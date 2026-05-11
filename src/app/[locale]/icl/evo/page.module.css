@@ -1,0 +1,410 @@
+/* ===== EVO+ ICL (icl4.php / spec1-wrapper) Page ===== */
+.wrapper {
+  overflow: hidden;
+}
+
+/* === Video Sections (spec1-sec3, sec4, sec5) === */
+.videoSection {
+  width: 100%;
+  position: relative;
+}
+
+.videoBox {
+  width: 100%;
+}
+
+.videoBox video {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* === Section 6: Surgery Process (spec1-sec6) === */
+.sec6 {
+  background: url(/img/plus/icl4-sec6-bg.png) no-repeat center center / cover;
+  background-color: #605557;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 120px 0;
+}
+
+.sec6Inner {
+  max-width: 1540px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.sec6TitGroup {
+  text-align: center;
+}
+
+.sec6H3 {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 44px;
+  line-height: 44px;
+  color: #fff;
+}
+
+.cMt {
+  color: #67B5A9;
+}
+
+.cBr {
+  color: #A48362;
+}
+
+.fzTr {
+  font-family: var(--font-serif-en);
+}
+
+.bold {
+  font-weight: 700;
+}
+
+/* Text box (desktop/mobile variants) */
+.sec6TextBox {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 23px;
+  color: #fff;
+  text-align: center;
+  margin-top: 16px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.sec6TextDesktop {
+  display: flex;
+}
+
+.sec6TextMobile {
+  display: none;
+}
+
+.sec6TextImg {
+  position: relative;
+  top: -9px;
+}
+
+.sec6TextImg img {
+  height: auto;
+}
+
+.sec6PBox {
+  text-align: left;
+}
+
+/* Process images */
+.sec6ContGroup {
+  margin-top: 112px;
+}
+
+.sec6ContBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+}
+
+.sec6ImgBox {
+  position: relative;
+}
+
+.sec6ImgBox img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Triangle dividers between images */
+.sec6ImgBox::after {
+  content: "";
+  position: absolute;
+  background: url(/img/spec/tri.png) no-repeat center center / contain;
+  width: 15px;
+  height: 35px;
+  left: -17px;
+  top: 48%;
+  transform: translateY(-50%);
+}
+
+.sec6ImgBox:first-child::after {
+  display: none;
+}
+
+/* Glow animation on second image */
+.glowImg {
+  animation: filterAnime 1s linear infinite alternate;
+}
+
+@keyframes filterAnime {
+  to {
+    filter: drop-shadow(0px 0px 10px #fff);
+  }
+}
+
+/* Bottom text */
+.sec6BottomText {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 34px;
+  line-height: 48px;
+  color: #fff;
+  text-align: center;
+  margin-top: 90px;
+}
+
+.sec6Des {
+  font-size: 22px;
+  line-height: 32px;
+  margin-top: 5px;
+}
+
+/* === Section 7: EVO+ ICL Uniqueness (spec1-sec7) === */
+.sec7 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 120px 0;
+}
+
+.sec7Inner {
+  max-width: 1540px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.sec7TitGroup {
+  text-align: center;
+}
+
+.sec7H3 {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 44px;
+  line-height: 44px;
+  color: #000;
+}
+
+.sec7TextBox {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 16px;
+  color: #000;
+  text-align: center;
+  margin-top: 16px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 10px;
+}
+
+.sec7TextDesktop {
+  display: flex;
+}
+
+.sec7TextMobile {
+  display: none;
+}
+
+.sec7TextImgBox {
+  display: flex;
+  align-items: flex-end;
+  gap: 6px;
+}
+
+.sec7TextImgBox img {
+  height: auto;
+}
+
+/* Content with rotating images */
+.sec7ContGroup {
+  position: relative;
+  margin-top: 40px;
+}
+
+.sec7MainImg {
+  position: relative;
+}
+
+.sec7MainImg img {
+  width: 100%;
+  height: auto;
+}
+
+/* Rotating image carousel overlay */
+.chImgWrap {
+  position: absolute;
+  top: 43%;
+  left: 49%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.chImgItem {
+  transition: opacity 1s;
+  opacity: 0;
+}
+
+.chImgItem:first-child {
+  opacity: 1;
+}
+
+.chImgItem:not(:first-child) {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.chImgVisible {
+  opacity: 1;
+}
+
+.chImgItem:not(.chImgVisible) {
+  opacity: 0;
+}
+
+.chImgItem img {
+  width: 100%;
+  height: auto;
+}
+
+/* Mobile text images */
+.sec7TextImgGroup {
+  display: none;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.sec7TextImgGroup img {
+  width: 100%;
+  height: auto;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 1250px) {
+  .sec6Inner,
+  .sec7Inner {
+    width: 90%;
+    padding: 0;
+  }
+
+  .sec6ContBox {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .sec6ImgBox {
+    width: calc(50% - 15px);
+  }
+
+  .sec6ImgBox::after {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .sec6 {
+    padding: 75px 0 74px;
+  }
+
+  .sec6H3 {
+    font-size: 30px;
+    line-height: 40px;
+  }
+
+  .sec6TextDesktop {
+    display: none;
+  }
+
+  .sec6TextMobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+  }
+
+  .sec6TextMobile .sec6TextImg {
+    display: flex;
+    align-items: flex-end;
+    top: -5px;
+  }
+
+  .sec6TextMobile .sec6TextImg p {
+    line-height: 1;
+  }
+
+  .sec6TextMobile .sec6PBox {
+    text-align: center;
+  }
+
+  .sec6ContGroup {
+    margin-top: 44px;
+  }
+
+  .sec6ContBox {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sec6ImgBox {
+    width: 70%;
+  }
+
+  .sec6BottomText {
+    font-size: 24px;
+    line-height: 34px;
+    margin-top: 40px;
+  }
+
+  .sec6Des {
+    font-size: 16px;
+    line-height: 26px;
+  }
+
+  .sec7 {
+    padding: 75px 0;
+  }
+
+  .sec7H3 {
+    font-size: 30px;
+    line-height: 40px;
+  }
+
+  .sec7TextDesktop {
+    display: none;
+  }
+
+  .sec7TextMobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+  }
+
+  .sec7TextImgGroup {
+    display: flex;
+  }
+
+  .chImgWrap {
+    display: none !important;
+  }
+}
+
+@media (max-width: 550px) {
+  .sec6ImgBox {
+    width: 90%;
+  }
+}
+
+@media (max-width: 290px) {
+  .sec6TextBox {
+    font-size: 12px;
+  }
+}

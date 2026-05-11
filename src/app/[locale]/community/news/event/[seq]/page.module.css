@@ -1,0 +1,479 @@
+/* ===== Event Detail Page (community1_view_l.php) ===== */
+.wrapper {
+  overflow: hidden;
+}
+
+/* === Hero === */
+.heroSection {
+  background: url(/img/etc/login_top.png) no-repeat right center / cover;
+}
+
+.heroContent {
+  padding-top: 230px;
+  padding-bottom: 117px;
+  text-align: center;
+}
+
+.heroTitle {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 44px;
+  line-height: 44px;
+  color: #fff;
+}
+
+.heroSub {
+  font-family: var(--font-serif-en);
+  font-weight: 400;
+  font-size: 54px;
+  line-height: 54px;
+  color: #67B5A9;
+  opacity: 0.3;
+}
+
+/* === Detail Section (com_notice_list) === */
+.detailSection {
+  height: inherit;
+  padding: 150px 0;
+}
+
+.container {
+  max-width: 1550px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.titleBox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 8px;
+  border-top: solid 1px #035764;
+  border-bottom: solid 1px #ddd;
+}
+
+.titleBox::after {
+  display: block;
+  clear: both;
+  content: "";
+}
+
+.tit {
+  float: left;
+  font-size: 1.125em;
+  font-weight: 500;
+  line-height: 2;
+  color: #000;
+}
+
+.detailSpan {
+  float: right;
+  color: #666;
+  font-weight: 300;
+  line-height: 2;
+  display: flex;
+  align-items: center;
+}
+
+.detailName,
+.detailDate {
+  display: inline-block;
+}
+
+.detailName::after {
+  display: inline-block;
+  overflow: hidden;
+  width: 1px;
+  height: 12px;
+  margin: -1px 10px 0 7px;
+  background: #bbb;
+  content: "";
+  vertical-align: middle;
+}
+
+.contentArea {
+  width: 50%;
+  margin: 0 auto;
+  padding-top: 25px;
+  line-height: 21px;
+  min-height: 150px;
+}
+
+.contentArea img {
+  max-width: 100%;
+  height: auto;
+}
+
+.required {
+  color: #64C0A7;
+}
+
+.btnChk {
+  cursor: pointer;
+}
+
+.pcOnly {
+  display: block;
+}
+
+.moOnly {
+  display: none;
+}
+
+/* === Back Button (btn-type-01) === */
+.backBtnBox {
+  margin: 40px 0;
+  text-align: center;
+}
+
+.backBtn {
+  background-color: #67B5A9;
+  border: 0;
+  min-width: 160px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  vertical-align: middle;
+  line-height: 2.5;
+  color: #fff;
+  border-radius: 10px;
+  cursor: pointer;
+  font-family: var(--font-body);
+}
+
+.backBtn:hover {
+  opacity: 0.8;
+}
+
+/* === Inline Event Form (모바일/태블릿 - 1000px 이하) === */
+.eventSection {
+  display: none;
+  background: url(/img/event/Frame2074.png) top center / cover;
+  background-position: top;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  padding-top: 67px;
+  padding-bottom: 67px;
+  margin-top: 100px;
+  margin-bottom: 95px;
+}
+
+.eventMImg {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.eventMImg img {
+  max-width: 100%;
+  height: auto;
+}
+
+.eventMContent {
+  width: 90%;
+  max-width: 700px;
+}
+
+.eventContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  gap: 12px;
+  padding-top: 16px;
+}
+
+.eventDetail {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 56px;
+}
+
+.eventDetail p {
+  font-size: 20px;
+  line-height: 22px;
+  padding-top: 10px;
+  max-width: 86px;
+  width: 100%;
+}
+
+.eventDetail input,
+.eventDetail textarea {
+  width: 100%;
+  height: 50px;
+  border: 1px solid #c5c5c5;
+  color: #050714;
+  padding: 8px 12px;
+  box-sizing: border-box;
+  font-family: var(--font-body);
+}
+
+.eventDetail textarea {
+  height: 126px;
+  resize: vertical;
+}
+
+.eventSubmit {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  padding-top: 24px;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.eventFf {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 15px;
+}
+
+.eventFf input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  appearance: auto;
+}
+
+.eventFf p,
+.eventSubmit p {
+  color: #050714;
+  font-size: 16px;
+  line-height: 16px;
+}
+
+/* === Fixed Sidebar Event Form (PC - 1000px 초과) === */
+.eventFix {
+  background: url(/img/event/Property.png);
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 50px;
+  padding: 29px 20px;
+  right: 10%;
+  z-index: 9999;
+}
+
+.eventFixInner {
+  display: flex;
+  flex-direction: column;
+}
+
+.eventImgSetting {
+  margin: 0 auto;
+}
+
+.eventImgSetting img {
+  max-width: 100%;
+  height: auto;
+}
+
+.eventFixForm {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-top: 16px;
+}
+
+.eventFixRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.eventFixRow p {
+  width: 120px;
+  font-size: 18px;
+  line-height: 10px;
+  padding-top: 20px;
+  color: #050714;
+}
+
+.eventFixRow input {
+  width: 100%;
+  height: 35px;
+  border: 1px solid #c5c5c5;
+  color: #050714;
+  padding: 4px 8px;
+  box-sizing: border-box;
+}
+
+.eventFixRow textarea {
+  width: 100%;
+  height: 85px;
+  border: 1px solid #c5c5c5;
+  color: #050714;
+  padding: 4px 8px;
+  box-sizing: border-box;
+  resize: vertical;
+}
+
+.eventFixSubmit {
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+  gap: 12px;
+}
+
+.eventFixAgree {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 13px;
+  justify-content: center;
+}
+
+.eventFixAgree p {
+  font-size: 16px;
+  line-height: 7px;
+  color: #050714;
+}
+
+/* === Bottom Section === */
+.bottomSection {
+  position: relative;
+  background: url(/img/background/back_03_2.jpg) no-repeat center center / cover;
+  padding-top: 210px;
+  padding-bottom: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.bottomBgLogo {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translate(-30%, 26%);
+}
+
+.bottomImgBox {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.bottomImgBox img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 1750px) {
+  .eventFix { right: 3%; }
+}
+
+@media (max-width: 1650px) {
+  .eventFix { right: 0; }
+}
+
+@media (max-width: 1000px) {
+  .eventSection {
+    display: flex;
+  }
+
+  .eventFix {
+    display: none;
+  }
+
+  .contentArea {
+    width: 100%;
+    padding: 0 0 0 0;
+  }
+}
+
+@media (max-width: 820px) {
+  .bottomImgBox:first-of-type {
+    max-width: 140px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 800px) {
+  .bottomBgLogo {
+    transform: translate(-30%, 3%);
+    width: 40%;
+    min-width: 120px;
+  }
+}
+
+@media (max-width: 768px) {
+  .detailSection {
+    padding: 80px 0;
+  }
+
+  .titleBox {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .eventDetail {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .eventDetail p {
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  .eventMContent {
+    margin: 0 auto;
+    width: 90%;
+  }
+
+  .eventMImg {
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .eventMImg img {
+    width: 80%;
+  }
+
+  .eventSubmit {
+    flex-direction: column;
+  }
+
+  .pcOnly {
+    display: none;
+  }
+
+  .moOnly {
+    display: block;
+  }
+}
+
+@media (max-width: 550px) {
+  .heroSection {
+    background-image: url(/img/etc/login_top_mo.png);
+  }
+
+  .heroContent {
+    padding-top: 150px;
+    padding-bottom: 80px;
+  }
+
+  .heroTitle { font-size: 30px; }
+  .heroSub { font-size: 35px; }
+
+  .bottomSection {
+    padding-top: 70px;
+    padding-bottom: 90px;
+  }
+}

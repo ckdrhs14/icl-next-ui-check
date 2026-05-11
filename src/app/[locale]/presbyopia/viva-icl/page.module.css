@@ -1,0 +1,616 @@
+/* ===== Viva ICL (비바 ICL / 노안) Page ===== */
+/* Matches PHP: pages/disease4.php + css/sh.css + css/hw.css */
+
+/* === Responsive display helpers === */
+.none768 { display: inline; }
+.block768 { display: none; }
+
+/* === Base wrapper (matches .pages-wrapper.dise-wrapper) === */
+.pagesWrapper { }
+.diseWrapper {
+  padding-top: 107px;
+}
+
+/* === Section wrap with background === */
+.sectionWrap {
+  position: relative;
+}
+.bg {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100vh;
+}
+.bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+}
+
+/* === Container === */
+.contInner {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+/* === Title group === */
+.titGroup {
+  font-family: 'Pretendard';
+  font-weight: 500;
+  font-size: 44px;
+  text-align: center;
+  margin-bottom: 68px;
+}
+
+/* === Color spans === */
+.cBr {
+  color: #67B5A9;
+}
+.cNv {
+  color: #67B5A9;
+}
+.cMt {
+  color: #A48362;
+}
+.hwPointColor {
+  color: #64C0A7;
+}
+
+/* === Shared text groups === */
+.contGroup { }
+.txtGroup {
+  font-family: 'Pretendard';
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 50px;
+}
+.txtGroup h5 {
+  font-weight: 700;
+  font-size: 35px;
+  margin-bottom: 30px;
+}
+.txtBox {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ==============================
+   dise_sec1 - 노안이란
+   ============================== */
+.diseSec1 {
+  height: inherit;
+  padding-top: 77px;
+  padding-bottom: 88px;
+}
+.diseSec1 .titGroup {
+  font-family: 'Pretendard';
+  font-weight: 500;
+  font-size: 44px;
+  text-align: center;
+  margin-bottom: 68px;
+}
+.diseSec1 .txtGroup {
+  margin-top: 50px;
+}
+.imgBoxWrap {
+  margin-top: 48px;
+}
+.imgRel {
+  position: relative;
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+}
+.imgRel img {
+  width: 100%;
+}
+
+/* ==============================
+   dise_sec2 - 노안증상과 진행
+   ============================== */
+.diseSec2 {
+  height: inherit;
+  padding-top: 130px;
+  padding-bottom: 117px;
+  background: linear-gradient(to bottom, #000000, #042B48, #042B48, #000000);
+}
+.diseSec2 .titGroup {
+  font-family: 'Pretendard';
+  font-weight: 500;
+  font-size: 44px;
+  text-align: center;
+  margin-bottom: 50px;
+  color: #fff;
+}
+.diseSec2 .titGroup p {
+  font-family: "Pretendard";
+  font-size: 22px;
+  line-height: 30px;
+  font-style: normal;
+  margin-top: 20px;
+}
+.sec2ImgBox {
+  text-align: center;
+}
+.sec2ImgBox img {
+  width: 100%;
+}
+.diseSec2 .txtGroup {
+  font-family: 'Pretendard';
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 60px;
+  color: #fff;
+}
+.sec2ImgBox2 {
+  text-align: center;
+  margin-top: 40px;
+}
+.sec2ImgBox2 img {
+  width: 100%;
+}
+
+/* ==============================
+   dise_sec3 - 노안 보충제/치료/��정
+   ============================== */
+.diseSec3 {
+  height: inherit;
+  padding-top: 189px;
+  padding-bottom: 132px;
+  background-color: #fff;
+}
+.diseSec3 .titGroup {
+  font-family: 'Pretendard';
+  font-weight: 500;
+  font-size: 44px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.diseSec3 .txtGroup {
+  font-family: 'Pretendard';
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 30px;
+}
+.diseSec3 .txtGroup h5 {
+  font-weight: 700;
+}
+.diseSec3 .txtGroup:nth-child(2) {
+  margin-top: 74px;
+}
+.hwText {
+  color: #A48362;
+  font-family: "Pretendard";
+  font-size: 22px;
+  line-height: 30px;
+  font-style: normal;
+  font-weight: 400;
+  margin-top: 30px;
+}
+
+/* hw_add_4 styles */
+.imgList {
+  margin-top: 40px;
+  display: flex;
+  gap: 25px;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+.imgList li p {
+  font-family: "Pretendard";
+  font-size: 16px;
+  line-height: 25px;
+  color: #000;
+  margin-top: 10px;
+  font-style: normal;
+  font-weight: 400;
+  text-align: center;
+}
+
+/* ==============================
+   dise_sec4 - 다초점 렌즈 특징 (swiper cards)
+   ============================== */
+.diseSec4 {
+  height: inherit;
+  padding-top: 119px;
+  padding-bottom: 107px;
+  background-image: url("/img/dise/dis4_sec5_bg.png");
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.diseSec4 .titGroup {
+  font-family: 'Pretendard';
+  font-weight: 500;
+  font-size: 44px;
+  text-align: center;
+  margin-bottom: 50px;
+  color: #fff;
+}
+.diseSec4 .titGroup p {
+  color: #042B48;
+  font-family: "Pretendard";
+  font-size: 22px;
+  line-height: 30px;
+  font-style: normal;
+  font-weight: 400;
+  margin-top: 20px;
+}
+
+/* Swiper layout (matches PHP hw_add_5_swiper) */
+.swiperArea {
+  overflow: hidden;
+  position: relative;
+  padding: 40px 0 60px;
+}
+
+.swiperTrack {
+  display: flex;
+  gap: 20px;
+  transition: transform 1s ease;
+}
+
+.swiperSlide {
+  flex-shrink: 0;
+  width: 100%;
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+}
+
+.swiperSlideActive {
+  opacity: 1;
+}
+
+.swiperBtnBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.swiperBtnPrev,
+.swiperBtnNext {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.swiperPagination {
+  display: flex;
+  gap: 20px;
+}
+
+.swiperBullet {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #042B48;
+  opacity: 0.3;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.swiperBulletActive {
+  opacity: 1;
+}
+.cardBox {
+  background-color: #fff;
+  border-radius: 10px;
+  max-width: 920px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.cardTitle {
+  font-family: "Pretendard";
+  text-align: center;
+  color: #fff;
+  font-size: 22px;
+  line-height: 25px;
+  padding: 20px 0;
+  font-style: normal;
+  font-weight: 700;
+  border-radius: 10px 10px 0 0;
+  background: #042B48;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  width: 100%;
+  box-sizing: border-box;
+}
+.cardImgBox {
+  text-align: center;
+  margin: 90px auto 70px;
+}
+.cardText {
+  padding: 0 80px;
+  box-sizing: border-box;
+  padding-bottom: 40px;
+}
+.cardText p {
+  color: #000;
+  text-align: center;
+  font-family: "Pretendard";
+  font-size: 22px;
+  line-height: 30px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+/* ==============================
+   dise_sec5 - 단초점 vs 다초점
+   ============================== */
+.diseSec5 {
+  height: inherit;
+  padding-top: 131px;
+  padding-bottom: 202px;
+  background: linear-gradient(180deg, #000 -15.07%, #042B48 11.86%, #042B48 87.95%, #000 115.25%);
+}
+.diseSec5 .titGroup {
+  font-family: 'Pretendard';
+  font-weight: 500;
+  font-size: 44px;
+  line-height: 50px;
+  text-align: center;
+  margin-bottom: 83px;
+  color: #fff;
+}
+.diseSec5 .titGroup p {
+  color: #FFF;
+  font-family: "Pretendard";
+  font-size: 22px;
+  line-height: 30px;
+  font-style: normal;
+  font-weight: 400;
+  margin-top: 20px;
+}
+
+/* list items (hw_add_6) */
+.list {
+  margin-bottom: 80px;
+  list-style: none;
+  padding: 0;
+}
+.list li {
+  border-radius: 15px;
+  background-color: #4F4F4F;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+.list li:last-child {
+  margin-bottom: 0;
+}
+.list li h4 {
+  color: #FFF;
+  text-align: center;
+  font-family: "Pretendard";
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
+  background-color: #67B5A9;
+  padding: 25px 0;
+  box-sizing: border-box;
+}
+.listImgBox {
+  text-align: center;
+  background-color: #fff;
+  padding: 26px 0 40px;
+}
+.listImgBox img {
+  max-width: 90%;
+}
+
+/* txt-box in sec5 */
+.sec5TxtBox {
+  font-family: 'Pretendard';
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 1.5;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  text-align: center;
+  width: 85%;
+  margin: 0 auto;
+}
+
+/* ===== Responsive: 1250px ===== */
+@media screen and (max-width: 1250px) {
+  .contInner {
+    width: 90%;
+    margin: auto;
+    max-width: none;
+  }
+}
+
+/* ===== Responsive: 1000px ===== */
+@media screen and (max-width: 1000px) {
+  .cardText {
+    padding: 0 40px;
+    padding-bottom: 40px;
+  }
+  .cardImgBox {
+    margin: 30px auto;
+  }
+  .swiperArea {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+/* ===== Responsive: 768px ===== */
+@media screen and (max-width: 768px) {
+  .none768 { display: none; }
+  .block768 { display: block; }
+
+  .diseWrapper {
+    padding-top: 0;
+  }
+
+  /* dise_sec1 */
+  .diseSec1 {
+    padding-top: 0;
+    padding-bottom: 69px;
+  }
+  .diseSec1 .titGroup {
+    font-size: 30px;
+    line-height: 40px;
+    margin-bottom: 32px;
+  }
+  .diseSec1 .txtGroup {
+    font-size: 16px;
+    line-height: 25px;
+    margin-top: 37px;
+  }
+  .diseSec1 .txtGroup h5 {
+    text-align: center;
+    font-size: 22px;
+    line-height: 32px;
+    margin-bottom: 0;
+  }
+
+  /* dise_sec2 */
+  .diseSec2 {
+    padding-top: 75px;
+    padding-bottom: 95px;
+  }
+  .diseSec2 .titGroup {
+    font-size: 30px;
+    line-height: 40px;
+    margin-bottom: 32px;
+  }
+  .diseSec2 .titGroup p {
+    margin-top: 0;
+  }
+  .diseSec2 .txtGroup {
+    font-size: 16px;
+    line-height: 25px;
+    margin-top: 37px;
+  }
+  .diseSec2 .txtGroup h5 {
+    text-align: center;
+    font-size: 22px;
+    line-height: 32px;
+    margin-bottom: 0;
+  }
+  .sec2ImgBox img {
+    margin: 0 auto;
+  }
+
+  /* dise_sec3 */
+  .diseSec3 {
+    padding-top: 75px;
+    padding-bottom: 85px;
+  }
+  .diseSec3 .titGroup {
+    font-size: 30px;
+    line-height: 40px;
+    margin-bottom: 32px;
+  }
+  .diseSec3 .txtGroup {
+    font-size: 16px;
+    line-height: 25px;
+    margin-top: 37px;
+  }
+  .diseSec3 .txtGroup h5 {
+    text-align: center;
+    font-size: 22px;
+    line-height: 32px;
+    margin-bottom: 0;
+  }
+  .diseSec3 .txtGroup:nth-child(2) {
+    margin-top: 37px;
+  }
+  .hwText {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .imgList {
+    flex-direction: column;
+  }
+
+  /* dise_sec4 */
+  .diseSec4 {
+    padding-top: 75px;
+    padding-bottom: 56px;
+  }
+  .diseSec4 .titGroup {
+    font-size: 30px;
+    line-height: 40px;
+    margin-bottom: 32px;
+  }
+  .diseSec4 .titGroup p {
+    font-size: 18px;
+    line-height: 25px;
+  }
+  .swiperArea {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .cardTitle {
+    font-size: 20px;
+    line-height: 30px;
+    padding: 10px 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 90px;
+  }
+  .cardImgBox {
+    margin: 25px auto;
+  }
+  .cardText {
+    padding: 0 10px;
+    padding-bottom: 30px;
+  }
+  .cardText p {
+    font-size: 16px;
+    line-height: 25px;
+  }
+
+  /* dise_sec5 */
+  .diseSec5 {
+    padding-top: 75px;
+    padding-bottom: 87px;
+  }
+  .diseSec5 .titGroup {
+    font-size: 30px;
+    line-height: 40px;
+    margin-bottom: 48px;
+  }
+  .sec5TxtBox {
+    font-size: 16px;
+    line-height: 25px;
+    width: 100%;
+  }
+  .list li h4 {
+    font-size: 18px;
+    line-height: 25px;
+    padding: 15px 10px;
+  }
+}

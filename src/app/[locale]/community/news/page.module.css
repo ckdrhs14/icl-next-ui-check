@@ -1,0 +1,362 @@
+/* ===== Community News (병원소식) Page ===== */
+.wrapper {
+  overflow: hidden;
+}
+
+/* === Hero Section (page-top-section top-login) === */
+.heroSection {
+  background: url(/img/etc/login_top.png) no-repeat right center / cover;
+}
+
+.heroContent {
+  padding-top: 230px;
+  padding-bottom: 117px;
+  text-align: center;
+}
+
+.heroTitle {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 44px;
+  line-height: 44px;
+  color: #fff;
+  text-align: center;
+}
+
+.heroSub {
+  font-family: var(--font-serif-en);
+  font-weight: 400;
+  font-size: 54px;
+  line-height: 54px;
+  color: #67B5A9;
+  opacity: 0.3;
+  text-align: center;
+}
+
+/* === Content Section (comm1-sec1) === */
+.contentSection {
+  height: inherit;
+  padding-top: 0;
+  padding-bottom: 100px;
+}
+
+.sectionInner {
+  max-width: 1280px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* === Tab Navigation (com1_tag_group) === */
+.tagGroup {
+  padding-top: 70px;
+  display: flex;
+  justify-content: center;
+}
+
+.tagItem {
+  position: relative;
+  transition: 0.4s;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-bottom: 1px solid #bbbcba;
+  border-radius: 0;
+  background: transparent;
+  color: rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  font-family: var(--font-body);
+  font-size: 22px;
+  font-weight: 400;
+  padding: 0 0 20px;
+}
+
+.tagItem::after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: transparent;
+  transform: translateY(50%);
+}
+
+.tagItem:hover {
+  color: #000;
+}
+
+.tagItem:hover::after {
+  background-color: #000;
+}
+
+.tagItemOn {
+  color: rgba(0, 0, 0, 1);
+  background: transparent;
+  border-bottom: 2px solid #000;
+}
+
+.tagItemOn::after {
+  background-color: #000;
+}
+
+/* === Grid (com1_grid_group) === */
+.gridGroup {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+  column-gap: 2vw;
+  row-gap: 40px;
+  margin-top: 60px;
+}
+
+.gridItem {
+  transition: 0.3s;
+  box-sizing: border-box;
+  width: calc((100% - 6vw) / 4);
+  min-height: 330px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  overflow: hidden;
+  border: none;
+  background: #fff;
+  box-shadow: none;
+}
+
+.gridItem:hover {
+  transition: 0.3s;
+  transform: translateY(-20px);
+}
+
+.gridItemImg {
+  width: 100%;
+  height: 70%;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.gridItemImg img {
+  height: 100%;
+  object-fit: contain;
+}
+
+.gridItemTxt {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  height: 30%;
+}
+
+.gridItemTitle {
+  font-family: var(--font-body);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 120%;
+  color: #171717;
+  text-align: center;
+}
+
+.gridItemDate p {
+  font-family: var(--font-body);
+  font-size: 13px;
+  color: #999;
+}
+
+/* Event card status badge */
+.eventCurr {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 6px 14px;
+  border-radius: 50px;
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.eventCurrActive {
+  background-color: #67B5A9;
+}
+
+.eventCurrEnd {
+  background-color: #999;
+}
+
+.gridItemEnd {
+  opacity: 0.6;
+}
+
+.gridItemImg {
+  position: relative;
+}
+
+.emptyText {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 80px 0;
+  font-size: 16px;
+  color: #999;
+}
+
+/* === Pagination (notice_pag) === */
+.pagination {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 140px;
+}
+
+.pagBtn {
+  background: none;
+  border: none;
+  font-family: var(--font-body);
+  font-size: 22px;
+  cursor: pointer;
+  padding: 8px;
+  color: #000;
+}
+
+.pagBtn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.pagCurrent {
+  font-family: var(--font-body);
+  font-size: 22px;
+  color: #000;
+}
+
+/* === Bottom Section (mem_sub_common) === */
+.bottomSection {
+  position: relative;
+  background: url(/img/background/back_03_2.jpg) no-repeat center center / cover;
+  padding-top: 210px;
+  padding-bottom: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.bottomBgLogo {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translate(-30%, 26%);
+}
+
+.bottomImgBox {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.bottomImgBox img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 1280px) {
+  .gridItem {
+    width: calc((100% - 4vw) / 3);
+  }
+}
+
+@media (max-width: 1025px) {
+  .tagGroup {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    overflow-x: auto;
+  }
+
+  .tagItem {
+    flex: 1 0 auto;
+    width: max-content;
+    font-size: 16px;
+    height: 35px;
+  }
+
+  .gridItem {
+    width: calc((100% - 2vw) / 2);
+  }
+
+  .gridItem:hover {
+    transform: unset;
+  }
+
+  .pagination {
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 820px) {
+  .bottomImgBox:first-of-type {
+    max-width: 140px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 800px) {
+  .bottomBgLogo {
+    transform: translate(-30%, 3%);
+    width: 40%;
+    min-width: 120px;
+  }
+}
+
+@media (max-width: 550px) {
+  .heroSection {
+    background: url(/img/etc/login_top_mo.png) no-repeat left top / cover;
+  }
+
+  .heroContent {
+    padding-top: 89px;
+    padding-bottom: 49px;
+  }
+
+  .heroTitle {
+    font-size: 30px;
+    line-height: 30px;
+  }
+
+  .heroSub {
+    font-size: 44px;
+    line-height: 44px;
+  }
+
+  .bottomSection {
+    padding-top: 70px;
+    padding-bottom: 90px;
+  }
+}
+
+@media (max-width: 768px) {
+  .gridItem {
+    width: 100%;
+  }
+
+  .pagBtn { font-size: 16px; }
+  .pagCurrent { font-size: 16px; }
+}
+
+@media (max-width: 350px) {
+  .tagItem {
+    font-size: 14px;
+    line-height: 14px;
+    padding-bottom: 5px;
+  }
+}

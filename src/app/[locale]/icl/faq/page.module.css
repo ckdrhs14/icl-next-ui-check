@@ -1,0 +1,104 @@
+/* ===== ICL FAQ (faq.php) Page ===== */
+.wrapper {
+  overflow: hidden;
+}
+
+/* === Header === */
+.faqHeader {
+  width: 100%;
+}
+
+.faqHeaderPc img,
+.faqHeaderMb img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* === FAQ Content === */
+.faqCont {
+  background: linear-gradient(to bottom, #B3DAD4, #67B5A9);
+  padding: 90px 0;
+}
+
+.faqImg {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.faqImg img {
+  width: 100%;
+  height: auto;
+}
+
+.faqMbImg {
+  display: none;
+}
+
+/* === Bottom Section (mem_sub_common) === */
+.bottomSection {
+  position: relative;
+  background: url(/img/background/back_03_2.jpg) no-repeat center center / cover;
+  padding: 120px 0;
+  text-align: center;
+  overflow: hidden;
+}
+
+.bottomBgLogo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.05;
+}
+
+.bottomImgBox {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.bottomImgBox:last-child {
+  margin-bottom: 0;
+}
+
+.bottomImgBox img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 1250px) {
+  .faqImg {
+    width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .faqCont {
+    padding-top: 45px;
+    padding-bottom: 45px;
+  }
+
+  .faqImg {
+    background-color: #fff;
+  }
+
+  .faqImg :global(.pc) {
+    display: none;
+  }
+
+  .faqMbImg {
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 41px;
+    padding-bottom: 59px;
+  }
+
+  .bottomSection {
+    padding: 80px 20px;
+  }
+}

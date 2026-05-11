@@ -1,0 +1,1334 @@
+/* ===== Doctor Page (intro1: int1-sec1, int1-sec2, video-sec, int1-sec2-plus1, int1-sec2-plus2) ===== */
+.wrapper {
+    overflow: hidden;
+}
+
+/* === Hero Section — maps to .int1-sec1 === */
+.heroSection {
+    position: relative;
+    background: url("/img/int/int1_sec1_bg.png") no-repeat left top / cover;
+    background-color: #042b48;
+    overflow: hidden;
+}
+
+.heroBg {
+    display: none; /* background handled via section */
+}
+
+.heroInner {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1125px;
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 188px;
+    padding-bottom: 37px;
+    right: -110px;
+}
+
+.heroLeft {
+    position: relative;
+    top: -100px;
+}
+
+.heroTextTop {
+    display: flex;
+    flex-direction: column;
+}
+
+.heroName {
+    display: flex;
+    align-items: flex-end;
+    gap: 23px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.nameKr {
+    font-family: var(--font-serif-kr);
+    font-weight: 400;
+    font-size: 96px;
+    line-height: 103px;
+    color: #fff;
+}
+
+.nameRole {
+    font-family: var(--font-body);
+    font-weight: 200;
+    font-size: 74px;
+    line-height: 74px;
+    color: #fff;
+}
+
+.nameEn {
+    font-family: var(--font-serif-en);
+    font-size: 64px;
+    line-height: 54px;
+    color: #fff;
+    font-weight: 200;
+    opacity: 0.3;
+    text-align: center;
+}
+
+.heroComm {
+    position: relative;
+    margin-top: 66px;
+}
+
+.heroComm::before {
+    content: "";
+    position: absolute;
+    left: -80px;
+    top: 0;
+    background: url("/img/int/comm1.png") no-repeat center center / contain;
+    width: 53px;
+    height: 30px;
+}
+
+.heroComm::after {
+    content: "";
+    position: absolute;
+    right: -80px;
+    top: 0;
+    background: url("/img/int/comm2.png") no-repeat center center / contain;
+    width: 53px;
+    height: 30px;
+}
+
+.heroComm p {
+    font-family: var(--font-body);
+    font-weight: 500;
+    font-size: 44px;
+    line-height: 64px;
+    color: #fff;
+    white-space: nowrap;
+    text-align: center;
+}
+
+.heroRight {
+    position: relative;
+    right: -70px;
+    bottom: -20px;
+    flex-shrink: 0;
+}
+
+.doctorImg {
+    width: 100%;
+    height: auto;
+}
+
+/* Mobile Nav Buttons */
+.navBtnGroup {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.navBtn {
+    display: flex;
+    width: 33.333%;
+    text-align: center;
+    height: 50px;
+    padding-top: 17px;
+    border-radius: 20px 20px 0 0;
+    font-size: 15px;
+    font-weight: 500;
+    color: #fff;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+/* === Career Section — maps to .int1-sec2 === */
+.careerSection {
+    position: relative;
+    height: inherit;
+    overflow: hidden;
+}
+
+.careerSection::before {
+    content: "";
+    position: absolute;
+    top: 37px;
+    left: 0;
+    right: 0;
+    height: 10px;
+    background-color: #67b5a9;
+    opacity: 0.5;
+}
+
+.lensDecor {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+.lens1 {
+    position: absolute;
+    left: 0;
+    top: 18%;
+    width: auto;
+    height: auto;
+}
+
+.lens2 {
+    position: absolute;
+    right: 0;
+    top: 18%;
+    left: unset;
+    width: auto;
+    height: auto;
+    z-index: 2;
+}
+
+.careerInner {
+    position: relative;
+    z-index: 1;
+    max-width: 1650px;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 170px;
+    padding-bottom: 100px;
+}
+
+.careerInner :global(.pc) {
+    display: block;
+}
+
+.careerInner :global(.mo) {
+    display: none;
+}
+
+.careerInner img {
+    min-height: 250px;
+    object-fit: contain;
+    object-position: center;
+}
+
+/* === Video Section — maps to .video-sec === */
+.videoSection {
+    width: 100%;
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    background: #000;
+}
+
+.videoWrapper {
+    height: 100%;
+    position: relative;
+}
+
+.videoThumb {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+    cursor: pointer;
+    border: none;
+    padding: 0;
+    background: none;
+    overflow: hidden;
+}
+
+.videoThumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.4s ease;
+}
+
+.videoThumb:hover img {
+    transform: scale(1.05);
+}
+
+.playBtn {
+    display: none;
+}
+
+.video {
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+
+.videoVisible {
+    opacity: 1;
+}
+
+/* hidden class for thumb after play */
+.hidden {
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+/* === History Section (International) — maps to .int1-sec2-plus1 === */
+.historySection {
+    height: inherit;
+    padding: 225px 0;
+    background: url("/img/int/int1_sec2_plus_bg.png") no-repeat center center / cover;
+}
+
+.sectionInner {
+    max-width: 1125px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.historySection .sectionInner {
+    display: flex;
+    align-items: start;
+    gap: 82px;
+}
+
+.sectionTitle {
+    text-align: left;
+    flex-shrink: 0;
+}
+
+.titleSub {
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 50px;
+    color: #64c0a7;
+}
+
+.titleAccent {
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 70px;
+    color: #64c0a7;
+}
+
+.titleEn {
+    font-family: var(--font-body);
+    font-size: 25px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 35px;
+    margin-top: 20px;
+}
+
+.titleMain {
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 78px;
+    line-height: 88px;
+    color: #fff;
+}
+
+.dividerLine {
+    min-width: 1px;
+    background-color: #fff;
+    height: 550px;
+    opacity: 0.5;
+    margin: 0;
+}
+
+/* Swiper / Slide styles */
+.swiperContainer {
+    max-width: 792px;
+    width: 100%;
+}
+
+.swiperInstance {
+    max-width: 792px;
+}
+
+.slide {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.slideDate {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.slideYear {
+    font-family: var(--font-serif-en);
+    font-weight: 500;
+    font-size: 50px;
+    color: #fff;
+}
+
+.slideLabel {
+    font-family: var(--font-body);
+    font-weight: 500;
+    font-size: 24px;
+    color: #042b48;
+    padding: 10px 20px;
+    background-color: #64c0a7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+}
+
+.slideTitle {
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 50px;
+    color: #fff;
+}
+
+.slideDesc {
+    font-family: var(--font-body);
+    font-size: 22px;
+    line-height: 32px;
+    color: #fff;
+}
+
+/* Navigation buttons container */
+.swiperBtns {
+    display: flex;
+    align-items: center;
+    position: relative;
+    gap: 10px;
+    margin-top: 152px;
+}
+
+.swiperBtnPrev,
+.swiperBtnNext {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.swiperBtnPrev::after {
+    content: "";
+    background: url("/img/int/int1_swiper_arr_prev.png") no-repeat center center / contain;
+    width: 18px;
+    height: 23px;
+    display: block;
+}
+
+.swiperBtnNext::after {
+    content: "";
+    background: url("/img/int/int1_swiper_arr_next.png") no-repeat center center / contain;
+    width: 18px;
+    height: 23px;
+    display: block;
+}
+
+/* Pagination */
+.swiperPagination {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.bullet {
+    transition: 0.3s;
+    position: relative;
+    background-color: #fff;
+    opacity: 0.5;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.bullet::after {
+    transition: 0.3s;
+    content: "";
+    display: block;
+    width: 44px;
+    height: 28px;
+    background: url("/img/int/swiper_on.png") no-repeat center center / contain;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+}
+
+.bulletActive {
+    opacity: 1;
+}
+
+.bulletActive::after {
+    opacity: 1;
+}
+
+/* === Timeline Section (Domestic) — maps to .int1-sec2-plus2 === */
+.timelineSection {
+    height: inherit;
+    padding-top: 200px;
+    padding-bottom: 63px;
+    background: url("/img/int/int1_sec2_plus2_bg.png") no-repeat center center / cover;
+    overflow: hidden;
+}
+
+.timelineSection .sectionInner {
+    max-width: 1400px;
+    position: relative;
+    left: 117px;
+}
+
+.timelineSection .titleEn {
+    font-size: 35px;
+    font-weight: 700;
+    line-height: 45px;
+    margin-top: 20px;
+}
+
+.timelineSection .titleMain {
+    font-size: 120px;
+    line-height: 130px;
+    margin-top: 20px;
+}
+
+.timeline {
+    margin-top: 70px;
+    overflow-y: scroll;
+    height: 420px;
+}
+
+.timeline::-webkit-scrollbar {
+    display: none;
+}
+
+.timelineList {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 65px;
+    position: relative;
+}
+
+.timelineList::before {
+    display: none;
+}
+
+.timelineItem {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    position: relative;
+    transition: background-color 0.2s ease;
+}
+
+.timelineYear {
+    font-family: var(--font-body);
+    font-size: 40px;
+    font-weight: 700;
+    color: var(--color-teal-light);
+}
+
+.timelineDot {
+    border: 3px solid #64c0a7;
+    border-radius: 50%;
+    background-color: #484848;
+    min-width: 20px;
+    height: 20px;
+    margin-top: 7px;
+    display: none;
+}
+
+.timelineContent {
+    padding-left: 0;
+}
+
+.timelineTitle {
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 40px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.timelineDesc {
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 23px;
+    color: #fff;
+}
+
+.moreBtn {
+    display: none;
+}
+
+/* ===== Responsive ===== */
+
+/* 1500px */
+@media (max-width: 1500px) {
+    .timelineSection .sectionInner {
+        left: unset;
+    }
+
+    .timelineYear {
+        font-size: 30px;
+    }
+
+    .timelineTitle {
+        font-size: 20px;
+    }
+
+    .timelineDesc {
+        font-size: 14px;
+    }
+
+    .timelineDot {
+        min-width: 10px;
+        height: 10px;
+    }
+}
+
+/* 1250px — main mobile breakpoint matching PHP */
+@media (max-width: 1250px) {
+    .heroSection {
+        height: inherit;
+        background: url("/img/int/int1_sec1_bg_mo.png") no-repeat center center / cover;
+        background-color: #042b48;
+    }
+
+    .heroInner {
+        flex-direction: column;
+        right: unset;
+        padding-bottom: 0;
+        padding-top: 100px;
+        width: 90%;
+    }
+
+    .heroLeft {
+        top: unset;
+    }
+
+    .heroName {
+        gap: 7px;
+        margin-bottom: 10px;
+    }
+
+    .nameKr {
+        font-size: 50px;
+        line-height: 53px;
+    }
+
+    .nameEn {
+        font-size: 35px;
+        line-height: 35px;
+    }
+
+    .nameRole {
+        font-size: 40px;
+        line-height: 40px;
+    }
+
+    .heroComm::before {
+        top: -32px;
+        left: unset;
+        width: 37px;
+    }
+
+    .heroComm::after {
+        bottom: -32px;
+        top: unset;
+        right: 0;
+        width: 37px;
+    }
+
+    .heroComm p {
+        white-space: normal;
+        font-size: 22px;
+        line-height: 32px;
+        font-weight: 400;
+        text-align: center;
+    }
+
+    .heroRight {
+        right: unset;
+        bottom: -40px;
+        text-align: center;
+    }
+
+    .doctorImg {
+        width: 90%;
+    }
+
+    .navBtnGroup {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        height: 50px;
+    }
+
+    .careerSection::before {
+        top: 20px;
+    }
+
+    .careerInner {
+        padding-bottom: 80px;
+        padding-top: 80px;
+        width: 90%;
+    }
+
+    .careerInner :global(.pc) {
+        display: none;
+    }
+
+    .careerInner :global(.mo) {
+        display: block;
+        width: 100%;
+    }
+
+    .lens1 {
+        top: 47%;
+        right: -80px;
+        left: unset;
+        rotate: 180deg;
+        z-index: 2;
+    }
+
+    .lens2 {
+        top: 2%;
+        right: -80px;
+    }
+
+    .historySection {
+        padding-top: 82px;
+        padding-bottom: 112px;
+    }
+
+    .historySection .sectionInner {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sectionInner {
+        width: 90%;
+    }
+
+    .dividerLine {
+        display: none;
+    }
+
+    .swiperContainer {
+        width: 100%;
+        max-width: unset;
+    }
+
+    .swiperBtns {
+        margin-top: 27px;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .timelineSection {
+        padding-top: 82px;
+        padding-bottom: 40px;
+    }
+
+    .timelineSection .sectionInner {
+        left: unset;
+    }
+
+    .timelineSection .titleMain {
+        font-size: 78px;
+        line-height: 88px;
+    }
+
+    .timelineSection .titleEn {
+        font-size: 25px;
+        line-height: 35px;
+    }
+}
+
+/* 800px */
+@media (max-width: 800px) {
+    .timelineList {
+        grid-template-columns: 1fr;
+        row-gap: 35px;
+    }
+
+    .timeline {
+        position: relative;
+        width: calc(100% - 50px);
+        margin: 0 auto;
+        padding-left: 50px;
+        height: 555px;
+        overflow-y: inherit;
+        overflow: hidden;
+        margin-top: 40px;
+    }
+
+    .timeline::after {
+        position: absolute;
+        content: "";
+        height: 100%;
+        width: 10px;
+        left: 22px;
+        top: 50px;
+        border-left: 1.5px dashed #64c0a7;
+    }
+
+    .timelineItem {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .timelineYear {
+        font-size: 30px;
+        line-height: 35px;
+    }
+
+    .timelineDesc {
+        position: relative;
+        font-size: 12px;
+        line-height: 17px;
+    }
+
+    .timelineDesc::after {
+        content: "";
+        width: 15px;
+        height: 15px;
+        border: 2.25px solid #64c0a7;
+        background-color: #484848;
+        position: absolute;
+        left: -37px;
+        top: 0;
+        transform: translateY(20%);
+        border-radius: 50%;
+        z-index: 1;
+    }
+
+    .timelineTitle {
+        font-size: 22.5px;
+        line-height: 27.5px;
+    }
+
+    .moreBtn {
+        display: flex;
+        width: 100%;
+        margin: 0 auto;
+        position: relative;
+        z-index: 1;
+        height: 50px;
+        border-radius: 10px;
+        background-color: #67b5a9;
+        font-family: var(--font-body);
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 32px;
+        color: #fff;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        cursor: pointer;
+    }
+
+    .sectionTitle .titleSub {
+        font-size: 20px;
+        line-height: 25px;
+    }
+
+    .sectionTitle .titleAccent {
+        font-size: 30px;
+        line-height: 35px;
+    }
+
+    .titleEn {
+        font-size: 12.5px;
+        line-height: 17.5px;
+        margin-top: 10px;
+    }
+
+    .titleMain {
+        font-size: 39px;
+        line-height: 44px;
+    }
+
+    .timelineSection .titleMain {
+        font-size: 39px;
+        line-height: 44px;
+    }
+
+    .timelineSection .titleEn {
+        font-size: 12.5px;
+        line-height: 17.5px;
+        margin-top: 10px;
+    }
+}
+
+/* 600px */
+@media (max-width: 600px) {
+    .slideYear {
+        font-size: 38px;
+    }
+
+    .slideLabel {
+        font-weight: 700;
+        font-size: 18px;
+    }
+
+    .slideTitle {
+        font-size: 30px;
+        line-height: 37.5px;
+    }
+
+    .slideDesc {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    .swiperPagination {
+        gap: 14px;
+    }
+
+    .swiperBtnNext::after {
+        width: 10px;
+    }
+
+    .swiperBtnPrev::after {
+        width: 10px;
+    }
+
+    .bullet::after {
+        width: 35px;
+    }
+}
+
+/* 500px */
+@media (max-width: 500px) {
+    .titleSub {
+        font-size: 20px;
+        line-height: 25px;
+    }
+
+    .titleAccent {
+        font-size: 30px;
+        line-height: 35px;
+    }
+
+    .titleEn {
+        font-size: 12.5px;
+        line-height: 17.5px;
+        margin-top: 10px;
+    }
+
+    .titleMain {
+        font-size: 39px;
+        line-height: 44px;
+    }
+}
+
+/* 350px */
+@media (max-width: 350px) {
+    .heroComm p {
+        font-size: 18px;
+        line-height: 25px;
+    }
+}
+
+/* ===== Vision Sections (int1-sec3, int1-sec4, int1-sec5) ===== */
+
+/* === Vision Hero Section — maps to .int1-sec3 === */
+.visionHeroSection {
+    position: relative;
+    height: inherit;
+    background: url("/img/background/back_03.jpg") no-repeat center center / cover;
+}
+
+.visionHeroContent {
+    position: relative;
+    z-index: 1;
+    max-width: 880px;
+    margin: 0 auto;
+    padding-top: 171px;
+    padding-bottom: 191px;
+}
+
+.visionHeroTitleGroup {
+    text-align: center;
+}
+
+.visionHeroTitleImg img {
+    margin: 0 auto;
+}
+
+.visionHeroBodyImg {
+    margin-top: 148px;
+    text-align: center;
+}
+
+.visionHeroBodyImg img {
+    margin: 0 auto;
+}
+
+.visionHeroBodyImg :global(.pc) {
+    display: block;
+}
+
+.visionHeroBodyImg :global(.mo) {
+    display: none;
+}
+
+.visionMessageTitleImg :global(.pc) {
+    display: block;
+}
+
+.visionMessageTitleImg :global(.mo) {
+    display: none;
+}
+
+/* === Vision Message Section — maps to .int1-sec4 === */
+.visionMessageSection {
+    position: relative;
+    height: inherit;
+}
+
+.visionMessageSection::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 270px;
+    background: linear-gradient(to bottom, #042b48 80%, #fff 100%);
+    z-index: -1;
+}
+
+.visionMessageBg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 270px;
+    overflow: hidden;
+}
+
+.visionMessageBgImg {
+    width: 100%;
+    object-fit: cover;
+}
+
+.visionMessageTitleImg {
+    position: relative;
+    z-index: 1;
+    padding-top: 80px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.visionMessageTitleImg img {
+    max-width: 800px;
+    width: 100%;
+    height: auto;
+}
+
+.visionMessageInner {
+    position: relative;
+    z-index: 1;
+    max-width: 1360px;
+    margin: 0 auto;
+    padding-top: 140px;
+    padding-bottom: 134px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.visionCommentBlock {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 250px;
+}
+
+.visionCommentText h4 {
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 150%;
+    color: #042b48;
+}
+
+.visionCommentHighlight {
+    position: relative;
+    right: -152px;
+}
+
+.visionCommentImg {
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+}
+
+.visionCommentImg:hover {
+    transform: scale(1.03);
+}
+
+.visionCommentImg img {
+    width: 100%;
+    height: auto;
+}
+
+.visionContentGrid {
+    display: flex;
+    flex-direction: column;
+}
+
+.visionContentBox {
+    position: relative;
+    margin-bottom: 140px;
+}
+
+.visionContentBox:last-child {
+    margin-bottom: 0;
+}
+
+.visionContentNum {
+    position: absolute;
+    font-family: var(--font-serif-en);
+    font-weight: 400;
+    font-size: 300px;
+    line-height: 300px;
+    color: #67b5a9;
+    opacity: 0.2;
+    transform: translateY(-50%) translateX(-23%);
+    pointer-events: none;
+    user-select: none;
+}
+
+.visionContentBox:nth-child(2n) .visionContentNum {
+    right: 0;
+    transform: translateY(-50%);
+}
+
+.visionContentText {
+    position: relative;
+    z-index: 2;
+}
+
+.visionContentTitle {
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 35px;
+    margin-bottom: 30px;
+}
+
+.visionContentDesc {
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 23px;
+}
+
+/* === Vision Pledge Section — maps to .int1-sec5 === */
+.visionPledgeSection {
+    position: relative;
+    height: inherit;
+    padding-top: 141px;
+    padding-bottom: 104px;
+    background: url("/img/int/int1-sec5-bg.png") no-repeat center center / cover;
+}
+
+.visionPledgeContent {
+    position: relative;
+    z-index: 1;
+    text-align: right;
+    max-width: 1125px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.visionPledgeTxtBox {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.visionPledgeTxtBox img {
+    max-width: 315px;
+}
+
+/* ===== Vision Responsive ===== */
+
+@media (max-width: 1250px) {
+    .visionHeroSection {
+        height: inherit;
+    }
+
+    .visionHeroContent {
+        padding-top: 93px;
+        padding-bottom: 110px;
+        width: 90%;
+    }
+
+    .visionHeroBodyImg {
+        margin-top: 40px;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .visionHeroTitleGroup {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .visionMessageSection::after {
+        height: 200px;
+    }
+
+    .visionMessageBg {
+        height: 200px;
+    }
+
+    .visionMessageTitleImg {
+        padding-top: 45px;
+    }
+
+    .visionMessageInner {
+        padding-top: 240px;
+        width: 90%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .visionCommentBlock {
+        flex-direction: column;
+        justify-content: center;
+        gap: 12px;
+        margin-bottom: 50px;
+    }
+
+    .visionCommentText {
+        width: 80%;
+    }
+
+    .visionCommentHighlight {
+        right: unset;
+        text-align: right;
+    }
+
+    .visionCommentImg {
+        width: 60%;
+        margin: 0 auto;
+        text-align: center;
+    }
+}
+
+@media (max-width: 800px) {
+    .visionHeroBodyImg :global(.pc) {
+        display: none;
+    }
+
+    .visionHeroBodyImg :global(.mo) {
+        display: block;
+    }
+
+    .visionMessageTitleImg :global(.pc) {
+        display: none;
+    }
+
+    .visionMessageTitleImg :global(.mo) {
+        display: block;
+    }
+
+    .visionMessageSection::after {
+        height: 230px;
+    }
+
+    .visionMessageBg {
+        height: 230px;
+    }
+
+    .visionMessageTitleImg {
+        padding-top: 70px;
+    }
+
+    .visionMessageInner {
+        padding-top: 140px;
+    }
+
+    .visionContentBox {
+        margin-bottom: 80px;
+    }
+
+    .visionContentNum {
+        font-size: 70px;
+        line-height: 70px;
+        transform: translateY(-80%) translateX(-23%);
+    }
+
+    .visionContentBox:nth-child(2n) .visionContentNum {
+        right: unset;
+        transform: translateY(-80%) translateX(-23%);
+    }
+
+    .visionContentTitle {
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    .visionContentDesc {
+        font-size: 14px;
+        line-height: 19px;
+    }
+
+    .visionCommentText h4 {
+        font-size: 35px;
+    }
+}
+
+@media (max-width: 600px) {
+    .visionPledgeSection {
+        background: url("/img/int/int1-sec5-bg-mo.png") no-repeat center center / cover;
+        padding: 126px 0;
+    }
+
+    .visionPledgeTxtBox {
+        text-align: center;
+    }
+
+    .visionPledgeTxtBox img {
+        max-width: 157px;
+    }
+
+    .visionCommentText h4 {
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 500px) {
+    .visionCommentBlock {
+        margin-bottom: 20px;
+    }
+
+    .visionCommentText {
+        width: 100%;
+    }
+}
+
+@media (max-width: 350px) {
+    .visionCommentText h4 {
+        font-size: 20px;
+    }
+}

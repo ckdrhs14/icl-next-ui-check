@@ -1,0 +1,275 @@
+/* ===== Find ID / Reset PW (sh.css .reset-wrapper) ===== */
+.wrapper {
+  overflow: hidden;
+}
+
+/* === Hero === */
+.heroSection {
+  background: url(/img/etc/login_top.png) no-repeat right center / cover;
+}
+
+.heroContent {
+  padding-top: 230px;
+  padding-bottom: 117px;
+  text-align: center;
+}
+
+.heroTitle {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 44px;
+  line-height: 44px;
+  color: #fff;
+}
+
+.heroSub {
+  font-family: var(--font-serif-en);
+  font-weight: 400;
+  font-size: 54px;
+  line-height: 54px;
+  color: #67B5A9;
+  opacity: 0.3;
+}
+
+/* === Form Section === */
+.formSection {
+  background: #fff;
+  min-height: 45vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 180px;
+  padding-bottom: 120px;
+}
+
+.formContainer {
+  width: 500px;
+}
+
+.logo {
+  display: block;
+  margin: 0 auto 82px;
+  width: auto;
+  height: auto;
+  max-width: 300px;
+}
+
+/* Tabs */
+.tabGroup {
+  display: flex;
+  border-bottom: 2px solid #BBBCBA;
+  margin-bottom: 0;
+}
+
+.tabBtn {
+  flex: 1;
+  padding: 16px 0;
+  font-family: var(--font-body);
+  font-size: 22px;
+  font-weight: 400;
+  color: #BBBCBA;
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -2px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.tabBtnActive {
+  color: #042B48;
+  border-bottom-color: #042B48;
+  font-weight: 700;
+}
+
+/* Reset wrapper */
+.resetWrapper {
+  position: relative;
+  padding-top: 38px;
+}
+
+.resetWrapper form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Input box (.reset-wrapper .input_box) */
+.inputBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #BBBCBA;
+  padding: 20px 0;
+}
+
+.inputBox:last-of-type {
+  border-bottom: none;
+}
+
+.inputBox label {
+  font-family: var(--font-body);
+  font-size: 22px;
+  line-height: 22px;
+  color: #333;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.inputBox input {
+  border: 1px solid #BBBCBA;
+  border-radius: 10px;
+  height: 50px;
+  width: 65%;
+  padding-left: 20px;
+  font-family: var(--font-body);
+  font-size: 22px;
+  color: #333;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.inputBox input::placeholder {
+  font-family: var(--font-body);
+  font-size: 22px;
+  line-height: 1;
+  color: #00000049;
+}
+
+.inputBox input:focus {
+  border: 1px solid #67B5A9;
+}
+
+/* Submit button (.login_btn) */
+.submitBtn {
+  border: none;
+  width: 100%;
+  cursor: pointer;
+  transition: 0.4s;
+  border-radius: 7px;
+  background-color: #67B5A9;
+  color: #fff;
+  height: 50px;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 20px;
+  margin-top: 30px;
+}
+
+.submitBtn:hover {
+  filter: brightness(0.8);
+}
+
+.submitBtnDark {
+  background-color: #042B48;
+}
+
+/* Result */
+.resultText {
+  margin-top: 20px;
+  text-align: center;
+  font-family: var(--font-body);
+  font-size: 16px;
+  color: #A48362;
+}
+
+/* === Bottom Section === */
+.bottomSection {
+  position: relative;
+  background: url(/img/background/back_03_2.jpg) no-repeat center center / cover;
+  padding-top: 210px;
+  padding-bottom: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.bottomBgLogo {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translate(-30%, 26%);
+}
+
+.bottomImgBox {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.bottomImgBox img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .formSection {
+    padding-top: 50px;
+    padding-bottom: 70px;
+  }
+
+  .formContainer {
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+
+  .logo {
+    max-width: 260px;
+  }
+
+  .tabBtn {
+    font-size: 18px;
+  }
+
+  .inputBox {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 13px 0;
+  }
+
+  .inputBox input {
+    width: 100%;
+  }
+
+  .inputBox label {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 550px) {
+  .heroSection {
+    background: url(/img/etc/login_top_mo.png) no-repeat left top / cover;
+  }
+
+  .heroContent {
+    padding-top: 89px;
+    padding-bottom: 49px;
+  }
+
+  .heroTitle { font-size: 30px; line-height: 30px; }
+  .heroSub { font-size: 35px; line-height: 35px; }
+
+  .bottomSection {
+    padding-top: 70px;
+    padding-bottom: 90px;
+  }
+}
+
+@media (max-width: 800px) {
+  .bottomBgLogo {
+    transform: translate(-30%, 3%);
+    width: 40%;
+    min-width: 120px;
+  }
+}
+
+@media (max-width: 820px) {
+  .bottomImgBox:first-of-type {
+    max-width: 140px;
+    margin-bottom: 20px;
+  }
+}

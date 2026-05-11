@@ -1,0 +1,468 @@
+/* ===== System (차별화 시스템) Page - intro5 ===== */
+.wrapper {
+    overflow: hidden;
+}
+
+/* === Hero Section (_01) === */
+.heroSection {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 370px 0;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.heroContent {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    text-align: center;
+}
+
+.heroTitGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    text-align: center;
+}
+
+.heroDes {
+}
+
+.heroSub {
+    font-family: var(--font-body);
+    font-size: 52px;
+    font-weight: 500;
+    line-height: 1;
+    color: #fff;
+}
+
+.heroTitle {
+    font-family: var(--font-serif-kr);
+    font-size: 74px;
+    font-weight: 600;
+    line-height: 1;
+    color: #64c0a7;
+}
+
+.heroDivider {
+    width: 44px;
+    height: 2px;
+    background-color: #fff;
+}
+
+.heroDesc {
+    font-family: var(--font-body);
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #fff;
+    text-align: center;
+}
+
+/* === Common Section Styles === */
+.sectionInner {
+    max-width: 1125px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.sectionHeader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    color: #fff;
+    margin-bottom: 90px;
+}
+
+.sectionTitle {
+    font-family: var(--font-body);
+    font-size: 44px;
+    font-weight: 500;
+    line-height: 1.3;
+}
+
+.sectionDesc {
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.5;
+    opacity: 0.5;
+}
+
+.sectionHeaderBlue {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    color: #000;
+    margin-bottom: 90px;
+}
+
+.sectionTitleBlue {
+    font-family: var(--font-body);
+    font-size: 44px;
+    font-weight: 500;
+    line-height: 1.3;
+}
+
+.sectionDescBlue {
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.5;
+    opacity: 0.5;
+}
+
+.teal {
+    color: #67b5a9;
+}
+
+.brown {
+    color: #a48362;
+}
+
+.white {
+    color: #fff;
+}
+
+.brMobile {
+    display: none;
+}
+
+/* === OCT Section (_02) === */
+.octSection {
+    height: inherit;
+    padding: 200px 0;
+    background-color: #000;
+}
+
+.octImages {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.octImages img {
+    max-width: 100%;
+    height: auto;
+}
+
+.octImgFirst {
+    margin-bottom: 60px;
+}
+
+.octImgSecond {
+    margin-bottom: 20px;
+}
+
+.octTextGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.octTextPrimary {
+    text-align: center;
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.5;
+    color: #fff;
+}
+
+.octTextSecondary {
+    text-align: center;
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.5;
+    color: #ffffff77;
+}
+
+/* === Video Section (_03) === */
+.videoSection {
+    height: inherit;
+    padding: 200px 0;
+    background-color: #000000b6;
+}
+
+.simulationVideo {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.simulationVideo video {
+    width: 100%;
+    height: auto;
+}
+
+/* === Gallery Section (_04) === */
+.gallerySection {
+    height: inherit;
+    padding: 200px 0;
+    background-color: #fff;
+}
+
+.gallery {
+    overflow: visible;
+}
+
+.gallerySwiper {
+    overflow: visible;
+}
+
+.gallerySwiper :global(.swiper-wrapper) {
+    overflow: visible;
+}
+
+.gallerySwiper :global(.swiper-slide) {
+    transition:
+        0.4s transform,
+        0.4s opacity;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    transform: scale(0.85);
+    opacity: 0.5;
+}
+
+.gallerySwiper :global(.swiper-slide-active) {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.gallerySwiper :global(.swiper-slide) img {
+    width: 100%;
+    height: auto;
+}
+
+.galleryCaption {
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.5;
+    color: #000;
+    opacity: 0.5;
+    text-align: center;
+}
+
+/* Mobile grid */
+.mobileGrid {
+    display: none;
+}
+
+.mobileGridItem {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+}
+
+.mobileGridItem img {
+    width: 100%;
+    height: auto;
+}
+
+.mobileGridItem p {
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.5;
+    color: #000;
+    opacity: 0.5;
+}
+
+/* === Formula Section (_05) === */
+.formulaSection {
+    position: relative;
+    height: inherit;
+    padding: 200px 0;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.formulaContent {
+    position: relative;
+    z-index: 1;
+    max-width: 1125px;
+    margin: 0 auto;
+}
+
+.formulaSectionTitle {
+    font-family: var(--font-body);
+    font-size: 44px;
+    font-weight: 500;
+    line-height: 1.5;
+    color: #fff;
+    text-align: center;
+}
+
+.formulaImg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.formulaImg img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* === Surgeon Section (_06) === */
+.surgeonSection {
+    height: inherit;
+    padding: 200px 0;
+    background-color: #fff;
+}
+
+.surgeonGrid {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 55px;
+}
+
+.surgeonItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.surgeonItem img {
+    max-width: 100%;
+    height: auto;
+}
+
+.surgeonItem p {
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #000;
+    text-align: center;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 1250px) {
+    .sectionInner {
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .brMobile {
+        display: inline;
+    }
+
+    .sectionHeader,
+    .sectionHeaderBlue {
+        margin-bottom: 70px;
+        gap: 20px;
+    }
+
+    .sectionTitle,
+    .sectionTitleBlue {
+        font-size: 30px;
+        line-height: 40px;
+    }
+
+    .sectionDesc,
+    .sectionDescBlue {
+        font-size: 16px;
+        line-height: 23px;
+    }
+
+    .heroSection,
+    .octSection,
+    .videoSection,
+    .gallerySection,
+    .formulaSection,
+    .surgeonSection {
+        padding: 70px 0;
+    }
+
+    .heroSection {
+        padding: 236px 0;
+    }
+
+    .heroContent {
+        gap: 40px;
+    }
+
+    .heroSub {
+        font-size: 30px;
+        font-weight: 500;
+    }
+
+    .heroTitGroup {
+        gap: 25px;
+    }
+
+    .heroTitle {
+        font-size: 40px;
+        font-weight: 600;
+        line-height: 1.3;
+    }
+
+    .sectionInner {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .octTextPrimary,
+    .octTextSecondary {
+        font-size: 16px;
+    }
+
+    .videoSection .sectionInner {
+        width: 100%;
+    }
+
+    .videoSection .sectionHeader {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 70px;
+    }
+
+    /* Gallery: hide swiper, show grid */
+    .gallery {
+        display: none;
+    }
+
+    .mobileGrid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .formulaSectionTitle {
+        font-size: 30px;
+        line-height: 40px;
+    }
+
+    .surgeonGrid {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        margin-top: 70px;
+    }
+}

@@ -1,26 +1,233 @@
 @import "tailwindcss";
 
+/* ===== Design Tokens ===== */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+    /* Primary */
+    --color-navy: #042b48;
+    --color-navy-dark: #1c2533;
+
+    /* Accent - Teal */
+    --color-teal: #67b5a9;
+    --color-teal-light: #64c0a7;
+
+    /* Accent - Warm */
+    --color-tan: #a48362;
+    --color-tan-light: #dfcbb5;
+    --color-tan-warm: #b79e8a;
+    --color-tan-cream: #e3cfbd;
+
+    /* Neutral */
+    --color-white: #ffffff;
+    --color-black: #000000;
+    --color-gray-dark: #535353;
+    --color-gray-medium: #727272;
+    --color-gray-border: #bbbcba;
+    --color-gray-light: #d9d9d9;
+
+    /* Semantic */
+    --color-text-primary: #535353;
+    --color-text-muted: #727272;
+    --color-bg-dark: #042b48;
+    --color-bg-light: #ffffff;
+
+    /* Gradients */
+    --gradient-gold: linear-gradient(to bottom, #ffffff 16%, #dfcbb5 20%, #a48362 60%);
+    --gradient-warm: linear-gradient(to top, #b79e8a, #e3cfbd);
+    --gradient-navy: linear-gradient(180deg, #000 -15.07%, #042b48 11.86%, #042b48 87.95%, #000 115.25%);
+    --gradient-header-dropdown: linear-gradient(to bottom, #1c2533, #042b48);
+
+    /* Typography */
+    --font-body: "Pretendard", sans-serif;
+    --font-serif-kr: "Noto Serif KR", serif;
+    --font-serif-en: "Noto Serif", serif;
+
+    /* Spacing */
+    --section-padding-y: 120px;
+    --section-padding-x: 40px;
+    --container-max: 1400px;
+    --container-narrow: 1200px;
+
+    /* Transitions */
+    --transition-fast: 0.2s ease;
+    --transition-normal: 0.3s ease;
+    --transition-slow: 0.5s ease;
+
+    /* Z-Index */
+    --z-dropdown: 100;
+    --z-sticky: 1000;
+    --z-overlay: 10000;
+    --z-header: 99999;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* ===== Reset & Base ===== */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--font-body);
+    color: var(--color-black);
+    background: var(--color-white);
+    line-height: 1.5;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+body * {
+    word-break: keep-all;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font: inherit;
+    color: inherit;
+}
+
+/* ===== Utility Classes ===== */
+.pc {
+    display: block;
+}
+.mo {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .pc {
+        display: none;
+    }
+    .mo {
+        display: block;
+    }
+}
+
+/* ===== AOS (Animate On Scroll) ===== */
+[data-aos] {
+    pointer-events: none;
+}
+[data-aos].aos-animate {
+    pointer-events: auto;
+}
+
+/* fade-up */
+[data-aos="fade-up"] {
+    opacity: 0;
+    transform: translateY(40px);
+    transition-property: opacity, transform;
+    transition-timing-function: ease;
+}
+[data-aos="fade-up"].aos-animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* fade-down */
+[data-aos="fade-down"] {
+    opacity: 0;
+    transform: translateY(-40px);
+    transition-property: opacity, transform;
+    transition-timing-function: ease;
+}
+[data-aos="fade-down"].aos-animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* fade-left */
+[data-aos="fade-left"] {
+    opacity: 0;
+    transform: translateX(40px);
+    transition-property: opacity, transform;
+    transition-timing-function: ease;
+}
+[data-aos="fade-left"].aos-animate {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* fade-right */
+[data-aos="fade-right"] {
+    opacity: 0;
+    transform: translateX(-40px);
+    transition-property: opacity, transform;
+    transition-timing-function: ease;
+}
+[data-aos="fade-right"].aos-animate {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* fade (no movement) */
+[data-aos="fade"] {
+    opacity: 0;
+    transition-property: opacity;
+    transition-timing-function: ease;
+}
+[data-aos="fade"].aos-animate {
+    opacity: 1;
+}
+
+/* zoom-in */
+[data-aos="zoom-in"] {
+    opacity: 0;
+    transform: scale(0.9);
+    transition-property: opacity, transform;
+    transition-timing-function: ease;
+}
+[data-aos="zoom-in"].aos-animate {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Duration support via data-aos-duration */
+[data-aos][data-aos-duration="400"] {
+    transition-duration: 400ms;
+}
+[data-aos][data-aos-duration="600"] {
+    transition-duration: 600ms;
+}
+[data-aos][data-aos-duration="800"] {
+    transition-duration: 800ms;
+}
+[data-aos][data-aos-duration="1000"] {
+    transition-duration: 1000ms;
+}
+[data-aos][data-aos-duration="1200"] {
+    transition-duration: 1200ms;
+}
+[data-aos][data-aos-duration="1500"] {
+    transition-duration: 1500ms;
+}
+
+/* Default duration */
+[data-aos] {
+    transition-duration: 800ms;
 }

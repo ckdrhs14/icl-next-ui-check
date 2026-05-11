@@ -1,0 +1,76 @@
+{
+    "layout": {
+        "siteTitle": "닥터ICL안과의원",
+        "siteDesc": "강남안과, 강남역안과 1번출구, 렌즈삽입술, ICL, 노안백내장, 닥터아이씨엘안과",
+        "siteKeywords": "강남안과, 강남역안과, 렌즈삽입술, ICL, 이동훈, 닥터아이씨엘안과"
+    },
+    "header": {
+        "menu": {
+            "doctorIcl": "닥터 ICL",
+            "maestro": "마에스트로 ICL",
+            "iclDeepDive": "ICL 집중탐구",
+            "highMyopia": "고도근시 ICL",
+            "specialConditions": "특수질환 ICL",
+            "presbyopia": "노안교정",
+            "community": "고객센터"
+        },
+        "submenu": {
+            "vision": "닥터 ICL Vision",
+            "doctor": "닥터 ICL 이동훈",
+            "system": "차별화 시스템",
+            "equipment": "첨단장비",
+            "clinicInfo": "진료 안내",
+            "location": "오시는 길",
+            "maestroIcl": "ICL 마에스트로",
+            "maestroSelection": "마에스트로 선택",
+            "maestroDiagnosis": "마에스트로 진단",
+            "maestroSurgery": "마에스트로 수술",
+            "maestroReviews": "마에스트로 후기",
+            "evoIcl": "ICL Evo+ICL",
+            "iclDefinition": "ICL 정의",
+            "iclAdvantages": "ICL 특장점",
+            "iclFaq": "ICL FAQ",
+            "myopiaClinic": "고도근시 클리닉",
+            "myopiaGlaucoma": "고도근시 녹내장",
+            "myopiaRetina": "고도근시 망막",
+            "myopiaCataract": "고도근시 백내장",
+            "myopiaIcl": "고도근시 렌즈삽입술(ICL)",
+            "myopiaCare": "고도근시 관리",
+            "postLasik": "라식 후 재수술",
+            "keratoconus": "원추각막 ICL",
+            "avellino": "아벨리노 ICL",
+            "vivaIcl": "비바 ICL",
+            "presbyopiaCataract": "노안 ∙ 백내장",
+            "column": "닥터 ICL 칼럼",
+            "hospitalNews": "병원소식",
+            "reserve": "예약",
+            "reviews": "수술후기",
+            "youtube": "유튜브"
+        },
+        "quick": {
+            "reserve": "빠른 예약",
+            "location": "오시는 길",
+            "clinicHours": "진료 시간",
+            "map": "오시는 길 / 진료 시간",
+            "call": "전화상담",
+            "kakao": "카톡상담",
+            "naver": "네이버예약"
+        },
+        "login": "로그인",
+        "clinicHours": "진료 시간안내",
+        "lang": {
+            "kr": "KR",
+            "en": "EN"
+        }
+    },
+    "footer": {
+        "address": "서울특별시 강남구 강남대로 390, 20층(역삼동, 미진프라자)",
+        "ceo": "대표 : 이동훈",
+        "bizNo": "사업자등록번호 : 523-92-01735",
+        "tel": "전화번호 : 02.566.1215",
+        "copyright": "COPYRIGHT 2023 닥터 ICL 안과 All RIGHTS RESERVED",
+        "nonCovered": "비급여항목",
+        "terms": "이용약관",
+        "privacy": "개인정보처리방침"
+    }
+}

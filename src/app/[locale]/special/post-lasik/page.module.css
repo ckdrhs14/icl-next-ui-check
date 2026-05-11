@@ -1,0 +1,248 @@
+/* ===== Post-LASIK (disease1.php / icl1-wrapper) Page ===== */
+.wrapper {
+  padding-top: 107px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Background image */
+.bgWrap {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100vh;
+}
+
+.bgWrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+}
+
+/* Shared */
+.contInner {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+}
+
+.cBr {
+  font-family: var(--font-serif-en);
+  font-size: 54px;
+}
+
+.cMt {
+  font-family: var(--font-serif-en);
+  font-size: 54px;
+  color: #67B5A9;
+}
+
+.fzUp {
+  font-family: var(--font-serif-en);
+  font-size: 54px;
+  color: #fff;
+}
+
+/* === Section 1: 라식 수술 후 ICL로 시력 회복 === */
+.sec1 {
+  height: inherit;
+  padding-top: 87px;
+  padding-bottom: 144px;
+}
+
+.titGroup {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 44px;
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.imgBox {
+  text-align: center;
+}
+
+.imgBox img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* === Section 2: ICL을 선호하는 이유 === */
+.sec2 {
+  height: inherit;
+  background: url(/img/plus/icl3_sec7_bg.jpg) no-repeat center center / cover;
+  padding: 129px 0;
+}
+
+.sec2TitGroup {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 44px;
+  text-align: center;
+  margin-bottom: 70px;
+  color: #042B48;
+}
+
+.sec2TitGroup p {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 32px;
+  color: #fff;
+  margin-top: 40px;
+}
+
+.sec2ContGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.sec2TxtBox {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 32px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 24px 0;
+  background-color: #042B48;
+  border-radius: 10px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* === Section 3: 라식 수술 후 ICL 수술의 특장점 === */
+.sec3 {
+  position: relative;
+  height: inherit;
+  background-color: #042B48;
+  padding-top: 129px;
+  padding-bottom: 274px;
+}
+
+.sec3BgImg {
+  position: absolute;
+  left: 51%;
+  top: 73%;
+  transform: translate(-50%, -50%);
+  min-width: 750px;
+}
+
+.sec3BgImg img {
+  max-width: 100%;
+  height: auto;
+}
+
+.sec3TitGroup {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 44px;
+  text-align: center;
+  margin-bottom: 187px;
+  color: #fff;
+}
+
+.sec3TxtBox {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--font-body);
+  font-size: 22px;
+  line-height: 32px;
+  color: #fff;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 820px) {
+  .sec2 {
+    background: url(/img/plus/icl3_sec7_bg_mo.png) no-repeat center bottom / cover;
+  }
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    padding-top: 0;
+  }
+
+  .sec1 {
+    padding-top: 30px;
+    padding-bottom: 80px;
+  }
+
+  .titGroup {
+    font-size: 30px;
+    line-height: 40px;
+  }
+
+  .cBr,
+  .cMt,
+  .fzUp {
+    font-size: 30px;
+    line-height: 40px;
+  }
+
+  .imgBox {
+    padding-top: 50px;
+  }
+
+  .sec2 {
+    padding-top: 85px;
+    padding-bottom: 77px;
+  }
+
+  .sec2TitGroup {
+    font-size: 30px;
+    line-height: 40px;
+    margin-bottom: 30px;
+  }
+
+  .sec2TitGroup p {
+    margin-top: 30px;
+  }
+
+  .sec2TxtBox {
+    text-align: center;
+    padding: 49px 19px;
+    width: calc(100% - 38px);
+  }
+
+  .sec3 {
+    padding-top: 75px;
+    padding-bottom: 67px;
+  }
+
+  .sec3TitGroup {
+    font-size: 30px;
+    line-height: 40px;
+    margin-bottom: 37px;
+  }
+
+  .sec3TxtBox {
+    width: 100%;
+    font-size: 16px;
+    line-height: 25px;
+  }
+
+  .sec3BgImg {
+    top: 58%;
+    min-width: 500px;
+  }
+}
+
+@media (max-width: 300px) {
+  .sec2TxtBox {
+    font-size: 18px;
+  }
+}

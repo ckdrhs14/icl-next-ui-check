@@ -1,0 +1,207 @@
+/* ===== Legal Pages (privacy, terms, non-covered) ===== */
+.wrapper {
+  overflow: hidden;
+}
+
+/* === Hero === */
+.heroSection {
+  background: url(/img/etc/login_top.png) no-repeat right center / cover;
+}
+
+.heroContent {
+  padding-top: 230px;
+  padding-bottom: 117px;
+  text-align: center;
+}
+
+.heroTitle {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 44px;
+  line-height: 44px;
+  color: #fff;
+}
+
+.heroSub {
+  font-family: var(--font-serif-en);
+  font-weight: 400;
+  font-size: 54px;
+  line-height: 54px;
+  color: #67B5A9;
+  opacity: 0.3;
+}
+
+/* === Content === */
+.contentSection {
+  background: #fff;
+  padding: 120px 20px 160px;
+}
+
+.contentInner {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.pageTitle {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 32px;
+  color: #042B48;
+  margin-bottom: 50px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #042B48;
+}
+
+/* Index box */
+.indexBox {
+  background: #f5f5f5;
+  border-radius: 10px;
+  padding: 30px 40px;
+  margin-bottom: 50px;
+}
+
+.indexBox p {
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 30px;
+  color: #555;
+}
+
+/* Tabs (non-covered) */
+.tabGroup {
+  display: flex;
+  border-bottom: 2px solid #BBBCBA;
+  margin-bottom: 40px;
+}
+
+.tabBtn {
+  flex: 1;
+  padding: 16px 0;
+  font-family: var(--font-body);
+  font-size: 20px;
+  font-weight: 400;
+  color: #BBBCBA;
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -2px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.tabBtnActive {
+  color: #042B48;
+  border-bottom-color: #042B48;
+  font-weight: 700;
+}
+
+/* Date text */
+.dateText {
+  margin-top: 40px;
+  color: #999;
+  font-size: 14px;
+}
+
+/* Text content */
+.textBox {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 28px;
+  color: #333;
+}
+
+.textBox h4 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #042B48;
+  margin-top: 40px;
+  margin-bottom: 14px;
+}
+
+.textBox p {
+  margin-bottom: 16px;
+}
+
+/* Table (non-covered) */
+.tableTitle {
+  font-family: var(--font-body);
+  font-size: 22px;
+  font-weight: 700;
+  color: #042B48;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--font-body);
+  font-size: 15px;
+  margin-bottom: 40px;
+}
+
+.table thead th {
+  background: #042B48;
+  color: #fff;
+  padding: 14px 16px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.table tbody td {
+  padding: 14px 16px;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+  color: #333;
+}
+
+.table tbody tr:hover {
+  background: #f9f9f9;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .contentSection {
+    padding: 60px 16px 80px;
+  }
+
+  .pageTitle {
+    font-size: 24px;
+  }
+
+  .textBox {
+    font-size: 15px;
+    line-height: 26px;
+  }
+
+  .textBox h4 {
+    font-size: 18px;
+  }
+
+  .table {
+    font-size: 13px;
+  }
+
+  .table thead th,
+  .table tbody td {
+    padding: 10px 8px;
+  }
+
+  .tableTitle {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 550px) {
+  .heroSection {
+    background: url(/img/etc/login_top_mo.png) no-repeat left top / cover;
+  }
+
+  .heroContent {
+    padding-top: 89px;
+    padding-bottom: 49px;
+  }
+
+  .heroTitle { font-size: 30px; line-height: 30px; }
+  .heroSub { font-size: 44px; line-height: 44px; }
+}

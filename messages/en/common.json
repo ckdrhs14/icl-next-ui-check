@@ -1,0 +1,76 @@
+{
+  "layout": {
+    "siteTitle": "Dr. ICL Eye Clinic",
+    "siteDesc": "Gangnam Eye Clinic, ICL Lens Implantation, Presbyopia & Cataract, Dr. ICL",
+    "siteKeywords": "Gangnam Eye Clinic, ICL, Lens Implantation, Lee Dong Hoon, Dr. ICL"
+  },
+  "header": {
+    "menu": {
+      "doctorIcl": "Dr. ICL",
+      "maestro": "MAESTRO ICL",
+      "iclDeepDive": "ICL In-Depth Exploration",
+      "highMyopia": "Rare Conditions ICL",
+      "specialConditions": "Rare Conditions ICL",
+      "presbyopia": "Presbyopia Correction",
+      "community": "Customer Center"
+    },
+    "submenu": {
+      "vision": "Dr. ICL Vision",
+      "doctor": "Dr. ICL LEE DONG HOON",
+      "system": "Differentiated System",
+      "equipment": "Advanced Equipment",
+      "clinicInfo": "Information",
+      "location": "Directions",
+      "maestroIcl": "ICL MAESTRO",
+      "maestroSelection": "Choosing MAESTRO",
+      "maestroDiagnosis": "MAESTRO Diagnosis",
+      "maestroSurgery": "MAESTRO Surgery",
+      "maestroReviews": "MAESTRO Reviews",
+      "evoIcl": "ICL Evo+ICL",
+      "iclDefinition": "ICL Overview",
+      "iclAdvantages": "ICL Benefits",
+      "iclFaq": "ICL FAQ",
+      "myopiaClinic": "High Myopia Clinic",
+      "myopiaGlaucoma": "High Myopia Glaucoma",
+      "myopiaRetina": "High Myopia Retina",
+      "myopiaCataract": "High Myopia Cataract",
+      "myopiaIcl": "High Myopia ICL",
+      "myopiaCare": "High Myopia Care",
+      "postLasik": "LASIK Reoperation",
+      "keratoconus": "Keratoconus ICL",
+      "avellino": "Avellino ICL",
+      "vivaIcl": "Presbyopia ICL",
+      "presbyopiaCataract": "Presbyopia & Cataract",
+      "column": "Dr. ICL column",
+      "hospitalNews": "Notice",
+      "reserve": "Reservations",
+      "reviews": "Surgery Reviews",
+      "youtube": "YouTube"
+    },
+    "quick": {
+      "reserve": "Quick Reservation",
+      "location": "Location",
+      "clinicHours": "Clinic Hours",
+      "map": "Location / Clinic Hours",
+      "call": "Phone Inquiry",
+      "kakao": "KakaoTalk Inquiry",
+      "naver": "Naver Booking"
+    },
+    "login": "Login",
+    "clinicHours": "Clinic Hours",
+    "lang": {
+      "kr": "KR",
+      "en": "EN"
+    }
+  },
+  "footer": {
+    "address": "390 Gangnam-daero, Gangnam-gu, Seoul, 20F, Mijin Plaza",
+    "ceo": "Representative: LEE DONG HOON",
+    "bizNo": "Business Registration No.: 523-92-01735",
+    "tel": "Tel: 02-566-1215",
+    "copyright": "COPYRIGHT 2023 DR.ICL Eye Clinic, All RIGHTS RESERVED",
+    "nonCovered": "Non-insurance Items",
+    "terms": "Terms of Use",
+    "privacy": "Privacy Policy"
+  }
+}

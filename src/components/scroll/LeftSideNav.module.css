@@ -1,0 +1,99 @@
+/* ===== Left Side Navigation (PHP: .wrapper-sub.l_f) ===== */
+.nav {
+  position: fixed;
+  left: 0;
+  top: 330px;
+  padding-left: 78px;
+  box-sizing: border-box;
+  z-index: 998;
+  transition-duration: 0.2s;
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.item {
+  position: relative;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 6px 0;
+  background: none;
+  border: none;
+  font: inherit;
+  transition: all 0.2s;
+}
+
+/* PHP: .wrapper-sub.l_f .l_fix li em */
+.label {
+  font-size: 16px;
+  font-weight: 400;
+  font-style: normal;
+  font-family: 'Pretendard', sans-serif;
+  color: #00000057;
+  margin-right: 8px;
+  transition: color 0.2s;
+}
+
+/* PHP: .wrapper-sub.l_f .l_fix li span — green bullet */
+.dot {
+  display: block;
+  width: 9px;
+  height: 9px;
+  background-color: #67B5A9;
+  border-radius: 50%;
+  opacity: 0;
+  flex-shrink: 0;
+  transition: opacity 0.2s;
+}
+
+/* Active: .wrapper-sub.l_f .l_fix li.on em */
+.active .label {
+  color: #000;
+}
+
+/* Active: .wrapper-sub.l_f .l_fix li.on span */
+.active .dot {
+  opacity: 1;
+}
+
+/* Inverted (dark background): .wrapper-sub.l_f.bgC-nv */
+.inverted .label {
+  color: #ffffffa1;
+}
+
+.inverted .active .label {
+  color: #fff;
+}
+
+.inverted .dot {
+  background-color: #67B5A9;
+}
+
+/* End state */
+.ended {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Responsive: hide at 1300px */
+@media screen and (max-width: 1300px) {
+  .nav {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1600px) {
+  .nav {
+    padding-left: 2.5%;
+  }
+}

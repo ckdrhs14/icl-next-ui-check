@@ -1,0 +1,439 @@
+/* ===== Auth Register Page (join-wrapper from sh.css) ===== */
+.wrapper {
+  overflow: hidden;
+}
+
+/* === Hero Section === */
+.heroSection {
+  background: url(/img/etc/login_top.png) no-repeat right center / cover;
+}
+
+.heroContent {
+  padding-top: 230px;
+  padding-bottom: 117px;
+  text-align: center;
+}
+
+.heroTitle {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 44px;
+  line-height: 44px;
+  color: #fff;
+}
+
+.heroSub {
+  font-family: var(--font-serif-en);
+  font-weight: 400;
+  font-size: 54px;
+  line-height: 54px;
+  color: #67B5A9;
+  opacity: 0.3;
+}
+
+/* === Form Section (join-wrapper .cont) === */
+.formSection {
+  background: #fff;
+  padding-top: 180px;
+  padding-bottom: 208px;
+}
+
+.formContainer {
+  max-width: 580px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Logo (join-wrapper .logo_bx) */
+.logo {
+  display: block;
+  margin: 0 auto 82px;
+  width: auto;
+  height: auto;
+  max-width: 300px;
+}
+
+/* Privacy (join-wrapper .read_group) */
+.privacyGroup {
+  margin-bottom: 0;
+}
+
+.privacyTitle {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 30px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.required {
+  color: #67B5A9;
+}
+
+/* Privacy box (join-wrapper .read_box) */
+.privacyBox {
+  max-height: 150px;
+  overflow: scroll;
+  border: 1px solid #BBBCBA;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 14px;
+}
+
+.privacyBox p {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.privacyBox p:last-child {
+  margin-bottom: 0;
+}
+
+.privacyCheck {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.privacyCheck label {
+  font-family: var(--font-body);
+  font-size: 16px;
+  color: #333;
+  cursor: pointer;
+}
+
+.checkbox {
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  border: 1px solid #cccfdb;
+  accent-color: #07f;
+  cursor: pointer;
+}
+
+/* Required note (join-wrapper .join_group .br-txt) */
+.requiredNote {
+  position: relative;
+  text-align: right;
+  margin-top: 50px;
+  margin-bottom: 10px;
+  font-family: var(--font-body);
+  font-size: 16px;
+  color: #67B5A9;
+}
+
+.requiredDot {
+  position: relative;
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  background-color: #A48362;
+  border-radius: 3px;
+  vertical-align: super;
+  margin-left: 2px;
+}
+
+/* Form (join-wrapper .join_group) */
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Field row (join-wrapper .join_group .input_box) */
+.fieldRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid #BBBCBA;
+  padding: 20px 0;
+}
+
+/* Label (join-wrapper .join_group label) */
+.fieldLabel {
+  position: relative;
+  font-family: var(--font-body);
+  font-size: 22px;
+  line-height: 22px;
+  font-weight: 400;
+  color: #333;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* Input (join-wrapper .join_group input[type="text"]) */
+.fieldInput {
+  border: 1px solid #BBBCBA;
+  border-radius: 10px;
+  height: 50px;
+  width: 65%;
+  padding-left: 20px;
+  font-family: var(--font-body);
+  font-size: 22px;
+  color: #333;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.fieldInput::placeholder {
+  font-family: var(--font-body);
+  font-size: 22px;
+  line-height: 1;
+  color: #00000049;
+}
+
+.fieldInput:focus {
+  border: 1px solid #67B5A9;
+}
+
+/* Multi-field row (select_box .select_wrap) */
+.fieldMulti {
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.fieldMulti .fieldInput {
+  width: 45%;
+}
+
+/* Select (join-wrapper .join_group .select_box select) */
+.fieldSelect {
+  width: 45%;
+  border: 1px solid #BBBCBA;
+  border-radius: 10px;
+  height: 52px;
+  font-family: var(--font-body);
+  font-size: 16px;
+  color: #333;
+  padding: 0 10px;
+  outline: none;
+  cursor: pointer;
+  box-sizing: border-box;
+  background: #fff;
+}
+
+.atSign {
+  font-size: 18px;
+  color: #999;
+  flex-shrink: 0;
+}
+
+.dateUnit {
+  font-family: var(--font-body);
+  font-size: 16px;
+  color: #333;
+  flex-shrink: 0;
+}
+
+/* Check group (join-wrapper .join_group .check-group) */
+.optGroup {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  border-top: 1px solid #BBBCBA;
+  padding: 20px 0;
+}
+
+.optItem {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.optItem label {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 16px;
+  color: #333;
+  cursor: pointer;
+}
+
+/* Submit (login_btn) */
+.submitBtn {
+  border: none;
+  width: 100%;
+  max-width: 400px;
+  cursor: pointer;
+  transition: 0.4s;
+  border-radius: 7px;
+  background-color: #67B5A9;
+  color: #fff;
+  height: 50px;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 20px;
+  margin: 30px auto 0;
+  display: block;
+}
+
+.submitBtn:hover {
+  filter: brightness(0.8);
+}
+
+.submitBtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Success */
+.successBox {
+  text-align: center;
+  padding: 80px 0;
+}
+
+.successBox h3 {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 26px;
+  color: #042B48;
+  margin-bottom: 16px;
+}
+
+.successBox p {
+  font-family: var(--font-body);
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.loginLink {
+  display: inline-block;
+  padding: 12px 40px;
+  background: #67B5A9;
+  border-radius: 7px;
+  color: #fff;
+  font-family: var(--font-body);
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.loginLink:hover {
+  filter: brightness(0.8);
+}
+
+/* === Bottom Section (mem_sub_common) === */
+.bottomSection {
+  position: relative;
+  background: url(/img/background/back_03_2.jpg) no-repeat center center / cover;
+  padding-top: 210px;
+  padding-bottom: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.bottomBgLogo {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translate(-30%, 26%);
+}
+
+.bottomImgBox {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.bottomImgBox img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ===== Responsive (max-width: 768px) ===== */
+@media (max-width: 768px) {
+  .formSection {
+    padding-top: 50px;
+    padding-bottom: 74px;
+  }
+
+  .logo {
+    max-width: 260px;
+    margin-bottom: 50px;
+  }
+
+  .privacyTitle {
+    font-size: 16px;
+    line-height: 16px;
+  }
+
+  .privacyBox p {
+    font-size: 14px;
+  }
+
+  .requiredNote {
+    font-size: 14px;
+  }
+
+  .fieldRow {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+    padding: 13px 0;
+    padding-bottom: 30px;
+  }
+
+  .fieldInput {
+    width: calc(100% - 20px);
+  }
+
+  .fieldLabel {
+    font-size: 20px;
+    line-height: 16px;
+  }
+
+  .fieldMulti {
+    width: 100%;
+    gap: 10px;
+  }
+
+  .optGroup {
+    justify-content: center;
+    padding-top: 10px;
+    padding-bottom: 40px;
+  }
+}
+
+@media (max-width: 550px) {
+  .heroSection {
+    background: url(/img/etc/login_top_mo.png) no-repeat left top / cover;
+  }
+
+  .heroContent {
+    padding-top: 89px;
+    padding-bottom: 49px;
+  }
+
+  .heroTitle { font-size: 30px; line-height: 30px; }
+  .heroSub { font-size: 44px; line-height: 44px; }
+
+  .bottomSection {
+    padding-top: 70px;
+    padding-bottom: 90px;
+  }
+}
+
+@media (max-width: 800px) {
+  .bottomBgLogo {
+    transform: translate(-30%, 3%);
+    width: 40%;
+    min-width: 120px;
+  }
+}
+
+@media (max-width: 820px) {
+  .bottomImgBox:first-of-type {
+    max-width: 140px;
+    margin-bottom: 20px;
+  }
+}

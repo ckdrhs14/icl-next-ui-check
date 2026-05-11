@@ -1,0 +1,294 @@
+/* ===== Equipment (첨단장비) Page - equip ===== */
+.wrapper {
+  overflow: hidden;
+}
+
+/* === Hero Section (top-login) === */
+.heroSection {
+  position: relative;
+  background: url(/img/etc/login_top.png) no-repeat right center / cover;
+}
+
+.heroContent {
+  padding-top: 230px;
+  padding-bottom: 117px;
+  text-align: center;
+}
+
+.heroTitle {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 44px;
+  line-height: 44px;
+  color: #fff;
+  text-align: center;
+}
+
+.heroSub {
+  font-family: var(--font-serif-en);
+  font-weight: 400;
+  font-size: 54px;
+  line-height: 54px;
+  color: #67B5A9;
+  opacity: 0.3;
+  text-align: center;
+}
+
+/* === Section 1: Equipment List === */
+.sec1 {
+  height: inherit;
+  padding-top: 137px;
+  padding-bottom: 94px;
+}
+
+.sectionInner {
+  max-width: 1125px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.sectionTit {
+  font-family: var(--font-body);
+  text-align: center;
+  font-size: 16px;
+  line-height: 23px;
+}
+
+.sectionTitH3 {
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 57px;
+  margin-bottom: 30px;
+}
+
+.teal {
+  color: #67B5A9;
+}
+
+.brown {
+  color: #A48362;
+}
+
+.brDesktop {
+  display: inline;
+}
+
+.brMobile {
+  display: none;
+}
+
+.equipList {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  margin-top: 100px;
+}
+
+/* === Equipment Box === */
+.equipBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+}
+
+.equipImgBox {
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.equipImgBox img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.numBox {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 40px;
+  height: 40px;
+  background: #64C0A7;
+  border-radius: 0 0 20px 0;
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 23px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.numBoxBrown {
+  background-color: #A48362;
+}
+
+.desBox {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  width: 45%;
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 23px;
+}
+
+.desBoxH4 {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 37px;
+  white-space: nowrap;
+}
+
+.desBoxLine {
+  width: 100%;
+  height: 5px;
+  background-color: #D9D9D9;
+  position: relative;
+}
+
+.desBoxLine::after {
+  content: "";
+  position: absolute;
+  display: block;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background-color: #64C0A7;
+  width: 150px;
+}
+
+.desBoxLineBrown::after {
+  background-color: #A48362;
+}
+
+.desBoxMedium {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 27px;
+}
+
+.desBoxDesc {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 23px;
+}
+
+/* === Section 2: Cleaning System === */
+.sec2 {
+  height: inherit;
+  padding-bottom: 229px;
+}
+
+.sec2TitH3 {
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 57px;
+  margin-bottom: 30px;
+}
+
+.sec2List {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  margin-top: 100px;
+}
+
+/* === Bottom Section (mem_sub_common) === */
+.bottomSection {
+  position: relative;
+  background: url(/img/background/back_03_2.jpg) no-repeat center center / cover;
+  padding: 120px 0;
+  text-align: center;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 1250px) {
+  .sectionInner {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .sectionTitH3,
+  .sec2TitH3 {
+    font-size: 35px;
+    line-height: 45px;
+    margin-bottom: 20px;
+  }
+
+  .equipList,
+  .sec2List {
+    margin-top: 70px;
+  }
+
+  .sec2 {
+    padding-bottom: 100px;
+  }
+
+  .equipBox {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .desBox {
+    width: 100%;
+  }
+
+  .desBoxH4 {
+    white-space: normal;
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 768px) {
+  .brMobile {
+    display: inline;
+  }
+
+  .brDesktop {
+    display: none;
+  }
+}
+
+@media (max-width: 550px) {
+  .heroSection {
+    background-image: url(/img/etc/login_top_mo.png);
+    background-position: left top;
+  }
+
+  .heroContent {
+    padding-top: 89px;
+    padding-bottom: 49px;
+  }
+
+  .heroTitle {
+    font-size: 30px;
+    line-height: 30px;
+  }
+
+  .heroSub {
+    font-size: 44px;
+    line-height: 44px;
+  }
+}
+
+@media (max-width: 290px) {
+  .heroSub {
+    font-size: 33px;
+  }
+}
+
+@media (max-width: 350px) {
+  .desBoxH4 {
+    font-size: 22px;
+    line-height: 1.5;
+  }
+
+  .desBox {
+    gap: 10px;
+  }
+}

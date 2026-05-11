@@ -1,0 +1,447 @@
+/* ===== Community YouTube (유튜브) Page ===== */
+.wrapper {
+  overflow: hidden;
+}
+
+/* === Hero Section (top-login) === */
+.heroSection {
+  background: url(/img/etc/login_top.png) no-repeat right center / cover;
+}
+
+.heroContent {
+  padding-top: 230px;
+  padding-bottom: 117px;
+  text-align: center;
+}
+
+.heroTitle {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 44px;
+  line-height: 44px;
+  color: #fff;
+}
+
+.heroSub {
+  font-family: var(--font-serif-en);
+  font-weight: 400;
+  font-size: 54px;
+  line-height: 54px;
+  color: #67B5A9;
+  opacity: 0.3;
+}
+
+/* === Featured Video Section (yutube-sec3) === */
+.featuredSection {
+  position: relative;
+  background-image: url(/img/youtube/yutube-sec2_bg.png);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 140px 0 40px 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.featuredInner {
+  max-width: 1125px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.featuredLabel {
+  color: #67B5A9;
+  text-align: center;
+  font-family: var(--font-body);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 100%;
+}
+
+.featuredTitle {
+  margin-top: 14px;
+  color: #042B48;
+  text-align: center;
+  font-family: 'GmarketSansMedium', var(--font-body);
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.featuredVideoBox {
+  max-width: 1020px;
+  margin: 30px auto 0;
+  width: 100%;
+  height: 516px;
+  background-color: #333;
+  border-radius: 28px;
+  border: 4px solid #0D325C;
+  overflow: hidden;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.featuredVideoBox iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.featuredBottom {
+  margin-top: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.featuredBottom > div {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.ytLogoBox {
+  flex-shrink: 0;
+}
+
+.ytLogoBox img {
+  height: auto;
+}
+
+.featuredDesc {
+  color: #333;
+  font-family: var(--font-body);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: -0.96px;
+}
+
+.featuredDescBold {
+  color: #67B5A9;
+}
+
+.ytLink {
+  color: #fff;
+  text-align: center;
+  font-family: var(--font-body);
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 120%;
+  letter-spacing: -1.04px;
+  padding: 13px 32px;
+  box-sizing: border-box;
+  background-color: #67B5A9;
+  display: flex;
+  gap: 25px;
+  border-radius: 130px;
+  align-items: center;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.ytLink p {
+  color: #fff;
+}
+
+/* Animated side images */
+.aniImgLeft {
+  position: absolute;
+  top: 20%;
+  left: 5%;
+  z-index: 0;
+  animation: shake 1.5s infinite linear;
+  animation-iteration-count: 2;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+.aniImgRight {
+  position: absolute;
+  bottom: 20%;
+  right: 5%;
+  z-index: 0;
+  animation: shake2 1.5s infinite linear;
+  animation-iteration-count: 2;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+.aniImgLeft img,
+.aniImgRight img {
+  max-width: 100%;
+  height: auto;
+}
+
+@keyframes shake {
+  0% { transform: rotateX(0deg) rotateY(0deg) translateX(0) rotate(0deg); }
+  25% { transform: rotateX(30deg) rotateY(60deg) translateX(-40px) rotate(-10deg); }
+  50% { transform: rotateX(60deg) rotateY(120deg) translateX(0) rotate(0deg); }
+  75% { transform: rotateX(30deg) rotateY(60deg) translateX(40px) rotate(10deg); }
+  100% { transform: rotateX(0deg) rotateY(0deg) translateX(0) rotate(0deg); }
+}
+
+@keyframes shake2 {
+  0% { transform: rotateX(0deg) rotateY(0deg) translateX(0) rotate(0deg); }
+  25% { transform: rotateX(30deg) rotateY(60deg) translateX(40px) rotate(10deg); }
+  50% { transform: rotateX(60deg) rotateY(120deg) translateX(0) rotate(0deg); }
+  75% { transform: rotateX(30deg) rotateY(60deg) translateX(-40px) rotate(-10deg); }
+  100% { transform: rotateX(0deg) rotateY(0deg) translateX(0) rotate(0deg); }
+}
+
+/* === Video Grid Section (yutube-sec1) === */
+.gridSection {
+  padding: 40px 0 90px 0;
+  box-sizing: border-box;
+  height: inherit;
+}
+
+.sectionInner {
+  max-width: 1125px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.gridBox {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.videoBox {
+  overflow: hidden;
+  width: 100%;
+  aspect-ratio: 16 / 11;
+  border-radius: 10px;
+  border: 1px solid #BBBCBA;
+}
+
+.videoWrap {
+  background-color: #D9D9D9;
+  display: block;
+  height: 71%;
+  width: 100%;
+}
+
+.videoWrap iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.videoTxt {
+  height: 29%;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.videoTit h5 {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 32px;
+}
+
+.videoDate p {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 23px;
+  color: #BBBCBA;
+}
+
+/* === Pagination (notice_pag) === */
+.pagination {
+  display: flex;
+  gap: 53px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.pagBtn {
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.pagBtn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.pagCurrent {
+  font-family: var(--font-body);
+  font-size: 16px;
+  color: #333;
+}
+
+/* === Bottom Section (mem_sub_common) === */
+.bottomSection {
+  position: relative;
+  background: url(/img/background/back_03_2.jpg) no-repeat center center / cover;
+  padding-top: 210px;
+  padding-bottom: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.bottomBgLogo {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translate(-30%, 26%);
+}
+
+.bottomImgBox {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.bottomImgBox img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 1020px) {
+  .featuredVideoBox {
+    max-width: 560px;
+    height: 350px;
+  }
+
+  .featuredDesc {
+    font-size: 18px;
+  }
+
+  .ytLink {
+    font-size: 20px;
+    padding: 12px 24px;
+    gap: 10px;
+  }
+
+  .aniImgLeft,
+  .aniImgRight {
+    display: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .gridBox {
+    grid-template-columns: 1fr;
+  }
+
+  .gridSection {
+    padding-top: 65px;
+    padding-bottom: 56px;
+  }
+}
+
+@media (max-width: 820px) {
+  .bottomImgBox:first-of-type {
+    max-width: 140px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 800px) {
+  .bottomBgLogo {
+    transform: translate(-30%, 3%);
+    width: 40%;
+    min-width: 120px;
+  }
+}
+
+@media (max-width: 768px) {
+  .featuredLabel {
+    font-size: 15px;
+  }
+
+  .featuredTitle {
+    font-size: 18px;
+  }
+
+  .featuredSection {
+    background-image: url(/img/youtube/yutube-sec2_bg_mo.png);
+    padding: 94px 0 42px 0;
+  }
+
+  .featuredVideoBox {
+    width: 90%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
+
+  .featuredBottom {
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+  }
+
+  .featuredBottom > div {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .featuredDesc {
+    text-align: center;
+    font-size: 16px;
+  }
+
+  .ytLink {
+    font-size: 18px;
+    padding: 18px 30px;
+  }
+
+  .ytLogo {
+    max-width: 50px;
+  }
+}
+
+@media (max-width: 550px) {
+  .heroSection {
+    background: url(/img/etc/login_top_mo.png) no-repeat left top / cover;
+  }
+
+  .heroContent {
+    padding-top: 89px;
+    padding-bottom: 49px;
+  }
+
+  .heroTitle {
+    font-size: 30px;
+    line-height: 30px;
+  }
+
+  .heroSub {
+    font-size: 44px;
+    line-height: 44px;
+  }
+
+  .bottomSection {
+    padding-top: 70px;
+    padding-bottom: 90px;
+  }
+}
+
+@media (max-width: 390px) {
+  .videoTit h5 {
+    font-size: 18px;
+    line-height: 12px;
+  }
+
+  .videoDate p {
+    font-size: 14px;
+    line-height: 1;
+  }
+}

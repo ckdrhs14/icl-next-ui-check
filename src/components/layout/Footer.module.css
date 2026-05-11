@@ -1,0 +1,173 @@
+.footer {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  padding: 55px 0 120px;
+  color: #fff;
+  background-image: url(/img/layout/footerBg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.wrap {
+  width: 95%;
+  margin: 0 auto;
+  max-width: 1700px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.lbx {
+  width: 100%;
+  padding-right: 10px;
+  box-sizing: border-box;
+}
+
+.lbxLs {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.footlogo {
+  min-width: 100px;
+  padding: 10px 0;
+}
+
+.lbxSns {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding-top: 5px;
+}
+
+.sns {
+  font-family: 'Pretendard';
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.sns img {
+  width: 30px;
+}
+
+.snsKakao {
+  font-size: 32px;
+}
+
+.snsKakao img {
+  width: 30px;
+}
+
+.footinfo {
+  margin-top: 15px;
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin-bottom: 0;
+}
+
+.footinfo li {
+  font-size: 16px;
+  letter-spacing: -0.05em;
+  color: #727272;
+  line-height: calc(35 / 16);
+  font-weight: 300;
+  margin-right: 25px;
+}
+
+.lbx > p {
+  font-size: 16px;
+  letter-spacing: -0.05em;
+  color: #727272;
+  line-height: calc(35 / 16);
+  font-weight: 300;
+  margin: 0;
+}
+
+.rbx {
+  flex-shrink: 0;
+}
+
+.popupbtn {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.popupbtn li {
+  font-size: 16px;
+  letter-spacing: -0.05em;
+  font-weight: 400;
+  padding: 5px 0;
+  cursor: pointer;
+  text-align: right;
+}
+
+@media screen and (max-width: 1440px) {
+  .footer {
+    padding: 35px 0 100px;
+  }
+
+  .footinfo li {
+    font-size: 14px;
+  }
+
+  .popupbtn li {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 820px) {
+  .wrap {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .lbx {
+    padding-right: 0;
+  }
+
+  .lbx > p {
+    font-size: 14px;
+  }
+
+  .footinfo {
+    flex-wrap: wrap;
+  }
+
+  .footinfo li {
+    line-height: 1.4;
+  }
+
+  .popupbtn {
+    display: flex;
+    margin-top: 15px;
+  }
+
+  .popupbtn li {
+    text-align: left;
+    margin-right: 10px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .lbxLs {
+    gap: 15px;
+  }
+
+  .sns {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .lbxSns {
+    gap: 10px;
+  }
+}

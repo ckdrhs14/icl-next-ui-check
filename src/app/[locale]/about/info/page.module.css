@@ -1,0 +1,466 @@
+/* ===== Info (진료안내) Page - intro2 ===== */
+.wrapper {
+  overflow: hidden;
+}
+
+/* === Main Section (int2-sec1) === */
+.mainSection {
+  background: url("/img/background/back_03_2.jpg") no-repeat center center / cover;
+  background-attachment: fixed;
+  position: relative;
+}
+
+.contInner {
+  max-width: 1125px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  padding-top: 199px;
+  padding-bottom: 177px;
+}
+
+.bgText {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 70%;
+}
+
+.bgText img {
+  width: 100%;
+  height: auto;
+}
+
+/* === Title Box === */
+.titBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 26px;
+}
+
+.titBoxH3 {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 44px;
+  line-height: 44px;
+  color: #64c0a7;
+}
+
+.titLine {
+  position: relative;
+}
+
+/* === Hours Group === */
+.timGroupWrap {
+  background: #ffffff1f;
+  border-radius: 10px;
+  padding: 50px 0;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.timBox {
+  text-align: center;
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1;
+  color: #fff;
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+}
+
+.timBoxRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 19px;
+}
+
+.timBoxBold {
+  font-size: 28px;
+  font-weight: 700;
+  width: 200px;
+  text-align: left;
+}
+
+.timInnerBox {
+  width: 90%;
+  margin: 0 auto;
+  padding: 25px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: brightness(0.7);
+}
+
+.smFz {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+}
+
+/* === Directions Section (오시는길) === */
+.cont2 {
+  padding-top: 150px;
+}
+
+.contGroup {
+  margin-top: 23px;
+  margin-bottom: 45px;
+}
+
+.contGroup .imgBox {
+  text-align: center;
+  border-radius: 10px;
+  overflow: hidden;
+  max-width: 550px;
+  margin: 0 auto;
+}
+
+.contGroup .imgBox img {
+  width: 100%;
+  height: auto;
+}
+
+.imgBoxBorder {
+  border: 1px solid #fff;
+}
+
+.desText {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 22px;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.contTop {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.contTop + .contTop {
+  margin-top: 30px;
+}
+
+.leftGroup,
+.rightGroup {
+  flex: 1;
+}
+
+.middleGroup {
+  flex: 1;
+}
+
+/* === Map Buttons & Contact === */
+.contBot {
+  margin-top: 45px;
+}
+
+.mapBtnGroup {
+  display: flex;
+  justify-content: center;
+}
+
+.btnBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  height: 64px;
+  width: 232px;
+  text-decoration: none;
+}
+
+.btnBox p {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 22px;
+  color: #000;
+}
+
+.btnKakao {
+  background-color: #fed500;
+  border-radius: 50px 0 0 50px;
+}
+
+.iconKakao {
+  background: url("/img/common/icon_kakao.png") no-repeat center center / contain;
+  width: 28px;
+  height: 24px;
+  display: block;
+}
+
+.btnNaver {
+  background-color: #2db400;
+  border-radius: 0 50px 50px 0;
+}
+
+.btnNaver p {
+  color: #fff;
+}
+
+.iconNaver {
+  background: url("/img/common/icon_naver.png") no-repeat center center / contain;
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+
+.addrBox {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 27px;
+  color: #fff;
+  margin-top: 20px;
+  margin-bottom: 45px;
+  text-align: center;
+}
+
+.addrSm {
+  font-size: 16px;
+  line-height: 16px;
+  margin-top: 10px;
+  font-weight: 400;
+}
+
+.numBox {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 22px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+
+.numBold {
+  font-weight: 700;
+}
+
+/* === Provincial Visitors (지방에서 오시는 경우) === */
+.contPlus {
+  margin-top: 100px;
+}
+
+.plusTit {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 22px;
+  color: #fff;
+}
+
+.desCBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.desCBox .imgBox {
+  max-width: unset;
+  flex: 1;
+}
+
+.contBox + .contBox {
+  margin-top: 40px;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 1250px) {
+  .mainSection {
+    background-image: url("/img/int/int2_bg_mo.png");
+    background-position: center top;
+  }
+
+  .contInner {
+    padding: 116px 0;
+    padding-bottom: 50px;
+    width: 90%;
+  }
+
+  .titBox {
+    margin-bottom: 60px;
+  }
+
+  .timGroupWrap .titBox {
+    margin-bottom: 25px;
+  }
+
+  .titBoxH3 {
+    font-size: 30px;
+    line-height: 24px;
+  }
+
+  .titLine::after {
+    content: "";
+    position: absolute;
+    bottom: -45px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 1px;
+    width: 50px;
+    background-color: #fff;
+  }
+
+  .cont2 .titBox {
+    margin-bottom: 90px;
+  }
+
+  .desText {
+    font-size: 22px;
+    line-height: 22px;
+    font-weight: 400;
+    margin-bottom: 10px;
+  }
+
+  .contTop {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .contBot {
+    margin-top: 30px;
+  }
+
+  .btnBox {
+    height: 48px;
+    width: 168px;
+  }
+
+  .btnBox p {
+    font-size: 16px;
+    line-height: 16px;
+  }
+
+  .iconKakao {
+    width: 21px;
+    height: 18px;
+  }
+
+  .iconNaver {
+    width: 18px;
+    height: 18px;
+  }
+
+  .addrBox {
+    font-size: 16px;
+    line-height: 24px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .addrSm {
+    font-size: 16px;
+    line-height: 16px;
+    margin-top: 20px;
+  }
+
+  .numBox {
+    font-size: 16px;
+    line-height: 16px;
+  }
+
+  .timGroupWrap {
+    width: 100%;
+  }
+
+  .timBox {
+    font-size: 14px;
+  }
+
+  .timBoxBold {
+    font-size: 16px;
+  }
+
+  .smFz {
+    font-size: 16px;
+    width: 90%;
+  }
+
+  .cont2 {
+    padding-top: 90px;
+  }
+}
+
+@media (max-width: 800px) {
+  .contPlus .titBox {
+    margin-bottom: 40px;
+  }
+
+  .plusTit {
+    text-align: center;
+  }
+
+  .contPlus .contGroup .imgBox {
+    max-width: unset;
+  }
+
+  .desCBox {
+    flex-direction: column;
+  }
+
+  .contPlus {
+    margin-top: 77px;
+  }
+}
+
+@media (max-width: 500px) {
+  .timBox .timBoxRow img {
+    display: none;
+  }
+}
+
+@media (max-width: 470px) {
+  .timBoxBold {
+    width: 80px;
+  }
+}
+
+@media (max-width: 350px) {
+  .timBox .timBoxRow:last-child {
+    width: 100%;
+  }
+}
+
+@media (max-width: 290px) {
+  .timBoxRow {
+    gap: 10px;
+    font-size: 13px;
+  }
+
+  .timBoxBold {
+    font-size: 14px;
+  }
+
+  .desText {
+    font-size: 18px;
+  }
+
+  .btnBox {
+    gap: 5px;
+  }
+
+  .btnBox p {
+    font-size: 14px;
+  }
+}
