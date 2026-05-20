@@ -243,27 +243,6 @@ export default async function DoctorPage() {
                                 {t("heroQuote")}
                             </p>
                         </div>
-
-                        {/* Mobile nav buttons */}
-                        <div className={`${styles.navBtnGroup} mo`}>
-                            <a href="#career" className={styles.navBtn} style={{ background: "var(--color-tan)" }}>
-                                {t("navCareer")}
-                            </a>
-                            <a
-                                href="#intl-history"
-                                className={styles.navBtn}
-                                style={{ background: "var(--color-teal)" }}
-                            >
-                                {t("navIntl")}
-                            </a>
-                            <a
-                                href="#domestic-history"
-                                className={styles.navBtn}
-                                style={{ background: "var(--color-navy)" }}
-                            >
-                                {t("navDomestic")}
-                            </a>
-                        </div>
                     </div>
 
                     <div className={styles.heroRight}>
@@ -275,6 +254,21 @@ export default async function DoctorPage() {
                             priority
                             className={styles.doctorImg}
                         />
+                    </div>
+
+                    {/* Mobile nav buttons — heroInner 직접 자식, position: absolute bottom: 0 */}
+                    <div className={styles.navBtnGroup}>
+                        <div className="nav-btn-inner">
+                            <a href="#career" className={styles.navBtn} style={{ backgroundColor: '#A48362', color: '#fff' }}>
+                                {t("navCareer")}
+                            </a>
+                            <a href="#intl-history" className={styles.navBtn} style={{ backgroundColor: '#67B5A9', color: '#000' }}>
+                                {t("navIntl")}
+                            </a>
+                            <a href="#domestic-history" className={styles.navBtn} style={{ backgroundColor: '#042B48', color: '#fff' }}>
+                                {t("navDomestic")}
+                            </a>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -343,8 +337,8 @@ export default async function DoctorPage() {
                             <Image
                                 src={li("/img/int/int1-sec3-txt1.png")}
                                 alt={t("visionImgAlt")}
-                                width={600}
-                                height={200}
+                                width={712}
+                                height={87}
                             />
                         </div>
                     </div>
@@ -352,15 +346,15 @@ export default async function DoctorPage() {
                         <Image
                             src={li("/img/int/int1-sec3-txt2.png")}
                             alt={t("visionDescImgAlt")}
-                            width={1000}
-                            height={400}
+                            width={884}
+                            height={401}
                             className="pc"
                         />
                         <Image
                             src={li("/img/int/int1-sec3-txt2-mo.png")}
                             alt={t("visionDescImgAlt")}
-                            width={600}
-                            height={400}
+                            width={327}
+                            height={391}
                             className="mo"
                         />
                     </div>
@@ -381,15 +375,15 @@ export default async function DoctorPage() {
                     <Image
                         src={li("/img/int/int1-sec4-txt1.png")}
                         alt=""
-                        width={800}
-                        height={200}
+                        width={783}
+                        height={94}
                         className="pc"
                     />
                     <Image
                         src={li("/img/int/int1-sec4-txt1-mo.png")}
                         alt=""
-                        width={500}
-                        height={200}
+                        width={246}
+                        height={85}
                         className="mo"
                     />
                 </div>

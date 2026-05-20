@@ -4,6 +4,11 @@ import { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 import { useTranslations, useLocale } from 'next-intl';
 import { getLocalizedImg } from '@/utils/localizedImage';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 import styles from './page.module.css';
 
 const LENS_CARD_KEYS = [
@@ -33,29 +38,7 @@ export default function VivaIclClient() {
   const t = useTranslations('presbyopia.vivaIcl');
   const locale = useLocale();
   const li = (src: string) => getLocalizedImg(src, locale);
-  const [lensSlide, setLensSlide] = useState(0);
-  const autoplayRef = useRef<ReturnType<typeof setInterval> | null>(null);
-
-  const totalSlides = LENS_CARD_KEYS.length;
-
-  const startAutoplay = () => {
-    stopAutoplay();
-    autoplayRef.current = setInterval(() => {
-      setLensSlide((p) => (p + 1) % totalSlides);
-    }, 2000);
-  };
-
-  const stopAutoplay = () => {
-    if (autoplayRef.current) clearInterval(autoplayRef.current);
-  };
-
-  useEffect(() => {
-    startAutoplay();
-    return () => stopAutoplay();
-  }, []);
-
-  const goLensPrev = () => { setLensSlide((p) => (p - 1 + totalSlides) % totalSlides); startAutoplay(); };
-  const goLensNext = () => { setLensSlide((p) => (p + 1) % totalSlides); startAutoplay(); };
+  const lensSwiperRef = useRef<any>(null);
 
   return (
     <div className={`${styles.pagesWrapper} ${styles.diseWrapper}`}>
@@ -247,43 +230,48 @@ export default function VivaIclClient() {
             </div>
           </div>
           <div className={styles.swiperArea}>
-            <div
-              className={styles.swiperTrack}
-              style={{ transform: `translateX(calc(-${lensSlide * 100}% - ${lensSlide * 20}px))` }}
+            <Swiper
+              modules={[Navigation, Pagination, Autoplay]}
+              slidesPerView={1.2}
+              centeredSlides
+              spaceBetween={20}
+              speed={1000}
+              initialSlide={5}
+              autoplay={{ delay: 2000, disableOnInteraction: false }}
+              pagination={{ el: `.${styles.swiperPagination}`, clickable: true, renderBullet: (_: number, className: string) => `<span class="${className}"></span>` }}
+              navigation={{
+                prevEl: `.${styles.swiperBtnPrev}`,
+                nextEl: `.${styles.swiperBtnNext}`,
+              }}
+              breakpoints={{ 768: { slidesPerView: 1.6 } }}
+              onSwiper={(swiper) => { lensSwiperRef.current = swiper; }}
+              className={styles.lensSwiper}
             >
-              {LENS_CARD_KEYS.map((card, idx) => (
-                <div
-                  key={idx}
-                  className={`${styles.swiperSlide} ${lensSlide === idx ? styles.swiperSlideActive : ''}`}
-                >
-                  <div className={styles.cardBox}>
-                    <h3 className={styles.cardTitle}>{t(card.titleKey)}</h3>
-                    <div className={styles.cardImgBox}>
-                      <Image src={card.img} alt={t(card.titleKey)} width={300} height={200} style={{ height: 'auto' }} />
+              {/* 슬라이드 5번 반복하여 유사 loop 효과 */}
+              {Array.from({ length: 5 }).flatMap((_, rep) =>
+                LENS_CARD_KEYS.map((card, idx) => (
+                  <SwiperSlide key={`${rep}-${idx}`}>
+                    <div className={styles.cardBox}>
+                      <h3 className={styles.cardTitle}>{t(card.titleKey)}</h3>
+                      <div className={styles.cardImgBox}>
+                        <Image src={card.img} alt={t(card.titleKey)} width={300} height={200} style={{ height: 'auto' }} />
+                      </div>
+                      <div className={styles.cardText}>
+                        {card.textKeys.map((tk, ti) => (
+                          <p key={ti}>{t(tk)}</p>
+                        ))}
+                      </div>
                     </div>
-                    <div className={styles.cardText}>
-                      {card.textKeys.map((tk, ti) => (
-                        <p key={ti}>{t(tk)}</p>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
+                  </SwiperSlide>
+                ))
+              )}
+            </Swiper>
             <div className={styles.swiperBtnBox}>
-              <button className={styles.swiperBtnPrev} onClick={goLensPrev} aria-label="Previous">
+              <button className={styles.swiperBtnPrev} aria-label="Previous">
                 <svg width="10" height="16" viewBox="0 0 10 16" fill="none"><path d="M9 1L1 8L9 15" stroke="#042B48" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
               </button>
-              <div className={styles.swiperPagination}>
-                {LENS_CARD_KEYS.map((_, idx) => (
-                  <span
-                    key={idx}
-                    className={`${styles.swiperBullet} ${lensSlide === idx ? styles.swiperBulletActive : ''}`}
-                    onClick={() => { setLensSlide(idx); startAutoplay(); }}
-                  />
-                ))}
-              </div>
-              <button className={styles.swiperBtnNext} onClick={goLensNext} aria-label="Next">
+              <div className={styles.swiperPagination} />
+              <button className={styles.swiperBtnNext} aria-label="Next">
                 <svg width="10" height="16" viewBox="0 0 10 16" fill="none"><path d="M1 15L9 8L1 1" stroke="#042B48" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
               </button>
             </div>

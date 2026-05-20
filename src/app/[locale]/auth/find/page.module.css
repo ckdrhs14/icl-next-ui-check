@@ -204,6 +204,18 @@
 }
 
 /* ===== Responsive ===== */
+@media (max-width: 1025px) {
+  .formSection {
+    padding-top: 150px;
+    min-height: auto;
+  }
+
+  .formContainer {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
 @media (max-width: 768px) {
   .formSection {
     padding-top: 50px;
@@ -252,6 +264,34 @@
 
   .heroTitle { font-size: 30px; line-height: 30px; }
   .heroSub { font-size: 35px; line-height: 35px; }
+
+  .tabGroup {
+    margin-top: 50px;
+  }
+
+  .tabBtn {
+    font-size: 16px;
+    line-height: 16px;
+    padding-bottom: 20px;
+  }
+
+  .inputBox {
+    border: 0;
+    padding: 15px 0;
+  }
+
+  .inputBox input {
+    width: calc(100% - 20px);
+  }
+
+  .inputBox label {
+    font-size: 20px;
+    line-height: 16px;
+  }
+
+  .resetWrapper {
+    margin-top: 30px;
+  }
 
   .bottomSection {
     padding-top: 70px;

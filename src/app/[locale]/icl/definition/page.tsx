@@ -1,8 +1,21 @@
 import Image from 'next/image';
 import { getTranslations, getLocale } from 'next-intl/server';
 import { getLocalizedImg } from '@/utils/localizedImage';
+import { ScrollPageLayout, type ScrollSection } from '@/components/scroll';
 import DefinitionClient from './DefinitionClient';
 import styles from './page.module.css';
+
+const SECTIONS: ScrollSection[] = [
+  { id: 'about', hash: '#about', label: 'ABOUT' },
+  { id: 'technique', hash: '#technique', label: 'TECHNIQUE', dark: true },
+  { id: 'evo-icl', hash: '#evo-icl', label: 'EVO+ ICL' },
+  { id: 'lens-spec', hash: '#lens-spec', label: 'LENS SPEC' },
+  { id: 'history', hash: '#history', label: 'HISTORY', dark: true },
+  { id: 'surgery-process', hash: '#surgery-process', label: 'SURGERY PROCESS' },
+  { id: 'until-surgery', hash: '#until-surgery', label: 'UNTIL SURGERY', dark: true },
+  { id: 'merits-demerits', hash: '#merits-demerits', label: 'MERITS / DEMERITS' },
+  { id: 'care-system', hash: '#care-system', label: 'CARE SYSTEM', dark: true },
+];
 
 export async function generateMetadata() {
   const t = await getTranslations('icl.definition');
@@ -66,6 +79,7 @@ export default async function DefinitionPage() {
   ];
 
   return (
+    <ScrollPageLayout sections={SECTIONS}>
     <div className={styles.wrapper}>
       {/* Background image */}
       <div className={styles.bgWrap}>
@@ -74,7 +88,7 @@ export default async function DefinitionPage() {
       </div>
 
       {/* Section 1: ICL 이란? */}
-      <section className={styles.sec1}>
+      <section id="about" className={styles.sec1}>
         <div className={styles.contInner} data-aos="fade-up" data-aos-duration="1000">
           <div className={styles.titGroup}>
             <h3><span className={styles.cBr}>{t('sec1Title')}</span></h3>
@@ -110,7 +124,7 @@ export default async function DefinitionPage() {
       </section>
 
       {/* Section 2: ICL 수술기법 */}
-      <section className={styles.sec2}>
+      <section id="technique" className={styles.sec2}>
         <div className={styles.contInner} data-aos="fade-up" data-aos-duration="1000">
           <div className={styles.titGroupWhite}>
             <h3><span className={`${styles.cMt} ${styles.fzUp}`}>ICL</span>{t('sec2Title').replace('ICL', '')}</h3>
@@ -128,7 +142,7 @@ export default async function DefinitionPage() {
       </section>
 
       {/* Section 3: EVO+ ICL 업그레이드 */}
-      <section className={styles.sec3}>
+      <section id="evo-icl" className={styles.sec3}>
         <div className={styles.contInner} data-aos="fade-up" data-aos-duration="1000">
           <div className={styles.titGroup}>
             <h3><span className={`${styles.cBr} ${styles.fzUp}`}>EVO+ ICL</span> {t('sec3Title').replace('EVO+ ICL ', '')}</h3>
@@ -145,7 +159,7 @@ export default async function DefinitionPage() {
       </section>
 
       {/* Section 4: ICL 렌즈 스펙 */}
-      <section className={styles.sec4}>
+      <section id="lens-spec" className={styles.sec4}>
         <div className={styles.contInner} data-aos="fade-up" data-aos-duration="1000">
           <div className={styles.titGroup}>
             <h3><span className={`${styles.cBr} ${styles.fzUp}`}>ICL</span> {t('sec4Title').replace('ICL ', '')}</h3>
@@ -187,7 +201,7 @@ export default async function DefinitionPage() {
       </section>
 
       {/* Section 5: 렌즈삽입수술의 역사 */}
-      <section className={styles.sec5}>
+      <section id="history" className={styles.sec5}>
         <div className={styles.contInner} data-aos="fade-up" data-aos-duration="1000">
           <div className={styles.titGroupWhite}>
             <h3><span className={styles.cBr}>{t('sec5Title')}</span></h3>
@@ -223,7 +237,7 @@ export default async function DefinitionPage() {
       </section>
 
       {/* Section 6: ICL 수술과정 (Swiper) */}
-      <section className={styles.sec6}>
+      <section id="surgery-process" className={styles.sec6}>
         <div className={styles.contInner} data-aos="fade-up" data-aos-duration="1000">
           <div className={styles.titGroup}>
             <h3><span className={`${styles.cBr} ${styles.fzUp} ${styles.fzTr}`}>ICL</span> {t('sec6Title').replace('ICL ', '')}</h3>
@@ -233,7 +247,7 @@ export default async function DefinitionPage() {
       </section>
 
       {/* Section 7: ICL 수술까지 */}
-      <section className={styles.sec7}>
+      <section id="until-surgery" className={styles.sec7}>
         <div className={styles.contInner} data-aos="fade-up" data-aos-duration="1000">
           <div className={styles.titGroupWhite}>
             <h3><span className={`${styles.cNv} ${styles.fzUp}`}>ICL</span> {t('sec7Title').replace('ICL ', '')}</h3>
@@ -257,7 +271,7 @@ export default async function DefinitionPage() {
       </section>
 
       {/* Section 8: ICL의 장점 */}
-      <section id="advantages" className={styles.sec8}>
+      <section id="merits-demerits" className={styles.sec8}>
         <div className={styles.contInner} data-aos="fade-up" data-aos-duration="1000">
           <div className={styles.titGroup}>
             <h3><span className={`${styles.cMt} ${styles.fzUp}`}>ICL</span>{t('sec8Title').replace('ICL', '')}</h3>
@@ -291,7 +305,7 @@ export default async function DefinitionPage() {
       </section>
 
       {/* Section 10: 케어 시스템 */}
-      <section className={styles.sec10}>
+      <section id="care-system" className={styles.sec10}>
         <div className={styles.sec10BgImg}>
           <Image src="/img/plus/icl3_sec10_bg.png" alt="" width={800} height={600} />
         </div>
@@ -309,5 +323,6 @@ export default async function DefinitionPage() {
         </div>
       </section>
     </div>
+    </ScrollPageLayout>
   );
 }

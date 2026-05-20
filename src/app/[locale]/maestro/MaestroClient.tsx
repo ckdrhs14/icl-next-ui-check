@@ -168,7 +168,7 @@ export default function MaestroClient() {
           setCounted(true);
           animateCount(0, 4, 3000, setCountMin);
           animateCount(0, 13, 3000, setCountSec);
-          animateCount(0, 98.5, 3000, setCountPercent, 1);
+          animateCount(0, 99, 3000, setCountPercent);
         }
       },
       { threshold: 0.3 }
@@ -196,7 +196,7 @@ export default function MaestroClient() {
   }
 
   return (
-    <ScrollPageLayout sections={RIGHT_NAV}>
+    <ScrollPageLayout sections={LEFT_NAV}>
       {/* Right Quick Nav */}
       <nav className={`${styles.rightQuickNav} ${locale === 'en' ? styles.rightQuickNavEn : ''}`}>
         <ul className={styles.rightQuickList}>
@@ -229,7 +229,11 @@ export default function MaestroClient() {
           </div>
           <div>
             <p className={styles.heroBottomText}>
-              {t('heroBottomText')}
+              {locale === 'ko' ? (
+                <>ICL 렌즈삽입술 오직 한 길만 걸어온<br className={styles.mo} /> 22년차 안과전문의<br className={styles.mo} /> ICL 레퍼런스 닥터 <br className={styles.mo} />이동훈 대표원장</>
+              ) : (
+                t('heroBottomText')
+              )}
             </p>
           </div>
         </div>
@@ -260,14 +264,20 @@ export default function MaestroClient() {
         <div className={styles.sectionInner} data-aos="fade-up" data-aos-duration="1000">
           <div className={styles.selectionTitGroup}>
             <div className={styles.selectionTitBox}>
-              <div className={styles.titLine} />
               <h3 className={styles.selectionH3}>
-                <span className={styles.cMt}>{t('selectionH3Highlight')}</span>{t('selectionH3')}
+                {locale === 'ko' ? (
+                  <><span className={styles.cMt}>닥터 ICL 안과</span>의 개인별 맞춤 시스템<br className={styles.mo} /> 풍부한 집도 경험</>
+                ) : (
+                  <><span className={styles.cMt}>{t('selectionH3Highlight')}</span>{t('selectionH3')}</>
+                )}
               </h3>
-              <div className={styles.titLine} />
             </div>
             <div className={styles.selectionTextBox}>
-              <p>{t('selectionText')}</p>
+              {locale === 'ko' ? (
+                <p>ICL 렌즈삽입술을 고민하고 계신다면<br className={styles.mo} /> 반드시 고려해야할 중요 사항입니다.</p>
+              ) : (
+                <p>{t('selectionText')}</p>
+              )}
             </div>
           </div>
           <div className={styles.selectionContGroup}>
@@ -297,7 +307,11 @@ export default function MaestroClient() {
             <div className={`${styles.diagnosisTitLine} ${styles.pc}`} />
           </div>
           <div className={styles.diagnosisTextBox}>
-            <p>{t('diagnosisText')}</p>
+            {locale === 'ko' ? (
+              <p>닥터 ICL 안과의 마에스트로<br className={styles.mo} /> 수술 기법을 완성시키는 솔루션</p>
+            ) : (
+              <p>{t('diagnosisText')}</p>
+            )}
           </div>
           <div className={styles.diagnosisContGroup}>
             <div className={styles.diagnosisContLeft}>
@@ -379,12 +393,20 @@ export default function MaestroClient() {
           <div className={styles.fastFactsTitBox}>
             <div className={`${styles.fastFactsTitLine} ${styles.pc}`} />
             <h3 className={styles.fastFactsH3}>
-              <span className={styles.cBr}>{t('fastFactsH3Highlight')}</span>{t('fastFactsH3Suffix')}
+              {locale === 'ko' ? (
+                <><span className={styles.cBr}>닥터 ICL 안과</span>의<br className={styles.mo} /> 높은 신뢰도</>
+              ) : (
+                <><span className={styles.cBr}>{t('fastFactsH3Highlight')}</span>{t('fastFactsH3Suffix')}</>
+              )}
             </h3>
             <div className={`${styles.fastFactsTitLine} ${styles.pc}`} />
           </div>
           <div className={styles.fastFactsTextBox}>
-            <p>{t('fastFactsText1')}</p>
+            {locale === 'ko' ? (
+              <p>20년간의 임상연구로 입증된<br className={styles.mo} /> 국내 최초 렌즈삽입술 전문 클리닉<br className={styles.mo} /> 닥터 ICL 안과만의 기술력</p>
+            ) : (
+              <p>{t('fastFactsText1')}</p>
+            )}
             <p className={`${styles.bold} ${styles.fastFactsFzUp} ${styles.pc}`}>{t('fastFactsText2')}</p>
           </div>
           <div className={styles.contGroup} ref={factsRef}>
@@ -397,13 +419,17 @@ export default function MaestroClient() {
                   </div>
                   <div className={styles.numBox}>
                     <span className={styles.count}>{countMin}</span>
-                    <em className={styles.numBoxEm}>{t('unitMin')}</em>
+                    <span className={styles.numBoxEm}>{t('unitMin')}</span>
                     <span className={styles.count}>{countSec}</span>
-                    <em className={styles.numBoxEm}>{t('unitSec')}</em>
+                    <span className={styles.numBoxEm}>{t('unitSec')}</span>
                   </div>
                 </div>
                 <div className={styles.factsDesBox}>
-                  <p>{t('avgSurgeryTime')}</p>
+                  {locale === 'ko' ? (
+                    <p>평균 수술 시간<br className={styles.mo} />(단안기준)</p>
+                  ) : (
+                    <p>{t('avgSurgeryTime')}</p>
+                  )}
                   <p className={styles.factsDesBoxSm}>{t('surgeryTimeDes')}</p>
                 </div>
               </div>
@@ -419,7 +445,7 @@ export default function MaestroClient() {
                     <div className={styles.contBotNumBox}>
                       <div className={styles.counterWrap}>
                         <span className={styles.contBotCount}>{countPercent}</span>
-                        <em className={styles.contBotEm}>%</em>
+                        <span className={styles.contBotEm}>%</span>
                       </div>
                       <div className={styles.contBotDesBox}>
                         <p>{t('satisfaction')}</p>
@@ -453,6 +479,9 @@ export default function MaestroClient() {
             <p>{t('doctorText')}</p>
           </div>
           <div className={styles.doctorTextGroup}>
+            <div className={`${styles.doctorImgMo} ${styles.mo}`}>
+              <img src="/img/spec/spec1-sec12-img1-mo_2.png" alt="" style={{ width: '100%', height: 'auto' }} />
+            </div>
             <div className={`${styles.doctorTextBox} ${styles.pc}`}>
               <p>{t('doctorText')}</p>
             </div>

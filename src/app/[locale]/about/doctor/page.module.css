@@ -120,7 +120,7 @@
     height: auto;
 }
 
-/* Mobile Nav Buttons */
+/* Mobile Nav Buttons (원본 .cont-nav-btn + .nav-btn-group + .nav-btn-box) */
 .navBtnGroup {
     display: none;
     position: absolute;
@@ -129,11 +129,18 @@
     right: 0;
 }
 
+.navBtnGroup > :global(.nav-btn-inner) {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    height: 50px;
+}
+
 .navBtn {
     display: flex;
     width: 33.333%;
     text-align: center;
-    height: 50px;
+    height: 100%;
     padding-top: 17px;
     border-radius: 20px 20px 0 0;
     font-size: 15px;
@@ -141,6 +148,7 @@
     color: #fff;
     align-items: flex-start;
     justify-content: center;
+    text-decoration: none;
 }
 
 /* === Career Section — maps to .int1-sec2 === */
@@ -253,12 +261,31 @@
 }
 
 .video {
-    display: block;
     overflow: hidden;
     width: 100%;
     height: 100%;
     object-fit: contain;
     object-position: center;
+}
+
+.videoPc {
+    composes: video;
+    display: block !important;
+}
+
+.videoMo {
+    composes: video;
+    display: none !important;
+}
+
+.thumbPc { display: block !important; }
+.thumbMo { display: none !important; }
+
+@media (max-width: 768px) {
+    .videoPc { display: none !important; }
+    .videoMo { display: block !important; }
+    .thumbPc { display: none !important; }
+    .thumbMo { display: block !important; }
 }
 
 .videoVisible {
@@ -504,6 +531,9 @@
     margin-top: 20px;
 }
 
+.timelineWrap { position: relative; }
+.timelineWrapExpanded { position: relative; }
+
 .timeline {
     margin-top: 70px;
     overflow-y: scroll;
@@ -673,6 +703,10 @@
     }
 
     .navBtnGroup {
+        display: block;
+    }
+
+    .navBtnGroup > :global(.nav-btn-inner) {
         display: flex;
         align-items: flex-start;
         justify-content: space-between;
@@ -743,6 +777,7 @@
     .timelineSection {
         padding-top: 82px;
         padding-bottom: 40px;
+        background-attachment: fixed;
     }
 
     .timelineSection .sectionInner {
@@ -760,11 +795,23 @@
     }
 }
 
-/* 800px */
+/* 800px — 원본 sh.css @media 800px 그대로 이식 */
 @media (max-width: 800px) {
+    /* 타이틀 가운데 정렬 */
+    .timelineSection .sectionInner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
     .timelineList {
         grid-template-columns: 1fr;
         row-gap: 35px;
+    }
+
+    .timelineWrap {
+        width: 100%;
     }
 
     .timeline {
@@ -773,11 +820,24 @@
         margin: 0 auto;
         padding-left: 50px;
         height: 555px;
-        overflow-y: inherit;
         overflow: hidden;
         margin-top: 40px;
     }
 
+    /* 하단 그라데이션 (더보기 전) */
+    .timelineWrap:not(.timelineWrapExpanded) .timeline::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 57px;
+        z-index: 1;
+        background: linear-gradient(to top, #000, rgba(0,0,0,0));
+        pointer-events: none;
+    }
+
+    /* 타임라인 점선 */
     .timeline::after {
         position: absolute;
         content: "";
@@ -788,23 +848,25 @@
         border-left: 1.5px dashed #64c0a7;
     }
 
+    /* expanded: 높이 해제 */
+    .timelineExpanded {
+        height: auto !important;
+        overflow: visible !important;
+    }
+
     .timelineItem {
         flex-direction: column;
         gap: 10px;
-    }
-
-    .timelineYear {
-        font-size: 30px;
-        line-height: 35px;
-    }
-
-    .timelineDesc {
         position: relative;
-        font-size: 12px;
-        line-height: 17px;
+        text-align: left;
     }
 
-    .timelineDesc::after {
+    /* 불릿: des-box(timelineContent) 기준, 원본 .des-box::after 그대로 */
+    .timelineContent {
+        position: relative;
+    }
+
+    .timelineContent::after {
         content: "";
         width: 15px;
         height: 15px;
@@ -816,6 +878,20 @@
         transform: translateY(20%);
         border-radius: 50%;
         z-index: 1;
+    }
+
+    .timelineDot {
+        display: none;
+    }
+
+    .timelineYear {
+        font-size: 30px;
+        line-height: 35px;
+    }
+
+    .timelineDesc {
+        font-size: 12px;
+        line-height: 17px;
     }
 
     .timelineTitle {
@@ -970,6 +1046,9 @@
 
 .visionHeroTitleImg img {
     margin: 0 auto;
+    width: auto !important;
+    max-width: 100%;
+    height: auto !important;
 }
 
 .visionHeroBodyImg {
@@ -979,6 +1058,9 @@
 
 .visionHeroBodyImg img {
     margin: 0 auto;
+    width: auto !important;
+    max-width: 100%;
+    height: auto !important;
 }
 
 .visionHeroBodyImg :global(.pc) {
@@ -1039,9 +1121,10 @@
 }
 
 .visionMessageTitleImg img {
-    max-width: 800px;
-    width: 100%;
-    height: auto;
+    width: auto !important;
+    max-width: 100%;
+    height: auto !important;
+    margin: 0 auto;
 }
 
 .visionMessageInner {
@@ -1305,7 +1388,7 @@
     }
 
     .visionPledgeTxtBox {
-        text-align: center;
+        justify-content: center;
     }
 
     .visionPledgeTxtBox img {

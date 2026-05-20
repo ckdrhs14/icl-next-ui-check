@@ -351,6 +351,21 @@
 
   .pagBtn { font-size: 16px; }
   .pagCurrent { font-size: 16px; }
+
+  .pagination {
+    margin-bottom: 60px;
+  }
+}
+
+@media (max-width: 500px) {
+  .gridGroup {
+    column-gap: 0;
+  }
+
+  .gridItem {
+    width: 100%;
+    margin: 0 auto;
+  }
 }
 
 @media (max-width: 350px) {

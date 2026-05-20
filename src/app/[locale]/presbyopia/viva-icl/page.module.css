@@ -265,20 +265,12 @@
   padding: 40px 0 60px;
 }
 
-.swiperTrack {
-  display: flex;
-  gap: 20px;
-  transition: transform 1s ease;
-}
-
-.swiperSlide {
-  flex-shrink: 0;
-  width: 100%;
+.lensSwiper :global(.swiper-slide) {
   opacity: 0.5;
   transition: opacity 0.3s ease;
 }
 
-.swiperSlideActive {
+.lensSwiper :global(.swiper-slide-active) {
   opacity: 1;
 }
 
@@ -303,7 +295,7 @@
   gap: 20px;
 }
 
-.swiperBullet {
+.swiperPagination :global(.swiper-pagination-bullet) {
   width: 8px;
   height: 8px;
   border-radius: 50%;
@@ -313,7 +305,7 @@
   transition: opacity 0.3s;
 }
 
-.swiperBulletActive {
+.swiperPagination :global(.swiper-pagination-bullet-active) {
   opacity: 1;
 }
 .cardBox {
@@ -458,8 +450,7 @@
     margin: 30px auto;
   }
   .swiperArea {
-    grid-template-columns: 1fr;
-    gap: 20px;
+    padding: 20px 0 40px;
   }
 }
 
@@ -474,7 +465,7 @@
 
   /* dise_sec1 */
   .diseSec1 {
-    padding-top: 0;
+    padding-top: 107px;
     padding-bottom: 69px;
   }
   .diseSec1 .titGroup {
@@ -569,8 +560,7 @@
     line-height: 25px;
   }
   .swiperArea {
-    grid-template-columns: 1fr;
-    gap: 20px;
+    padding: 20px 0 40px;
   }
   .cardTitle {
     font-size: 20px;

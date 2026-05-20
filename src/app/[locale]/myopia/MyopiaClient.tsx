@@ -203,7 +203,7 @@ export default function MyopiaClient() {
       <div className={`${styles.bannerBox} ${styles.sec4Banner}`}>
         <div className={styles.bannerBoxInner} data-aos="fade-up" data-aos-duration="1000">
           <h3 className={styles.bannerH3}>
-            {t('sec4banner.title')}
+            고도근시의 눈은 일반적인 <br />검사만으로는 충분하지 않습니다.
           </h3>
           <p className={styles.bannerP}>{t('sec4banner.desc')}</p>
         </div>
@@ -453,7 +453,7 @@ export default function MyopiaClient() {
                 <div>
                   <h4 className={styles.sec10Tit}>{t('sec10.point0Tit')}</h4>
                   <strong className={styles.sec10Subtit}>&ldquo;{t('sec10.point0Subtit')}&rdquo;</strong>
-                  <p className={styles.sec10TxtP}>{t('sec10.point0Text1')}</p>
+                  <p className={styles.sec10TxtP}>일반 공식으로는 안구 길이변수에<br className={styles.mo} /> 대응하기 어렵습니다.</p>
                   <p className={styles.sec10TxtP}>{t('sec10.point0Text2')}</p>
                 </div>
               </div>
@@ -487,7 +487,7 @@ export default function MyopiaClient() {
                   <h4 className={styles.sec10Tit}>{t('sec10.point2Tit')}</h4>
                   <strong className={styles.sec10Subtit}>&ldquo;{t('sec10.point2Subtit')}&rdquo;</strong>
                   <p className={styles.sec10TxtP}>{t('sec10.point2Text1')}</p>
-                  <p className={styles.sec10TxtP}>{t('sec10.point2Text2')}</p>
+                  <p className={styles.sec10TxtP}>닥터아이씨엘은 수정체낭과<br className={styles.mo} /> 이를 지지하는 조직의 부담을<br />최소화하는 정교한 저자극 수술 테크닉으로<br />수술 중 돌발 손상과 2차 합병증 위험을 낮춥니다.</p>
                 </div>
               </div>
             </div>
@@ -676,7 +676,7 @@ export default function MyopiaClient() {
 
           {/* Equip info list */}
           <div className={styles.equipInfoList}>
-            <div className={styles.equipInfoTitle}>{t('sec16.infoTitle')}</div>
+            <div className={styles.equipInfoTitle}>닥터 아이씨엘의 데이터 기반<br className={styles.mo} /> 평생 관리 시스템</div>
             {[
               { em: t('sec16.info0Em'), span: t('sec16.info0Span') },
               { em: t('sec16.info1Em'), span: t('sec16.info1Span') },
@@ -726,7 +726,7 @@ export default function MyopiaClient() {
             <img src="/img/myopia/btm-logo.png" alt="" />
           </div>
           <ul className={styles.sec18NavArea}>
-            <li>
+            <li className={styles.sec18NavItem}>
               <a href="/community/reservation" className={styles.sec18NavLink}>
                 <svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" viewBox="0 0 33 33" fill="none">
                   <path d="M9.57008 2.75C10.1442 2.75 10.6096 3.1762 10.6096 3.70193V5.62214C11.5316 5.60576 12.5651 5.60576 13.728 5.60576H19.272C20.4348 5.60576 21.4684 5.60576 22.3905 5.62214V3.70193C22.3905 3.1762 22.8558 2.75 23.4299 2.75C24.0041 2.75 24.4694 3.1762 24.4694 3.70193V5.70636C26.4643 5.85265 27.7739 6.21167 28.7361 7.09277C29.6982 7.97386 30.0902 9.17316 30.25 11V12.375H2.75V11C2.90975 9.17316 3.30179 7.97386 4.26393 7.09277C5.22609 6.21167 6.53569 5.85265 8.53058 5.70636V3.70193C8.53058 3.1762 8.99598 2.75 9.57008 2.75Z" fill="white"/>
@@ -737,7 +737,7 @@ export default function MyopiaClient() {
               </a>
             </li>
             <li className={styles.sec18NavDivider} />
-            <li>
+            <li className={styles.sec18NavItem}>
               <a href="/about/info" className={styles.sec18NavLink}>
                 <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38" fill="none">
                   <g opacity="0.8">
@@ -750,7 +750,7 @@ export default function MyopiaClient() {
               </a>
             </li>
             <li className={styles.sec18NavDivider} />
-            <li>
+            <li className={styles.sec18NavItem}>
               <a href="tel:02-566-1215" className={styles.sec18NavLink}>
                 <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
                   <path d="M24.0833 16.9997C27.9953 16.9997 31.1667 13.8284 31.1667 9.91634C31.1667 6.00433 27.9953 2.83301 24.0833 2.83301C20.1714 2.83301 17 6.00433 17 9.91634C17 11.0494 17.266 12.1204 17.7391 13.0702C17.8649 13.3226 17.9067 13.6111 17.8339 13.8834L17.412 15.4602C17.2288 16.1447 17.855 16.7709 18.5395 16.5877L20.1162 16.1658C20.3887 16.093 20.6771 16.1348 20.9296 16.2606C21.8793 16.7336 22.9503 16.9997 24.0833 16.9997Z" fill="white"/>

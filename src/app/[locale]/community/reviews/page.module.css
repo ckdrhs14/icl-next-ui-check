@@ -509,6 +509,11 @@
     margin-bottom: 30px;
   }
 
+  .titGroup h3 {
+    font-size: 24px;
+    line-height: 24px;
+  }
+
   .heroContent {
     padding-top: 150px;
     padding-bottom: 80px;
@@ -517,10 +522,35 @@
   .heroTitle { font-size: 30px; }
   .heroSub { font-size: 35px; }
 
+  .tabSection {
+    padding: 40px 0 50px;
+  }
+
   .customerCard { width: 100%; }
   .starCard { width: calc(50% - 10px); }
   .videoCard { width: 100%; }
   .starOverlay { opacity: 1; }
+
+  .pagination {
+    font-size: 16px;
+    margin-bottom: 60px;
+  }
+
+  .starName { font-size: 16px; }
+  .starTitle { font-size: 14px; }
+
+  .videoName { font-size: 16px; }
+}
+
+@media (max-width: 700px) {
+  .reviewGroup {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .reviewBox {
+    width: 100%;
+  }
 }
 
 @media (max-width: 550px) {
@@ -554,4 +584,18 @@
 
   .pagBtn { font-size: 16px; }
   .pagCurrent { font-size: 16px; }
+}
+
+@media (max-width: 300px) {
+  .reviewBox {
+    width: 100%;
+  }
+
+  .reviewPicInner {
+    width: 100%;
+  }
+
+  .reviewPicInner img {
+    width: 100%;
+  }
 }

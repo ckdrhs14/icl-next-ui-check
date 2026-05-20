@@ -47,7 +47,14 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  display: block;
+}
+
+.bgVideo:global(.pc) { display: block; }
+.bgVideo:global(.mo) { display: none; }
+
+@media (max-width: 768px) {
+  .bgVideo:global(.pc) { display: none; }
+  .bgVideo:global(.mo) { display: block; }
 }
 
 .bgFilter {

@@ -15,6 +15,8 @@
     width: 95%;
     margin: 0 auto;
     max-width: 1760px;
+    position: relative;
+    z-index: 2;
 }
 
 /* Logo */
@@ -204,38 +206,39 @@
     left: 0;
 }
 
+/* ham open state — 독립 클래스로 정의하여 CSS Module이 export */
+.hamOpen {
+    background-color: #fff !important;
+    color: #404040 !important;
+}
+
 /* Hamburger open state */
-.header.ham .hamWrap span:nth-of-type(1) {
+.hamOpen .hamWrap span:nth-of-type(1) {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) rotate(45deg);
 }
 
-.header.ham .hamWrap span:nth-of-type(2) {
+.hamOpen .hamWrap span:nth-of-type(2) {
     transform: translate(-50%, 0);
     opacity: 0;
 }
 
-.header.ham .hamWrap span:nth-of-type(3) {
+.hamOpen .hamWrap span:nth-of-type(3) {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) rotate(-45deg);
 }
 
-.header.ham {
-    background-color: #fff !important;
-    color: #404040 !important;
-}
-
-.header.ham .logoWhite {
+.hamOpen .logoWhite {
     display: none !important;
 }
 
-.header.ham .logoColor {
+.hamOpen .logoColor {
     display: block !important;
 }
 
-.header.ham .hamWrap span {
+.hamOpen .hamWrap span {
     background-color: #404040 !important;
 }
 
@@ -328,34 +331,47 @@
     font-weight: 400;
 }
 
-/* ===== Mobile GNB ===== */
+/* ===== Mobile GNB (원본 header.css @media 1280px 그대로 이식) ===== */
 .gnbClickBx {
     display: none;
+    transition: 0.4s;
     position: fixed;
     left: 0;
     right: 0;
-    z-index: 9999;
+    z-index: 1;
     top: 0;
     bottom: 0;
     max-height: 0;
     background: url(/img/common/com_ham_bg.png) no-repeat center bottom / cover;
+    background-color: #042b48;
     overflow: hidden;
 }
 
-.header.ham .gnbClickBx {
+.hamOpen .gnbClickBx {
     max-height: 100vh;
 }
 
 .gnbBx {
-    width: 100%;
-    height: 100%;
+    display: block;
+    transition: 0.4s ease-out;
+    top: 0 !important;
+    height: 100vh;
+    max-height: 0%;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+}
+
+.hamOpen .gnbBx {
+    max-height: 100%;
     overflow-y: auto;
-    padding-top: 60px;
 }
 
 .gnbCntBx {
-    width: 90%;
-    margin: 0 auto;
+    width: 100%;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
 }
 
 .gnbListBx2 {
@@ -412,6 +428,7 @@
 
 .gnbSubBx.on {
     transition: 0.6s;
+    max-height: 320px;
 }
 
 .gnbListSub2 {
@@ -477,10 +494,11 @@
     color: #fff;
 }
 
-.line {
+.quickLine {
     width: 1px;
     height: 30px;
     background-color: #fff;
+    flex-shrink: 0;
 }
 
 /* ===== Responsive 1440px ===== */
@@ -539,6 +557,10 @@
         font-size: 14px;
     }
 
+    .langDropdown button {
+        padding: 7px 0 !important;
+    }
+
     .headerList {
         display: none;
     }
@@ -565,16 +587,33 @@
         align-items: center;
     }
 
+    .moLang button {
+        display: flex;
+        align-items: center;
+    }
+
+    .langBtnLi .langDropdown {
+        bottom: -70px;
+        left: -18px;
+        width: auto;
+    }
+
+    .langDropdown button {
+        padding: 8px 20px !important;
+    }
+
     .hamWrap {
         margin-left: 10px;
     }
 }
 
-/* ===== Quick Group Responsive 1250px ===== */
+/* ===== Quick Group Responsive 1250px (원본 sh.css 그대로) ===== */
 @media screen and (max-width: 1250px) {
     .btnBox {
         flex-direction: column;
         gap: 0;
+        height: 54px;
+        justify-content: space-between;
     }
 
     .textBox {
@@ -583,30 +622,66 @@
         font-weight: 500;
     }
 
+    .textBox :global(.pc) {
+        display: none;
+    }
+
     .btnMap .textBox {
         position: relative;
-        top: -2px;
+        top: unset;
     }
 
     .btnKakao .textBox {
         position: relative;
-        top: 4px;
+        top: unset;
+    }
+
+    .btnBox .imgBox {
+        display: flex;
+        align-items: center;
+        height: 32px;
+        justify-content: center;
     }
 
     .btnBox .imgBox img {
         width: 80%;
         margin: 0 auto;
     }
+
+    .quickLine {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .btnBox {
+        height: 48px;
+    }
+
+    .btnBox .imgBox {
+        max-width: 70%;
+        height: 27px;
+    }
+
+    .quickBox {
+        gap: 20px;
+    }
+
+    .textBox {
+        text-align: center;
+        word-break: keep-all;
+    }
 }
 
 @media screen and (max-width: 430px) {
     .quickBox {
-        gap: 20px;
+        justify-content: space-between;
+        gap: 10px;
     }
 }
 
 @media screen and (max-width: 320px) {
     .quickBox {
-        gap: 10px;
+        gap: 5px;
     }
 }

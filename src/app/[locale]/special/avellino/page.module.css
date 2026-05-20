@@ -431,6 +431,14 @@
 }
 
 /* ===== Responsive ===== */
+@media (max-width: 1250px) {
+  .contInner {
+    width: 90%;
+    margin: 0 auto;
+    max-width: none;
+  }
+}
+
 @media (max-width: 768px) {
   .wrapper {
     padding-top: 0;
@@ -563,5 +571,23 @@
 
   .imgRel {
     width: 80%;
+  }
+}
+
+@media (max-width: 360px) {
+  .imgDesTxtBox {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 310px) {
+  .imgDesTxtBox {
+    font-size: 0.7em;
+  }
+}
+
+@media (max-width: 300px) {
+  .sec4ContTit {
+    font-size: 18px;
   }
 }

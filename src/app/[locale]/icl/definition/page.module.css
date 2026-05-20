@@ -708,9 +708,27 @@
     line-height: 25px;
   }
 
+  .imgDesGroup .imgCenter img {
+    width: 100%;
+  }
+
+  .imgCenter48 .imgCenter img,
+  .imgCenter28 img {
+    width: 100%;
+  }
+
   /* sec5 */
   .sec5 {
     padding: 75px 0;
+  }
+
+  .imgCenter54 {
+    margin-top: 20px;
+  }
+
+  .txtBoxWhite {
+    font-size: 16px;
+    line-height: 25px;
   }
 
   .contTit {
@@ -754,20 +772,36 @@
     height: 26px;
   }
 
+  .swiperBullet {
+    width: 50px;
+  }
+
+  .slideDes {
+    text-align: left;
+    width: 100%;
+  }
+
   /* sec7 */
   .sec7 {
     padding-top: 75px;
-    padding-bottom: 50px;
+    padding-bottom: 43px;
   }
 
   .untilTitle {
     font-size: 16px;
     padding: 18px 16px;
+    line-height: 32px;
+  }
+
+  .untilTitle p {
+    width: 85%;
+    margin: 0 auto;
+    text-align: center;
   }
 
   .untilDetail {
     font-size: 16px;
-    line-height: 22px;
+    line-height: 25px;
     padding: 16px;
     width: calc(100% - 32px);
   }
@@ -775,7 +809,7 @@
   /* sec8 */
   .sec8 {
     padding-top: 75px;
-    padding-bottom: 46px;
+    padding-bottom: 23px;
   }
 
   .meritTit,
@@ -801,8 +835,23 @@
     padding-bottom: 62px;
   }
 
+  .sec10Grid {
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
   .sec10ImgBox {
-    width: 45%;
+    width: 100%;
+    text-align: center;
+  }
+
+  .sec10BgImg {
+    top: 190px;
+    left: 50%;
+    min-width: 500px;
+    transform: translate(-50%, 0%);
   }
 }
 
@@ -810,8 +859,30 @@
   .dateHistory {
     grid-template-columns: repeat(3, 1fr);
   }
+}
 
-  .sec10ImgBox {
-    width: 100%;
+@media (max-width: 500px) {
+  .sec4 .txtGroup {
+    margin-top: 0;
+  }
+
+  .imgCenter48 p {
+    margin-top: 15px;
+  }
+
+  .swiperBullet {
+    width: 30px;
+    margin: 0 5px;
+  }
+
+  .untilTitle {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 300px) {
+  .imgCaption2col {
+    gap: 15px;
+    font-size: 12px;
   }
 }

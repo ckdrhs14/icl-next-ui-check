@@ -147,7 +147,7 @@ export function Header() {
         [router, pathname]
     );
 
-    const headerClasses = [styles.header, scrolled ? styles.basicbg : "", hamOpen ? styles.ham : ""]
+    const headerClasses = [styles.header, scrolled ? styles.basicbg : "", hamOpen ? styles.hamOpen : ""]
         .filter(Boolean)
         .join(" ");
 
@@ -326,8 +326,8 @@ export function Header() {
                 </div>
             </header>
 
-            {/* Quick Group Bar - fixed bottom */}
-            <div className={styles.quickGroup}>
+            {/* Quick Group Bar - 메인페이지에서만 표시 */}
+            {pathname === '/' && <div className={styles.quickGroup}>
                 <div className={styles.contInner}>
                     <div className={styles.quickBox}>
                         <Link href="/community/reservation" className={`${styles.btnBox} ${styles.btnReserve}`}>
@@ -338,7 +338,7 @@ export function Header() {
                                 <p>{t("quick.reserve")}</p>
                             </div>
                         </Link>
-                        <div className={styles.line} />
+                        <div className={styles.quickLine} />
                         <Link href="/about/info" className={`${styles.btnBox} ${styles.btnMap}`}>
                             <div className={styles.imgBox}>
                                 <img src={li("/img/common/icon_map_br.png")} alt="" className={styles.brImg} />
@@ -349,7 +349,7 @@ export function Header() {
                                 </p>
                             </div>
                         </Link>
-                        <div className={styles.line} />
+                        <div className={styles.quickLine} />
                         <a href="tel:02-566-1215" className={`${styles.btnBox} ${styles.btnCall}`}>
                             <div className={styles.imgBox}>
                                 <img src="/img/common/icon_call_br.png" alt="" className={styles.brImg} />
@@ -358,7 +358,7 @@ export function Header() {
                                 <p>{t("quick.call")}</p>
                             </div>
                         </a>
-                        <div className={styles.line} />
+                        <div className={styles.quickLine} />
                         <a
                             href="https://pf.kakao.com/_rXGTG"
                             target="_blank"
@@ -372,7 +372,7 @@ export function Header() {
                                 <p>{t("quick.kakao")}</p>
                             </div>
                         </a>
-                        <div className={styles.line} />
+                        <div className={styles.quickLine} />
                         <a
                             href="https://m.booking.naver.com/booking/13/bizes/1003562"
                             target="_blank"
@@ -388,7 +388,7 @@ export function Header() {
                         </a>
                     </div>
                 </div>
-            </div>
+            </div>}
         </>
     );
 }

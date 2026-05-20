@@ -434,6 +434,12 @@
   }
 }
 
+@media (max-width: 500px) {
+  .featuredVideoBox {
+    height: 250px;
+  }
+}
+
 @media (max-width: 390px) {
   .videoTit h5 {
     font-size: 18px;

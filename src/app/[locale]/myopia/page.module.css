@@ -1349,6 +1349,9 @@
   width: 100%;
 }
 
+.sec18NavItem { display: flex; }
+.equipInfoSvg { display: inline-block; }
+
 .sec18NavDivider {
   width: 1px;
   height: 30px;
@@ -1373,13 +1376,65 @@
 
 /* ===== Responsive: 1250px ===== */
 @media screen and (max-width: 1250px) {
+  .sec1Inner {
+    padding: 200px 0 160px 0;
+  }
+
   .sec1TxtBox h3 {
     font-size: 30px;
     line-height: 44px;
   }
 
   .sec1TxtBox p {
+    font-size: 16px;
+    line-height: 140%;
+    margin-top: 8px;
+  }
+
+  .myopiaListType2TxtBoxP {
+    font-size: 16px;
+  }
+
+  .myopiaListType3P {
+    font-size: 16px;
+  }
+
+  .sec3 .myopiaListType2TxtBox {
+    max-width: 360px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .descBoxP + .descBoxP {
+    margin-top: 20px;
+  }
+
+  .sec10Subtit {
     font-size: 20px;
+  }
+
+  .bannerH3 {
+    font-size: 30px;
+    line-height: 140%;
+  }
+
+  .sec9DescP {
+    font-size: 24px;
+    line-height: 140%;
+  }
+
+  .sec11P {
+    font-size: 24px;
+    line-height: 140%;
+  }
+
+  .sec15TxtBottomH3 {
+    font-size: 28px;
+    line-height: 140%;
+  }
+
+  .sec15DescP {
+    font-size: 24px;
     line-height: 140%;
   }
 
@@ -1471,6 +1526,10 @@
 
   .myopiaListType3H4 {
     font-size: 24px;
+  }
+
+  .myopiaListTopTxtBox {
+    height: 60px;
   }
 
   .myopiaListTopTxtBoxH4 {
@@ -1635,6 +1694,23 @@
   .pc { display: none; }
   .mo { display: block; }
 
+  .sec7TopTxtBox {
+    height: 60px;
+  }
+
+  .sec3 .myopiaListType2TxtBox {
+    padding: 20px;
+  }
+
+  .sec18NavItem {
+    width: 33.333%;
+  }
+
+  .equipInfoSvg {
+    width: 20px;
+    height: 20px;
+  }
+
   .sec1 {
     background-position: 70% 50%;
   }
@@ -1654,7 +1730,6 @@
   .sec1Inner {
     position: relative;
     z-index: 2;
-    padding: 120px 20px 60px;
   }
 
   .titGroupH3,
@@ -1727,6 +1802,11 @@
     text-align: center;
   }
 
+  .sec9DescP {
+    font-size: 16px;
+    line-height: 140%;
+  }
+
   .differentList {
     flex-wrap: wrap;
     gap: 60px;
@@ -1794,13 +1874,55 @@
     gap: 8px;
   }
 
-  .bannerH3,
-  .bannerP {
+  .sec11P {
+    font-size: 20px;
+    line-height: 140%;
+  }
+
+  .sec15TxtBottomH3 {
+    font-size: 24px;
+    line-height: 140%;
+  }
+
+  .sec15DescP {
+    font-size: 16px;
+    line-height: 140%;
+  }
+
+  .bannerH3 {
+    font-size: 24px;
+    line-height: 140%;
     text-align: center;
   }
 
   .bannerP {
+    text-align: center;
     font-size: 16px;
+  }
+
+  .sec12TxtBox {
+    height: 60px;
+  }
+
+  .sec12TxtBottomH3 {
+    font-size: 24px;
+  }
+
+  .sec12DescP {
+    font-size: 16px;
+  }
+
+  .sec13DescP {
+    font-size: 16px;
+  }
+
+  .equipInfoEm svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .sec18NavArea {
+    width: 90%;
   }
 
   .sec12Inner {

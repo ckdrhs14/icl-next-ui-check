@@ -259,6 +259,14 @@
 }
 
 /* ===== Responsive ===== */
+@media (max-width: 1250px) {
+  .contInner {
+    width: 90%;
+    margin: 0 auto;
+    max-width: none;
+  }
+}
+
 @media (max-width: 820px) {
   .sec3 {
     background: url(/img/plus/icl3_sec7_bg_mo.png) no-repeat center bottom / cover;

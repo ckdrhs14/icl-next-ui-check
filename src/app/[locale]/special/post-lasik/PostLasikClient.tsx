@@ -8,7 +8,9 @@ import styles from './page.module.css';
 const SECTIONS: ScrollSection[] = [
   { id: 'vision', hash: '#vision', label: 'VISION DECREASE' },
   { id: 'resurgery', hash: '#resurgery', label: 'RE-SURGERY' },
-  { id: 'eyesight', hash: '#eyesight', label: "ICL'S EYESIGHT", dark: true },
+  { id: 'eyesight', hash: '#eyesight', label: "ICL'S EYESIGHT" },
+  { id: 'why-icl', hash: '#why-icl', label: 'WHY ICL' },
+  { id: 'point', hash: '#point', label: 'POINT', dark: true },
 ];
 
 const PREFER_REASON_KEYS = [
@@ -36,11 +38,11 @@ export default function PostLasikClient() {
           <div className={styles.titGroup}>
             <h3 dangerouslySetInnerHTML={{ __html: t.raw('sec1Title') }} />
           </div>
-          <div className={styles.imgBox}>
+          <div id="resurgery" className={styles.imgBox}>
             <Image src="/img/plus/icl_sec1_txt1.png" alt="" width={920} height={400} className="pc" />
             <Image src="/img/plus/icl_sec1_txt1_mo.png" alt="" width={600} height={400} className="mo" />
           </div>
-          <div className={styles.imgBox}>
+          <div id="eyesight" className={styles.imgBox}>
             <Image src="/img/plus/icl_sec1_txt2_mo.png" alt="" width={600} height={400} className="mo" />
           </div>
           <div className={styles.imgBox}>
@@ -50,7 +52,7 @@ export default function PostLasikClient() {
       </section>
 
       {/* Section 2: ICL을 선호하는 이유 (icl_sec2) */}
-      <section id="resurgery" className={styles.sec2}>
+      <section id="why-icl" className={styles.sec2}>
         <div className={styles.contInner} data-aos="fade-up" data-aos-duration="1000">
           <div className={styles.sec2TitGroup}>
             <h3 dangerouslySetInnerHTML={{ __html: t.raw('sec2Title') }} />
@@ -67,7 +69,7 @@ export default function PostLasikClient() {
       </section>
 
       {/* Section 3: 라식 수술 후 ICL 수술의 특장점 (icl_sec3) */}
-      <section id="eyesight" className={styles.sec3}>
+      <section id="point" className={styles.sec3}>
         <div className={styles.contInner} data-aos="fade-up" data-aos-duration="1000">
           <div className={styles.sec3BgImg}>
             <Image src="/img/plus/icl_sec3_bg_img.png" alt="" width={750} height={500} />

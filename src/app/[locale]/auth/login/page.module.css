@@ -246,6 +246,22 @@
 }
 
 /* ===== Responsive ===== */
+@media (max-width: 1025px) {
+  .formSection {
+    padding-top: 150px;
+    min-height: auto;
+  }
+
+  .formContainer {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .checkGroup {
+    gap: 5px;
+  }
+}
+
 @media (max-width: 768px) {
   .formSection {
     padding-top: 50px;
@@ -291,9 +307,25 @@
   .heroTitle { font-size: 30px; line-height: 30px; }
   .heroSub { font-size: 44px; line-height: 44px; }
 
+  .linkGroup a {
+    font-size: 16px;
+    line-height: 16px;
+    text-align: center;
+  }
+
+  .checkGroup {
+    gap: 20px;
+  }
+
   .bottomSection {
     padding-top: 70px;
     padding-bottom: 90px;
+  }
+}
+
+@media (max-width: 290px) {
+  .heroSub {
+    font-size: 33px;
   }
 }
 

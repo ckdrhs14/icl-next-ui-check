@@ -1,7 +1,15 @@
 import Image from 'next/image';
 import { getTranslations, getLocale } from 'next-intl/server';
 import { getLocalizedImg } from '@/utils/localizedImage';
+import { ScrollPageLayout, type ScrollSection } from '@/components/scroll';
 import styles from './page.module.css';
+
+const SECTIONS: ScrollSection[] = [
+  { id: 'cat-about', hash: '#cat-about', label: 'ABOUT' },
+  { id: 'cat-diagnosis', hash: '#cat-diagnosis', label: 'DIAGNOSIS' },
+  { id: 'cat-therapy', hash: '#cat-therapy', label: 'THERAPY', dark: true },
+  { id: 'cat-warning', hash: '#cat-warning', label: 'WARNING' },
+];
 
 export async function generateMetadata() {
   const t = await getTranslations('presbyopia.cataract');
@@ -14,6 +22,7 @@ export default async function CataractPage() {
   const li = (src: string) => getLocalizedImg(src, locale);
 
   return (
+    <ScrollPageLayout sections={SECTIONS}>
     <div className={`${styles.pagesWrapper} ${styles.catWrapper}`}>
       {/* cat_sec10 - 닥터 ICL 안과 확인 */}
       <div className={`${styles.catSec10} ${styles.catBImg3}`}>
@@ -89,7 +98,7 @@ export default async function CataractPage() {
       </div>
 
       {/* cat_sec1 - 백내장이란 */}
-      <div className={`${styles.catSec1} ${styles.padTb} ${styles.catBImg}`}>
+      <div id="cat-about" className={`${styles.catSec1} ${styles.padTb} ${styles.catBImg}`}>
         <div className={styles.contInner} data-aos="fade-up" data-aos-duration="1000">
           <div className={styles.titGroup}>
             <h3 dangerouslySetInnerHTML={{ __html: t.raw('sec1Title') }} />
@@ -203,7 +212,7 @@ export default async function CataractPage() {
       </div>
 
       {/* cat_sec3 - 백내장의 진단 */}
-      <div className={`${styles.catSec3} ${styles.secBG} ${styles.pad160}`}>
+      <div id="cat-diagnosis" className={`${styles.catSec3} ${styles.secBG} ${styles.pad160}`}>
         <div className={styles.contInner} data-aos="fade-up" data-aos-duration="1000">
           <div className={styles.titGroup}>
             <h3 dangerouslySetInnerHTML={{ __html: t.raw('sec3Title') }} />
@@ -613,7 +622,7 @@ export default async function CataractPage() {
       </div>
 
       {/* cat_sec6 - 백내장의 예방 및 치료 */}
-      <div className={`${styles.catSec6} ${styles.catBImg1} ${styles.pad160}`}>
+      <div id="cat-therapy" className={`${styles.catSec6} ${styles.catBImg1} ${styles.pad160}`}>
         <div className={styles.contInner} data-aos="fade-up" data-aos-duration="1000">
           <div className={`${styles.titGroup} ${styles.white}`}>
             <h3 dangerouslySetInnerHTML={{ __html: t.raw('sec6Title') }} />
@@ -932,7 +941,7 @@ export default async function CataractPage() {
       </div>
 
       {/* cat_sec9 - 수술 후 치료, 경과 */}
-      <div className={`${styles.catSec9} ${styles.secBG} ${styles.pad160}`}>
+      <div id="cat-warning" className={`${styles.catSec9} ${styles.secBG} ${styles.pad160}`}>
         <div className={styles.contInner} data-aos="fade-up" data-aos-duration="1000">
           <div className={styles.titGroup}>
             <h3 dangerouslySetInnerHTML={{ __html: t.raw('sec9PostOpTitle') }} />
@@ -949,5 +958,6 @@ export default async function CataractPage() {
         </div>
       </div>
     </div>
+    </ScrollPageLayout>
   );
 }

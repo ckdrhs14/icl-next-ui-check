@@ -294,6 +294,11 @@
     padding: 0;
   }
 
+  .sec6 {
+    height: inherit;
+    background-attachment: fixed;
+  }
+
   .sec6ContBox {
     flex-wrap: wrap;
     gap: 15px;
@@ -305,6 +310,53 @@
 
   .sec6ImgBox::after {
     display: none;
+  }
+
+  .sec6BottomText {
+    font-size: 24px;
+    line-height: 30px;
+    margin-top: 30px;
+  }
+
+  .sec6Des {
+    font-size: 16px;
+    line-height: 26px;
+  }
+
+  .sec7 {
+    height: inherit;
+    padding: 75px 0 51px;
+  }
+
+  .sec7Inner {
+    width: 100%;
+  }
+
+  .sec7H3 {
+    font-size: 30px;
+    line-height: 40px;
+    text-align: center;
+  }
+
+  .chImgWrap {
+    width: 100%;
+    top: 48%;
+  }
+
+  .sec7TextImgGroup {
+    display: flex;
+    margin-top: 2px;
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .sec7ContGroup .sec7MainImg img {
+    width: 100%;
+  }
+
+  .sec7TextImgGroup .sec7TextImgBox {
+    margin-top: 15px;
   }
 }
 
@@ -354,6 +406,26 @@
 
   .sec6ImgBox {
     width: 70%;
+  }
+
+  .sec6ImgBox img {
+    margin: 0 auto;
+    display: block;
+  }
+
+  .sec6ImgBox::after {
+    display: block !important;
+    left: 48% !important;
+    top: -27px !important;
+    transform: rotate(90deg) translateX(-50%) !important;
+  }
+
+  .sec6ImgBox:first-child::after {
+    display: none !important;
+  }
+
+  .sec6ImgBox:nth-child(2) {
+    margin-bottom: 10px;
   }
 
   .sec6BottomText {

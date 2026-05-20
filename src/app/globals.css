@@ -1,5 +1,69 @@
 @import "tailwindcss";
 
+/* ===== Base HTML ===== */
+html {
+    overscroll-behavior: none;
+    scroll-behavior: auto;
+}
+
+/* ===== Header White Background (메인 페이지 비디오/어두운 섹션 위) ===== */
+.header.headerWhiteBg {
+    background: rgba(0, 0, 0, 0.2) !important;
+}
+.header.headerWhiteBg .headerTopContainer {
+    border-bottom-color: rgba(255, 255, 255, 0.4) !important;
+}
+.header.headerWhiteBg .logo .whiteLogo {
+    opacity: 1 !important;
+}
+.header.headerWhiteBg .logo .colorLogo {
+    opacity: 0 !important;
+}
+.header.headerWhiteBg nav a,
+.header.headerWhiteBg .navLink {
+    color: #fff !important;
+}
+.header.headerWhiteBg .hamburgerLine {
+    background-color: #fff !important;
+}
+.header.headerWhiteBg .btnTxt {
+    color: #fff !important;
+}
+.header.headerWhiteBg svg path {
+    fill: #fff !important;
+}
+
+/* ===== AOS Animation Styles ===== */
+[data-aos] {
+    opacity: 0;
+    transition-property: transform, opacity;
+    transition-duration: 800ms;
+    transition-timing-function: cubic-bezier(0.33, 1, 0.68, 1);
+}
+[data-aos].aos-animate { opacity: 1; }
+[data-aos="fade-up"] { transform: translateY(60px); }
+[data-aos="fade-up"].aos-animate { transform: translateY(0); }
+[data-aos="fade-left"] { transform: translateX(-60px); }
+[data-aos="fade-left"].aos-animate { transform: translateX(0); }
+[data-aos="fade-right"] { transform: translateX(60px); }
+[data-aos="fade-right"].aos-animate { transform: translateX(0); }
+[data-aos="fade-in"] { transform: none; }
+[data-aos="fade-in"].aos-animate { opacity: 1; }
+
+/* ===== Thesis Swiper — 끊김 없는 등속 흐름 ===== */
+[data-thesis-swiper] .swiper-wrapper {
+    transition-timing-function: linear !important;
+    align-items: center;
+}
+[data-thesis-swiper] .swiper-slide {
+    user-select: none;
+    width: 320px;
+    max-width: min(365px, 78vw);
+    height: auto;
+    flex-shrink: 0;
+    box-sizing: border-box;
+}
+
 /* ===== Design Tokens ===== */
 :root {
     /* Primary */
@@ -59,6 +123,15 @@
     --z-header: 99999;
 }
 
+/* ===== Scrollbar (from scroll.css) ===== */
+html::-webkit-scrollbar {
+    width: 8px;
+}
+html::-webkit-scrollbar-thumb {
+    background-color: #2f3542;
+    border-radius: 10px;
+}
+
 /* ===== Reset & Base ===== */
 *,
 *::before,
@@ -72,6 +145,9 @@ html {
     font-size: 16px;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: none;
+    -ms-text-size-adjust: none;
+    -moz-text-size-adjust: none;
 }
 
 body {
@@ -110,6 +186,24 @@ button {
     cursor: pointer;
     font: inherit;
     color: inherit;
+}
+
+/* iOS form element resets (from reset.css) */
+input,
+textarea,
+button,
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    outline: 0;
+}
+
+input[type="radio"] {
+    appearance: none;
 }
 
 /* ===== Utility Classes ===== */

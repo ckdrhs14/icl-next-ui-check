@@ -7,7 +7,7 @@ import { routing } from '@/i18n/routing';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { AosInit } from '@/components/aos/AosInit';
-import '../globals.css';
+import { LenisInit } from '@/components/lenis/LenisInit';
 
 const notoSerifKr = Noto_Serif_KR({
   subsets: ['latin'],
@@ -33,13 +33,28 @@ export async function generateMetadata() {
     description: t('siteDesc'),
     keywords: t('siteKeywords'),
     robots: 'index, follow',
+    authors: [{ name: 'WACUS' }],
     openGraph: {
       type: 'website' as const,
       siteName: t('siteTitle'),
-      images: [{ url: '/img/ogImage.png' }],
+      title: t('siteTitle'),
+      description: t('siteDesc'),
+      url: 'https://doctoricl.com/',
+      images: [{ url: 'https://doctoricl.com/img/ogImage.png' }],
     },
     other: {
       'naver-site-verification': 'c515fcd626ac35f2bfb5475c5c27123d8f32f556',
+      'theme-color': '#ffffff',
+      'mobile-web-app-capable': 'yes',
+      'apple-mobile-web-app-capable': 'yes',
+      'apple-mobile-web-app-status-bar-style': 'black-translucent',
+      'apple-mobile-web-app-title': t('siteTitle'),
+      'application-name': t('siteTitle'),
+      'msapplication-TileColor': '#ffffff',
+      'format-detection': 'telephone=no',
+      googlebot: 'index, follow',
+      'revisit-after': '7 days',
+      language: 'Korean',
     },
   };
 }
@@ -60,30 +75,21 @@ export default async function LocaleLayout({
   const messages = await getMessages();
 
   return (
-    <html
-      lang={locale}
-      className={`${notoSerifKr.variable} ${notoSerif.variable}`}
-    >
-      <head>
-        <link
-          rel="stylesheet"
-          as="style"
-          crossOrigin="anonymous"
-          href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"
-        />
-        <link
-          rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
-        />
-      </head>
-      <body>
-        <NextIntlClientProvider messages={messages}>
-          <AosInit />
-          <Header />
-          <main>{children}</main>
-          <Footer />
-        </NextIntlClientProvider>
-      </body>
-    </html>
+    <div className={`${notoSerifKr.variable} ${notoSerif.variable}`} lang={locale}>
+      {/* Hidden SEO headings (원본 PHP 동일) */}
+      <div style={{ position: 'absolute', top: -54, overflow: 'hidden', height: 1, width: 1 }}>
+        <h1>강남 닥터ICL안과의원 - 강남안과,렌즈삽입술,안내렌즈삽입술</h1>
+      </div>
+      <div style={{ position: 'absolute', top: -54, overflow: 'hidden', height: 1, width: 1 }}>
+        <h2>강남 안과</h2>
+      </div>
+      <NextIntlClientProvider messages={messages}>
+        <LenisInit />
+        <AosInit />
+        <Header />
+        <main>{children}</main>
+        <Footer />
+      </NextIntlClientProvider>
+    </div>
   );
 }
