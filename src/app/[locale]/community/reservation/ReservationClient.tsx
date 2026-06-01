@@ -1,13 +1,17 @@
 'use client';
 
 import { useState, type FormEvent } from 'react';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import styles from './page.module.css';
 
 export default function ReservationClient() {
   const t = useTranslations('community.reservation');
+  const locale = useLocale();
+  const isEn = locale === 'en';
   const [name, setName] = useState('');
+  const [countryCode, setCountryCode] = useState('+1');
   const [phone, setPhone] = useState('');
+  const [email, setEmail] = useState('');
   const [subject, setSubject] = useState('');
   const [time, setTime] = useState('');
   const [content, setContent] = useState('');
@@ -118,52 +122,131 @@ export default function ReservationClient() {
 
         {/* Form */}
         <form className={styles.formGroup} onSubmit={handleSubmit} data-aos="fade-up" data-aos-duration="1000">
-          <div className={styles.topFormGroup}>
-            <div className={styles.formBox}>
-              <label>{t('labelName')}</label>
-              <div className={styles.formLine} />
-              <input
-                type="text"
-                placeholder={t('placeholderName')}
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                required
-                maxLength={20}
-                minLength={2}
-              />
+          {isEn ? (
+            <>
+              <div className={`${styles.topFormGroup} ${styles.topFormGroupEn}`}>
+                <div className={styles.formBox}>
+                  <label>{t('labelName')}</label>
+                  <div className={styles.formLine} />
+                  <input
+                    type="text"
+                    placeholder={t('placeholderName')}
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                    required
+                    maxLength={20}
+                    minLength={2}
+                  />
+                </div>
+                <div className={styles.formBox}>
+                  <select value={countryCode} onChange={(e) => setCountryCode(e.target.value)} required>
+                    <option value="+1">US +1</option>
+                    <option value="+86">CN +86</option>
+                    <option value="+81">JP +81</option>
+                    <option value="+7">RU +7</option>
+                    <option value="+65">SG +65</option>
+                    <option value="+886">TW +886</option>
+                    <option value="+976">MN +976</option>
+                    <option value="+84">VN +84</option>
+                    <option value="+66">TH +66</option>
+                    <option value="+60">MY +60</option>
+                  </select>
+                </div>
+                <div className={styles.formBox}>
+                  <label>{t('labelPhone')}</label>
+                  <div className={styles.formLine} />
+                  <input
+                    type="text"
+                    placeholder={t('placeholderPhone')}
+                    value={phone}
+                    onChange={(e) => handlePhoneInput(e.target.value)}
+                    required
+                    maxLength={13}
+                  />
+                </div>
+              </div>
+              <div className={`${styles.topFormGroup} ${styles.topFormGroupEn}`}>
+                <div className={styles.formBox}>
+                  <label>{t('labelEmail')}</label>
+                  <div className={styles.formLine} />
+                  <input
+                    type="text"
+                    placeholder={t('placeholderEmail')}
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    required
+                    maxLength={50}
+                  />
+                </div>
+                <div className={styles.formBox}>
+                  <select value={subject} onChange={(e) => setSubject(e.target.value)} required>
+                    <option value="">{t('subjectDefault')}</option>
+                    <option value="렌즈삽입술">{t('subjectLens')}</option>
+                    <option value="재수술">{t('subjectRe')}</option>
+                    <option value="노안/백내장">{t('subjectPresbyopia')}</option>
+                    <option value="외래진료">{t('subjectOutpatient')}</option>
+                    <option value="기타">{t('subjectOther')}</option>
+                  </select>
+                </div>
+                <div className={styles.formBox}>
+                  <select value={time} onChange={(e) => setTime(e.target.value)} required>
+                    <option value="">{t('timeDefault')}</option>
+                    <option value="상시가능">{t('timeAnytime')}</option>
+                    <option value="10:00~12:00">10:00~12:00</option>
+                    <option value="14:00~16:00">14:00~16:00</option>
+                    <option value="16:00~18:00">16:00~18:00</option>
+                  </select>
+                </div>
+              </div>
+            </>
+          ) : (
+            <div className={styles.topFormGroup}>
+              <div className={styles.formBox}>
+                <label>{t('labelName')}</label>
+                <div className={styles.formLine} />
+                <input
+                  type="text"
+                  placeholder={t('placeholderName')}
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  required
+                  maxLength={20}
+                  minLength={2}
+                />
+              </div>
+              <div className={styles.formBox}>
+                <label>{t('labelPhone')}</label>
+                <div className={styles.formLine} />
+                <input
+                  type="text"
+                  placeholder={t('placeholderPhone')}
+                  value={phone}
+                  onChange={(e) => handlePhoneInput(e.target.value)}
+                  required
+                  maxLength={13}
+                />
+              </div>
+              <div className={styles.formBox}>
+                <select value={subject} onChange={(e) => setSubject(e.target.value)} required>
+                  <option value="">{t('subjectDefault')}</option>
+                  <option value="렌즈삽입술">{t('subjectLens')}</option>
+                  <option value="재수술">{t('subjectRe')}</option>
+                  <option value="노안/백내장">{t('subjectPresbyopia')}</option>
+                  <option value="외래진료">{t('subjectOutpatient')}</option>
+                  <option value="기타">{t('subjectOther')}</option>
+                </select>
+              </div>
+              <div className={styles.formBox}>
+                <select value={time} onChange={(e) => setTime(e.target.value)} required>
+                  <option value="">{t('timeDefault')}</option>
+                  <option value="상시가능">{t('timeAnytime')}</option>
+                  <option value="10:00~12:00">10:00~12:00</option>
+                  <option value="14:00~16:00">14:00~16:00</option>
+                  <option value="16:00~18:00">16:00~18:00</option>
+                </select>
+              </div>
             </div>
-            <div className={styles.formBox}>
-              <label>{t('labelPhone')}</label>
-              <div className={styles.formLine} />
-              <input
-                type="text"
-                placeholder={t('placeholderPhone')}
-                value={phone}
-                onChange={(e) => handlePhoneInput(e.target.value)}
-                required
-                maxLength={13}
-              />
-            </div>
-            <div className={styles.formBox}>
-              <select value={subject} onChange={(e) => setSubject(e.target.value)} required>
-                <option value="">{t('subjectDefault')}</option>
-                <option value="렌즈삽입술">{t('subjectLens')}</option>
-                <option value="재수술">{t('subjectRe')}</option>
-                <option value="노안/백내장">{t('subjectPresbyopia')}</option>
-                <option value="외래진료">{t('subjectOutpatient')}</option>
-                <option value="기타">{t('subjectOther')}</option>
-              </select>
-            </div>
-            <div className={styles.formBox}>
-              <select value={time} onChange={(e) => setTime(e.target.value)} required>
-                <option value="">{t('timeDefault')}</option>
-                <option value="상시가능">{t('timeAnytime')}</option>
-                <option value="10:00~12:00">10:00~12:00</option>
-                <option value="14:00~16:00">14:00~16:00</option>
-                <option value="16:00~18:00">16:00~18:00</option>
-              </select>
-            </div>
-          </div>
+          )}
 
           <div className={styles.botFormGroup}>
             <div className={`${styles.formBox} ${styles.textArea}`}>
