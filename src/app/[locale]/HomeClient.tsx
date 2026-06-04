@@ -12,8 +12,18 @@ import type { Swiper as SwiperType } from "swiper";
 import "swiper/css";
 import "swiper/css/effect-fade";
 import s from "./page.module.css";
+import type { YouTubeVideo } from "@/utils/youtube";
+import type { InstaPost } from "@/utils/instagram";
 
 /* ── data ── */
+const fallbackYtVideos = [
+    { id: "j3GQyliVv2I", title: "한국 유일 렌즈삽입술 전문병원 닥터ICL안과", published: "2026-05-21", thumbnail: "https://img.youtube.com/vi/j3GQyliVv2I/mqdefault.jpg" },
+    { id: "o1uDJjAaknU", title: "그 간절함이 태평양을 건넜습니다 2편 | Angelica님의 ICL렌즈삽입술 수술 후기", published: "2026-05-14", thumbnail: "https://img.youtube.com/vi/o1uDJjAaknU/mqdefault.jpg" },
+    { id: "DCLsJhl3Vd4", title: "그 간절함이 태평양을 건넜습니다 1편 | 미국에 사는 그녀의 ICL렌즈삽입술 수술 후기", published: "2026-05-14", thumbnail: "https://img.youtube.com/vi/DCLsJhl3Vd4/mqdefault.jpg" },
+    { id: "wD26Gi3DwsQ", title: "ICL 렌즈삽입술, 의사들을 교육하는 의사에게 받으세요", published: "2026-04-16", thumbnail: "https://img.youtube.com/vi/wD26Gi3DwsQ/mqdefault.jpg" },
+    { id: "mN0EFbMyz2I", title: "피프티피프티 FIFTYFIFTY 예원님의 ICL 수술후기2", published: "2026-04-07", thumbnail: "https://img.youtube.com/vi/mN0EFbMyz2I/mqdefault.jpg" },
+];
+
 const aboutImages = [
     { src: "/img/main/main_about_img1.jpg", alt: "엑스퍼트 인스트럭터" },
     { src: "/img/main/main_about_img2.jpg", alt: "엑스퍼트 인스트럭터" },
@@ -170,12 +180,26 @@ function HeroVideo() {
     );
 }
 
-export default function HomeClient() {
+export default function HomeClient({ ytVideos: ytVideosProp = [], instaPosts = [] }: { ytVideos?: YouTubeVideo[]; instaPosts?: InstaPost[] }) {
+    const ytVideos = ytVideosProp.length > 0 ? ytVideosProp : fallbackYtVideos;
     const [activeExp, setActiveExp] = useState(0);
     const [newsIndex, setNewsIndex] = useState(0);
     const [thesisPopup, setThesisPopup] = useState<string | null>(null);
+    const [activeYt, setActiveYt] = useState(0);
+    const ytListRef = useRef<HTMLDivElement>(null);
     const expSwiperRef = useRef<SwiperType | null>(null);
+    const expNavSwRef = useRef<SwiperType | null>(null);
+    const expSyncing = useRef(false);
     const newsSwiperRef = useRef<SwiperType | null>(null);
+    const [isMobileNav, setIsMobileNav] = useState(false);
+
+    useEffect(() => {
+        const mql = window.matchMedia("(max-width: 768px)");
+        const onChange = (e: MediaQueryListEvent | MediaQueryList) => setIsMobileNav(e.matches);
+        onChange(mql);
+        mql.addEventListener("change", onChange);
+        return () => mql.removeEventListener("change", onChange);
+    }, []);
 
     /* count-up refs */
     const [yearRef, yearCount] = useCountUp(20);
@@ -370,17 +394,23 @@ export default function HomeClient() {
                                 <p>
                                     같은 수술이라도 결과가 다른 이유는 분명합니다.
                                     <br />
-                                    닥터아이씨엘 이동훈 대표원장은 단순한 &apos;ICL 레퍼런스 닥터&apos;를 넘어, 의사를
-                                    가르치는 의사인{" "}
+                                    닥터아이씨엘 이동훈 대표원장은 단순한
+                                    <br className={s.moBlock} /> &apos;ICL 레퍼런스 닥터&apos;를 넘어,
+                                    <br className={s.pcBlock} />
+                                    의사를
+                                    <br className={s.moBlock} /> 가르치는 의사인{" "}
                                     <b className={s.highlight}>
-                                        &apos;ICL 엑스퍼트 인스트럭터(Expert Instructor)&apos;
+                                        &apos;ICL 엑스퍼트 인스트럭터
+                                        <br className={s.moBlock} />
+                                        (Expert Instructor)&apos;
                                     </b>
                                     입니다.
                                 </p>
                                 <p>
                                     의사 교육을 전담하는 엄격한 기준과 압도적인 숙련도,
                                     <br />
-                                    수술의 정석을 만드는 그 실력 그대로 당신의 소중한 눈을 직접 집도합니다.
+                                    수술의 정석을 만드는 그 실력 그대로
+                                    <br className={s.moBlock} /> 당신의 소중한 눈을 직접 집도합니다.
                                 </p>
                             </div>
                         </figure>
@@ -567,23 +597,51 @@ export default function HomeClient() {
                         </h3>
                         <p data-aos="fade-up">이 과정의 끝에 ICL 엑스퍼트 인스트럭터 이동훈 대표 원장이 있습니다.</p>
                     </div>
-                    <div className={s.experienceNav} data-aos="fade-up">
-                        {experienceTabs.map((tab, i) => (
-                            <div
-                                key={i}
-                                className={`${s.experienceNavItem} ${activeExp === i ? s.experienceNavItemActive : ""}`}
-                                onClick={() => {
-                                    setActiveExp(i);
-                                    expSwiperRef.current?.slideToLoop(i);
-                                }}
-                            >
-                                <div className={s.experienceNavCircleWrap}>
-                                    <span className={s.experienceNavCircle} />
+                    {isMobileNav ? (
+                        <Swiper
+                            className={`${s.experienceNav} ${s.experienceNavMobile}`}
+                            data-aos="fade-up"
+                            slidesPerView={1}
+                            centeredSlides={true}
+                            loop={true}
+                            speed={400}
+                            onSwiper={(sw) => { expNavSwRef.current = sw; }}
+                            onSlideChange={(sw) => {
+                                if (expSyncing.current) return;
+                                expSyncing.current = true;
+                                setActiveExp(sw.realIndex);
+                                expSwiperRef.current?.slideToLoop(sw.realIndex);
+                                requestAnimationFrame(() => { expSyncing.current = false; });
+                            }}
+                        >
+                            {experienceTabs.map((tab, i) => (
+                                <SwiperSlide key={i} className={`${s.experienceNavItem} ${activeExp === i ? s.experienceNavItemActive : ""}`}>
+                                    <div className={s.experienceNavCircleWrap}>
+                                        <span className={s.experienceNavCircle} />
+                                    </div>
+                                    <h5>{tab}</h5>
+                                </SwiperSlide>
+                            ))}
+                        </Swiper>
+                    ) : (
+                        <div className={s.experienceNav} data-aos="fade-up">
+                            {experienceTabs.map((tab, i) => (
+                                <div
+                                    key={i}
+                                    className={`${s.experienceNavItem} ${activeExp === i ? s.experienceNavItemActive : ""}`}
+                                    onClick={() => {
+                                        setActiveExp(i);
+                                        expSwiperRef.current?.slideToLoop(i);
+                                    }}
+                                >
+                                    <div className={s.experienceNavCircleWrap}>
+                                        <span className={s.experienceNavCircle} />
+                                    </div>
+                                    <h5>{tab}</h5>
                                 </div>
-                                <h5>{tab}</h5>
-                            </div>
-                        ))}
-                    </div>
+                            ))}
+                        </div>
+                    )}
                     <div className={s.experienceContentWrap}>
                         <Swiper
                             data-gsap="experience-swiper"
@@ -597,7 +655,15 @@ export default function HomeClient() {
                                 expSwiperRef.current = sw;
                                 sw.autoplay.stop();
                             }}
-                            onSlideChange={(sw) => setActiveExp(sw.realIndex)}
+                            onSlideChange={(sw) => {
+                                if (expSyncing.current) return;
+                                expSyncing.current = true;
+                                setActiveExp(sw.realIndex);
+                                if (expNavSwRef.current && !expNavSwRef.current.destroyed) {
+                                    expNavSwRef.current.slideToLoop(sw.realIndex, 400, false);
+                                }
+                                requestAnimationFrame(() => { expSyncing.current = false; });
+                            }}
                             allowTouchMove={true}
                         >
                             {/* Slide 1: Stats */}
@@ -1002,6 +1068,140 @@ export default function HomeClient() {
                             </div>
                         ))}
                     </div>
+                </div>
+            </section>
+
+            {/* 10-1. YouTube Section */}
+            <section className={s.youtubeSection}>
+                <div className={s.youtubeInner}>
+                    <div className={s.youtubePlayer} data-aos="fade-right">
+                        <iframe
+                            key={ytVideos[activeYt].id}
+                            src={`https://www.youtube.com/embed/${ytVideos[activeYt].id}?rel=0`}
+                            title={ytVideos[activeYt].title}
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowFullScreen
+                        />
+                    </div>
+                    <div className={s.youtubeContent} data-aos="fade-left">
+                        <div className={s.youtubeTitWrap}>
+                            <div>
+                                <h5>Doctoricl YOUTUBE</h5>
+                                <h3>
+                                    렌즈삽입술은 닥터ICL안과
+                                    <br />
+                                    <span>유튜브에서 닥터ICL을 만나보세요</span>
+                                </h3>
+                            </div>
+                            <a
+                                href="https://www.youtube.com/@driclno.1/videos"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className={s.youtubeBtn}
+                            >
+                                <span className={s.youtubeBtnDot} />
+                                <span>닥터ICL안과 유튜브 바로가기</span>
+                            </a>
+                        </div>
+                        <div className={s.youtubeListWrap}>
+                            <div
+                                className={s.youtubeList}
+                                ref={ytListRef}
+                                data-lenis-prevent
+                            >
+                                {ytVideos.map((v, i) => (
+                                    <div key={v.id}>
+                                        <button
+                                            type="button"
+                                            className={`${s.youtubeItem} ${activeYt === i ? s.youtubeItemActive : ""}`}
+                                            onClick={() => setActiveYt(i)}
+                                        >
+                                            <div className={s.youtubeItemThumb}>
+                                                <img
+                                                    src={v.thumbnail}
+                                                    alt={v.title}
+                                                />
+                                            </div>
+                                            <div className={s.youtubeItemTxt}>
+                                                <h6>{v.title}</h6>
+                                                <p>{v.published}</p>
+                                            </div>
+                                        </button>
+                                        {i < ytVideos.length - 1 && <div className={s.youtubeDivider} />}
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* 10-2. Instagram Section */}
+            <section className={s.instaSection}>
+                <div className={s.instaTitArea} data-aos="fade-up">
+                    <div className={s.instaTitWrap}>
+                        <h5>Doctoricl Insights</h5>
+                        <h3>
+                            닥터ICL안과의 <span className={s.highlight}>새로운 소식</span>을 만나보세요
+                        </h3>
+                    </div>
+                    <a
+                        href="https://www.instagram.com/doctoricl/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={s.instaBtn}
+                    >
+                        <span className={s.instaBtnDot} />
+                        <span>닥터ICL 인스타그램 바로가기</span>
+                    </a>
+                </div>
+                <div className={s.instaGrid} data-aos="fade-up">
+                    {instaPosts.length > 0
+                        ? instaPosts.map((post) => (
+                            <a
+                                key={post.id}
+                                href={post.permalink}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className={s.instaCard}
+                            >
+                                <div className={s.instaCardImg}>
+                                    <img src={post.thumbnail} alt={post.caption.slice(0, 50)} />
+                                </div>
+                                <div className={s.instaCardTxt}>
+                                    <h6>{post.caption.length > 40 ? post.caption.slice(0, 40) + "…" : post.caption}</h6>
+                                    <p>{post.timestamp}</p>
+                                </div>
+                            </a>
+                        ))
+                        : [
+                            { img: 1, title: "2025 KOREA EVO ICL FORUM", date: "2025-08-06" },
+                            { img: 2, title: "ICL EXPERT INSTRUCTOR 공식 선정", date: "2025-07-22" },
+                            { img: 3, title: "세계 6인의 ICL Expert Doctor 선정", date: "2025-07-15" },
+                            { img: 4, title: "2026 EVO ICL APAC EXPERTS SUMMIT", date: "2025-06-30" },
+                        ].map((item) => (
+                            <a
+                                key={item.img}
+                                href="https://www.instagram.com/doctoricl/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className={s.instaCard}
+                            >
+                                <div className={s.instaCardImg}>
+                                    <Image
+                                        src={`/img/main/main_insta_placeholder${item.img}.jpg`}
+                                        alt={item.title}
+                                        width={420}
+                                        height={549}
+                                        style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                                    />
+                                </div>
+                                <div className={s.instaCardTxt}>
+                                    <h6>{item.title}</h6>
+                                    <p>{item.date}</p>
+                                </div>
+                            </a>
+                        ))}
                 </div>
             </section>
 

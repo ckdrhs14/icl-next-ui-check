@@ -15,14 +15,15 @@
 
 /* ===== 2. About Section ===== */
 .aboutSection { width: 100%; min-height: 100vh; background-image: url('/img/main/main_about_bg.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; display: flex; align-items: center; }
-.aboutInner { display: flex; height: 100%; justify-content: start; align-items: center; }
+.aboutInner { display: flex; width: 100%; height: 100%; justify-content: start; align-items: center; }
 .aboutInfoWrap { display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 40px; margin-left: 100px; }
 .aboutTxtWrap { color: #fff; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; }
 .aboutTxtWrap h5 { font-family: 'Noto Serif KR', serif; font-size: clamp(20px, 2vw, 26px); font-weight: 300; line-height: 160%; letter-spacing: -0.035em; }
 .aboutTxtWrap h3 { font-size: clamp(40px, 4vw, 70px); font-weight: 700; line-height: 140%; letter-spacing: -0.02em; background: linear-gradient(180deg, #fff 35.32%, #c7fff0 85.71%); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 20px; }
 .aboutTxtWrap .aboutDesc p { color: #fff; font-size: clamp(16px, 1.6vw, 20px); font-weight: 300; line-height: 140%; letter-spacing: -0.02em; margin-bottom: 12px; }
 .aboutTxtWrap .aboutDesc p:last-of-type { margin-bottom: 0; }
-.aboutImgList { width: 100%; max-width: 776px; display: flex; gap: 12px; }
+.aboutImgList { width: 100%; max-width: 776px; }
+.aboutImgList :global(.swiper-wrapper) { display: flex; gap: 12px; }
 .aboutImgItem { border-radius: 24px; overflow: hidden; flex: 1; }
 .aboutImgItem img { width: 100%; height: auto; display: block; }
 
@@ -121,6 +122,12 @@
 .experienceSection { background-color: #f5f5f4; padding: 150px 0; overflow: hidden; }
 .experienceNav { display: flex; position: relative; align-items: center; justify-content: center; margin-top: 50px; margin-bottom: 80px; gap: 100px; }
 .experienceNav::after { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 1px; background: linear-gradient(90deg, rgba(214,211,209,0) 0%, #d6d3d1 10%, #d6d3d1 90%, rgba(214,211,209,0) 100%); }
+.experienceNavMobile { display: block; padding: 0 12px; margin-top: 32px; margin-bottom: 40px; overflow: hidden; position: relative; }
+.experienceNavMobile::after { display: none; }
+.experienceNavMobile::before { content: ''; position: absolute; top: 14px; left: -50%; width: 200%; height: 1px; background-color: #d6d3d1; z-index: 0; }
+.experienceNavMobile .experienceNavItem { display: flex; flex-direction: column; align-items: center; gap: 12px; position: relative; z-index: 1; }
+.experienceNavMobile .experienceNavCircleWrap { margin-top: 0; z-index: 2; }
+.experienceNavMobile .experienceNavItem h5 { font-size: 16px; line-height: 150%; }
 .experienceNavItem { display: flex; flex-direction: column; align-items: center; gap: 12px; cursor: pointer; }
 .experienceNavCircleWrap { width: 28px; aspect-ratio: 1/1; position: relative; display: flex; align-items: center; justify-content: center; margin-top: -14px; z-index: 2; }
 .experienceNavCircle { width: calc(100% - 12px); height: calc(100% - 12px); border-radius: 50%; background-color: #d6d3d1; transition: all 0.3s ease-in-out; }
@@ -178,10 +185,10 @@
 .thesisPopupClose span:last-child { transform: rotate(-45deg); }
 
 /* ===== 7. Technology Section ===== */
-.technologySection { padding: 0; position: relative; overflow: hidden; }
+.technologySection { padding: 0; position: relative; overflow: hidden; min-height: 100vh; }
 .techContainerWrap { position: relative; }
-.techInfo { padding: 200px 0; }
-.technologyInner { max-width: 1500px; margin: 0 auto; height: 100%; position: relative; }
+.techInfo { padding: 200px 0; min-height: 100vh; display: flex; align-items: center; }
+.technologyInner { max-width: 1500px; margin: 0 auto; width: 100%; height: 100%; position: relative; }
 .techInfo1 .technologyInner { position: relative; z-index: 2; }
 .techInfo1 .technologyThumb { background-color: #000; z-index: 1; }
 .technologyTitWrap { width: 40.8%; }
@@ -223,6 +230,56 @@
 .faqItemTxt { padding: 32px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; text-align: center; }
 .faqItemTxt h5 { color: #252525; font-size: clamp(16px, 1.6vw, 22px); font-weight: 600; line-height: 130%; letter-spacing: -0.02em; }
 .faqItemTxt p { color: #404040; font-size: clamp(14px, 1.4vw, 18px); font-weight: 300; line-height: 160%; }
+
+/* ===== 10-1. YouTube Section ===== */
+.youtubeSection { background-color: #f7f7fa; padding: 120px 80px; }
+.youtubeInner { max-width: 1760px; margin: 0 auto; display: flex; align-items: stretch; justify-content: space-between; gap: 60px; }
+.youtubePlayer { width: 59%; flex-shrink: 0; border-radius: 12px; overflow: hidden; position: relative; aspect-ratio: 16/9; background: #000; }
+.youtubePlayer iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: none; }
+.youtubeContent { flex: 1; display: flex; flex-direction: column; gap: 60px; min-width: 0; }
+.youtubeTitWrap { display: flex; flex-direction: column; gap: 32px; }
+.youtubeTitWrap h5 { color: #252525; font-size: 26px; font-weight: 300; line-height: 140%; letter-spacing: 0.2em; }
+.youtubeTitWrap h3 { color: #111; font-size: 50px; font-weight: 600; line-height: 130%; letter-spacing: -0.02em; }
+.youtubeTitWrap h3 span { color: #64c0a7; }
+.youtubeBtn { display: inline-flex; align-items: center; gap: 12px; background: #fff; padding: 16px 32px; border-radius: 999px; box-shadow: 0 2px 20px 0 rgba(46,21,51,0.08); text-decoration: none; transition: box-shadow 0.3s; cursor: pointer; border: none; }
+.youtubeBtn:hover { box-shadow: 0 4px 24px 0 rgba(46,21,51,0.14); }
+.youtubeBtnDot { width: 10px; height: 10px; border-radius: 50%; background-color: #64c0a7; flex-shrink: 0; }
+.youtubeBtn span { color: #111; font-size: 20px; font-weight: 400; letter-spacing: -0.03em; line-height: 1.2; }
+.youtubeListWrap { display: flex; align-items: stretch; flex: 1; min-height: 0; }
+.youtubeList { flex: 1; display: flex; flex-direction: column; gap: 0; overflow-y: auto; overscroll-behavior: contain; max-height: 320px; scrollbar-width: thin; scrollbar-color: #64c0a7 #e5e5e5; }
+.youtubeList::-webkit-scrollbar { width: 4px; }
+.youtubeList::-webkit-scrollbar-track { background: #e5e5e5; }
+.youtubeList::-webkit-scrollbar-thumb { background: #64c0a7; border-radius: 2px; }
+.youtubeList::-webkit-scrollbar-button { display: none; width: 0; height: 0; }
+.youtubeItem { display: flex; align-items: center; gap: 20px; padding: 12px 0; cursor: pointer; background: none; border: none; text-align: left; width: 100%; transition: opacity 0.2s; }
+.youtubeItem:hover { opacity: 0.7; }
+.youtubeItemActive { opacity: 1; }
+.youtubeItemActive .youtubeItemTxt h6 { color: #64c0a7; }
+.youtubeItemThumb { width: 171px; height: 95px; border-radius: 4px; overflow: hidden; flex-shrink: 0; }
+.youtubeItemThumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.youtubeItemTxt { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+.youtubeItemTxt h6 { color: #252525; font-size: 20px; font-weight: 600; line-height: 160%; letter-spacing: -0.04em; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; transition: color 0.2s; }
+.youtubeItemTxt p { color: #747474; font-size: 18px; font-weight: 400; line-height: 180%; letter-spacing: -0.04em; }
+.youtubeDivider { width: 100%; height: 1px; background-color: #e5e5e5; flex-shrink: 0; }
+
+/* ===== 10-2. Instagram Section ===== */
+.instaSection { background-color: #fff; padding: 120px 80px; }
+.instaTitArea { display: flex; flex-direction: column; align-items: center; gap: 24px; margin-bottom: 80px; }
+.instaTitWrap { display: flex; flex-direction: column; align-items: center; gap: 4px; text-align: center; }
+.instaTitWrap h5 { color: #252525; font-size: 26px; font-weight: 300; line-height: 140%; letter-spacing: 0.2em; }
+.instaTitWrap h3 { color: #111; font-size: 50px; font-weight: 600; line-height: 130%; letter-spacing: -0.02em; }
+.instaBtn { display: inline-flex; align-items: center; gap: 12px; background: #fff; padding: 16px 32px; border-radius: 999px; border: 1px solid #eee; box-shadow: 0 2px 20px 0 rgba(46,21,51,0.08); text-decoration: none; transition: box-shadow 0.3s; cursor: pointer; }
+.instaBtn:hover { box-shadow: 0 4px 24px 0 rgba(46,21,51,0.14); }
+.instaBtnDot { width: 10px; height: 10px; border-radius: 50%; background-color: #64c0a7; flex-shrink: 0; }
+.instaBtn span { color: #111; font-size: 20px; font-weight: 400; letter-spacing: -0.03em; line-height: 1.2; }
+.instaGrid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; max-width: 1760px; margin: 0 auto; }
+.instaCard { display: flex; flex-direction: column; gap: 24px; align-items: center; text-decoration: none; transition: transform 0.3s; }
+.instaCard:hover { transform: translateY(-4px); }
+.instaCardImg { width: 100%; aspect-ratio: 420/549; border-radius: 20px; overflow: hidden; }
+.instaCardImg img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.instaCardTxt { display: flex; flex-direction: column; align-items: center; gap: 2px; text-align: center; width: 100%; }
+.instaCardTxt h6 { color: #252525; font-size: 20px; font-weight: 600; line-height: 160%; letter-spacing: -0.04em; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; }
+.instaCardTxt p { color: #747474; font-size: 18px; font-weight: 400; line-height: 180%; letter-spacing: -0.04em; }
 
 /* ===== 11. News Section ===== */
 .newsSection { background-color: #f5f5f4; padding: 100px 0; }
@@ -281,18 +338,20 @@
 
 /* ===== Responsive: 1860px ===== */
 @media (max-width: 1860px) {
-  .innerCon { width: calc(100% - 100px); }
+  .innerCon, .technologyInner { width: calc(100% - 100px); }
   .expertiseTitWrap { padding: 0 50px; }
 }
 
 /* ===== Responsive: 1340px ===== */
 @media (max-width: 1340px) {
-  .innerCon { width: calc(100% - 75px); }
+  .innerCon, .technologyInner { width: calc(100% - 75px); }
 }
 
 /* ===== Responsive: 1024px ===== */
 @media (max-width: 1024px) {
-  .innerCon { width: calc(100% - 50px); }
+  .innerCon, .technologyInner { width: calc(100% - 50px); }
+  .aboutInfoWrap { margin-left: 0; width: 100%; }
+  .aboutInner { justify-content: center; }
   .expertiseTitWrap { padding: 0 25px; }
   .expertiseContainer { height: auto !important; }
   .expertiseRoller { position: relative !important; top: auto !important; width: 100% !important; height: auto !important; overflow: visible !important; }
@@ -305,16 +364,29 @@
   .experienceSlideInfo { width: 100%; }
   .infoListItem { width: 100%; box-sizing: border-box; }
   .faqGrid { grid-template-columns: repeat(2, 1fr); }
-  .newsSlide { flex-direction: column; padding-bottom: 100px; }
-  .newsSlideImg { width: 100%; aspect-ratio: 1/1; }
+  .instaSection { padding: 80px 40px; }
+  .instaTitArea { margin-bottom: 48px; }
+  .instaTitWrap h3 { font-size: 36px; }
+  .instaTitWrap h5 { font-size: 20px; }
+  .instaGrid { grid-template-columns: repeat(2, 1fr); }
+  .youtubeSection { padding: 40px 20px; }
+  .youtubeInner { flex-direction: column; gap: 32px; }
+  .youtubePlayer { width: 100%; }
+  .youtubeTitWrap h5 { font-size: 16px; }
+  .youtubeTitWrap h3 { font-size: 28px; }
+  .youtubeBtn span { font-size: 16px; }
+  .youtubeBtn { padding: 12px 24px; }
+  .youtubeContent { gap: 32px; }
+  .youtubeList { max-height: 260px; }
+  .youtubeItemThumb { width: 120px; height: 68px; }
+  .youtubeItemTxt h6 { font-size: 16px; }
+  .youtubeItemTxt p { font-size: 14px; }
+  .newsSlide { flex-direction: column; padding-bottom: 100px; align-items: center; }
+  .newsSlideImg { width: 100%; aspect-ratio: 1/1; overflow: hidden; border-radius: 30px; }
   .newsSlideImg img { width: 100%; height: 100%; object-fit: cover; }
   .locationSection { flex-direction: column; }
   .locationMap { width: 100%; aspect-ratio: 111/103; }
   .locationTxtWrap { width: 100%; padding: 24px 25px 60px; }
-  .technologyTitWrap { width: 100%; }
-  .technologyThumb { position: relative; width: 100%; margin-top: 24px; }
-  .techInfo { padding: 60px 0; }
-  .techInfo2 { position: relative; opacity: 1; pointer-events: auto; }
   .thesisPopupClose { top: 90px; right: 15px; width: 25px; }
 }
 
@@ -334,10 +406,11 @@
   .aboutTxtWrap h5 { font-size: 16px; margin-bottom: 4px; }
   .aboutTxtWrap h3 { font-size: 34px; margin-bottom: 12px; }
   .aboutTxtWrap .aboutDesc p { font-size: 16px; margin-bottom: 8px; }
-  .aboutImgList { flex-direction: row; overflow-x: auto; gap: 8px; }
+  .aboutImgList { overflow: auto; }
+  .aboutImgList :global(.swiper-wrapper) { gap: 0; }
 
   /* Intro */
-  .introStickyWrap { background-image: none; background: linear-gradient(180deg, #fefefe 24.61%, rgba(254,254,254,0.86) 47.23%, rgba(254,254,254,0) 100%); align-items: flex-start; justify-content: flex-start; }
+  .introStickyWrap { background-image: none; background: linear-gradient(180deg, #fefefe 24.61%, rgba(254,254,254,0.86) 47.23%, rgba(254,254,254,0) 100%); align-items: flex-start; justify-content: flex-start; height: 100vh; }
   .introTxtBox1, .introTxtBox2 { padding-top: 155px; }
   .introTxtBox1 h3, .introTxtBox2 h3 { font-size: 30px; }
   .scrollDownIcon { margin-top: 16px; }
@@ -351,7 +424,7 @@
   .introLastInner { flex-direction: column; align-items: center; justify-content: flex-start; padding: 0 25px; }
   .introLastTitWrap { width: 100%; }
   .introLastTxtWrap { width: 100%; padding-bottom: 0; }
-  .introLastImgWrap { position: absolute; bottom: 0; width: 65%; max-width: 300px; }
+  .introLastImgWrap { position: absolute; bottom: 0; width: 65%; max-width: calc(57.14vh - 230px); }
   .introLastTitWrap h5 { font-size: 14px; }
   .introLastTitWrap h3 { font-size: 32px; margin-bottom: 10px; }
   .introLastTitWrap p { font-size: 15px; margin-bottom: 8px; }
@@ -379,10 +452,10 @@
 
   /* Experience */
   .experienceSection { padding: 60px 0; overflow: hidden; }
-  .experienceNav { margin-top: 32px; margin-bottom: 40px; gap: 0; flex-wrap: wrap; align-items: flex-start; justify-content: flex-start; }
-  .experienceNav::after { display: none; }
-  .experienceNavItem { width: 100%; padding: 12px 8px; position: relative; }
-  .experienceNavItem::after { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 1px; background-color: #d6d3d1; }
+  .experienceNav { margin-top: 32px; margin-bottom: 40px; }
+  .experienceNavItem { padding: 0 8px; box-sizing: border-box; }
+  .experienceNavItem h5 { font-size: 16px; line-height: 150%; }
+  .experienceNavCircleWrap { z-index: 2; }
   .experienceSlide { gap: 30px; }
   .experienceTitWrap { flex-direction: column; align-items: flex-start; gap: 12px; }
   .experienceTitWrap h5 { font-size: 32px; }
@@ -391,6 +464,8 @@
   .statItem:last-child { border-width: 0 !important; }
   .statCount { font-size: 30px; }
   .statUnit { font-size: 20px; }
+  .statTxt h5 { font-size: 18px; }
+  .statTxt h6 { font-size: 15px; }
   .infoList { gap: 20px; }
   .infoListItem { padding: 20px 25px; gap: 20px; }
   .infoListItemCircle { font-size: 20px; width: 35px; min-width: 35px; }
@@ -398,10 +473,11 @@
 
   /* Thesis */
   .thesisSection { padding: 60px 0 100px; }
-  .thesisTxtWrap { min-height: 40px; }
+  .thesisTxtWrap { height: 100px; }
   .thesisTxtWrap p { font-size: 14px; }
 
   /* Technology */
+  .technologyTitWrap { width: 100%; }
   .technologySection { min-height: 0; padding: 0; }
   .technologyInner { height: auto; }
   .techInfo { padding: 60px 0; }
@@ -426,6 +502,20 @@
   .faqItemTxt h5 { font-size: 18px; }
   .faqItemTxt p { font-size: 18px; }
 
+  /* Instagram */
+  .instaSection { padding: 40px 20px; }
+  .instaTitArea { margin-bottom: 32px; gap: 16px; }
+  .instaTitWrap h5 { font-size: 16px; }
+  .instaTitWrap h3 { font-size: 28px; }
+  .instaBtn span { font-size: 16px; }
+  .instaBtn { padding: 12px 24px; }
+  .instaGrid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .instaCardImg { border-radius: 12px; }
+  .instaCardTxt h6 { font-size: 16px; }
+  .instaCardTxt p { font-size: 14px; }
+  .instaCard { gap: 12px; }
+
+  /* YouTube */
   /* News */
   .newsSection { padding: 60px 0; }
   .newsTop { flex-direction: column; gap: 12px; padding: 20px 15px; }
@@ -436,8 +526,9 @@
   .newsSlideTit { padding-bottom: 8px; }
   .newsSlideTit h3 { font-size: 24px; margin-bottom: 8px; }
   .newsSlideDesc { padding-top: 12px; margin-bottom: 12px; }
-  .newsSlideDesc p { font-size: 16px; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 6; overflow: hidden; text-overflow: ellipsis; word-break: keep-all; }
-  .newsThumbNav { position: relative; right: 0; bottom: 0; margin: 0 auto 20px; justify-content: center; width: calc(100% - 70px); }
+  .newsSlideTitMeta { font-size: 16px; }
+  .newsSlideDesc p { font-size: 16px; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 6; line-clamp: 6; overflow: hidden; text-overflow: ellipsis; word-break: keep-all; }
+  .newsThumbNav { position: relative; right: 0; bottom: 0; margin: 0 auto 20px; justify-content: center; width: calc(100% - 70px); gap: 8px; }
 
   /* Location */
   .locationSection { flex-direction: column; }

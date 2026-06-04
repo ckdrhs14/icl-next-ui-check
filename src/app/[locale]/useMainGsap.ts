@@ -10,10 +10,8 @@ if (typeof window !== 'undefined') {
 }
 
 export function useMainGsap() {
-  const timerRef = { current: null as ReturnType<typeof setTimeout> | null };
-
   useEffect(() => {
-    timerRef.current = setTimeout(() => {
+    function init() {
       initIntro();
       initExpertise();
       initTechnology();
@@ -23,10 +21,25 @@ export function useMainGsap() {
       initExperienceAutoplay();
       initNewsAutoplay();
       ScrollTrigger.refresh();
-    }, 500);
+    }
+
+    // 이미지 등 모든 리소스 로드 완료 후 초기화 (원본 PHP와 동일)
+    if (document.readyState === 'complete') {
+      // 이미 로드 완료된 경우 (SPA 내부 이동 등)
+      requestAnimationFrame(() => init());
+    } else {
+      window.addEventListener('load', init);
+    }
+
+    // resize 시 ScrollTrigger 재계산
+    const onResize = () => {
+      ScrollTrigger.refresh();
+    };
+    window.addEventListener('resize', onResize);
 
     return () => {
-      if (timerRef.current) clearTimeout(timerRef.current);
+      window.removeEventListener('load', init);
+      window.removeEventListener('resize', onResize);
     };
   }, []);
 
@@ -171,8 +184,6 @@ function initTechnology() {
   const thumb1Img = section.querySelector('[data-gsap="tech-thumb1-img"]') as HTMLElement;
   if (!info2 || !inner1 || !thumb1 || !thumb1Img) return;
 
-  if (window.innerWidth < 1025) return;
-
   info2.classList.remove(s.techInfo2Active);
   gsap.set(info2, { opacity: 0 });
   gsap.set(thumb1Img, { opacity: 1 });
@@ -195,7 +206,7 @@ function initTechnology() {
       top: secRect.top - parentRect.top,
       left: secRect.left - parentRect.left,
       width: secRect.width,
-      height: window.innerHeight,
+      height: secRect.height,
     };
   }
 
