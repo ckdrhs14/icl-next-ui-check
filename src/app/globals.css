@@ -164,6 +164,18 @@ body * {
     word-break: keep-all;
 }
 
+@media (max-width: 1024px) {
+    section {
+        overflow: hidden;
+    }
+}
+
+::-webkit-scrollbar-button {
+    display: none;
+    width: 0;
+    height: 0;
+}
+
 a {
     color: inherit;
     text-decoration: none;
