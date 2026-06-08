@@ -299,8 +299,8 @@
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: #042B48;
-  opacity: 0.3;
+  background: #fff;
+  opacity: 0.4;
   cursor: pointer;
   transition: opacity 0.3s;
 }
