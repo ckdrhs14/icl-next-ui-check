@@ -72,10 +72,11 @@ const MENU_ITEMS = [
     },
     {
         key: "community",
-        href: "/community/news",
+        href: "/community/column",
         submenu: [
-            { key: "column", href: "/community/news" },
-            { key: "hospitalNews", href: "/community/news?code=소식" },
+            { key: "column", href: "/community/column" },
+            { key: "hospitalNews", href: "/community/hospital-news" },
+            { key: "event", href: "/community/event" },
             { key: "reserve", href: "/community/reservation" },
             { key: "reviews", href: "/community/reviews" },
             { key: "youtube", href: "/community/youtube" }
