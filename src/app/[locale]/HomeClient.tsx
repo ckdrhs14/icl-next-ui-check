@@ -17,11 +17,36 @@ import type { InstaPost } from "@/utils/instagram";
 
 /* ── data ── */
 const fallbackYtVideos = [
-    { id: "j3GQyliVv2I", title: "한국 유일 렌즈삽입술 전문병원 닥터ICL안과", published: "2026-05-21", thumbnail: "https://img.youtube.com/vi/j3GQyliVv2I/mqdefault.jpg" },
-    { id: "o1uDJjAaknU", title: "그 간절함이 태평양을 건넜습니다 2편 | Angelica님의 ICL렌즈삽입술 수술 후기", published: "2026-05-14", thumbnail: "https://img.youtube.com/vi/o1uDJjAaknU/mqdefault.jpg" },
-    { id: "DCLsJhl3Vd4", title: "그 간절함이 태평양을 건넜습니다 1편 | 미국에 사는 그녀의 ICL렌즈삽입술 수술 후기", published: "2026-05-14", thumbnail: "https://img.youtube.com/vi/DCLsJhl3Vd4/mqdefault.jpg" },
-    { id: "wD26Gi3DwsQ", title: "ICL 렌즈삽입술, 의사들을 교육하는 의사에게 받으세요", published: "2026-04-16", thumbnail: "https://img.youtube.com/vi/wD26Gi3DwsQ/mqdefault.jpg" },
-    { id: "mN0EFbMyz2I", title: "피프티피프티 FIFTYFIFTY 예원님의 ICL 수술후기2", published: "2026-04-07", thumbnail: "https://img.youtube.com/vi/mN0EFbMyz2I/mqdefault.jpg" },
+    {
+        id: "j3GQyliVv2I",
+        title: "한국 유일 렌즈삽입술 전문병원 닥터ICL안과",
+        published: "2026-05-21",
+        thumbnail: "https://img.youtube.com/vi/j3GQyliVv2I/mqdefault.jpg"
+    },
+    {
+        id: "o1uDJjAaknU",
+        title: "그 간절함이 태평양을 건넜습니다 2편 | Angelica님의 ICL렌즈삽입술 수술 후기",
+        published: "2026-05-14",
+        thumbnail: "https://img.youtube.com/vi/o1uDJjAaknU/mqdefault.jpg"
+    },
+    {
+        id: "DCLsJhl3Vd4",
+        title: "그 간절함이 태평양을 건넜습니다 1편 | 미국에 사는 그녀의 ICL렌즈삽입술 수술 후기",
+        published: "2026-05-14",
+        thumbnail: "https://img.youtube.com/vi/DCLsJhl3Vd4/mqdefault.jpg"
+    },
+    {
+        id: "wD26Gi3DwsQ",
+        title: "ICL 렌즈삽입술, 의사들을 교육하는 의사에게 받으세요",
+        published: "2026-04-16",
+        thumbnail: "https://img.youtube.com/vi/wD26Gi3DwsQ/mqdefault.jpg"
+    },
+    {
+        id: "mN0EFbMyz2I",
+        title: "피프티피프티 FIFTYFIFTY 예원님의 ICL 수술후기2",
+        published: "2026-04-07",
+        thumbnail: "https://img.youtube.com/vi/mN0EFbMyz2I/mqdefault.jpg"
+    }
 ];
 
 const aboutImages = [
@@ -180,7 +205,13 @@ function HeroVideo() {
     );
 }
 
-export default function HomeClient({ ytVideos: ytVideosProp = [], instaPosts = [] }: { ytVideos?: YouTubeVideo[]; instaPosts?: InstaPost[] }) {
+export default function HomeClient({
+    ytVideos: ytVideosProp = [],
+    instaPosts = []
+}: {
+    ytVideos?: YouTubeVideo[];
+    instaPosts?: InstaPost[];
+}) {
     const ytVideos = ytVideosProp.length > 0 ? ytVideosProp : fallbackYtVideos;
     const [activeExp, setActiveExp] = useState(0);
     const [newsIndex, setNewsIndex] = useState(0);
@@ -577,7 +608,7 @@ export default function HomeClient({ ytVideos: ytVideosProp = [], instaPosts = [
                             </div>
                             <div className={s.expertiseDarkPanelTit}>
                                 <h3>
-                                    &ldquo;당신의 집도의는 누구에게
+                                    &ldquo;당신의 집도의는 누구에게&nbsp;
                                     <br className={s.moBlock} /> 수술을 배웠습니까?&rdquo;
                                 </h3>
                                 <p>의사를 가르치는 의사, 이동훈 대표원장이 닥터아이씨엘의 이름으로 증명합니다.</p>
@@ -605,17 +636,24 @@ export default function HomeClient({ ytVideos: ytVideosProp = [], instaPosts = [
                             centeredSlides={true}
                             loop={true}
                             speed={400}
-                            onSwiper={(sw) => { expNavSwRef.current = sw; }}
+                            onSwiper={(sw) => {
+                                expNavSwRef.current = sw;
+                            }}
                             onSlideChange={(sw) => {
                                 if (expSyncing.current) return;
                                 expSyncing.current = true;
                                 setActiveExp(sw.realIndex);
                                 expSwiperRef.current?.slideToLoop(sw.realIndex);
-                                requestAnimationFrame(() => { expSyncing.current = false; });
+                                requestAnimationFrame(() => {
+                                    expSyncing.current = false;
+                                });
                             }}
                         >
                             {experienceTabs.map((tab, i) => (
-                                <SwiperSlide key={i} className={`${s.experienceNavItem} ${activeExp === i ? s.experienceNavItemActive : ""}`}>
+                                <SwiperSlide
+                                    key={i}
+                                    className={`${s.experienceNavItem} ${activeExp === i ? s.experienceNavItemActive : ""}`}
+                                >
                                     <div className={s.experienceNavCircleWrap}>
                                         <span className={s.experienceNavCircle} />
                                     </div>
@@ -662,7 +700,9 @@ export default function HomeClient({ ytVideos: ytVideosProp = [], instaPosts = [
                                 if (expNavSwRef.current && !expNavSwRef.current.destroyed) {
                                     expNavSwRef.current.slideToLoop(sw.realIndex, 400, false);
                                 }
-                                requestAnimationFrame(() => { expSyncing.current = false; });
+                                requestAnimationFrame(() => {
+                                    expSyncing.current = false;
+                                });
                             }}
                             allowTouchMove={true}
                         >
@@ -706,9 +746,7 @@ export default function HomeClient({ ytVideos: ytVideosProp = [], instaPosts = [
                                             </div>
                                             <div className={s.statItem} ref={casesRef}>
                                                 <div className={s.statNum}>
-                                                    <span className={s.statCount}>
-                                                        {casesCount.toLocaleString()}
-                                                    </span>
+                                                    <span className={s.statCount}>{casesCount.toLocaleString()}</span>
                                                     <span className={s.statUnit}>건</span>
                                                     <span className={s.statPlus}>
                                                         <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
@@ -975,11 +1013,13 @@ export default function HomeClient({ ytVideos: ytVideosProp = [], instaPosts = [
                                 </div>
                             </figure>
                             <figure className={s.technologyThumb}>
-                                <Image
-                                    src="/img/main/main_technology_img2_thumb.jpg"
-                                    alt="노모그램 보정"
-                                    width={800}
-                                    height={500}
+                                <video
+                                    src="/video/main_technology_video.mp4"
+                                    muted
+                                    loop
+                                    playsInline
+                                    autoPlay
+                                    poster="/img/main/main_technology_video_poster.jpg"
                                     style={{ width: "100%", height: "100%", objectFit: "cover" }}
                                 />
                             </figure>
@@ -1104,11 +1144,7 @@ export default function HomeClient({ ytVideos: ytVideosProp = [], instaPosts = [
                             </a>
                         </div>
                         <div className={s.youtubeListWrap}>
-                            <div
-                                className={s.youtubeList}
-                                ref={ytListRef}
-                                data-lenis-prevent
-                            >
+                            <div className={s.youtubeList} ref={ytListRef} data-lenis-prevent>
                                 {ytVideos.map((v, i) => (
                                     <div key={v.id}>
                                         <button
@@ -1117,10 +1153,7 @@ export default function HomeClient({ ytVideos: ytVideosProp = [], instaPosts = [
                                             onClick={() => setActiveYt(i)}
                                         >
                                             <div className={s.youtubeItemThumb}>
-                                                <img
-                                                    src={v.thumbnail}
-                                                    alt={v.title}
-                                                />
+                                                <img src={v.thumbnail} alt={v.title} />
                                             </div>
                                             <div className={s.youtubeItemTxt}>
                                                 <h6>{v.title}</h6>
@@ -1158,50 +1191,52 @@ export default function HomeClient({ ytVideos: ytVideosProp = [], instaPosts = [
                 <div className={s.instaGrid} data-aos="fade-up">
                     {instaPosts.length > 0
                         ? instaPosts.map((post) => (
-                            <a
-                                key={post.id}
-                                href={post.permalink}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className={s.instaCard}
-                            >
-                                <div className={s.instaCardImg}>
-                                    <img src={post.thumbnail} alt={post.caption.slice(0, 50)} />
-                                </div>
-                                <div className={s.instaCardTxt}>
-                                    <h6>{post.caption.length > 40 ? post.caption.slice(0, 40) + "…" : post.caption}</h6>
-                                    <p>{post.timestamp}</p>
-                                </div>
-                            </a>
-                        ))
+                              <a
+                                  key={post.id}
+                                  href={post.permalink}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className={s.instaCard}
+                              >
+                                  <div className={s.instaCardImg}>
+                                      <img src={post.thumbnail} alt={post.caption.slice(0, 50)} />
+                                  </div>
+                                  <div className={s.instaCardTxt}>
+                                      <h6>
+                                          {post.caption.length > 40 ? post.caption.slice(0, 40) + "…" : post.caption}
+                                      </h6>
+                                      <p>{post.timestamp}</p>
+                                  </div>
+                              </a>
+                          ))
                         : [
-                            { img: 1, title: "2025 KOREA EVO ICL FORUM", date: "2025-08-06" },
-                            { img: 2, title: "ICL EXPERT INSTRUCTOR 공식 선정", date: "2025-07-22" },
-                            { img: 3, title: "세계 6인의 ICL Expert Doctor 선정", date: "2025-07-15" },
-                            { img: 4, title: "2026 EVO ICL APAC EXPERTS SUMMIT", date: "2025-06-30" },
-                        ].map((item) => (
-                            <a
-                                key={item.img}
-                                href="https://www.instagram.com/doctoricl/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className={s.instaCard}
-                            >
-                                <div className={s.instaCardImg}>
-                                    <Image
-                                        src={`/img/main/main_insta_placeholder${item.img}.jpg`}
-                                        alt={item.title}
-                                        width={420}
-                                        height={549}
-                                        style={{ width: "100%", height: "100%", objectFit: "cover" }}
-                                    />
-                                </div>
-                                <div className={s.instaCardTxt}>
-                                    <h6>{item.title}</h6>
-                                    <p>{item.date}</p>
-                                </div>
-                            </a>
-                        ))}
+                              { img: 1, title: "2025 KOREA EVO ICL FORUM", date: "2025-08-06" },
+                              { img: 2, title: "ICL EXPERT INSTRUCTOR 공식 선정", date: "2025-07-22" },
+                              { img: 3, title: "세계 6인의 ICL Expert Doctor 선정", date: "2025-07-15" },
+                              { img: 4, title: "2026 EVO ICL APAC EXPERTS SUMMIT", date: "2025-06-30" }
+                          ].map((item) => (
+                              <a
+                                  key={item.img}
+                                  href="https://www.instagram.com/doctoricl/"
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className={s.instaCard}
+                              >
+                                  <div className={s.instaCardImg}>
+                                      <Image
+                                          src={`/img/main/main_insta_placeholder${item.img}.jpg`}
+                                          alt={item.title}
+                                          width={420}
+                                          height={549}
+                                          style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                                      />
+                                  </div>
+                                  <div className={s.instaCardTxt}>
+                                      <h6>{item.title}</h6>
+                                      <p>{item.date}</p>
+                                  </div>
+                              </a>
+                          ))}
                 </div>
             </section>
 
