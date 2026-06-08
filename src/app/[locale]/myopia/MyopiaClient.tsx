@@ -95,9 +95,11 @@ export default function MyopiaClient() {
   // Safety items - active on scroll (matches PHP ScrollTrigger: item top enters center)
   const [activeSafety, setActiveSafety] = useState(0);
   useEffect(() => {
+    const sec8El = document.querySelector('[data-sec8-container]');
     const items = document.querySelectorAll('[data-safety-item]');
-    if (items.length === 0) return;
+    if (!sec8El || items.length === 0) return;
 
+    // Use sec8 container as root so observer only fires within that section
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -107,7 +109,7 @@ export default function MyopiaClient() {
           }
         });
       },
-      { rootMargin: '-40% 0px -40% 0px', threshold: 0 }
+      { root: null, rootMargin: '-30% 0px -60% 0px', threshold: 0 }
     );
 
     items.forEach((el) => observer.observe(el));
@@ -364,7 +366,7 @@ export default function MyopiaClient() {
       </section>
 
       {/* myopia1-sec8: Safety Standards */}
-      <section className={styles.sec8}>
+      <section className={styles.sec8} data-sec8-container>
         <div className={styles.sec8Inner} data-aos="fade-up" data-aos-duration="1000">
           <div className={styles.sec8Title}>
             <h3 className={styles.sec8TitleH3}>

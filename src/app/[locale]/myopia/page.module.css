@@ -495,7 +495,9 @@
 /* === Section 8: Safety Standards (myopia1-sec8) === */
 .sec8 {
   background: url('/img/myopia/myopia-sec8-bg.jpg') no-repeat center center / cover;
-  height: inherit;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
 }
 
 .sec8Inner {
