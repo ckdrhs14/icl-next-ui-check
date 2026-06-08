@@ -292,7 +292,10 @@
 
 .swiperPagination {
   display: flex;
-  gap: 20px;
+  gap: 10px;
+  width: auto !important;
+  position: static !important;
+  transform: none !important;
 }
 
 .swiperPagination :global(.swiper-pagination-bullet) {
