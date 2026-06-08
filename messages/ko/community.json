@@ -92,6 +92,40 @@
     "featuredDesc4": "에서 체험해 보세요!",
     "ytLinkText": "Youtube 보러가기"
   },
+  "column": {
+    "heroTitle": "닥터 ICL 칼럼",
+    "heroSub": "COLUMN",
+    "metaTitle": "닥터 ICL 칼럼",
+    "metaDesc": "이동훈 원장이 직접 작성하는 ICL 전문 의학 정보",
+    "categoryDesc": "이동훈 원장이 직접 작성하는 ICL 전문 의학 정보입니다. 검증된 임상 경험을 바탕으로 정확한 정보를 제공합니다.",
+    "emptyPost": "등록된 칼럼이 없습니다.",
+    "authorName": "이동훈 원장",
+    "authorTitle": "닥터ICL안과 대표원장, ICL Expert Instructor",
+    "reviewed": "전문의 감수 완료",
+    "badge": "의학칼럼",
+    "relatedTitle": "함께 읽으면 좋은 칼럼",
+    "backList": "목록"
+  },
+  "hospitalNews": {
+    "heroTitle": "병원소식",
+    "heroSub": "NEWS",
+    "metaTitle": "병원소식",
+    "metaDesc": "닥터ICL안과의 최신 소식, 학회 발표, 수상 내역을 안내합니다.",
+    "categoryDesc": "닥터ICL안과의 최신 소식, 학회 발표, 수상 내역을 안내합니다.",
+    "emptyPost": "등록된 소식이 없습니다.",
+    "badge": "병원소식"
+  },
+  "eventList": {
+    "heroTitle": "이벤트",
+    "heroSub": "EVENT",
+    "metaTitle": "이벤트",
+    "metaDesc": "현재 진행 중인 수술 이벤트 및 할인 정보를 확인하세요.",
+    "categoryDesc": "현재 진행 중인 수술 이벤트 및 할인 정보를 확인하세요.",
+    "emptyEvent": "등록된 이벤트가 없습니다.",
+    "eventOngoing": "진행중",
+    "eventEnded": "진행종료",
+    "badge": "이벤트"
+  },
   "event": {
     "metaTitle": "이벤트 상세",
     "metaDesc": "닥터 ICL 안과 이벤트 상세 및 신청",

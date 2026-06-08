@@ -92,6 +92,40 @@
     "featuredDesc4": "Experience it at Dr. ICL, the first specialized clinic for lens implantation in the country!",
     "ytLinkText": "Visit YouTube"
   },
+  "column": {
+    "heroTitle": "Dr. ICL Column",
+    "heroSub": "COLUMN",
+    "metaTitle": "Dr. ICL Column",
+    "metaDesc": "Medical columns written directly by Dr. Lee Dong-hoon, based on verified clinical experience in ICL surgery.",
+    "categoryDesc": "Medical columns written directly by Dr. Lee Dong-hoon, based on verified clinical experience in ICL surgery.",
+    "emptyPost": "No columns available.",
+    "authorName": "Dr. Lee Dong-hoon",
+    "authorTitle": "Director, DR.ICL Eye Clinic | ICL Expert Instructor",
+    "reviewed": "Reviewed by a certified ophthalmologist",
+    "badge": "Medical Column",
+    "relatedTitle": "You may also like",
+    "backList": "List"
+  },
+  "hospitalNews": {
+    "heroTitle": "Clinic News",
+    "heroSub": "NEWS",
+    "metaTitle": "Clinic News",
+    "metaDesc": "Latest updates from DR.ICL Eye Clinic, including academic presentations and awards.",
+    "categoryDesc": "Latest updates from DR.ICL Eye Clinic, including academic presentations and awards.",
+    "emptyPost": "No news available.",
+    "badge": "Clinic News"
+  },
+  "eventList": {
+    "heroTitle": "Events",
+    "heroSub": "EVENT",
+    "metaTitle": "Events",
+    "metaDesc": "Check our current surgery events and promotional offers.",
+    "categoryDesc": "Check our current surgery events and promotional offers.",
+    "emptyEvent": "No events available.",
+    "eventOngoing": "Ongoing",
+    "eventEnded": "Ended",
+    "badge": "Event"
+  },
   "event": {
     "metaTitle": "Event Details",
     "metaDesc": "Dr. ICL Eye Clinic Event Details and Registration",
