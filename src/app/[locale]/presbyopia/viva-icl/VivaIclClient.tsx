@@ -236,9 +236,9 @@ export default function VivaIclClient() {
               centeredSlides
               spaceBetween={20}
               speed={1000}
-              initialSlide={5}
               autoplay={{ delay: 2000, disableOnInteraction: false }}
-              pagination={{ el: `.${styles.swiperPagination}`, clickable: true, renderBullet: (_: number, className: string) => `<span class="${className}"></span>` }}
+              loop
+              pagination={{ el: `.${styles.swiperPagination}`, clickable: true }}
               navigation={{
                 prevEl: `.${styles.swiperBtnPrev}`,
                 nextEl: `.${styles.swiperBtnNext}`,
@@ -247,32 +247,29 @@ export default function VivaIclClient() {
               onSwiper={(swiper) => { lensSwiperRef.current = swiper; }}
               className={styles.lensSwiper}
             >
-              {/* 슬라이드 5번 반복하여 유사 loop 효과 */}
-              {Array.from({ length: 5 }).flatMap((_, rep) =>
-                LENS_CARD_KEYS.map((card, idx) => (
-                  <SwiperSlide key={`${rep}-${idx}`}>
-                    <div className={styles.cardBox}>
-                      <h3 className={styles.cardTitle}>{t(card.titleKey)}</h3>
-                      <div className={styles.cardImgBox}>
-                        <Image src={card.img} alt={t(card.titleKey)} width={300} height={200} style={{ height: 'auto' }} />
-                      </div>
-                      <div className={styles.cardText}>
-                        {card.textKeys.map((tk, ti) => (
-                          <p key={ti}>{t(tk)}</p>
-                        ))}
-                      </div>
+              {LENS_CARD_KEYS.map((card, idx) => (
+                <SwiperSlide key={idx}>
+                  <div className={styles.cardBox}>
+                    <h3 className={styles.cardTitle}>{t(card.titleKey)}</h3>
+                    <div className={styles.cardImgBox}>
+                      <Image src={card.img} alt={t(card.titleKey)} width={300} height={200} style={{ height: 'auto' }} />
                     </div>
-                  </SwiperSlide>
-                ))
-              )}
+                    <div className={styles.cardText}>
+                      {card.textKeys.map((tk, ti) => (
+                        <p key={ti}>{t(tk)}</p>
+                      ))}
+                    </div>
+                  </div>
+                </SwiperSlide>
+              ))}
             </Swiper>
             <div className={styles.swiperBtnBox}>
               <button className={styles.swiperBtnPrev} aria-label="Previous">
-                <svg width="10" height="16" viewBox="0 0 10 16" fill="none"><path d="M9 1L1 8L9 15" stroke="#042B48" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                <svg width="10" height="16" viewBox="0 0 10 16" fill="none"><path d="M9 1L1 8L9 15" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
               </button>
               <div className={styles.swiperPagination} />
               <button className={styles.swiperBtnNext} aria-label="Next">
-                <svg width="10" height="16" viewBox="0 0 10 16" fill="none"><path d="M1 15L9 8L1 1" stroke="#042B48" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                <svg width="10" height="16" viewBox="0 0 10 16" fill="none"><path d="M1 15L9 8L1 1" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
               </button>
             </div>
           </div>
