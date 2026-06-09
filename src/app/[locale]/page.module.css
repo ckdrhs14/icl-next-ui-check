@@ -175,11 +175,15 @@
 .thesisSlide:hover::after { opacity: 1; }
 .thesisTxtWrap { text-align: center; margin-top: 24px; min-height: 60px; }
 .thesisTxtWrap p { color: #fff; font-size: 22px; font-weight: 300; letter-spacing: -0.02em; }
-.thesisPopup { position: fixed; inset: 0; z-index: 1000; background-color: rgba(0,0,0,0.8); display: flex; align-items: center; justify-content: center; opacity: 0; visibility: hidden; pointer-events: none; transition: all 0.6s ease-in-out; }
+.thesisPopup { position: fixed; inset: 0; z-index: 1000; background-color: rgba(0,0,0,0.8); display: flex; justify-content: center; opacity: 0; visibility: hidden; pointer-events: none; transition: all 0.6s ease-in-out; overflow-y: auto; -webkit-overflow-scrolling: touch; scrollbar-width: thin; scrollbar-color: #2f3542 transparent; }
+.thesisPopup::-webkit-scrollbar { width: 8px; }
+.thesisPopup::-webkit-scrollbar-track { background: transparent; }
+.thesisPopup::-webkit-scrollbar-thumb { background-color: #2f3542; border-radius: 10px; }
+.thesisPopup::-webkit-scrollbar-button { display: none; width: 0; height: 0; }
 .thesisPopupVisible { opacity: 1; visibility: visible; pointer-events: auto; }
-.thesisPopupImg { height: calc(100% - 250px); margin-top: 100px; }
-.thesisPopupImg img { height: 100%; width: auto; max-width: 90vw; object-fit: contain; }
-.thesisPopupClose { position: absolute; top: 150px; right: 50px; width: 40px; height: 40px; cursor: pointer; background: none; border: none; }
+.thesisPopupImg { width: 720px; max-width: 90vw; padding: 100px 0 60px; }
+.thesisPopupImg img { width: 100%; height: auto; display: block; }
+.thesisPopupClose { position: fixed; top: 40px; right: 50px; width: 40px; height: 40px; cursor: pointer; background: none; border: none; z-index: 1001; }
 .thesisPopupClose span { width: 100%; height: 2px; background-color: #fff; position: absolute; top: calc(50% - 1px); left: 0; display: block; }
 .thesisPopupClose span:first-child { transform: rotate(45deg); }
 .thesisPopupClose span:last-child { transform: rotate(-45deg); }
@@ -221,6 +225,32 @@
 .globalSection { background-image: url('/img/main/main_global_bg.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; padding-bottom: 0; position: relative; }
 .globalSection::after { content: ''; display: block; width: 100%; height: 115px; max-height: 15%; background: linear-gradient(180deg, rgba(10,11,16,0) 0%, #0a0b10 100%); position: absolute; bottom: 0; left: 0; pointer-events: none; }
 .globalSection .cateTitWrap h5, .globalSection .cateTitWrap h3, .globalSection .cateTitWrap p { color: #fff; }
+
+/* ===== Global Modal ===== */
+.globalModal { position: fixed; inset: 0; z-index: 1000; display: none; align-items: center; justify-content: center; padding: 32px; }
+.globalModalOpen { display: flex; }
+.globalModalBackdrop { position: absolute; inset: 0; background: rgba(0, 0, 0, 0.8); }
+.globalModalPanel { position: relative; width: 100%; max-width: 1463px; color: #111; border-radius: 20px; border: 1px solid #fff; background: #fff; box-shadow: -3px -3px 4px 0 rgba(255,255,255,0.2) inset, 2px 2px 6px 0 rgba(255,255,255,0.25) inset; backdrop-filter: blur(5px); padding: 40px 24px; }
+.globalModalClose { position: absolute; top: 30px; right: 40px; width: 30px; height: 30px; border: 0; border-radius: 0; background: transparent; color: #111; display: inline-flex; align-items: center; justify-content: center; cursor: pointer; opacity: 0.8; transition: opacity 0.2s; z-index: 15; padding: 0; }
+.globalModalClose svg { width: 100%; height: 100%; }
+.globalModalClose:hover { opacity: 1; }
+.globalModalSwiper { width: 100%; overflow: hidden; }
+.globalModalSwiper :global(.swiper-slide) { height: auto; }
+.globalModalBody { display: flex; align-items: stretch; gap: 0; min-height: 420px; }
+.globalModalImg { flex: 0 0 50%; height: 420px; padding-right: 48px; display: flex; align-items: center; justify-content: center; background: transparent; overflow: hidden; }
+.globalModalImg img, .globalModalImg video { width: 100%; max-width: 550px; max-height: 100%; height: auto; object-fit: contain; display: block; border-radius: 10px; }
+.globalModalText { flex: 1; padding: 24px 48px; border-left: 1px solid #D9D9D9; display: flex; flex-direction: column; justify-content: center; }
+.globalModalTextInner { width: 100%; max-width: 495px; margin: 0 auto; display: flex; flex-direction: column; }
+.globalModalText p { white-space: pre-line; word-break: keep-all; margin: 0; }
+.globalModalDate { color: #252525; font-size: 18px; font-weight: 400; line-height: 130%; letter-spacing: -0.02em; margin-bottom: 8px; }
+.globalModalDesc { font-size: 24px; line-height: 1.3; font-weight: 500; color: #111; margin-bottom: 16px; }
+.globalModalSubdesc { color: #252525; font-size: 16px; font-weight: 300; line-height: 130%; letter-spacing: -0.02em; }
+.globalModalNav { display: flex; align-items: center; gap: 12px; margin-top: 24px; justify-content: flex-start; }
+.globalModalArrow { cursor: pointer; margin-top: 4px; background: none; border: none; padding: 0; display: inline-flex; align-items: center; justify-content: center; transition: opacity 0.2s; }
+.globalModalArrow:hover { opacity: 0.5; }
+.globalModalCounter { color: #111; font-size: 20px; font-weight: 600; line-height: 140%; letter-spacing: -0.4px; display: flex; align-items: center; justify-content: center; gap: 0.8em; }
+.globalModalCounterCurrent, .globalModalCounterTotal { min-width: 1.4em; text-align: center; }
+.globalModalCounterTotal, .globalModalCounterDivider { opacity: 0.3; }
 
 /* ===== 10. FAQ Section ===== */
 .faqSection { padding: 150px 0; }
@@ -387,7 +417,8 @@
   .locationSection { flex-direction: column; }
   .locationMap { width: 100%; aspect-ratio: 111/103; }
   .locationTxtWrap { width: 100%; padding: 24px 25px 60px; }
-  .thesisPopupClose { top: 90px; right: 15px; width: 25px; }
+  .thesisPopupClose { top: 20px; right: 15px; width: 25px; }
+  .thesisPopupImg { padding: 60px 0 40px; }
 }
 
 /* ===== Responsive: 768px ===== */
@@ -494,6 +525,17 @@
   /* Global */
   .globalSection { padding-bottom: 0; }
   .globalSection .canvasWrap { margin-top: 20px; }
+  .globalModal { padding: 16px; }
+  .globalModalPanel { padding: 56px 20px 28px; }
+  .globalModalClose { top: 20px; right: 20px; }
+  .globalModalBody { flex-direction: column; min-height: 0; }
+  .globalModalImg { flex-basis: auto; width: 100%; height: 260px; padding-right: 0; padding-bottom: 24px; }
+  .globalModalText { padding-left: 0; padding-top: 24px; border-left: 0; border-top: 1px solid rgba(255,255,255,0.2); font-size: 14px; word-break: keep-all; }
+  .globalModalDate { font-size: 12px; margin-bottom: 0; }
+  .globalModalDesc { font-size: 14px; line-height: 1.6; }
+  .globalModalSubdesc { font-size: 13px; line-height: 1.55; margin-top: 0; }
+  .globalModalNav { margin-top: 16px; }
+  .globalModalCounter { font-size: 13px; min-width: 48px; }
 
   /* FAQ */
   .faqSection { padding: 60px 0; }
