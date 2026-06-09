@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef, useCallback } from "react";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import dynamic from "next/dynamic";
@@ -58,8 +59,8 @@ const aboutImages = [
 const introImages = [
     { src: "/img/main/main_intro_img1.jpg", alt: "레퍼런스 닥터 선정" },
     { src: "/img/main/main_intro_img2.jpg", alt: "엑스퍼트 인스트럭터" },
-    { src: "/img/main/main_intro_img3.jpg", alt: "ICL 엑스퍼트 인스트럭터" },
-    { src: "/img/main/main_intro_img4.jpg", alt: "ICL 엑스퍼트 인스트럭터" }
+    { src: "/img/main/main_intro_img3.jpg", alt: "ICL Expert Instructor" },
+    { src: "/img/main/main_intro_img4.jpg", alt: "ICL Expert Instructor" }
 ];
 
 const expertiseItems = [
@@ -92,15 +93,44 @@ const experienceTabs = [
 const thesisSlides = [
     {
         src: "/img/main/main_thesis_img1.jpg",
-        text: "JCRS_Risk factors for normal-tension glaucoma among subgroups of patients"
+        fullImg: "/img/main/thesis_full/jcrs_glaucoma.jpg",
+        text: "JCRS_Risk Factors for Normal Tension Glaucoma Among Subgroups of Patients"
     },
-    { src: "/img/main/main_thesis_img2.jpg", text: "JKOS 대한안과학회지" },
     {
-        src: "/img/main/main_thesis_img3.jpg",
-        text: "JCRS_Risk factors for normal-tension glaucoma among subgroups of patients"
+        src: "/img/main/main_thesis_img2.jpg",
+        fullImg: "/img/main/thesis_full/jkos_dlek.jpg",
+        text: "JKOS_수포각막병증에서의 심층각막내피이식(DLEK)의 치료성적"
     },
-    { src: "/img/main/main_thesis_img4.jpg", text: "Ophthalmology-International Edition" },
-    { src: "/img/main/main_thesis_img5.jpg", text: "KJO-Korean Journal of Ophthalmology" }
+    {
+        src: "/img/main/main_thesis_img2.jpg",
+        fullImg: "/img/main/thesis_full/jkos_intra_ocular.jpg",
+        text: "JKOS_인공수정체 삽입술에 따른 조절력 비교"
+    },
+    {
+        src: "/img/main/main_thesis_img2.jpg",
+        fullImg: "/img/main/thesis_full/jkos_restor.jpg",
+        text: "JKOS_구면/비구면 ReSTOR 인공수정체의 3개월 임상 결과"
+    },
+    {
+        src: "/img/main/main_thesis_img4.jpg",
+        fullImg: "/img/main/thesis_full/ophth_icl_vault.jpg",
+        text: "Ophthalmology_Correlation between Preoperative Biometry and Posterior Chamber Phakic Visian ICL Vaulting"
+    },
+    {
+        src: "/img/main/main_thesis_img5.jpg",
+        fullImg: "/img/main/thesis_full/kjo_diabetic.jpg",
+        text: "KJO_Diabetic Retinopathy and Peripapillary Retinal Thickness"
+    },
+    {
+        src: "/img/main/main_thesis_img5.jpg",
+        fullImg: "/img/main/thesis_full/kjo_femto.jpg",
+        text: "KJO_Femtosecond Laser-Assisted Small Incision Deep Lamellar Endothelial Keratoplasty"
+    },
+    {
+        src: "/img/main/main_thesis_img5.jpg",
+        fullImg: "/img/main/thesis_full/kjo_plk.jpg",
+        text: "KJO_A Comparison of Posterior Lamellar Keratoplasty Modalities: DLEK vs. DSEK"
+    }
 ];
 
 const faqItems = [
@@ -117,6 +147,71 @@ const faqItems = [
     { img: "/img/main/main_faq_img3.jpg", title: "갑자기 뿌옇게 보여요!!", date: "2025-12-01" },
     { img: "/img/main/main_faq_img4.jpg", title: "토릭 ICL!! 렌즈가 돌아갈까 봐\n걱정되시나요?", date: "2025-12-01" }
 ];
+
+interface GlobalSlide {
+    image?: string;
+    video?: string;
+    poster?: string;
+    desc: string;
+}
+
+const globalModalData: Record<string, GlobalSlide[]> = {
+    korea: [
+        { image: "/img/main/global_slide/korea1.webp", desc: "2016.10\nSTAAR Surgical Asia-Pacific에서 ICL 2000 Awards 수상" },
+        { image: "/img/main/global_slide/korea2.webp", desc: "2016.11 대한민국 서울\n- 116회 대한안과학회 학술대회에서 열린 '개원의를 위한 안과학회 주최 심포지엄'에서 안과의사회 라식수술 위원회 연수교육강좌 강연\n- 주제: \"각막굴절교정수술은 어디까지 안전한가?\"" },
+        { image: "/img/main/global_slide/korea3.webp", desc: "2017.03\nEVO+ICL APAC으로부터 TICL 500 Award 수상" },
+        { image: "/img/main/global_slide/korea4.webp", desc: "2017.03\nToric EVO+ICL 레퍼런스 닥터 선정" },
+        { image: "/img/main/global_slide/korea5.webp", desc: "2017.03 대한민국 서울\n3rd EVO+ICL Experts Meeting에서 초청강연 및 전체토론패널선정\nTICL 500 Award 수상\nCEA(Continuing Education Awards) 평생교육공로상 수상\n주제: Why Toric ICL?" },
+        { image: "/img/main/global_slide/korea6.webp", desc: "2017.12\nEVO+ICL Practice of Excellence 수상 및 EVO+TICL 올해의 THE BEST SURGEON 선정" },
+        { image: "/img/main/global_slide/korea7.webp", desc: "2018.07 대한민국 서울\n제7회 삼성안과심포지움\n\"Controversies in Cornea & Cataract/Refractive Surgery\"에서 강연\n주제: 굴절교정수술에서의 난시 — ICL with LRI vs Toric ICL" },
+        { image: "/img/main/global_slide/korea8.webp", desc: "2018.11 서울한강로타리클럽 특별강연\n주제: 중장년기의 눈 건강" },
+        { image: "/img/main/global_slide/korea9.webp", desc: "2018.11\n- 120회 대한안과학회 학술대회에서 열린 '개원의를 위한 안과학회 주최 심포지엄'에서 안과의사회 라식수술 위원회 연수교육강좌 강연\n- 주제: \"쉽고 간편한 ICL sizing과 exchange 비법\"" },
+        { image: "/img/main/global_slide/korea10.webp", desc: "2019.07 STAAR Surgical 전세계 1,000,000 cases 기념 BEST SURGEON 선정" },
+        { image: "/img/main/global_slide/korea11.webp", desc: "2019.08 김안과 심포지움 초청 강연\n주제: ICL 안내렌즈 삽입술 후 발생 가능한 문제점과 해결법" },
+        { image: "/img/main/global_slide/korea12.webp", desc: "2019.11\n- 122회 대한안과학회 학술대회 연제 제출\n- 주제: \"파장가변 전방 빛간섭단층 촬영계 CASIA2의 안내계측치를 기반으로 시행한 후방 유수정체 안내렌즈 ICL 삽입술의 장기임상결과\"" },
+        { image: "/img/main/global_slide/korea13.webp", desc: "2020 KSCRS 정보통신이사 활동 및 영문판 홈페이지 표지모델 선정" },
+        { image: "/img/main/global_slide/korea14.webp", desc: "2022 KSCRS 편 4판 백내장 교과서\n다초점렌즈삽입술 환자선택 챕터 저자 (공동집필)" },
+        { image: "/img/main/global_slide/korea15.webp", desc: "Korea & Japan ICL Forum (서울)\n주제: Refractive Surgery Trend" },
+        { image: "/img/main/global_slide/korea16.webp", desc: "2025.07\n2025 EVO ICL Forum\n주제: The Importance of Visual Quality in Refractive Surgery" },
+        { image: "/img/main/global_slide/korea17.webp", desc: "2025.11\n3rd Korea & Japan ICL Forum\n주제: Phakic IOL usage in Korea, Japan KOL perspective\n— how to treat the Elderly, Presbyopic Patients, and Hyperopic Patients treatment" },
+    ],
+    spain: [
+        { image: "/img/main/global_slide/spain1.webp", desc: "2015.09 스페인 바르셀로나\nEuropean Society of Cataract & Refractive Surgery (ESCRS) in Barcelona, Spain 발표\n주제: \"Correlation between Preoperative Biometry and Posterior Chamber Phakic Visian Implantable Collamer Lens Vaulting\"" },
+        { image: "/img/main/global_slide/spain2.webp", desc: "2015.09 스페인 시체스\n12차 세계 ICL 전문가 미팅에서 초청 강연\nBest Speaker 및 ICL EXPERT AWARDS 수상\n주제: \"Correlation between Preoperative Biometry and Posterior Chamber Phakic Visian Implantable Collamer Lens Vaulting\"" },
+    ],
+    china: [
+        { image: "/img/main/global_slide/china1_1.webp", desc: "2016.03 중국 상해\n2nd APAC ICL Expert Symposium 초청강연\n주제: \"렌즈삽입술에 대한 집도의로서의 의학적 견해\"" },
+        { video: "/video/china1.mp4", poster: "/img/main/global_slide/china1_poster.jpg", desc: "VISION Group CEO 축하 영상\n(전세계 43개 안과 운영중)" },
+        { video: "/video/china2.mp4", poster: "/img/main/global_slide/china2_poster.jpg", desc: "普瑞眼科 BRIGHT EYE HOSPITAL 원장 축하 영상\n(중국 내 총 27개 병원 운영중)" },
+        { video: "/video/china3.mp4", poster: "/img/main/global_slide/china3_poster.jpg", desc: "AIER 안과병원 굴절수술 표준화 관리자 축하 영상\n(세계최대 안과그룹 — 전세계 813개 안과병원 운영중)" },
+        { video: "/video/china4.mp4", poster: "/img/main/global_slide/china4_poster.jpg", desc: "STAAR Surgical 중국 총 책임자 축하 영상" },
+    ],
+    indonesia: [
+        { image: "/img/main/global_slide/indonesia1.webp", desc: "2016.07 인도네시아 발리\n29th APACRS\n주제: 안구공간측정 및 최적렌즈선택모델에 관한 방정식" },
+    ],
+    portugal: [
+        { image: "/img/main/global_slide/portugal1.webp", desc: "2017.10 포르투갈, 리스본\n14th EVO ICL Experts Summit에서 ICL 3000 Award 수상" },
+        { image: "/img/main/global_slide/portugal2.webp", desc: "2017.10 포르투갈, 리스본\n35th European Society of Cataract & Refractive Surgery (ESCRS) 연자 초청\n주제: Optimization of vision implantable collamer lens vault by intentional rotation" },
+    ],
+    france: [
+        { image: "/img/main/global_slide/france1.webp", desc: "2019.09 프랑스 파리\n10th EVO+ICL Experts Summit에서 EVO+ICL 5,000 Award 수상" },
+        { image: "/img/main/global_slide/france2.webp", desc: "2019.09\nEuropean Society of Cataract & Refractive Surgery (ESCRS) in Paris 참석\n주제: 스마일 엑스트라 수술의 장기 임상 결과 및 안전성\n(lenticule extraction with accelerated corneal cross-linking (SMILE Xtra): two-year results)" },
+    ],
+    usa: [
+        { image: "/img/main/global_slide/usa1.webp", desc: "2020.05\nAmerican Society of Cataract & Refractive Surgery (ASCRS) in Boston (online society) 발표" },
+        { image: "/img/main/global_slide/usa2.webp", desc: "2025.04.25~28 LA ASCRS\n주제: Optimizing outcomes in a broad range of patients" },
+        { video: "/video/usa1.mp4", poster: "/img/main/global_slide/usa1_poster.jpg", desc: "STAAR Surgical CEO 축하 영상" },
+        { video: "/video/usa2.mp4", poster: "/img/main/global_slide/usa2_poster.jpg", desc: "STAAR Surgical Senior Vice President 축하 영상" },
+        { video: "/video/usa3.mp4", poster: "/img/main/global_slide/usa3_poster.jpg", desc: "Tracey Technologies Vice President 축하 영상" },
+    ],
+    japan: [
+        { image: "/img/main/global_slide/japan1.webp", desc: "2023.11.18\n2023 Korea & Japan ICL Forum (도쿄)\n주제: Quality of Vision & Recovery" },
+        { image: "/img/main/global_slide/japan2.webp", desc: "2024.03.15~17\n2024 APAC Experts Summit\n주제: ICL — Now and Future" },
+        { image: "/img/main/global_slide/japan3.webp", desc: "2024.11.14\n15th ICL Study Group Committee\n주제: ICL 수술 후 안내염의 원인과 대책" },
+        { image: "/img/main/global_slide/japan4.webp", desc: "Yoshihiro Kitazawa 원장과 이동훈 원장\n(일본 최대 ICL 전문 클리닉 대표원장)" },
+        { image: "/img/main/global_slide/japan5.webp", desc: "EYE CLINIC TOKYO 국제 진료 협력 파트너십 체결\n(일본 NO.1 ICL 전문 클리닉)" },
+    ],
+};
 
 const newsData = {
     title: "각막 보존하는 시력교정 대안, 렌즈삽입술 선택 기준은?",
@@ -212,11 +307,24 @@ export default function HomeClient({
     ytVideos?: YouTubeVideo[];
     instaPosts?: InstaPost[];
 }) {
+    const t = useTranslations("home");
     const ytVideos = ytVideosProp.length > 0 ? ytVideosProp : fallbackYtVideos;
     const [activeExp, setActiveExp] = useState(0);
     const [newsIndex, setNewsIndex] = useState(0);
     const [thesisPopup, setThesisPopup] = useState<string | null>(null);
+
+    useEffect(() => {
+        if (thesisPopup) {
+            document.body.style.overflow = "hidden";
+        } else {
+            document.body.style.overflow = "";
+        }
+        return () => { document.body.style.overflow = ""; };
+    }, [thesisPopup]);
+
     const [activeYt, setActiveYt] = useState(0);
+    const [globalModal, setGlobalModal] = useState<string | null>(null);
+    const [globalSlideIndex, setGlobalSlideIndex] = useState(0);
     const ytListRef = useRef<HTMLDivElement>(null);
     const expSwiperRef = useRef<SwiperType | null>(null);
     const expNavSwRef = useRef<SwiperType | null>(null);
@@ -347,6 +455,10 @@ export default function HomeClient({
                 effect: "coverflow",
                 grabCursor: true,
                 centeredSlides: true,
+                slideToClickedSlide: false,
+                preventClicks: false,
+                preventClicksPropagation: false,
+                touchStartPreventDefault: false,
                 slidesPerView: "auto",
                 spaceBetween: 24,
                 loop: doLoop,
@@ -368,6 +480,15 @@ export default function HomeClient({
                     },
                     slideChange(sw: SwiperType) {
                         syncTxt(sw.realIndex);
+                    },
+                    click(_sw: SwiperType, event: PointerEvent | MouseEvent | TouchEvent) {
+                        const target = (event.target as HTMLElement).closest("[data-thesis-full]") as HTMLElement | null;
+                        if (!target) return;
+                        const fullImg = target.getAttribute("data-thesis-full") || "";
+                        if (fullImg) {
+                            setThesisPopup(fullImg);
+                            thesisSwiperRef.current?.autoplay?.stop();
+                        }
                     }
                 }
             });
@@ -398,14 +519,29 @@ export default function HomeClient({
         };
     }, []);
 
+    const globalSwiperRef = useRef<SwiperType | null>(null);
+
+    const openGlobalModal = useCallback((id: string) => {
+        if (globalModalData[id]) {
+            setGlobalSlideIndex(0);
+            setGlobalModal(id);
+            document.body.style.overflow = "hidden";
+        }
+    }, []);
+
+    const closeGlobalModal = useCallback(() => {
+        setGlobalModal(null);
+        document.body.style.overflow = "";
+    }, []);
+
     const copyAddress = useCallback(async () => {
         try {
-            await navigator.clipboard.writeText("서울특별시 강남구 강남대로 390, 20층(역삼동, 미진프라자)");
-            alert("주소가 복사되었습니다.");
+            await navigator.clipboard.writeText(t("location.address"));
+            alert(t("location.address_copied"));
         } catch {
             /* noop */
         }
-    }, []);
+    }, [t]);
 
     return (
         <>
@@ -419,29 +555,27 @@ export default function HomeClient({
                 <div className={`${s.innerCon} ${s.aboutInner}`}>
                     <div className={s.aboutInfoWrap}>
                         <figure className={s.aboutTxtWrap}>
-                            <h5 data-aos="fade-up">당신의 집도의는 누구에게 수술을 배웠습니까?</h5>
-                            <h3 data-aos="fade-up">ICL 엑스퍼트 인스트럭터</h3>
+                            <h5 data-aos="fade-up">{t("about.question")}</h5>
+                            <h3 data-aos="fade-up">{t("about.title")}</h3>
                             <div className={s.aboutDesc} data-aos="fade-up">
                                 <p>
-                                    같은 수술이라도 결과가 다른 이유는 분명합니다.
+                                    {t("about.desc1")}
                                     <br />
-                                    닥터아이씨엘 이동훈 대표원장은 단순한
-                                    <br className={s.moBlock} /> &apos;ICL 레퍼런스 닥터&apos;를 넘어,
+                                    {t("about.desc2_1")}
+                                    <br className={s.moBlock} /> {t("about.desc2_ref")}
                                     <br className={s.pcBlock} />
-                                    의사를
-                                    <br className={s.moBlock} /> 가르치는 의사인{" "}
+                                    {t("about.desc2_2")}
+                                    <br className={s.moBlock} /> {t("about.desc2_3")}{" "}
                                     <b className={s.highlight}>
-                                        &apos;ICL 엑스퍼트 인스트럭터
-                                        <br className={s.moBlock} />
-                                        (Expert Instructor)&apos;
+                                        {t("about.desc2_expert")}
                                     </b>
-                                    입니다.
+                                    {t("about.desc2_end")}
                                 </p>
                                 <p>
-                                    의사 교육을 전담하는 엄격한 기준과 압도적인 숙련도,
+                                    {t("about.desc3_1")}
                                     <br />
-                                    수술의 정석을 만드는 그 실력 그대로
-                                    <br className={s.moBlock} /> 당신의 소중한 눈을 직접 집도합니다.
+                                    {t("about.desc3_2")}
+                                    <br className={s.moBlock} /> {t("about.desc3_3")}
                                 </p>
                             </div>
                         </figure>
@@ -490,8 +624,8 @@ export default function HomeClient({
                         <figure className={s.introTxtBoxWrap}>
                             {/* txt-box1: step 1-2 */}
                             <div className={s.introTxtBox1}>
-                                <h3 className={s.introTxtH3First}>레퍼런스 닥터를 넘어</h3>
-                                <h3 className={s.introTxtH3Second}>수술의 기준이 되다</h3>
+                                <h3 className={s.introTxtH3First}>{t("intro.h3_1")}</h3>
+                                <h3 className={s.introTxtH3Second}>{t("intro.h3_2")}</h3>
                                 <div className={s.scrollDownIcon}>
                                     <div className={s.mouseIcon}>
                                         <div className={s.mouseWheel} />
@@ -501,7 +635,7 @@ export default function HomeClient({
                             {/* txt-box2: step 3 */}
                             <div className={s.introTxtBox2}>
                                 <h5>ICL Expert Instructor</h5>
-                                <h3>ICL 엑스퍼트 인스트럭터</h3>
+                                <h3>{t("intro.sub_h3")}</h3>
                                 <div className={s.scrollDownIcon}>
                                     <div className={s.mouseIcon}>
                                         <div className={s.mouseWheel} />
@@ -515,8 +649,8 @@ export default function HomeClient({
                                 <div className={s.introLastDecoImg} />
                                 <div className={s.introLastTitWrap}>
                                     <h5>ICL Expert Instructor</h5>
-                                    <h3>ICL 엑스퍼트 인스트럭터</h3>
-                                    <p>레퍼런스 닥터를 넘어, 수술의 기준이 되다</p>
+                                    <h3>{t("intro.sub_h3")}</h3>
+                                    <p>{t("intro.last_p")}</p>
                                 </div>
                                 <div className={s.introLastImgWrap}>
                                     <Image
@@ -529,19 +663,18 @@ export default function HomeClient({
                                 </div>
                                 <div className={s.introLastTxtWrap}>
                                     <p>
-                                        닥터아이씨엘 이동훈 대표원장은 ICL 레퍼런스 닥터를 거쳐, <br />
-                                        현재는{" "}
+                                        {t("intro.last_txt1")} <br />
+                                        {" "}
                                         <b>
-                                            전 세계 상위 1% 수준의 의사 교육 전담 포지션인 &apos;ICL 엑스퍼트
-                                            인스트럭터&apos;로 활동
+                                            {t("intro.last_txt1_b")}
                                         </b>
-                                        하고 있습니다.
+                                        {t("intro.last_txt1_end")}
                                     </p>
                                     <p>
-                                        전문의에게 수술을 가르치는 더 엄격하고 정교한 기준. <br />
-                                        의사를 가르치는 그 최고의 기술력이 닥터아이씨엘에서는 수술의 기본이 됩니다.{" "}
+                                        {t("intro.last_txt2")} <br />
+                                        {t("intro.last_txt3")}{" "}
                                         <br />
-                                        <b>결과의 차이, 집도의의 급(級)에서 시작</b>됩니다.
+                                        <b>{t("intro.last_txt3_b")}</b>{t("intro.last_txt3_end")}
                                     </p>
                                 </div>
                             </div>
@@ -556,13 +689,11 @@ export default function HomeClient({
                     <div className={s.cateTitWrap}>
                         <h5 data-aos="fade-left">ICL Expert Instructor</h5>
                         <h3 data-aos="fade-left">
-                            같은 수술, 다른 결과 이유는{" "}
-                            <span className={s.highlight}>&apos;집도의&apos;에 있습니다.</span>
+                            {t("expertise.h3_1")}{" "}
+                            <span className={s.highlight}>{t("expertise.h3_highlight")}</span>
                         </h3>
                         <p data-aos="fade-left">
-                            수술의 완성도는 장비가 아닌, 집도의의 경험과 판단에서 결정됩니다.
-                            <br />
-                            수많은 케이스를 통해 축적된 노하우가 결과의 차이를 만들어냅니다.
+                            {t("expertise.desc")}
                         </p>
                     </div>
                 </div>
@@ -575,18 +706,18 @@ export default function HomeClient({
                                     <div className={s.expertiseItemInner}>
                                         <div className={s.expertiseItemTxtWrap}>
                                             <div className={s.expertiseItemTit} data-gsap="expertise-tit">
-                                                <h3 data-aos="fade-left">{item.en}</h3>
-                                                <h5 data-aos="fade-left">{item.ko}</h5>
+                                                <h3 data-aos="fade-left">{t(`expertise.items.${i}.en`)}</h3>
+                                                <h5 data-aos="fade-left">{t(`expertise.items.${i}.ko`)}</h5>
                                             </div>
                                             <div className={s.expertiseItemDesc} data-aos="fade-left">
-                                                <p>{item.desc}</p>
+                                                <p>{t(`expertise.items.${i}.desc`)}</p>
                                             </div>
                                         </div>
                                         <div className={s.expertiseItemImgWrap}>
                                             <div className={s.expertiseItemImg} data-aos="fade-in">
                                                 <Image
                                                     src={item.img}
-                                                    alt={item.ko}
+                                                    alt={t(`expertise.items.${i}.ko`)}
                                                     width={800}
                                                     height={500}
                                                     style={{ width: "100%", height: "auto" }}
@@ -608,10 +739,9 @@ export default function HomeClient({
                             </div>
                             <div className={s.expertiseDarkPanelTit}>
                                 <h3>
-                                    &ldquo;당신의 집도의는 누구에게&nbsp;
-                                    <br className={s.moBlock} /> 수술을 배웠습니까?&rdquo;
+                                    {t("expertise.dark_quote")}
                                 </h3>
-                                <p>의사를 가르치는 의사, 이동훈 대표원장이 닥터아이씨엘의 이름으로 증명합니다.</p>
+                                <p>{t("expertise.dark_sub")}</p>
                             </div>
                         </div>
                     </div>
@@ -624,9 +754,9 @@ export default function HomeClient({
                     <div className={`${s.cateTitWrap} ${s.centerTit}`}>
                         <h5 data-aos="fade-up">ICL Expert Instructor</h5>
                         <h3 data-aos="fade-up">
-                            ICL 엑스퍼트 인스트럭터는 <span className={s.highlight}>경험으로 증명됩니다.</span>
+                            {t("experience.h3_1")} <span className={s.highlight}>{t("experience.h3_highlight")}</span>
                         </h3>
-                        <p data-aos="fade-up">이 과정의 끝에 ICL 엑스퍼트 인스트럭터 이동훈 대표 원장이 있습니다.</p>
+                        <p data-aos="fade-up">{t("experience.desc")}</p>
                     </div>
                     {isMobileNav ? (
                         <Swiper
@@ -657,7 +787,7 @@ export default function HomeClient({
                                     <div className={s.experienceNavCircleWrap}>
                                         <span className={s.experienceNavCircle} />
                                     </div>
-                                    <h5>{tab}</h5>
+                                    <h5>{t(`experience.tabs.${i}`)}</h5>
                                 </SwiperSlide>
                             ))}
                         </Swiper>
@@ -675,7 +805,7 @@ export default function HomeClient({
                                     <div className={s.experienceNavCircleWrap}>
                                         <span className={s.experienceNavCircle} />
                                     </div>
-                                    <h5>{tab}</h5>
+                                    <h5>{t(`experience.tabs.${i}`)}</h5>
                                 </div>
                             ))}
                         </div>
@@ -724,13 +854,13 @@ export default function HomeClient({
                                                 <span className={s.highlight}>1 C</span>hoice for{" "}
                                                 <span className={s.highlight}>L</span>ife
                                             </h5>
-                                            <p>ICL에 집중해 온 이동훈 대표 원장</p>
+                                            <p>{t("experience.slide1_sub")}</p>
                                         </div>
                                         <div className={s.statGrid}>
                                             <div className={s.statItem} ref={yearRef}>
                                                 <div className={s.statNum}>
                                                     <span className={s.statCount}>{yearCount}</span>
-                                                    <span className={s.statUnit}>년</span>
+                                                    <span className={s.statUnit}>{t("experience.stat_year")}</span>
                                                     <span className={s.statPlus}>
                                                         <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
                                                             <path
@@ -741,13 +871,13 @@ export default function HomeClient({
                                                     </span>
                                                 </div>
                                                 <div className={s.statTxt}>
-                                                    <h5>ICL에 집중해온 시간</h5>
+                                                    <h5>{t("experience.stat_year_label")}</h5>
                                                 </div>
                                             </div>
                                             <div className={s.statItem} ref={casesRef}>
                                                 <div className={s.statNum}>
                                                     <span className={s.statCount}>{casesCount.toLocaleString()}</span>
-                                                    <span className={s.statUnit}>건</span>
+                                                    <span className={s.statUnit}>{t("experience.stat_cases")}</span>
                                                     <span className={s.statPlus}>
                                                         <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
                                                             <path
@@ -758,23 +888,23 @@ export default function HomeClient({
                                                     </span>
                                                 </div>
                                                 <div className={s.statTxt}>
-                                                    <h5>ICL 수술 집도 건 수</h5>
+                                                    <h5>{t("experience.stat_cases_label")}</h5>
                                                 </div>
                                             </div>
                                             <div className={s.statItem} ref={minRef}>
                                                 <div className={s.statNum}>
                                                     <span className={s.statCount}>{minCount}</span>
-                                                    <span className={s.statUnit}>분</span>
+                                                    <span className={s.statUnit}>{t("experience.stat_min")}</span>
                                                     <span className={s.statCount}>{secCount}</span>
-                                                    <span className={s.statUnit}>초</span>
+                                                    <span className={s.statUnit}>{t("experience.stat_sec")}</span>
                                                 </div>
                                                 <div className={s.statTxt}>
                                                     <h5>
-                                                        평균 수술 시간
+                                                        {t("experience.stat_time_label")}
                                                         <br />
-                                                        단안기준, 렌즈세팅 및 소독시간 제외
+                                                        {t("experience.stat_time_sub")}
                                                     </h5>
-                                                    <h6>2022.11~2023.7 평균실적</h6>
+                                                    <h6>{t("experience.stat_time_period")}</h6>
                                                 </div>
                                             </div>
                                             <div className={s.statItem} ref={satRef}>
@@ -784,9 +914,9 @@ export default function HomeClient({
                                                 </div>
                                                 <div className={s.statTxt}>
                                                     <h5>
-                                                        수술 후 만족도
+                                                        {t("experience.stat_pct_label")}
                                                         <br />
-                                                        (스페인, 한국, 싱가폴 공동조사)
+                                                        {t("experience.stat_pct_sub")}
                                                     </h5>
                                                 </div>
                                             </div>
@@ -808,16 +938,11 @@ export default function HomeClient({
                                     </div>
                                     <div className={s.experienceSlideInfo}>
                                         <div className={s.infoList}>
-                                            {[
-                                                { n: 1, b: "국내 다수 회차", t: "의사 대상 ICL 수술 교육 진행" },
-                                                { n: 2, b: "고난도 케이스 중심", t: "어려운 수술 케이스 교육" },
-                                                { n: 3, b: "실제 수술 현장 중심", t: "이론이 아닌 집도 기준 전수" },
-                                                { n: 4, b: "국내외 의료진 참여", t: "다양한 임상 케이스 공유" }
-                                            ].map((item) => (
-                                                <div key={item.n} className={s.infoListItem}>
-                                                    <span className={s.infoListItemCircle}>{item.n}</span>
+                                            {[0, 1, 2, 3].map((i) => (
+                                                <div key={i} className={s.infoListItem}>
+                                                    <span className={s.infoListItemCircle}>{i + 1}</span>
                                                     <p>
-                                                        <b>{item.b}</b> {item.t}
+                                                        <b>{t(`experience.slide2.${i}.b`)}</b> {t(`experience.slide2.${i}.t`)}
                                                     </p>
                                                 </div>
                                             ))}
@@ -839,16 +964,11 @@ export default function HomeClient({
                                     </div>
                                     <div className={s.experienceSlideInfo}>
                                         <div className={s.infoList}>
-                                            {[
-                                                { n: 1, b: "0.1mm 단위 보정", t: "개인별 노모그램 수동 보정" },
-                                                { n: 2, b: "데이터 + 판단 병행", t: "기계 수치 그대로 쓰지 않음" },
-                                                { n: 3, b: "차트 기록 기반", t: "수술 결과를 다음 판단에 반영" },
-                                                { n: 4, b: "재수술 최소화 기준", t: "처음부터 한 번에 끝내는 설계" }
-                                            ].map((item) => (
-                                                <div key={item.n} className={s.infoListItem}>
-                                                    <span className={s.infoListItemCircle}>{item.n}</span>
+                                            {[0, 1, 2, 3].map((i) => (
+                                                <div key={i} className={s.infoListItem}>
+                                                    <span className={s.infoListItemCircle}>{i + 1}</span>
                                                     <p>
-                                                        <b>{item.b}</b> {item.t}
+                                                        <b>{t(`experience.slide3.${i}.b`)}</b> {t(`experience.slide3.${i}.t`)}
                                                     </p>
                                                 </div>
                                             ))}
@@ -865,9 +985,9 @@ export default function HomeClient({
             <section className={`${s.contentSection} ${s.thesisSection}`} data-header-bg="white">
                 <div className={`${s.cateTitWrap} ${s.centerTit}`}>
                     <h5 data-aos="fade-up">Global Doctoricl Eye Center</h5>
-                    <h3 data-aos="fade-up">이동훈 대표원장님의 논문</h3>
+                    <h3 data-aos="fade-up">{t("thesis.h3")}</h3>
                     <p data-aos="fade-up">
-                        ICL 제1저자 연구논문 한국인 최초 안과학 최고 권위 학술지 Ophthalmology 등재
+                        {t("thesis.desc")}
                     </p>
                 </div>
                 <div className={s.thesisSwiperWrap} data-aos="fade-up">
@@ -877,10 +997,7 @@ export default function HomeClient({
                                 <div key={i} className="swiper-slide" data-text={slide.text}>
                                     <div
                                         className={s.thesisSlide}
-                                        onClick={() => {
-                                            setThesisPopup(slide.src);
-                                            thesisSwiperRef.current?.autoplay?.stop();
-                                        }}
+                                        data-thesis-full={slide.fullImg}
                                     >
                                         <Image
                                             src={slide.src}
@@ -937,12 +1054,12 @@ export default function HomeClient({
                                 <div className={s.cateTitWrap}>
                                     <h5 data-aos="fade-left">ICL Expert Instructor</h5>
                                     <h3 data-aos="fade-left">
-                                        그렇다면 <span className={s.highlight}>0.1mm의 판단은</span>
+                                        {t("technology.h3_1")} <span className={s.highlight}>{t("technology.h3_highlight")}</span>
                                         <br />
-                                        어떻게 만들어질까요?
+                                        {t("technology.h3_2")}
                                     </h3>
                                     <div className={s.techTxtDesc} data-aos="fade-left">
-                                        <p>감각이 아니라 첨단 장비를 통한 정확한 측정과 기록으로 판단합니다.</p>
+                                        <p>{t("technology.desc")}</p>
                                     </div>
                                 </div>
                                 <div className={s.technologyImgWrap}>
@@ -982,14 +1099,14 @@ export default function HomeClient({
                                 <div className={s.cateTitWrap}>
                                     <h5>ICL Expert Instructor</h5>
                                     <h3>
-                                        이러한 과정으로 <br />
-                                        0.1mm의 판단은{" "}
+                                        {t("technology.h3_3")} <br />
+                                        {t("technology.h3_4")}{" "}
                                         <span className={s.moBlock}>
                                             <br />
                                         </span>
-                                        완성됩니다.
+                                        {t("technology.h3_5")}
                                     </h3>
-                                    <p>(0.1mm 노모그램 보정)</p>
+                                    <p>{t("technology.sub")}</p>
                                 </div>
                                 <div className={s.technologyImgWrap} style={{ marginTop: 40 }}>
                                     <div className={s.technologyImg}>
@@ -1034,10 +1151,10 @@ export default function HomeClient({
                     <div className={`${s.cateTitWrap} ${s.centerTit} ${s.memoTitWrap}`}>
                         <h5>ICL Expert Instructor</h5>
                         <h3>
-                            이러한 과정으로 <br />
-                            <span className={s.highlight}>0.1mm의 판단은</span> 완성됩니다.
+                            {t("memo.h3_1")} <br />
+                            <span className={s.highlight}>{t("memo.h3_highlight")}</span> {t("memo.h3_2")}
                         </h3>
-                        <p>수술은 끝나도 기록은 끝나지 않습니다</p>
+                        <p>{t("memo.desc")}</p>
                     </div>
                     <div className={`swiper ${s.memoList}`} data-mobile-swiper="memo">
                         <div className="swiper-wrapper">
@@ -1065,12 +1182,102 @@ export default function HomeClient({
                 <div className={s.innerCon}>
                     <div className={`${s.cateTitWrap} ${s.centerTit}`}>
                         <h5 data-aos="fade-up">Global Doctoricl Eye Center</h5>
-                        <h3 data-aos="fade-up">글로벌 닥터 ICL 안과</h3>
-                        <p data-aos="fade-up">ICL 수술의 기준을 세계 학술 현장에서 공유합니다.</p>
+                        <h3 data-aos="fade-up">{t("global.h3")}</h3>
+                        <p data-aos="fade-up">{t("global.desc")}</p>
                     </div>
-                    <GlobeCanvas />
+                    <GlobeCanvas onMarkerClick={openGlobalModal} />
                 </div>
             </section>
+
+            {/* Global Modal */}
+            {globalModal && globalModalData[globalModal] && (
+                <div className={`${s.globalModal} ${s.globalModalOpen}`}>
+                    <div className={s.globalModalBackdrop} onClick={closeGlobalModal} />
+                    <div className={s.globalModalPanel}>
+                        <button className={s.globalModalClose} type="button" aria-label="닫기" onClick={closeGlobalModal}>
+                            <svg width="30" height="30" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M6 6l12 12M18 6L6 18" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
+                            </svg>
+                        </button>
+                        <Swiper
+                            className={s.globalModalSwiper}
+                            modules={[EffectFade]}
+                            effect="fade"
+                            fadeEffect={{ crossFade: true }}
+                            speed={320}
+                            loop={true}
+                            allowTouchMove={true}
+                            onSwiper={(sw) => { globalSwiperRef.current = sw; }}
+                            onSlideChange={(sw) => setGlobalSlideIndex(sw.realIndex)}
+                        >
+                            {globalModalData[globalModal].map((slide, i) => (
+                                <SwiperSlide key={i}>
+                                    <div className={s.globalModalBody}>
+                                        <div className={s.globalModalImg}>
+                                            {slide.video ? (
+                                                <video
+                                                    src={slide.video}
+                                                    poster={slide.poster}
+                                                    controls
+                                                    playsInline
+                                                    muted
+                                                    preload="metadata"
+                                                />
+                                            ) : (
+                                                // eslint-disable-next-line @next/next/no-img-element
+                                                <img src={slide.image || ""} alt={t(`global.slides.${globalModal}.${i}`).split("\n")[0]} />
+                                            )}
+                                        </div>
+                                        <div className={s.globalModalText}>
+                                            <div className={s.globalModalTextInner}>
+                                                {(() => {
+                                                    const desc = t(`global.slides.${globalModal}.${i}`);
+                                                    const lines = desc.split("\n");
+                                                    const dateLine = lines[0] || "";
+                                                    const descLine = lines.length > 1 ? lines[1] : "";
+                                                    const subLines = lines.slice(2).join("\n");
+                                                    return (
+                                                        <div>
+                                                            <p className={s.globalModalDate}>{dateLine}</p>
+                                                            <p className={s.globalModalDesc}>{descLine}</p>
+                                                            {subLines && <p className={s.globalModalSubdesc}>{subLines}</p>}
+                                                        </div>
+                                                    );
+                                                })()}
+                                                {globalModalData[globalModal].length > 1 && (
+                                                    <div className={s.globalModalNav}>
+                                                        <button
+                                                            type="button"
+                                                            className={s.globalModalArrow}
+                                                            aria-label="이전"
+                                                            onClick={() => globalSwiperRef.current?.slidePrev()}
+                                                        >
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="12" viewBox="0 0 16 12" fill="none"><path d="M6 12L7.4 10.55L3.85 7H16V5H3.85L7.4 1.45L6 0L0 6L6 12Z" fill="#111" /></svg>
+                                                        </button>
+                                                        <span className={s.globalModalCounter}>
+                                                            <span className={s.globalModalCounterCurrent}>{String(globalSlideIndex + 1).padStart(2, "0")}</span>
+                                                            <span className={s.globalModalCounterDivider}>·</span>
+                                                            <span className={s.globalModalCounterTotal}>{String(globalModalData[globalModal].length).padStart(2, "0")}</span>
+                                                        </span>
+                                                        <button
+                                                            type="button"
+                                                            className={s.globalModalArrow}
+                                                            aria-label="다음"
+                                                            onClick={() => globalSwiperRef.current?.slideNext()}
+                                                        >
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="12" viewBox="0 0 16 12" fill="none"><path d="M10 12L8.6 10.55L12.15 7H0V5H12.15L8.6 1.45L10 0L16 6L10 12Z" fill="#111" /></svg>
+                                                        </button>
+                                                    </div>
+                                                )}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </SwiperSlide>
+                            ))}
+                        </Swiper>
+                    </div>
+                </div>
+            )}
 
             {/* 10. FAQ Section */}
             <section className={`${s.contentSection} ${s.faqSection}`}>
@@ -1078,17 +1285,19 @@ export default function HomeClient({
                     <div className={`${s.cateTitWrap} ${s.centerTit}`}>
                         <h5 data-aos="fade-up">Doctoricl Insights</h5>
                         <h3 data-aos="fade-up">
-                            닥터 ICL 안과 고객님들이 <span className={s.highlight}>궁금해 하시는 내용</span>
+                            {t("faq.h3_1")} <span className={s.highlight}>{t("faq.h3_highlight")}</span>
                         </h3>
-                        <p data-aos="fade-up">닥터 ICL 칼럼에서 확인하세요</p>
+                        <p data-aos="fade-up">{t("faq.desc")}</p>
                     </div>
                     <div className={s.faqGrid} data-aos="fade-up">
-                        {faqItems.map((item, i) => (
+                        {faqItems.map((item, i) => {
+                            const title = t(`faq.items.${i}.title`);
+                            return (
                             <div key={i} className={s.faqItem}>
                                 <div className={s.faqItemImg}>
                                     <Image
                                         src={item.img}
-                                        alt={item.title}
+                                        alt={title}
                                         width={400}
                                         height={300}
                                         style={{ width: "100%", height: "auto" }}
@@ -1096,17 +1305,17 @@ export default function HomeClient({
                                 </div>
                                 <div className={s.faqItemTxt}>
                                     <h5>
-                                        {item.title.split("\n").map((line, j) => (
+                                        {title.split("\n").map((line: string, j: number) => (
                                             <span key={j}>
                                                 {line}
-                                                {j < item.title.split("\n").length - 1 && <br />}
+                                                {j < title.split("\n").length - 1 && <br />}
                                             </span>
                                         ))}
                                     </h5>
-                                    <p>{item.date}</p>
+                                    <p>{t(`faq.items.${i}.date`)}</p>
                                 </div>
-                            </div>
-                        ))}
+                            </div>);
+                        })}
                     </div>
                 </div>
             </section>
@@ -1126,11 +1335,11 @@ export default function HomeClient({
                     <div className={s.youtubeContent} data-aos="fade-left">
                         <div className={s.youtubeTitWrap}>
                             <div>
-                                <h5>Doctoricl YOUTUBE</h5>
+                                <h5>{t("youtube.h5")}</h5>
                                 <h3>
-                                    렌즈삽입술은 닥터ICL안과
+                                    {t("youtube.h3_1")}
                                     <br />
-                                    <span>유튜브에서 닥터ICL을 만나보세요</span>
+                                    <span>{t("youtube.h3_2")}</span>
                                 </h3>
                             </div>
                             <a
@@ -1140,7 +1349,7 @@ export default function HomeClient({
                                 className={s.youtubeBtn}
                             >
                                 <span className={s.youtubeBtnDot} />
-                                <span>닥터ICL안과 유튜브 바로가기</span>
+                                <span>{t("youtube.btn")}</span>
                             </a>
                         </div>
                         <div className={s.youtubeListWrap}>
@@ -1175,7 +1384,7 @@ export default function HomeClient({
                     <div className={s.instaTitWrap}>
                         <h5>Doctoricl Insights</h5>
                         <h3>
-                            닥터ICL안과의 <span className={s.highlight}>새로운 소식</span>을 만나보세요
+                            {t("instagram.h3_1")} <span className={s.highlight}>{t("instagram.h3_highlight")}</span>{t("instagram.h3_2")}
                         </h3>
                     </div>
                     <a
@@ -1185,7 +1394,7 @@ export default function HomeClient({
                         className={s.instaBtn}
                     >
                         <span className={s.instaBtnDot} />
-                        <span>닥터ICL 인스타그램 바로가기</span>
+                        <span>{t("instagram.btn")}</span>
                     </a>
                 </div>
                 <div className={s.instaGrid} data-aos="fade-up">
@@ -1209,12 +1418,7 @@ export default function HomeClient({
                                   </div>
                               </a>
                           ))
-                        : [
-                              { img: 1, title: "2025 KOREA EVO ICL FORUM", date: "2025-08-06" },
-                              { img: 2, title: "ICL EXPERT INSTRUCTOR 공식 선정", date: "2025-07-22" },
-                              { img: 3, title: "세계 6인의 ICL Expert Doctor 선정", date: "2025-07-15" },
-                              { img: 4, title: "2026 EVO ICL APAC EXPERTS SUMMIT", date: "2025-06-30" }
-                          ].map((item) => (
+                        : [0, 1, 2, 3].map((i) => ({ img: i + 1 })).map((item, i) => (
                               <a
                                   key={item.img}
                                   href="https://www.instagram.com/doctoricl/"
@@ -1225,15 +1429,15 @@ export default function HomeClient({
                                   <div className={s.instaCardImg}>
                                       <Image
                                           src={`/img/main/main_insta_placeholder${item.img}.jpg`}
-                                          alt={item.title}
+                                          alt={t(`instagram.fallback.${i}.title`)}
                                           width={420}
                                           height={549}
                                           style={{ width: "100%", height: "100%", objectFit: "cover" }}
                                       />
                                   </div>
                                   <div className={s.instaCardTxt}>
-                                      <h6>{item.title}</h6>
-                                      <p>{item.date}</p>
+                                      <h6>{t(`instagram.fallback.${i}.title`)}</h6>
+                                      <p>{t(`instagram.fallback.${i}.date`)}</p>
                                   </div>
                               </a>
                           ))}
@@ -1253,8 +1457,8 @@ export default function HomeClient({
                                 style={{ width: "auto", height: "auto" }}
                             />
                             <h5>
-                                신뢰받는 매체가 선택한 <br />
-                                닥터 ICL 안과 의료 소식
+                                {t("news.top_h5")} <br />
+                                {t("news.top_h5_2")}
                             </h5>
                         </div>
                         <Swiper
@@ -1285,15 +1489,15 @@ export default function HomeClient({
                                         </div>
                                         <div className={s.newsSlideTxt}>
                                             <div className={s.newsSlideTit}>
-                                                <h3>{newsData.title}</h3>
+                                                <h3>{t("news.title")}</h3>
                                                 <div className={s.newsSlideTitMeta}>
-                                                    <b>{newsData.author}</b>
+                                                    <b>{t("news.author")}</b>
                                                     <span className={s.newsMetaLine} />
                                                     <span>{newsData.date}</span>
                                                 </div>
                                             </div>
                                             <div className={s.newsSlideDesc}>
-                                                <p>{newsData.desc} ·····</p>
+                                                <p>{t("news.desc")} ·····</p>
                                             </div>
                                             <a
                                                 href={newsData.link}
@@ -1301,7 +1505,7 @@ export default function HomeClient({
                                                 rel="noopener noreferrer"
                                                 className={s.newsLink}
                                             >
-                                                <span>뉴스 기사 보러가기</span>
+                                                <span>{t("news.link_text")}</span>
                                             </a>
                                         </div>
                                     </div>
@@ -1344,11 +1548,10 @@ export default function HomeClient({
                     {/* Address */}
                     <div className={s.locationTxtItem}>
                         <div className={s.locationTit}>
-                            <h3 data-aos="fade-left">오시는 길</h3>
+                            <h3 data-aos="fade-left">{t("location.h3_map")}</h3>
                             <p data-aos="fade-left">
                                 <button type="button" className={s.addressCopyBtn} onClick={copyAddress}>
-                                    서울특별시 강남구 강남대로 390,
-                                    <br className={s.moBlock} /> 20층(역삼동, 미진프라자)
+                                    {t("location.address")}
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
                                         width="15"
@@ -1375,7 +1578,7 @@ export default function HomeClient({
                                             height={24}
                                         />
                                     </span>
-                                    <span>네이버 지도</span>
+                                    <span>{t("location.naver")}</span>
                                 </a>
                             </div>
                             <div className={`${s.mapBtn} ${s.googleBtn}`}>
@@ -1387,12 +1590,12 @@ export default function HomeClient({
                                     <span>
                                         <Image
                                             src="/img/main/icon_google_map.png"
-                                            alt="구글 지도"
+                                            alt={t("location.google")}
                                             width={24}
                                             height={24}
                                         />
                                     </span>
-                                    <span>구글 지도</span>
+                                    <span>{t("location.google")}</span>
                                 </a>
                             </div>
                             <div className={`${s.mapBtn} ${s.kakaoBtn}`}>
@@ -1404,12 +1607,12 @@ export default function HomeClient({
                                     <span>
                                         <Image
                                             src="/img/main/icon_kakao_map.png"
-                                            alt="카카오 지도"
+                                            alt={t("location.kakao")}
                                             width={24}
                                             height={24}
                                         />
                                     </span>
-                                    <span>카카오 지도</span>
+                                    <span>{t("location.kakao")}</span>
                                 </a>
                             </div>
                             <div className={`${s.mapBtn} ${s.tmapBtn}`}>
@@ -1419,9 +1622,9 @@ export default function HomeClient({
                                     rel="noopener noreferrer"
                                 >
                                     <span>
-                                        <Image src="/img/main/icon_tmap_map.png" alt="티맵" width={24} height={24} />
+                                        <Image src="/img/main/icon_tmap_map.png" alt={t("location.tmap")} width={24} height={24} />
                                     </span>
-                                    <span>티맵</span>
+                                    <span>{t("location.tmap")}</span>
                                 </a>
                             </div>
                         </div>
@@ -1429,10 +1632,9 @@ export default function HomeClient({
                     {/* Kakao */}
                     <div className={s.locationTxtItem}>
                         <div className={s.locationTit}>
-                            <h3 data-aos="fade-left">카톡상담</h3>
+                            <h3 data-aos="fade-left">{t("location.h3_kakao")}</h3>
                             <p data-aos="fade-left">
-                                카카오톡 아이디 검색에서 <br className={s.moBlock} />{" "}
-                                &ldquo;닥터아이씨엘안과의원&rdquo;을 검색하세요.
+                                {t("location.kakao_desc")}
                             </p>
                         </div>
                     </div>
@@ -1440,29 +1642,23 @@ export default function HomeClient({
                     <div className={`${s.locationTxtItem} ${s.locationFlexItem}`}>
                         <div>
                             <div className={s.locationTit}>
-                                <h3 data-aos="fade-left">진료시간</h3>
+                                <h3 data-aos="fade-left">{t("location.h3_hours")}</h3>
                             </div>
                             <ul className={s.locationHoursList} data-aos="fade-left">
-                                <li>
-                                    <b>월, 화, 목, 금</b>
-                                    <span>AM 09:00 ~ PM 06:00</span>
-                                </li>
-                                <li>
-                                    <b>토요일</b>
-                                    <span>AM 08:30 ~ PM 04:00</span>
-                                </li>
-                                <li>
-                                    <b>점심시간</b>
-                                    <span>PM 01:00 ~ PM 02:00</span>
-                                </li>
+                                {[0, 1, 2].map((i) => (
+                                    <li key={i}>
+                                        <b>{t(`location.hours.${i}.day`)}</b>
+                                        <span>{t(`location.hours.${i}.time`)}</span>
+                                    </li>
+                                ))}
                             </ul>
                             <p className={s.locationHoursNote} data-aos="fade-left">
-                                * 수요일, 일요일 및 공휴일은 휴무입니다.
+                                {t("location.hours_note")}
                             </p>
                         </div>
                         <div>
                             <div className={s.locationTit} data-aos="fade-left">
-                                <h3>상담예약</h3>
+                                <h3>{t("location.h3_contact")}</h3>
                             </div>
                             <div className={s.locationPhone} data-aos="fade-left">
                                 <a href="tel:02-6956-8882">02. 6956. 8882</a>
