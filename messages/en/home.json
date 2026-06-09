@@ -1,0 +1,214 @@
+{
+    "about": {
+        "question": "Who trained your surgeon?",
+        "title": "ICL Expert Instructor",
+        "desc1": "There is a clear reason why results differ even for the same surgery.",
+        "desc2_1": "Dr. Lee Dong Hoon, CEO of Dr.ICL, goes beyond being a mere",
+        "desc2_ref": "'ICL Reference Doctor',",
+        "desc2_2": "He is a doctor",
+        "desc2_3": "who teaches doctors —",
+        "desc2_expert": "'ICL Expert Instructor'",
+        "desc2_end": ".",
+        "desc3_1": "With rigorous standards and overwhelming proficiency dedicated to physician education,",
+        "desc3_2": "The very skills that set the standard for surgery",
+        "desc3_3": "are applied directly to your precious eyes."
+    },
+    "intro": {
+        "h3_1": "Beyond a Reference Doctor",
+        "h3_2": "Becoming the Standard of Surgery",
+        "sub_h5": "ICL Expert Instructor",
+        "sub_h3": "ICL Expert Instructor",
+        "last_p": "Beyond a Reference Doctor, Becoming the Standard",
+        "last_txt1": "Dr. Lee Dong Hoon of Dr.ICL, having served as an ICL Reference Doctor, currently",
+        "last_txt1_b": "serves as an 'ICL Expert Instructor' — a top 1% global position dedicated to physician education",
+        "last_txt1_end": ".",
+        "last_txt2": "Higher and more refined standards for teaching surgery to specialists.",
+        "last_txt3": "At Dr.ICL, the highest level of skill used to teach doctors becomes the standard for every surgery.",
+        "last_txt3_b": "The difference in results begins with the caliber of the surgeon",
+        "last_txt3_end": "."
+    },
+    "expertise": {
+        "h3_1": "Same surgery, different results — the reason lies in",
+        "h3_highlight": "the surgeon.",
+        "desc": "Surgical perfection is determined not by equipment, but by the surgeon's experience and judgment.\nKnow-how accumulated through countless cases creates the difference in outcomes.",
+        "items": [
+            {
+                "en": "Beyond Reference Doctor",
+                "ko": "The Highest Level of Proficiency Beyond a Reference Doctor",
+                "desc": "Not just a doctor who uses equipment, but a physician who shares and teaches the standards for equipment and surgical methods, deeply understanding and applying the principles and structure of surgery. Going beyond experience to creating and advancing standards — that is the role of a surgeon beyond a Reference Doctor."
+            },
+            {
+                "en": "Expert Instructor",
+                "ko": "A Dedicated Physician Who Educates and Passes On Surgical Expertise",
+                "desc": "Surgeons come to learn know-how, study actual surgical processes together, and discuss ways to create safer, more refined methods. Teaching someone means maintaining even higher standards, and that process itself is another reason for elevating surgical perfection."
+            },
+            {
+                "en": "The Standard",
+                "ko": "Performing Surgery with the Same Perfect Standards Taught to Doctors",
+                "desc": "The same standards and principles used in education are applied to patient surgeries. Not just delivering explanations and theories — because the doctor who created those standards performs the surgery directly, making a difference in both the process and outcomes."
+            }
+        ],
+        "dark_quote": "\"Who trained your surgeon?\"",
+        "dark_sub": "A doctor who teaches doctors — Dr. Lee Dong Hoon proves it under the name Dr.ICL."
+    },
+    "experience": {
+        "h3_1": "ICL Expert Instructor is",
+        "h3_highlight": "proven by experience.",
+        "desc": "At the end of this journey stands ICL Expert Instructor Dr. Lee Dong Hoon.",
+        "tabs": ["Dr. Lee Dong Hoon, Dedicated to ICL", "Multiple ICL Surgery Training Sessions for Doctors in Korea", "Same Prescription, Different Results — 0.1mm Nomogram Calibration"],
+        "slide1_sub": "Dr. Lee Dong Hoon, Dedicated to ICL",
+        "stat_year": "Years", "stat_year_label": "Dedicated to ICL",
+        "stat_cases": "Cases", "stat_cases_label": "ICL Surgeries Performed",
+        "stat_min": "Min", "stat_sec": "Sec", "stat_time_label": "Average Surgery Time", "stat_time_sub": "Per eye, excluding lens setting and sterilization", "stat_time_period": "Average from Nov 2022 – Jul 2023",
+        "stat_pct_label": "Post-surgery Satisfaction", "stat_pct_sub": "(Joint survey: Spain, Korea, Singapore)",
+        "slide2": [
+            { "b": "Multiple Sessions in Korea", "t": "ICL Surgery Training for Doctors" },
+            { "b": "High-difficulty Cases", "t": "Training on Challenging Surgical Cases" },
+            { "b": "Real Surgical Setting", "t": "Hands-on Standards, Not Just Theory" },
+            { "b": "Domestic & International Participation", "t": "Sharing Diverse Clinical Cases" }
+        ],
+        "slide3": [
+            { "b": "0.1mm Calibration", "t": "Individual Nomogram Manual Adjustment" },
+            { "b": "Data + Judgment", "t": "Not Relying on Machine Values Alone" },
+            { "b": "Chart-Based Records", "t": "Applying Results to Future Decisions" },
+            { "b": "Minimizing Reoperation", "t": "Designed to Get It Right the First Time" }
+        ]
+    },
+    "thesis": {
+        "h3": "Research Papers by Dr. Lee Dong Hoon",
+        "desc": "First Korean author to publish ICL research in Ophthalmology — the world's most prestigious ophthalmic journal"
+    },
+    "technology": {
+        "h3_1": "Then how is the",
+        "h3_highlight": "0.1mm precision",
+        "h3_2": "judgment made?",
+        "desc": "Not by intuition, but by precise measurement and documentation through advanced equipment.",
+        "h3_3": "Through this process,",
+        "h3_4": "the 0.1mm judgment",
+        "h3_5": "is perfected.",
+        "sub": "(0.1mm Nomogram Calibration)"
+    },
+    "memo": {
+        "h3_1": "Through this process,",
+        "h3_highlight": "the 0.1mm judgment",
+        "h3_2": "is perfected.",
+        "desc": "Surgery ends, but records never stop"
+    },
+    "global": {
+        "h3": "Global Dr.ICL Eye Center",
+        "desc": "Sharing the standards of ICL surgery on the global academic stage.",
+        "slides": {
+            "korea": [
+                "2016.10\nICL 2000 Awards at STAAR Surgical Asia-Pacific",
+                "2016.11 Seoul, Korea\n- Lecture at the 116th Korean Ophthalmological Society Symposium for Practitioners\n- Topic: \"How Far Is Corneal Refractive Surgery Safe?\"",
+                "2017.03\nTICL 500 Award from EVO+ICL APAC",
+                "2017.03\nSelected as Toric EVO+ICL Reference Doctor",
+                "2017.03 Seoul, Korea\nInvited lecture & panel at 3rd EVO+ICL Experts Meeting\nTICL 500 Award\nCEA (Continuing Education Awards)\nTopic: Why Toric ICL?",
+                "2017.12\nEVO+ICL Practice of Excellence Award & THE BEST SURGEON of the Year for EVO+TICL",
+                "2018.07 Seoul, Korea\n7th Samsung Ophthalmology Symposium\nLecture on \"Controversies in Cornea & Cataract/Refractive Surgery\"\nTopic: Astigmatism in Refractive Surgery — ICL with LRI vs Toric ICL",
+                "2018.11\nSpecial lecture at Seoul Hangang Rotary Club\nTopic: Eye Health in Middle Age",
+                "2018.11\n- Lecture at the 120th Korean Ophthalmological Society Symposium for Practitioners\n- Topic: \"Easy and Simple ICL Sizing and Exchange Tips\"",
+                "2019.07\nSelected as BEST SURGEON for STAAR Surgical's Global 1,000,000 Cases Milestone",
+                "2019.08\nInvited lecture at Kim's Eye Hospital Symposium\nTopic: Problems and Solutions After ICL Implantation",
+                "2019.11\n- Paper submitted at the 122nd Korean Ophthalmological Society\n- Topic: \"Long-term Clinical Results of Posterior Chamber Phakic ICL Implantation Based on CASIA2 Measurements\"",
+                "2020\nKSCRS IT Director & Selected as English Website Cover Model",
+                "2022\nKSCRS 4th Edition Cataract Textbook\nCo-author of Multifocal IOL Patient Selection Chapter",
+                "Korea & Japan ICL Forum (Seoul)\nTopic: Refractive Surgery Trend",
+                "2025.07\n2025 EVO ICL Forum\nTopic: The Importance of Visual Quality in Refractive Surgery",
+                "2025.11\n3rd Korea & Japan ICL Forum\nTopic: Phakic IOL usage in Korea, Japan KOL perspective\n— how to treat the Elderly, Presbyopic Patients, and Hyperopic Patients treatment"
+            ],
+            "spain": [
+                "2015.09 Barcelona, Spain\nPresentation at European Society of Cataract & Refractive Surgery (ESCRS)\nTopic: \"Correlation between Preoperative Biometry and Posterior Chamber Phakic Visian Implantable Collamer Lens Vaulting\"",
+                "2015.09 Sitges, Spain\nInvited lecture at 12th World ICL Experts Meeting\nBest Speaker & ICL EXPERT AWARDS\nTopic: \"Correlation between Preoperative Biometry and Posterior Chamber Phakic Visian Implantable Collamer Lens Vaulting\""
+            ],
+            "china": [
+                "2016.03 Shanghai, China\nInvited lecture at 2nd APAC ICL Expert Symposium\nTopic: \"Medical Perspective as an ICL Surgeon\"",
+                "Congratulatory video from VISION Group CEO\n(Operating 43 eye clinics worldwide)",
+                "Congratulatory video from BRIGHT EYE HOSPITAL Director\n(Operating 27 hospitals in China)",
+                "Congratulatory video from AIER Eye Hospital Refractive Surgery Standardization Manager\n(World's largest eye care group — 813 hospitals worldwide)",
+                "Congratulatory video from STAAR Surgical China Head"
+            ],
+            "indonesia": [
+                "2016.07 Bali, Indonesia\n29th APACRS\nTopic: Ocular Biometry and Optimal Lens Selection Model Equation"
+            ],
+            "portugal": [
+                "2017.10 Lisbon, Portugal\nICL 3000 Award at 14th EVO ICL Experts Summit",
+                "2017.10 Lisbon, Portugal\nInvited speaker at 35th European Society of Cataract & Refractive Surgery (ESCRS)\nTopic: Optimization of vision implantable collamer lens vault by intentional rotation"
+            ],
+            "france": [
+                "2019.09 Paris, France\nEVO+ICL 5,000 Award at 10th EVO+ICL Experts Summit",
+                "2019.09\nAttended European Society of Cataract & Refractive Surgery (ESCRS) in Paris\nTopic: Long-term clinical results and safety of SMILE Xtra\n(lenticule extraction with accelerated corneal cross-linking)"
+            ],
+            "usa": [
+                "2020.05\nPresentation at American Society of Cataract & Refractive Surgery (ASCRS) in Boston (online society)",
+                "2025.04.25~28 LA ASCRS\nTopic: Optimizing outcomes in a broad range of patients",
+                "Congratulatory video from STAAR Surgical CEO",
+                "Congratulatory video from STAAR Surgical Senior Vice President",
+                "Congratulatory video from Tracey Technologies Vice President"
+            ],
+            "japan": [
+                "2023.11.18\n2023 Korea & Japan ICL Forum (Tokyo)\nTopic: Quality of Vision & Recovery",
+                "2024.03.15~17\n2024 APAC Experts Summit\nTopic: ICL — Now and Future",
+                "2024.11.14\n15th ICL Study Group Committee\nTopic: Causes and Countermeasures for Endophthalmitis After ICL Surgery",
+                "Dr. Yoshihiro Kitazawa and Dr. Lee Dong Hoon\n(Director of Japan's Largest ICL Specialty Clinic)",
+                "International Clinical Cooperation Partnership with EYE CLINIC TOKYO\n(Japan's No.1 ICL Specialty Clinic)"
+            ]
+        }
+    },
+    "faq": {
+        "h3_1": "Questions our patients at Dr.ICL",
+        "h3_highlight": "frequently ask",
+        "desc": "Find out more from Dr.ICL Columns",
+        "items": [
+            { "title": "Halos after ICL surgery?\nWhy it's not a side effect & full adaptation guide", "date": "2025-12-01" },
+            { "title": "Pre-ICL exam questions answered\nPupil dilation, cost & exam duration guide", "date": "2025-12-01" },
+            { "title": "Suddenly blurry vision!!", "date": "2025-12-01" },
+            { "title": "Toric ICL!! Worried about\nlens rotation?", "date": "2025-12-01" }
+        ]
+    },
+    "youtube": {
+        "h5": "Doctoricl YOUTUBE",
+        "h3_1": "ICL Lens Implantation at Dr.ICL",
+        "h3_2": "Meet Dr.ICL on YouTube",
+        "btn": "Visit Dr.ICL YouTube Channel"
+    },
+    "instagram": {
+        "h3_1": "Discover",
+        "h3_highlight": "the latest updates",
+        "h3_2": "from Dr.ICL",
+        "btn": "Visit Dr.ICL Instagram",
+        "fallback": [
+            { "title": "2025 KOREA EVO ICL FORUM", "date": "2025-08-06" },
+            { "title": "ICL EXPERT INSTRUCTOR Official Selection", "date": "2025-07-22" },
+            { "title": "Selected as One of 6 ICL Expert Doctors Worldwide", "date": "2025-07-15" },
+            { "title": "2026 EVO ICL APAC EXPERTS SUMMIT", "date": "2025-06-30" }
+        ]
+    },
+    "news": {
+        "top_h5": "Trusted Media Chooses",
+        "top_h5_2": "Dr.ICL Eye Clinic Medical News",
+        "title": "Cornea-preserving vision correction alternative: Criteria for choosing lens implantation",
+        "author": "Dr. Lee Dong Hoon, CEO of Dr.ICL Eye Clinic",
+        "desc": "Amidst the trend of laser vision correction surgeries such as LASIK, LASEK, and SMILE, ICL (Implantable Collamer Lens) is emerging as a new option that prioritizes corneal preservation. Unlike corneal ablation methods, this approach places a special lens behind the iris, preserving the corneal structure.",
+        "link_text": "Read News Article"
+    },
+    "location": {
+        "h3_map": "Directions",
+        "address": "390 Gangnam-daero, Gangnam-gu, Seoul, 20F (Yeoksam-dong, Mijin Plaza)",
+        "address_copied": "Address copied.",
+        "naver": "Naver Map",
+        "google": "Google Maps",
+        "kakao": "Kakao Map",
+        "tmap": "T-Map",
+        "h3_kakao": "KakaoTalk",
+        "kakao_desc": "Search for \"Dr.ICL Eye Clinic\" on KakaoTalk.",
+        "h3_hours": "Clinic Hours",
+        "hours": [
+            { "day": "Mon, Tue, Thu, Fri", "time": "AM 09:00 ~ PM 06:00" },
+            { "day": "Saturday", "time": "AM 08:30 ~ PM 04:00" },
+            { "day": "Lunch Break", "time": "PM 01:00 ~ PM 02:00" }
+        ],
+        "hours_note": "* Closed on Wednesdays, Sundays and public holidays.",
+        "h3_contact": "Book Consultation"
+    }
+}

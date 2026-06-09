@@ -57,8 +57,12 @@ interface MarkerDef {
   label: string;
 }
 
+interface GlobeCanvasProps {
+  onMarkerClick?: (id: string) => void;
+}
+
 const MARKERS: MarkerDef[] = [
-  { lat: 37.55, lon: 126.98, id: 'seoul', label: 'Korea' },
+  { lat: 37.55, lon: 126.98, id: 'korea', label: 'Korea' },
   { lat: 40.4168, lon: -3.7038, id: 'spain', label: 'Spain' },
   { lat: 39.9042, lon: 116.4074, id: 'china', label: 'China' },
   { lat: -6.2088, lon: 106.8456, id: 'indonesia', label: 'Indonesia' },
@@ -141,9 +145,11 @@ function addMarker(sphere: THREE.Mesh, lat: number, lon: number, label: string) 
   sphere.add(group);
 }
 
-export default function GlobeCanvas() {
+export default function GlobeCanvas({ onMarkerClick }: GlobeCanvasProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
+  const onMarkerClickRef = useRef(onMarkerClick);
+  onMarkerClickRef.current = onMarkerClick;
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -287,11 +293,15 @@ export default function GlobeCanvas() {
     let velocity = 0;
     let dragging = false;
     let lastPointerX = 0;
+    let dragStartX = 0;
+    let dragStartY = 0;
 
     const onPointerDown = (e: PointerEvent) => {
       dragging = true;
       velocity = 0;
       lastPointerX = e.clientX;
+      dragStartX = e.clientX;
+      dragStartY = e.clientY;
       canvas.setPointerCapture(e.pointerId);
     };
     function pickHover(clientX: number, clientY: number) {
@@ -320,8 +330,18 @@ export default function GlobeCanvas() {
       pickHover(e.clientX, e.clientY);
     };
     const onPointerUp = (e: PointerEvent) => {
+      const dx = e.clientX - dragStartX;
+      const dy = e.clientY - dragStartY;
+      const dist = Math.sqrt(dx * dx + dy * dy);
       dragging = false;
       try { canvas.releasePointerCapture(e.pointerId); } catch { /* noop */ }
+      // Treat as click if drag distance is small
+      if (dist < 5) {
+        pickHover(e.clientX, e.clientY);
+        if (hoveredId && onMarkerClickRef.current) {
+          onMarkerClickRef.current(hoveredId);
+        }
+      }
     };
     const onPointerLeave = () => { hoveredId = null; showCountryHighlight(null); canvas!.style.cursor = ''; };
 

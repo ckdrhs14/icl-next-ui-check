@@ -18,6 +18,7 @@ export default getRequestConfig(async ({ requestLocale }) => {
   const myopia = (await import(`../../messages/${locale}/myopia.json`)).default;
   const special = (await import(`../../messages/${locale}/special.json`)).default;
   const presbyopia = (await import(`../../messages/${locale}/presbyopia.json`)).default;
+  const home = (await import(`../../messages/${locale}/home.json`)).default;
 
   return {
     locale,
@@ -32,6 +33,7 @@ export default getRequestConfig(async ({ requestLocale }) => {
       special,
       presbyopia,
       myopia,
+      home,
     },
   };
 });
