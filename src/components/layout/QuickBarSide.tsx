@@ -29,12 +29,22 @@ export function QuickBarSide() {
 
             {/* 카톡상담 (ko) / WhatsApp (en) */}
             {isKo ? (
-                <a href="https://pf.kakao.com/_rXGTG" target="_blank" rel="noopener noreferrer" className={styles.cardKakao}>
+                <a
+                    href="https://pf.kakao.com/_rXGTG"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={styles.cardKakao}
+                >
                     <img src="/img/common/quickbar/icon_kakao.svg" alt="" className={styles.icon} />
                     <span className={styles.label}>{t("quick.sideMessenger")}</span>
                 </a>
             ) : (
-                <a href="https://wa.me/8225661215" target="_blank" rel="noopener noreferrer" className={styles.cardWhatsapp}>
+                <a
+                    href="https://wa.me/821076742012"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={styles.cardWhatsapp}
+                >
                     <img src="/img/common/quickbar/icon_whatsapp.svg" alt="" className={styles.icon} />
                     <span className={styles.labelWhite}>{t("quick.sideMessenger")}</span>
                 </a>
