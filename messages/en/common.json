@@ -55,7 +55,11 @@
       "map": "Location / Clinic Hours",
       "call": "Phone Inquiry",
       "kakao": "KakaoTalk Inquiry",
-      "naver": "Naver Booking"
+      "naver": "Naver Booking",
+      "sideCall": "Phone\nInquiry",
+      "sideReserve": "Quick\nReservation",
+      "sideMessenger": "Whats App",
+      "sideTop": "TOP"
     },
     "login": "Login",
     "clinicHours": "Clinic Hours",
@@ -65,13 +69,15 @@
     }
   },
   "footer": {
-    "address": "390 Gangnam-daero, Gangnam-gu, Seoul, 20F, Mijin Plaza",
-    "ceo": "Representative: LEE DONG HOON",
-    "bizNo": "Business Registration No.: 523-92-01735",
-    "tel": "Tel: 02-566-1215",
-    "copyright": "COPYRIGHT 2023 DR.ICL Eye Clinic, All RIGHTS RESERVED",
+    "companyName": "Company : DR.ICL Eye Clinic",
+    "address": "Address : 390 Gangnam-daero, Gangnam-gu, Seoul, 20F, Mijin Plaza",
+    "ceo": "Representative : LEE DONG HOON",
+    "bizNo": "Business Registration No. : 523-92-01735",
+    "tel": "Tel : 02. 566. 1215",
+    "copyright": "COPYRIGHT © 2026 DR.ICL Eye Clinic. ALL RIGHT RESERVED.",
     "nonCovered": "Non-insurance Items",
     "terms": "Terms of Use",
-    "privacy": "Privacy Policy"
+    "privacy": "Privacy Policy",
+    "certificate": "Certificate Issuance"
   }
 }
