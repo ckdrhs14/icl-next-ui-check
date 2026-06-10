@@ -6,6 +6,7 @@ import { Noto_Serif_KR, Noto_Serif } from 'next/font/google';
 import { routing } from '@/i18n/routing';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
+import { QuickBarSide } from '@/components/layout/QuickBarSide';
 import { AosInit } from '@/components/aos/AosInit';
 import { LenisInit } from '@/components/lenis/LenisInit';
 
@@ -88,6 +89,7 @@ export default async function LocaleLayout({
         <AosInit />
         <Header />
         <main>{children}</main>
+        <QuickBarSide />
         <Footer />
       </NextIntlClientProvider>
     </div>

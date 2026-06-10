@@ -55,7 +55,11 @@
             "map": "오시는 길 / 진료 시간",
             "call": "전화상담",
             "kakao": "카톡상담",
-            "naver": "네이버예약"
+            "naver": "네이버예약",
+            "sideCall": "전화상담",
+            "sideReserve": "빠른 예약",
+            "sideMessenger": "카톡상담",
+            "sideTop": "TOP"
         },
         "login": "로그인",
         "clinicHours": "진료 시간안내",
@@ -65,13 +69,15 @@
         }
     },
     "footer": {
-        "address": "서울특별시 강남구 강남대로 390, 20층(역삼동, 미진프라자)",
-        "ceo": "대표 : 이동훈",
-        "bizNo": "사업자등록번호 : 523-92-01735",
-        "tel": "전화번호 : 02.566.1215",
-        "copyright": "COPYRIGHT 2023 닥터 ICL 안과 All RIGHTS RESERVED",
-        "nonCovered": "비급여항목",
+        "companyName": "상호명 : 닥터ICL안과",
+        "address": "주소 : 서울특별시 강남구 강남대로 390, 20층(역삼동, 미진프라자)",
+        "ceo": "대표자 : 이동훈",
+        "bizNo": "사업자 등록번호 : 523-92-01735",
+        "tel": "전화번호 : 02. 566. 1215",
+        "copyright": "COPYRIGHT © 2026 닥터ICL안과. ALL RIGHT RESERVED.",
+        "nonCovered": "비급여 항목 안내",
         "terms": "이용약관",
-        "privacy": "개인정보처리방침"
+        "privacy": "개인정보처리방침",
+        "certificate": "증명서 발급"
     }
 }
