@@ -59,7 +59,10 @@
       "sideCall": "Phone\nInquiry",
       "sideReserve": "Quick\nReservation",
       "sideMessenger": "Whats App",
-      "sideTop": "TOP"
+      "sideLocation": "Location",
+      "sideNaver": "Naver\nBooking",
+      "sideTop": "TOP",
+      "sideQuickMenu": "Quick\nMenu"
     },
     "login": "Login",
     "clinicHours": "Clinic Hours",

@@ -59,7 +59,10 @@
             "sideCall": "전화상담",
             "sideReserve": "빠른 예약",
             "sideMessenger": "카톡상담",
-            "sideTop": "TOP"
+            "sideLocation": "오시는 길",
+            "sideNaver": "네이버 예약",
+            "sideTop": "TOP",
+            "sideQuickMenu": "퀵메뉴"
         },
         "login": "로그인",
         "clinicHours": "진료 시간안내",
