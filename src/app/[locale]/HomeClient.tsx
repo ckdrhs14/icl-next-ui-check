@@ -157,60 +157,178 @@ interface GlobalSlide {
 
 const globalModalData: Record<string, GlobalSlide[]> = {
     korea: [
-        { image: "/img/main/global_slide/korea1.webp", desc: "2016.10\nSTAAR Surgical Asia-Pacific에서 ICL 2000 Awards 수상" },
-        { image: "/img/main/global_slide/korea2.webp", desc: "2016.11 대한민국 서울\n- 116회 대한안과학회 학술대회에서 열린 '개원의를 위한 안과학회 주최 심포지엄'에서 안과의사회 라식수술 위원회 연수교육강좌 강연\n- 주제: \"각막굴절교정수술은 어디까지 안전한가?\"" },
+        {
+            image: "/img/main/global_slide/korea1.webp",
+            desc: "2016.10\nSTAAR Surgical Asia-Pacific에서 ICL 2000 Awards 수상"
+        },
+        {
+            image: "/img/main/global_slide/korea2.webp",
+            desc: "2016.11 대한민국 서울\n- 116회 대한안과학회 학술대회에서 열린 '개원의를 위한 안과학회 주최 심포지엄'에서 안과의사회 라식수술 위원회 연수교육강좌 강연\n- 주제: \"각막굴절교정수술은 어디까지 안전한가?\""
+        },
         { image: "/img/main/global_slide/korea3.webp", desc: "2017.03\nEVO+ICL APAC으로부터 TICL 500 Award 수상" },
         { image: "/img/main/global_slide/korea4.webp", desc: "2017.03\nToric EVO+ICL 레퍼런스 닥터 선정" },
-        { image: "/img/main/global_slide/korea5.webp", desc: "2017.03 대한민국 서울\n3rd EVO+ICL Experts Meeting에서 초청강연 및 전체토론패널선정\nTICL 500 Award 수상\nCEA(Continuing Education Awards) 평생교육공로상 수상\n주제: Why Toric ICL?" },
-        { image: "/img/main/global_slide/korea6.webp", desc: "2017.12\nEVO+ICL Practice of Excellence 수상 및 EVO+TICL 올해의 THE BEST SURGEON 선정" },
-        { image: "/img/main/global_slide/korea7.webp", desc: "2018.07 대한민국 서울\n제7회 삼성안과심포지움\n\"Controversies in Cornea & Cataract/Refractive Surgery\"에서 강연\n주제: 굴절교정수술에서의 난시 — ICL with LRI vs Toric ICL" },
-        { image: "/img/main/global_slide/korea8.webp", desc: "2018.11 서울한강로타리클럽 특별강연\n주제: 중장년기의 눈 건강" },
-        { image: "/img/main/global_slide/korea9.webp", desc: "2018.11\n- 120회 대한안과학회 학술대회에서 열린 '개원의를 위한 안과학회 주최 심포지엄'에서 안과의사회 라식수술 위원회 연수교육강좌 강연\n- 주제: \"쉽고 간편한 ICL sizing과 exchange 비법\"" },
-        { image: "/img/main/global_slide/korea10.webp", desc: "2019.07 STAAR Surgical 전세계 1,000,000 cases 기념 BEST SURGEON 선정" },
-        { image: "/img/main/global_slide/korea11.webp", desc: "2019.08 김안과 심포지움 초청 강연\n주제: ICL 안내렌즈 삽입술 후 발생 가능한 문제점과 해결법" },
-        { image: "/img/main/global_slide/korea12.webp", desc: "2019.11\n- 122회 대한안과학회 학술대회 연제 제출\n- 주제: \"파장가변 전방 빛간섭단층 촬영계 CASIA2의 안내계측치를 기반으로 시행한 후방 유수정체 안내렌즈 ICL 삽입술의 장기임상결과\"" },
-        { image: "/img/main/global_slide/korea13.webp", desc: "2020 KSCRS 정보통신이사 활동 및 영문판 홈페이지 표지모델 선정" },
-        { image: "/img/main/global_slide/korea14.webp", desc: "2022 KSCRS 편 4판 백내장 교과서\n다초점렌즈삽입술 환자선택 챕터 저자 (공동집필)" },
-        { image: "/img/main/global_slide/korea15.webp", desc: "Korea & Japan ICL Forum (서울)\n주제: Refractive Surgery Trend" },
-        { image: "/img/main/global_slide/korea16.webp", desc: "2025.07\n2025 EVO ICL Forum\n주제: The Importance of Visual Quality in Refractive Surgery" },
-        { image: "/img/main/global_slide/korea17.webp", desc: "2025.11\n3rd Korea & Japan ICL Forum\n주제: Phakic IOL usage in Korea, Japan KOL perspective\n— how to treat the Elderly, Presbyopic Patients, and Hyperopic Patients treatment" },
+        {
+            image: "/img/main/global_slide/korea5.webp",
+            desc: "2017.03 대한민국 서울\n3rd EVO+ICL Experts Meeting에서 초청강연 및 전체토론패널선정\nTICL 500 Award 수상\nCEA(Continuing Education Awards) 평생교육공로상 수상\n주제: Why Toric ICL?"
+        },
+        {
+            image: "/img/main/global_slide/korea6.webp",
+            desc: "2017.12\nEVO+ICL Practice of Excellence 수상 및 EVO+TICL 올해의 THE BEST SURGEON 선정"
+        },
+        {
+            image: "/img/main/global_slide/korea7.webp",
+            desc: '2018.07 대한민국 서울\n제7회 삼성안과심포지움\n"Controversies in Cornea & Cataract/Refractive Surgery"에서 강연\n주제: 굴절교정수술에서의 난시 — ICL with LRI vs Toric ICL'
+        },
+        {
+            image: "/img/main/global_slide/korea8.webp",
+            desc: "2018.11 서울한강로타리클럽 특별강연\n주제: 중장년기의 눈 건강"
+        },
+        {
+            image: "/img/main/global_slide/korea9.webp",
+            desc: "2018.11\n- 120회 대한안과학회 학술대회에서 열린 '개원의를 위한 안과학회 주최 심포지엄'에서 안과의사회 라식수술 위원회 연수교육강좌 강연\n- 주제: \"쉽고 간편한 ICL sizing과 exchange 비법\""
+        },
+        {
+            image: "/img/main/global_slide/korea10.webp",
+            desc: "2019.07 STAAR Surgical 전세계 1,000,000 cases 기념 BEST SURGEON 선정"
+        },
+        {
+            image: "/img/main/global_slide/korea11.webp",
+            desc: "2019.08 김안과 심포지움 초청 강연\n주제: ICL 안내렌즈 삽입술 후 발생 가능한 문제점과 해결법"
+        },
+        {
+            image: "/img/main/global_slide/korea12.webp",
+            desc: '2019.11\n- 122회 대한안과학회 학술대회 연제 제출\n- 주제: "파장가변 전방 빛간섭단층 촬영계 CASIA2의 안내계측치를 기반으로 시행한 후방 유수정체 안내렌즈 ICL 삽입술의 장기임상결과"'
+        },
+        {
+            image: "/img/main/global_slide/korea13.webp",
+            desc: "2020 KSCRS 정보통신이사 활동 및 영문판 홈페이지 표지모델 선정"
+        },
+        {
+            image: "/img/main/global_slide/korea14.webp",
+            desc: "2022 KSCRS 편 4판 백내장 교과서\n다초점렌즈삽입술 환자선택 챕터 저자 (공동집필)"
+        },
+        {
+            image: "/img/main/global_slide/korea15.webp",
+            desc: "Korea & Japan ICL Forum (서울)\n주제: Refractive Surgery Trend"
+        },
+        {
+            image: "/img/main/global_slide/korea16.webp",
+            desc: "2025.07\n2025 EVO ICL Forum\n주제: The Importance of Visual Quality in Refractive Surgery"
+        },
+        {
+            image: "/img/main/global_slide/korea17.webp",
+            desc: "2025.11\n3rd Korea & Japan ICL Forum\n주제: Phakic IOL usage in Korea, Japan KOL perspective\n— how to treat the Elderly, Presbyopic Patients, and Hyperopic Patients treatment"
+        }
     ],
     spain: [
-        { image: "/img/main/global_slide/spain1.webp", desc: "2015.09 스페인 바르셀로나\nEuropean Society of Cataract & Refractive Surgery (ESCRS) in Barcelona, Spain 발표\n주제: \"Correlation between Preoperative Biometry and Posterior Chamber Phakic Visian Implantable Collamer Lens Vaulting\"" },
-        { image: "/img/main/global_slide/spain2.webp", desc: "2015.09 스페인 시체스\n12차 세계 ICL 전문가 미팅에서 초청 강연\nBest Speaker 및 ICL EXPERT AWARDS 수상\n주제: \"Correlation between Preoperative Biometry and Posterior Chamber Phakic Visian Implantable Collamer Lens Vaulting\"" },
+        {
+            image: "/img/main/global_slide/spain1.webp",
+            desc: '2015.09 스페인 바르셀로나\nEuropean Society of Cataract & Refractive Surgery (ESCRS) in Barcelona, Spain 발표\n주제: "Correlation between Preoperative Biometry and Posterior Chamber Phakic Visian Implantable Collamer Lens Vaulting"'
+        },
+        {
+            image: "/img/main/global_slide/spain2.webp",
+            desc: '2015.09 스페인 시체스\n12차 세계 ICL 전문가 미팅에서 초청 강연\nBest Speaker 및 ICL EXPERT AWARDS 수상\n주제: "Correlation between Preoperative Biometry and Posterior Chamber Phakic Visian Implantable Collamer Lens Vaulting"'
+        }
     ],
     china: [
-        { image: "/img/main/global_slide/china1_1.webp", desc: "2016.03 중국 상해\n2nd APAC ICL Expert Symposium 초청강연\n주제: \"렌즈삽입술에 대한 집도의로서의 의학적 견해\"" },
-        { video: "/video/china1.mp4", poster: "/img/main/global_slide/china1_poster.jpg", desc: "VISION Group CEO 축하 영상\n(전세계 43개 안과 운영중)" },
-        { video: "/video/china2.mp4", poster: "/img/main/global_slide/china2_poster.jpg", desc: "普瑞眼科 BRIGHT EYE HOSPITAL 원장 축하 영상\n(중국 내 총 27개 병원 운영중)" },
-        { video: "/video/china3.mp4", poster: "/img/main/global_slide/china3_poster.jpg", desc: "AIER 안과병원 굴절수술 표준화 관리자 축하 영상\n(세계최대 안과그룹 — 전세계 813개 안과병원 운영중)" },
-        { video: "/video/china4.mp4", poster: "/img/main/global_slide/china4_poster.jpg", desc: "STAAR Surgical 중국 총 책임자 축하 영상" },
+        {
+            image: "/img/main/global_slide/china1_1.webp",
+            desc: '2016.03 중국 상해\n2nd APAC ICL Expert Symposium 초청강연\n주제: "렌즈삽입술에 대한 집도의로서의 의학적 견해"'
+        },
+        {
+            video: "/video/china1.mp4",
+            poster: "/img/main/global_slide/china1_poster.jpg",
+            desc: "VISION Group CEO 축하 영상\n(전세계 43개 안과 운영중)"
+        },
+        {
+            video: "/video/china2.mp4",
+            poster: "/img/main/global_slide/china2_poster.jpg",
+            desc: "普瑞眼科 BRIGHT EYE HOSPITAL 원장 축하 영상\n(중국 내 총 27개 병원 운영중)"
+        },
+        {
+            video: "/video/china3.mp4",
+            poster: "/img/main/global_slide/china3_poster.jpg",
+            desc: "AIER 안과병원 굴절수술 표준화 관리자 축하 영상\n(세계최대 안과그룹 — 전세계 813개 안과병원 운영중)"
+        },
+        {
+            video: "/video/china4.mp4",
+            poster: "/img/main/global_slide/china4_poster.jpg",
+            desc: "STAAR Surgical 중국 총 책임자 축하 영상"
+        }
     ],
     indonesia: [
-        { image: "/img/main/global_slide/indonesia1.webp", desc: "2016.07 인도네시아 발리\n29th APACRS\n주제: 안구공간측정 및 최적렌즈선택모델에 관한 방정식" },
+        {
+            image: "/img/main/global_slide/indonesia1.webp",
+            desc: "2016.07 인도네시아 발리\n29th APACRS\n주제: 안구공간측정 및 최적렌즈선택모델에 관한 방정식"
+        }
     ],
     portugal: [
-        { image: "/img/main/global_slide/portugal1.webp", desc: "2017.10 포르투갈, 리스본\n14th EVO ICL Experts Summit에서 ICL 3000 Award 수상" },
-        { image: "/img/main/global_slide/portugal2.webp", desc: "2017.10 포르투갈, 리스본\n35th European Society of Cataract & Refractive Surgery (ESCRS) 연자 초청\n주제: Optimization of vision implantable collamer lens vault by intentional rotation" },
+        {
+            image: "/img/main/global_slide/portugal1.webp",
+            desc: "2017.10 포르투갈, 리스본\n14th EVO ICL Experts Summit에서 ICL 3000 Award 수상"
+        },
+        {
+            image: "/img/main/global_slide/portugal2.webp",
+            desc: "2017.10 포르투갈, 리스본\n35th European Society of Cataract & Refractive Surgery (ESCRS) 연자 초청\n주제: Optimization of vision implantable collamer lens vault by intentional rotation"
+        }
     ],
     france: [
-        { image: "/img/main/global_slide/france1.webp", desc: "2019.09 프랑스 파리\n10th EVO+ICL Experts Summit에서 EVO+ICL 5,000 Award 수상" },
-        { image: "/img/main/global_slide/france2.webp", desc: "2019.09\nEuropean Society of Cataract & Refractive Surgery (ESCRS) in Paris 참석\n주제: 스마일 엑스트라 수술의 장기 임상 결과 및 안전성\n(lenticule extraction with accelerated corneal cross-linking (SMILE Xtra): two-year results)" },
+        {
+            image: "/img/main/global_slide/france1.webp",
+            desc: "2019.09 프랑스 파리\n10th EVO+ICL Experts Summit에서 EVO+ICL 5,000 Award 수상"
+        },
+        {
+            image: "/img/main/global_slide/france2.webp",
+            desc: "2019.09\nEuropean Society of Cataract & Refractive Surgery (ESCRS) in Paris 참석\n주제: 스마일 엑스트라 수술의 장기 임상 결과 및 안전성\n(lenticule extraction with accelerated corneal cross-linking (SMILE Xtra): two-year results)"
+        }
     ],
     usa: [
-        { image: "/img/main/global_slide/usa1.webp", desc: "2020.05\nAmerican Society of Cataract & Refractive Surgery (ASCRS) in Boston (online society) 발표" },
-        { image: "/img/main/global_slide/usa2.webp", desc: "2025.04.25~28 LA ASCRS\n주제: Optimizing outcomes in a broad range of patients" },
-        { video: "/video/usa1.mp4", poster: "/img/main/global_slide/usa1_poster.jpg", desc: "STAAR Surgical CEO 축하 영상" },
-        { video: "/video/usa2.mp4", poster: "/img/main/global_slide/usa2_poster.jpg", desc: "STAAR Surgical Senior Vice President 축하 영상" },
-        { video: "/video/usa3.mp4", poster: "/img/main/global_slide/usa3_poster.jpg", desc: "Tracey Technologies Vice President 축하 영상" },
+        {
+            image: "/img/main/global_slide/usa1.webp",
+            desc: "2020.05\nAmerican Society of Cataract & Refractive Surgery (ASCRS) in Boston (online society) 발표"
+        },
+        {
+            image: "/img/main/global_slide/usa2.webp",
+            desc: "2025.04.25~28 LA ASCRS\n주제: Optimizing outcomes in a broad range of patients"
+        },
+        {
+            video: "/video/usa1.mp4",
+            poster: "/img/main/global_slide/usa1_poster.jpg",
+            desc: "STAAR Surgical CEO 축하 영상"
+        },
+        {
+            video: "/video/usa2.mp4",
+            poster: "/img/main/global_slide/usa2_poster.jpg",
+            desc: "STAAR Surgical Senior Vice President 축하 영상"
+        },
+        {
+            video: "/video/usa3.mp4",
+            poster: "/img/main/global_slide/usa3_poster.jpg",
+            desc: "Tracey Technologies Vice President 축하 영상"
+        }
     ],
     japan: [
-        { image: "/img/main/global_slide/japan1.webp", desc: "2023.11.18\n2023 Korea & Japan ICL Forum (도쿄)\n주제: Quality of Vision & Recovery" },
-        { image: "/img/main/global_slide/japan2.webp", desc: "2024.03.15~17\n2024 APAC Experts Summit\n주제: ICL — Now and Future" },
-        { image: "/img/main/global_slide/japan3.webp", desc: "2024.11.14\n15th ICL Study Group Committee\n주제: ICL 수술 후 안내염의 원인과 대책" },
-        { image: "/img/main/global_slide/japan4.webp", desc: "Yoshihiro Kitazawa 원장과 이동훈 원장\n(일본 최대 ICL 전문 클리닉 대표원장)" },
-        { image: "/img/main/global_slide/japan5.webp", desc: "EYE CLINIC TOKYO 국제 진료 협력 파트너십 체결\n(일본 NO.1 ICL 전문 클리닉)" },
-    ],
+        {
+            image: "/img/main/global_slide/japan1.webp",
+            desc: "2023.11.18\n2023 Korea & Japan ICL Forum (도쿄)\n주제: Quality of Vision & Recovery"
+        },
+        {
+            image: "/img/main/global_slide/japan2.webp",
+            desc: "2024.03.15~17\n2024 APAC Experts Summit\n주제: ICL — Now and Future"
+        },
+        {
+            image: "/img/main/global_slide/japan3.webp",
+            desc: "2024.11.14\n15th ICL Study Group Committee\n주제: ICL 수술 후 안내염의 원인과 대책"
+        },
+        {
+            image: "/img/main/global_slide/japan4.webp",
+            desc: "Yoshihiro Kitazawa 원장과 이동훈 원장\n(일본 최대 ICL 전문 클리닉 대표원장)"
+        },
+        {
+            image: "/img/main/global_slide/japan5.webp",
+            desc: "EYE CLINIC TOKYO 국제 진료 협력 파트너십 체결\n(일본 NO.1 ICL 전문 클리닉)"
+        }
+    ]
 };
 
 const newsData = {
@@ -290,7 +408,7 @@ function HeroVideo() {
         <video
             ref={videoRef}
             key={isMobile ? "mo" : "pc"}
-            src={isMobile ? "/video/main_hero_video_high_mo.mp4" : "/video/main_hero_video_high.mp4"}
+            src={isMobile ? "/video/main_hero_video_high_mo_v2.mp4" : "/video/main_hero_video_high_v2.mp4"}
             autoPlay
             muted
             loop
@@ -319,7 +437,9 @@ export default function HomeClient({
         } else {
             document.body.style.overflow = "";
         }
-        return () => { document.body.style.overflow = ""; };
+        return () => {
+            document.body.style.overflow = "";
+        };
     }, [thesisPopup]);
 
     const [activeYt, setActiveYt] = useState(0);
@@ -482,7 +602,9 @@ export default function HomeClient({
                         syncTxt(sw.realIndex);
                     },
                     click(_sw: SwiperType, event: PointerEvent | MouseEvent | TouchEvent) {
-                        const target = (event.target as HTMLElement).closest("[data-thesis-full]") as HTMLElement | null;
+                        const target = (event.target as HTMLElement).closest(
+                            "[data-thesis-full]"
+                        ) as HTMLElement | null;
                         if (!target) return;
                         const fullImg = target.getAttribute("data-thesis-full") || "";
                         if (fullImg) {
@@ -566,9 +688,7 @@ export default function HomeClient({
                                     <br className={s.pcBlock} />
                                     {t("about.desc2_2")}
                                     <br className={s.moBlock} /> {t("about.desc2_3")}{" "}
-                                    <b className={s.highlight}>
-                                        {t("about.desc2_expert")}
-                                    </b>
+                                    <b className={s.highlight}>{t("about.desc2_expert")}</b>
                                     {t("about.desc2_end")}
                                 </p>
                                 <p>
@@ -663,18 +783,14 @@ export default function HomeClient({
                                 </div>
                                 <div className={s.introLastTxtWrap}>
                                     <p>
-                                        {t("intro.last_txt1")} <br />
-                                        {" "}
-                                        <b>
-                                            {t("intro.last_txt1_b")}
-                                        </b>
+                                        {t("intro.last_txt1")} <br /> <b>{t("intro.last_txt1_b")}</b>
                                         {t("intro.last_txt1_end")}
                                     </p>
                                     <p>
                                         {t("intro.last_txt2")} <br />
-                                        {t("intro.last_txt3")}{" "}
-                                        <br />
-                                        <b>{t("intro.last_txt3_b")}</b>{t("intro.last_txt3_end")}
+                                        {t("intro.last_txt3")} <br />
+                                        <b>{t("intro.last_txt3_b")}</b>
+                                        {t("intro.last_txt3_end")}
                                     </p>
                                 </div>
                             </div>
@@ -689,12 +805,9 @@ export default function HomeClient({
                     <div className={s.cateTitWrap}>
                         <h5 data-aos="fade-left">ICL Expert Instructor</h5>
                         <h3 data-aos="fade-left">
-                            {t("expertise.h3_1")}{" "}
-                            <span className={s.highlight}>{t("expertise.h3_highlight")}</span>
+                            {t("expertise.h3_1")} <span className={s.highlight}>{t("expertise.h3_highlight")}</span>
                         </h3>
-                        <p data-aos="fade-left">
-                            {t("expertise.desc")}
-                        </p>
+                        <p data-aos="fade-left">{t("expertise.desc")}</p>
                     </div>
                 </div>
                 {/* itemContainer: 스크롤 여유 높이 / itemRollerWrap: pin 대상 */}
@@ -738,9 +851,7 @@ export default function HomeClient({
                                 </span>
                             </div>
                             <div className={s.expertiseDarkPanelTit}>
-                                <h3>
-                                    {t("expertise.dark_quote")}
-                                </h3>
+                                <h3>{t("expertise.dark_quote")}</h3>
                                 <p>{t("expertise.dark_sub")}</p>
                             </div>
                         </div>
@@ -942,7 +1053,8 @@ export default function HomeClient({
                                                 <div key={i} className={s.infoListItem}>
                                                     <span className={s.infoListItemCircle}>{i + 1}</span>
                                                     <p>
-                                                        <b>{t(`experience.slide2.${i}.b`)}</b> {t(`experience.slide2.${i}.t`)}
+                                                        <b>{t(`experience.slide2.${i}.b`)}</b>{" "}
+                                                        {t(`experience.slide2.${i}.t`)}
                                                     </p>
                                                 </div>
                                             ))}
@@ -968,7 +1080,8 @@ export default function HomeClient({
                                                 <div key={i} className={s.infoListItem}>
                                                     <span className={s.infoListItemCircle}>{i + 1}</span>
                                                     <p>
-                                                        <b>{t(`experience.slide3.${i}.b`)}</b> {t(`experience.slide3.${i}.t`)}
+                                                        <b>{t(`experience.slide3.${i}.b`)}</b>{" "}
+                                                        {t(`experience.slide3.${i}.t`)}
                                                     </p>
                                                 </div>
                                             ))}
@@ -986,19 +1099,14 @@ export default function HomeClient({
                 <div className={`${s.cateTitWrap} ${s.centerTit}`}>
                     <h5 data-aos="fade-up">Global Doctoricl Eye Center</h5>
                     <h3 data-aos="fade-up">{t("thesis.h3")}</h3>
-                    <p data-aos="fade-up">
-                        {t("thesis.desc")}
-                    </p>
+                    <p data-aos="fade-up">{t("thesis.desc")}</p>
                 </div>
                 <div className={s.thesisSwiperWrap} data-aos="fade-up">
                     <div className={`swiper ${s.thesisSwiperEl}`} data-thesis-swiper="">
                         <div className="swiper-wrapper">
                             {[...thesisSlides, ...thesisSlides, ...thesisSlides].map((slide, i) => (
                                 <div key={i} className="swiper-slide" data-text={slide.text}>
-                                    <div
-                                        className={s.thesisSlide}
-                                        data-thesis-full={slide.fullImg}
-                                    >
+                                    <div className={s.thesisSlide} data-thesis-full={slide.fullImg}>
                                         <Image
                                             src={slide.src}
                                             alt={slide.text}
@@ -1054,7 +1162,8 @@ export default function HomeClient({
                                 <div className={s.cateTitWrap}>
                                     <h5 data-aos="fade-left">ICL Expert Instructor</h5>
                                     <h3 data-aos="fade-left">
-                                        {t("technology.h3_1")} <span className={s.highlight}>{t("technology.h3_highlight")}</span>
+                                        {t("technology.h3_1")}{" "}
+                                        <span className={s.highlight}>{t("technology.h3_highlight")}</span>
                                         <br />
                                         {t("technology.h3_2")}
                                     </h3>
@@ -1194,9 +1303,19 @@ export default function HomeClient({
                 <div className={`${s.globalModal} ${s.globalModalOpen}`}>
                     <div className={s.globalModalBackdrop} onClick={closeGlobalModal} />
                     <div className={s.globalModalPanel}>
-                        <button className={s.globalModalClose} type="button" aria-label="닫기" onClick={closeGlobalModal}>
+                        <button
+                            className={s.globalModalClose}
+                            type="button"
+                            aria-label="닫기"
+                            onClick={closeGlobalModal}
+                        >
                             <svg width="30" height="30" viewBox="0 0 24 24" aria-hidden="true">
-                                <path d="M6 6l12 12M18 6L6 18" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
+                                <path
+                                    d="M6 6l12 12M18 6L6 18"
+                                    stroke="currentColor"
+                                    strokeWidth="1.6"
+                                    strokeLinecap="round"
+                                />
                             </svg>
                         </button>
                         <Swiper
@@ -1207,7 +1326,9 @@ export default function HomeClient({
                             speed={320}
                             loop={true}
                             allowTouchMove={true}
-                            onSwiper={(sw) => { globalSwiperRef.current = sw; }}
+                            onSwiper={(sw) => {
+                                globalSwiperRef.current = sw;
+                            }}
                             onSlideChange={(sw) => setGlobalSlideIndex(sw.realIndex)}
                         >
                             {globalModalData[globalModal].map((slide, i) => (
@@ -1225,7 +1346,10 @@ export default function HomeClient({
                                                 />
                                             ) : (
                                                 // eslint-disable-next-line @next/next/no-img-element
-                                                <img src={slide.image || ""} alt={t(`global.slides.${globalModal}.${i}`).split("\n")[0]} />
+                                                <img
+                                                    src={slide.image || ""}
+                                                    alt={t(`global.slides.${globalModal}.${i}`).split("\n")[0]}
+                                                />
                                             )}
                                         </div>
                                         <div className={s.globalModalText}>
@@ -1240,7 +1364,9 @@ export default function HomeClient({
                                                         <div>
                                                             <p className={s.globalModalDate}>{dateLine}</p>
                                                             <p className={s.globalModalDesc}>{descLine}</p>
-                                                            {subLines && <p className={s.globalModalSubdesc}>{subLines}</p>}
+                                                            {subLines && (
+                                                                <p className={s.globalModalSubdesc}>{subLines}</p>
+                                                            )}
                                                         </div>
                                                     );
                                                 })()}
@@ -1252,12 +1378,30 @@ export default function HomeClient({
                                                             aria-label="이전"
                                                             onClick={() => globalSwiperRef.current?.slidePrev()}
                                                         >
-                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="12" viewBox="0 0 16 12" fill="none"><path d="M6 12L7.4 10.55L3.85 7H16V5H3.85L7.4 1.45L6 0L0 6L6 12Z" fill="#111" /></svg>
+                                                            <svg
+                                                                xmlns="http://www.w3.org/2000/svg"
+                                                                width="16"
+                                                                height="12"
+                                                                viewBox="0 0 16 12"
+                                                                fill="none"
+                                                            >
+                                                                <path
+                                                                    d="M6 12L7.4 10.55L3.85 7H16V5H3.85L7.4 1.45L6 0L0 6L6 12Z"
+                                                                    fill="#111"
+                                                                />
+                                                            </svg>
                                                         </button>
                                                         <span className={s.globalModalCounter}>
-                                                            <span className={s.globalModalCounterCurrent}>{String(globalSlideIndex + 1).padStart(2, "0")}</span>
+                                                            <span className={s.globalModalCounterCurrent}>
+                                                                {String(globalSlideIndex + 1).padStart(2, "0")}
+                                                            </span>
                                                             <span className={s.globalModalCounterDivider}>·</span>
-                                                            <span className={s.globalModalCounterTotal}>{String(globalModalData[globalModal].length).padStart(2, "0")}</span>
+                                                            <span className={s.globalModalCounterTotal}>
+                                                                {String(globalModalData[globalModal].length).padStart(
+                                                                    2,
+                                                                    "0"
+                                                                )}
+                                                            </span>
                                                         </span>
                                                         <button
                                                             type="button"
@@ -1265,7 +1409,18 @@ export default function HomeClient({
                                                             aria-label="다음"
                                                             onClick={() => globalSwiperRef.current?.slideNext()}
                                                         >
-                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="12" viewBox="0 0 16 12" fill="none"><path d="M10 12L8.6 10.55L12.15 7H0V5H12.15L8.6 1.45L10 0L16 6L10 12Z" fill="#111" /></svg>
+                                                            <svg
+                                                                xmlns="http://www.w3.org/2000/svg"
+                                                                width="16"
+                                                                height="12"
+                                                                viewBox="0 0 16 12"
+                                                                fill="none"
+                                                            >
+                                                                <path
+                                                                    d="M10 12L8.6 10.55L12.15 7H0V5H12.15L8.6 1.45L10 0L16 6L10 12Z"
+                                                                    fill="#111"
+                                                                />
+                                                            </svg>
                                                         </button>
                                                     </div>
                                                 )}
@@ -1293,28 +1448,29 @@ export default function HomeClient({
                         {faqItems.map((item, i) => {
                             const title = t(`faq.items.${i}.title`);
                             return (
-                            <div key={i} className={s.faqItem}>
-                                <div className={s.faqItemImg}>
-                                    <Image
-                                        src={item.img}
-                                        alt={title}
-                                        width={400}
-                                        height={300}
-                                        style={{ width: "100%", height: "auto" }}
-                                    />
+                                <div key={i} className={s.faqItem}>
+                                    <div className={s.faqItemImg}>
+                                        <Image
+                                            src={item.img}
+                                            alt={title}
+                                            width={400}
+                                            height={300}
+                                            style={{ width: "100%", height: "auto" }}
+                                        />
+                                    </div>
+                                    <div className={s.faqItemTxt}>
+                                        <h5>
+                                            {title.split("\n").map((line: string, j: number) => (
+                                                <span key={j}>
+                                                    {line}
+                                                    {j < title.split("\n").length - 1 && <br />}
+                                                </span>
+                                            ))}
+                                        </h5>
+                                        <p>{t(`faq.items.${i}.date`)}</p>
+                                    </div>
                                 </div>
-                                <div className={s.faqItemTxt}>
-                                    <h5>
-                                        {title.split("\n").map((line: string, j: number) => (
-                                            <span key={j}>
-                                                {line}
-                                                {j < title.split("\n").length - 1 && <br />}
-                                            </span>
-                                        ))}
-                                    </h5>
-                                    <p>{t(`faq.items.${i}.date`)}</p>
-                                </div>
-                            </div>);
+                            );
                         })}
                     </div>
                 </div>
@@ -1384,7 +1540,8 @@ export default function HomeClient({
                     <div className={s.instaTitWrap}>
                         <h5>Doctoricl Insights</h5>
                         <h3>
-                            {t("instagram.h3_1")} <span className={s.highlight}>{t("instagram.h3_highlight")}</span>{t("instagram.h3_2")}
+                            {t("instagram.h3_1")} <span className={s.highlight}>{t("instagram.h3_highlight")}</span>
+                            {t("instagram.h3_2")}
                         </h3>
                     </div>
                     <a
@@ -1418,29 +1575,31 @@ export default function HomeClient({
                                   </div>
                               </a>
                           ))
-                        : [0, 1, 2, 3].map((i) => ({ img: i + 1 })).map((item, i) => (
-                              <a
-                                  key={item.img}
-                                  href="https://www.instagram.com/doctoricl/"
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                  className={s.instaCard}
-                              >
-                                  <div className={s.instaCardImg}>
-                                      <Image
-                                          src={`/img/main/main_insta_placeholder${item.img}.jpg`}
-                                          alt={t(`instagram.fallback.${i}.title`)}
-                                          width={420}
-                                          height={549}
-                                          style={{ width: "100%", height: "100%", objectFit: "cover" }}
-                                      />
-                                  </div>
-                                  <div className={s.instaCardTxt}>
-                                      <h6>{t(`instagram.fallback.${i}.title`)}</h6>
-                                      <p>{t(`instagram.fallback.${i}.date`)}</p>
-                                  </div>
-                              </a>
-                          ))}
+                        : [0, 1, 2, 3]
+                              .map((i) => ({ img: i + 1 }))
+                              .map((item, i) => (
+                                  <a
+                                      key={item.img}
+                                      href="https://www.instagram.com/doctoricl/"
+                                      target="_blank"
+                                      rel="noopener noreferrer"
+                                      className={s.instaCard}
+                                  >
+                                      <div className={s.instaCardImg}>
+                                          <Image
+                                              src={`/img/main/main_insta_placeholder${item.img}.jpg`}
+                                              alt={t(`instagram.fallback.${i}.title`)}
+                                              width={420}
+                                              height={549}
+                                              style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                                          />
+                                      </div>
+                                      <div className={s.instaCardTxt}>
+                                          <h6>{t(`instagram.fallback.${i}.title`)}</h6>
+                                          <p>{t(`instagram.fallback.${i}.date`)}</p>
+                                      </div>
+                                  </a>
+                              ))}
                 </div>
             </section>
 
@@ -1622,7 +1781,12 @@ export default function HomeClient({
                                     rel="noopener noreferrer"
                                 >
                                     <span>
-                                        <Image src="/img/main/icon_tmap_map.png" alt={t("location.tmap")} width={24} height={24} />
+                                        <Image
+                                            src="/img/main/icon_tmap_map.png"
+                                            alt={t("location.tmap")}
+                                            width={24}
+                                            height={24}
+                                        />
                                     </span>
                                     <span>{t("location.tmap")}</span>
                                 </a>
@@ -1633,9 +1797,7 @@ export default function HomeClient({
                     <div className={s.locationTxtItem}>
                         <div className={s.locationTit}>
                             <h3 data-aos="fade-left">{t("location.h3_kakao")}</h3>
-                            <p data-aos="fade-left">
-                                {t("location.kakao_desc")}
-                            </p>
+                            <p data-aos="fade-left">{t("location.kakao_desc")}</p>
                         </div>
                     </div>
                     {/* Hours + Phone */}
