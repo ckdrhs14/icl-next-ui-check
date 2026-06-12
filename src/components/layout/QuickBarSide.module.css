@@ -75,10 +75,63 @@
     object-fit: contain;
 }
 
+.iconCall {
+    composes: icon;
+    width: 26px;
+    height: 26px;
+    margin: 4px;
+}
+
+.iconCalendar {
+    composes: icon;
+    width: 27px;
+    height: 27px;
+    margin: 4px;
+}
+
+.iconLocation {
+    composes: icon;
+    width: 22px;
+    height: 28px;
+    margin: 4px;
+}
+
+.iconKakao {
+    composes: icon;
+    width: 30px;
+    height: 28px;
+    margin: 4px;
+}
+
+.iconWhatsapp {
+    composes: icon;
+    width: 32px;
+    height: 32px;
+    margin: 4px;
+}
+
+.iconNaver {
+    composes: icon;
+    width: 30px;
+    height: 30px;
+}
+
+.iconArrowTop {
+    composes: icon;
+    width: 34px;
+    height: 34px;
+}
+
+.iconLightning {
+    composes: icon;
+    width: 24px;
+    height: 24px;
+}
+
 .label {
     font-size: 16px;
     font-weight: 600;
-    line-height: 1.2;
+    line-height: 1.6;
     letter-spacing: -0.32px;
     text-align: center;
     text-transform: capitalize;
@@ -96,9 +149,23 @@
     display: none;
 }
 
-/* locale markers (no-op on PC) */
-.ko {}
-.en {}
+/* locale markers — PC */
+.ko {
+    width: 98px;
+}
+.ko .card {
+    height: 96px;
+}
+.en {
+    width: 98px;
+}
+.en .card {
+    height: 104px;
+}
+.en .label,
+.en .labelWhite {
+    line-height: 1.1;
+}
 
 /* ── Mobile ── */
 @media (max-width: 1024px) {
@@ -110,12 +177,20 @@
     }
 
     /* KO: 68×67 */
-    .ko { width: 68px; }
-    .ko .card { height: 67px; }
+    .ko {
+        width: 68px;
+    }
+    .ko .card {
+        height: 67px;
+    }
 
     /* EN: 76×72 */
-    .en { width: 76px; }
-    .en .card { height: 72px; }
+    .en {
+        width: 76px;
+    }
+    .en .card {
+        height: 72px;
+    }
 
     .items {
         gap: 8px;
@@ -134,7 +209,7 @@
 
     .card {
         padding: 10px 0;
-        gap: 2px;
+        gap: 4px;
         border-radius: 8px;
         transition: none;
     }
@@ -161,5 +236,40 @@
 
     .btnToggle {
         display: flex;
+    }
+    .iconCall {
+        width: 18px;
+        height: 18px;
+        margin: 2px;
+    }
+    .iconCalendar {
+        width: 20px;
+        height: 20px;
+        margin: 2px;
+    }
+    .iconLocation {
+        width: 17px;
+        height: 21px;
+        margin: 2px;
+    }
+    .iconKakao {
+        width: 21px;
+        height: 19px;
+        margin: 2px;
+    }
+    .iconWhatsapp {
+        width: 21px;
+        height: 21px;
+        margin: 2px;
+    }
+    .iconNaver {
+        width: 17px;
+        height: 15px;
+        margin: 2px;
+    }
+    .iconLightning {
+        width: 14px;
+        height: 20px;
+        margin: 2px;
     }
 }
