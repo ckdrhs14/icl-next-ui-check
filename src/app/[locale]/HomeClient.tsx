@@ -51,108 +51,49 @@ const fallbackYtVideos = [
 ];
 
 const aboutImages = [
-    { src: "/img/main/main_about_img1.jpg", alt: "엑스퍼트 인스트럭터" },
-    { src: "/img/main/main_about_img2.jpg", alt: "엑스퍼트 인스트럭터" },
-    { src: "/img/main/main_about_img3.jpg", alt: "엑스퍼트 인스트럭터" }
+    "/img/main/main_about_img1.jpg",
+    "/img/main/main_about_img2.jpg",
+    "/img/main/main_about_img3.jpg"
 ];
 
 const introImages = [
-    { src: "/img/main/main_intro_img1.jpg", alt: "레퍼런스 닥터 선정" },
-    { src: "/img/main/main_intro_img2.jpg", alt: "엑스퍼트 인스트럭터" },
-    { src: "/img/main/main_intro_img3.jpg", alt: "ICL Expert Instructor" },
-    { src: "/img/main/main_intro_img4.jpg", alt: "ICL Expert Instructor" }
+    "/img/main/main_intro_img1.jpg",
+    "/img/main/main_intro_img2.jpg",
+    "/img/main/main_intro_img3.jpg",
+    "/img/main/main_intro_img4.jpg"
 ];
 
-const expertiseItems = [
-    {
-        en: "Beyond Reference Doctor",
-        ko: "레퍼런스 닥터를 넘어선 최고의 숙련도",
-        desc: "단순히 장비를 사용하는 의사가 아니라 장비와 수술 방법의 기준을 공유하고 교육하는 의사로서 수술의 원리와 구조를 깊이 이해하고 직접 적용합니다. 경험에서 끝나는 것이 아니라 기준을 만들고 발전시키는 과정까지 함께하는 것, 그것이 레퍼런스 닥터를 넘어선 집도의의 역할입니다.",
-        img: "/img/main/main_expertise_img1.jpg"
-    },
-    {
-        en: "Expert Instructor",
-        ko: "의사를 교육하고 수술을 전수하는 전담의",
-        desc: "수술을 배우는 의사들이 찾아와 노하우를 배우고 실제 수술 과정을 함께 연구하고 토론하며 더 안전하고 더 정교한 방법을 만들어갑니다. 누군가를 가르친다는 것은 스스로 더 높은 기준을 유지해야 한다는 의미이며, 그 과정 자체가 수술의 완성도를 높이는 또 하나의 이유가 됩니다.",
-        img: "/img/main/main_expertise_img2.jpg"
-    },
-    {
-        en: "The Standard",
-        ko: "의사에게 가르치는 완벽한 기준 그대로 직접 집도",
-        desc: "교육할 때 사용하는 기준과 원칙을 환자의 수술에도 동일하게 적용합니다. 설명과 이론만 전달하는 것이 아니라 그 기준을 만든 의사가 직접 수술을 집도하기 때문에 수술의 과정과 결과 모두에서 차이를 만들어냅니다.",
-        img: "/img/main/main_expertise_img3.jpg"
-    }
+const expertiseImages = [
+    "/img/main/main_expertise_img1.jpg",
+    "/img/main/main_expertise_img2.jpg",
+    "/img/main/main_expertise_img3.jpg"
 ];
 
-const experienceTabs = [
-    "ICL에 집중해 온 이동훈 대표 원장",
-    "의사 대상 ICL 수술 교육 국내 다수 진행",
-    "같은 도수, 다른 결과 0.1mm 노모그램 보정"
-];
+const experienceTabCount = 3;
 
 const thesisSlides = [
-    {
-        src: "/img/main/main_thesis_img1.jpg",
-        fullImg: "/img/main/thesis_full/jcrs_glaucoma.jpg",
-        text: "JCRS_Risk Factors for Normal Tension Glaucoma Among Subgroups of Patients"
-    },
-    {
-        src: "/img/main/main_thesis_img2.jpg",
-        fullImg: "/img/main/thesis_full/jkos_dlek.jpg",
-        text: "JKOS_수포각막병증에서의 심층각막내피이식(DLEK)의 치료성적"
-    },
-    {
-        src: "/img/main/main_thesis_img2.jpg",
-        fullImg: "/img/main/thesis_full/jkos_intra_ocular.jpg",
-        text: "JKOS_인공수정체 삽입술에 따른 조절력 비교"
-    },
-    {
-        src: "/img/main/main_thesis_img2.jpg",
-        fullImg: "/img/main/thesis_full/jkos_restor.jpg",
-        text: "JKOS_구면/비구면 ReSTOR 인공수정체의 3개월 임상 결과"
-    },
-    {
-        src: "/img/main/main_thesis_img4.jpg",
-        fullImg: "/img/main/thesis_full/ophth_icl_vault.jpg",
-        text: "Ophthalmology_Correlation between Preoperative Biometry and Posterior Chamber Phakic Visian ICL Vaulting"
-    },
-    {
-        src: "/img/main/main_thesis_img5.jpg",
-        fullImg: "/img/main/thesis_full/kjo_diabetic.jpg",
-        text: "KJO_Diabetic Retinopathy and Peripapillary Retinal Thickness"
-    },
-    {
-        src: "/img/main/main_thesis_img5.jpg",
-        fullImg: "/img/main/thesis_full/kjo_femto.jpg",
-        text: "KJO_Femtosecond Laser-Assisted Small Incision Deep Lamellar Endothelial Keratoplasty"
-    },
-    {
-        src: "/img/main/main_thesis_img5.jpg",
-        fullImg: "/img/main/thesis_full/kjo_plk.jpg",
-        text: "KJO_A Comparison of Posterior Lamellar Keratoplasty Modalities: DLEK vs. DSEK"
-    }
+    { src: "/img/main/main_thesis_img1.jpg", fullImg: "/img/main/thesis_full/jcrs_glaucoma.jpg" },
+    { src: "/img/main/main_thesis_img2.jpg", fullImg: "/img/main/thesis_full/jkos_dlek.jpg" },
+    { src: "/img/main/main_thesis_img2.jpg", fullImg: "/img/main/thesis_full/jkos_intra_ocular.jpg" },
+    { src: "/img/main/main_thesis_img2.jpg", fullImg: "/img/main/thesis_full/jkos_restor.jpg" },
+    { src: "/img/main/main_thesis_img4.jpg", fullImg: "/img/main/thesis_full/ophth_icl_vault.jpg" },
+    { src: "/img/main/main_thesis_img5.jpg", fullImg: "/img/main/thesis_full/kjo_diabetic.jpg" },
+    { src: "/img/main/main_thesis_img5.jpg", fullImg: "/img/main/thesis_full/kjo_femto.jpg" },
+    { src: "/img/main/main_thesis_img5.jpg", fullImg: "/img/main/thesis_full/kjo_plk.jpg" }
 ];
 
-const faqItems = [
-    {
-        img: "/img/main/main_faq_img1.jpg",
-        title: "ICL 수술 후 빛 번짐(링 현상)?\n부작용이 아닌 이유와 적응 기간 총정리",
-        date: "2025-12-01"
-    },
-    {
-        img: "/img/main/main_faq_img2.jpg",
-        title: "ICL 수술 전 검사 궁금증 해결\n산동검사 여부·비용·검사시간 안내",
-        date: "2025-12-01"
-    },
-    { img: "/img/main/main_faq_img3.jpg", title: "갑자기 뿌옇게 보여요!!", date: "2025-12-01" },
-    { img: "/img/main/main_faq_img4.jpg", title: "토릭 ICL!! 렌즈가 돌아갈까 봐\n걱정되시나요?", date: "2025-12-01" }
+const faqImages = [
+    "/img/main/main_faq_img1.jpg",
+    "/img/main/main_faq_img2.jpg",
+    "/img/main/main_faq_img3.jpg",
+    "/img/main/main_faq_img4.jpg"
 ];
 
 interface GlobalSlide {
     image?: string;
     video?: string;
     poster?: string;
-    desc: string;
+    desc?: string;
 }
 
 const globalModalData: Record<string, GlobalSlide[]> = {
@@ -332,10 +273,7 @@ const globalModalData: Record<string, GlobalSlide[]> = {
 };
 
 const newsData = {
-    title: "각막 보존하는 시력교정 대안, 렌즈삽입술 선택 기준은?",
-    author: "이동훈 닥터아이씨엘안과 원장",
     date: "2026.03.03",
-    desc: "시력교정술의 주요 선택지로 언급되던 라식·라섹·스마일라식 등 레이저 시력교정술의 흐름 속에서, 최근에는 각막 보존을 우선 가치로 두는 렌즈삽입술(ICL)이 새롭게 부상하고 있다. 각막을 절삭하는 방식과 달리, 특수 렌즈를 홍채 뒤쪽에 위치시키는 접근은 각막 구조를 보존한다는 점에서 다르다.",
     link: "https://m.health.chosun.com/svc/news_view.html?contid=2026030303044",
     images: [
         "/img/main/main_news_img1.jpg",
@@ -426,6 +364,7 @@ export default function HomeClient({
     instaPosts?: InstaPost[];
 }) {
     const t = useTranslations("home");
+    const a11y = useTranslations("accessibility");
     const ytVideos = ytVideosProp.length > 0 ? ytVideosProp : fallbackYtVideos;
     const [activeExp, setActiveExp] = useState(0);
     const [newsIndex, setNewsIndex] = useState(0);
@@ -701,11 +640,11 @@ export default function HomeClient({
                         </figure>
                         <div className={`swiper ${s.aboutImgList}`} data-aos="fade-up" data-mobile-swiper="about">
                             <div className="swiper-wrapper">
-                                {aboutImages.map((img, i) => (
+                                {aboutImages.map((src, i) => (
                                     <div key={i} className={`swiper-slide ${s.aboutImgItem}`}>
                                         <Image
-                                            src={img.src}
-                                            alt={img.alt}
+                                            src={src}
+                                            alt={t("alt.aboutImg")}
                                             width={250}
                                             height={330}
                                             style={{ width: "100%", height: "auto" }}
@@ -722,13 +661,13 @@ export default function HomeClient({
             <section className={s.introSection} data-gsap="intro">
                 <figure className={s.introStickyContainer} data-gsap="intro-container">
                     <div className={s.introImgList} data-gsap="intro-imglist">
-                        {introImages.map((img, i) => (
+                        {introImages.map((src, i) => (
                             <div key={i} className={s.introImgItem} data-aos="fade-up" data-gsap="intro-img-item">
                                 <div className={s.introImgItemBox}>
                                     <div className={s.introImgItemImg} data-gsap="intro-img">
                                         <Image
-                                            src={img.src}
-                                            alt={img.alt}
+                                            src={src}
+                                            alt={t(`alt.introImg${i + 1}`)}
                                             width={400}
                                             height={700}
                                             style={{ width: "100%", height: "auto" }}
@@ -775,7 +714,7 @@ export default function HomeClient({
                                 <div className={s.introLastImgWrap}>
                                     <Image
                                         src="/img/main/main_intro_doctor.png"
-                                        alt="이동훈 원장님"
+                                        alt={t("alt.doctorPhoto")}
                                         width={530}
                                         height={800}
                                         style={{ width: "100%", height: "auto" }}
@@ -814,7 +753,7 @@ export default function HomeClient({
                 <div className={s.expertiseContainer} data-gsap="expertise-container">
                     <div className={s.expertiseRoller} data-gsap="expertise-roller">
                         <div className={s.expertiseList} data-gsap="expertise-list">
-                            {expertiseItems.map((item, i) => (
+                            {expertiseImages.map((img, i) => (
                                 <div key={i} className={s.expertiseItem} data-gsap="expertise-item">
                                     <div className={s.expertiseItemInner}>
                                         <div className={s.expertiseItemTxtWrap}>
@@ -829,7 +768,7 @@ export default function HomeClient({
                                         <div className={s.expertiseItemImgWrap}>
                                             <div className={s.expertiseItemImg} data-aos="fade-in">
                                                 <Image
-                                                    src={item.img}
+                                                    src={img}
                                                     alt={t(`expertise.items.${i}.ko`)}
                                                     width={800}
                                                     height={500}
@@ -890,7 +829,7 @@ export default function HomeClient({
                                 });
                             }}
                         >
-                            {experienceTabs.map((tab, i) => (
+                            {Array.from({ length: experienceTabCount }, (_, i) => (
                                 <SwiperSlide
                                     key={i}
                                     className={`${s.experienceNavItem} ${activeExp === i ? s.experienceNavItemActive : ""}`}
@@ -904,7 +843,7 @@ export default function HomeClient({
                         </Swiper>
                     ) : (
                         <div className={s.experienceNav} data-aos="fade-up">
-                            {experienceTabs.map((tab, i) => (
+                            {Array.from({ length: experienceTabCount }, (_, i) => (
                                 <div
                                     key={i}
                                     className={`${s.experienceNavItem} ${activeExp === i ? s.experienceNavItemActive : ""}`}
@@ -953,7 +892,7 @@ export default function HomeClient({
                                     <div className={s.experienceSlideImg}>
                                         <Image
                                             src="/img/main/main_experience_img1.jpg"
-                                            alt="ICL에 집중해 온 이동훈 대표 원장"
+                                            alt={t("alt.experienceImg1")}
                                             width={795}
                                             height={530}
                                             style={{ width: "100%", height: "auto" }}
@@ -1041,7 +980,7 @@ export default function HomeClient({
                                     <div className={s.experienceSlideImg}>
                                         <Image
                                             src="/img/main/main_experience_img2.jpg"
-                                            alt="의사 대상 ICL 수술 교육 국내 다수 진행"
+                                            alt={t("alt.experienceImg2")}
                                             width={795}
                                             height={530}
                                             style={{ width: "100%", height: "auto" }}
@@ -1068,7 +1007,7 @@ export default function HomeClient({
                                     <div className={s.experienceSlideImg}>
                                         <Image
                                             src="/img/main/main_experience_img3.jpg"
-                                            alt="같은 도수, 다른 결과 0.1mm 노모그램 보정"
+                                            alt={t("alt.experienceImg3")}
                                             width={795}
                                             height={530}
                                             style={{ width: "100%", height: "auto" }}
@@ -1104,26 +1043,30 @@ export default function HomeClient({
                 <div className={s.thesisSwiperWrap} data-aos="fade-up">
                     <div className={`swiper ${s.thesisSwiperEl}`} data-thesis-swiper="">
                         <div className="swiper-wrapper">
-                            {[...thesisSlides, ...thesisSlides, ...thesisSlides].map((slide, i) => (
-                                <div key={i} className="swiper-slide" data-text={slide.text}>
-                                    <div className={s.thesisSlide} data-thesis-full={slide.fullImg}>
-                                        <Image
-                                            src={slide.src}
-                                            alt={slide.text}
-                                            width={365}
-                                            height={500}
-                                            style={{ width: "100%", height: "auto" }}
-                                        />
+                            {[...thesisSlides, ...thesisSlides, ...thesisSlides].map((slide, i) => {
+                                const textKey = i % thesisSlides.length;
+                                const text = t(`thesis_items.${textKey}`);
+                                return (
+                                    <div key={i} className="swiper-slide" data-text={text}>
+                                        <div className={s.thesisSlide} data-thesis-full={slide.fullImg}>
+                                            <Image
+                                                src={slide.src}
+                                                alt={text}
+                                                width={365}
+                                                height={500}
+                                                style={{ width: "100%", height: "auto" }}
+                                            />
+                                        </div>
                                     </div>
-                                </div>
-                            ))}
+                                );
+                            })}
                         </div>
                     </div>
                 </div>
                 <div className={s.thesisTxtWrap} data-thesis-txt-wrap="">
-                    {thesisSlides.map((slide, i) => (
+                    {thesisSlides.map((_, i) => (
                         <p key={i} data-thesis-txt={i} style={{ display: "none" }}>
-                            {slide.text}
+                            {t(`thesis_items.${i}`)}
                         </p>
                     ))}
                 </div>
@@ -1139,7 +1082,7 @@ export default function HomeClient({
             >
                 <div className={s.thesisPopupImg}>
                     {/* eslint-disable-next-line @next/next/no-img-element */}
-                    {thesisPopup && <img src={thesisPopup} alt="논문" />}
+                    {thesisPopup && <img src={thesisPopup} alt={t("alt.thesis")} />}
                 </div>
                 <button
                     className={s.thesisPopupClose}
@@ -1175,7 +1118,7 @@ export default function HomeClient({
                                     <div className={s.technologyImg} data-aos="fade-up">
                                         <Image
                                             src="/img/main/main_technology_img1_1.jpg"
-                                            alt="첨단 장비"
+                                            alt={t("alt.techImg1")}
                                             width={400}
                                             height={300}
                                             style={{ width: "100%", height: "auto" }}
@@ -1184,7 +1127,7 @@ export default function HomeClient({
                                     <div className={s.technologyImg} data-aos="fade-up">
                                         <Image
                                             src="/img/main/main_technology_img1_2.jpg"
-                                            alt="정확한 측정"
+                                            alt={t("alt.techImg2")}
                                             width={400}
                                             height={300}
                                             style={{ width: "100%", height: "auto" }}
@@ -1196,7 +1139,7 @@ export default function HomeClient({
                                 {/* eslint-disable-next-line @next/next/no-img-element */}
                                 <img
                                     src="/img/main/main_technology_bg.gif"
-                                    alt="0.1mm의 판단"
+                                    alt={t("alt.techBg")}
                                     data-gsap="tech-thumb1-img"
                                 />
                             </figure>
@@ -1221,7 +1164,7 @@ export default function HomeClient({
                                     <div className={s.technologyImg}>
                                         <Image
                                             src="/img/main/main_technology_img2_1.jpg"
-                                            alt="노모그램 보정"
+                                            alt={t("alt.nomogram1")}
                                             width={400}
                                             height={300}
                                             style={{ width: "100%", height: "auto" }}
@@ -1230,7 +1173,7 @@ export default function HomeClient({
                                     <div className={s.technologyImg}>
                                         <Image
                                             src="/img/main/main_technology_img2_2.jpg"
-                                            alt="노모그램 보정"
+                                            alt={t("alt.nomogram2")}
                                             width={400}
                                             height={300}
                                             style={{ width: "100%", height: "auto" }}
@@ -1274,7 +1217,7 @@ export default function HomeClient({
                                 >
                                     <Image
                                         src={`/img/main/main_memo_img${n}.png`}
-                                        alt="수술 기록"
+                                        alt={t("alt.memo")}
                                         width={400}
                                         height={550}
                                         style={{ width: "100%", height: "auto" }}
@@ -1306,7 +1249,7 @@ export default function HomeClient({
                         <button
                             className={s.globalModalClose}
                             type="button"
-                            aria-label="닫기"
+                            aria-label={a11y("close")}
                             onClick={closeGlobalModal}
                         >
                             <svg width="30" height="30" viewBox="0 0 24 24" aria-hidden="true">
@@ -1375,7 +1318,7 @@ export default function HomeClient({
                                                         <button
                                                             type="button"
                                                             className={s.globalModalArrow}
-                                                            aria-label="이전"
+                                                            aria-label={a11y("prev")}
                                                             onClick={() => globalSwiperRef.current?.slidePrev()}
                                                         >
                                                             <svg
@@ -1406,7 +1349,7 @@ export default function HomeClient({
                                                         <button
                                                             type="button"
                                                             className={s.globalModalArrow}
-                                                            aria-label="다음"
+                                                            aria-label={a11y("next")}
                                                             onClick={() => globalSwiperRef.current?.slideNext()}
                                                         >
                                                             <svg
@@ -1445,13 +1388,13 @@ export default function HomeClient({
                         <p data-aos="fade-up">{t("faq.desc")}</p>
                     </div>
                     <div className={s.faqGrid} data-aos="fade-up">
-                        {faqItems.map((item, i) => {
+                        {faqImages.map((img, i) => {
                             const title = t(`faq.items.${i}.title`);
                             return (
                                 <div key={i} className={s.faqItem}>
                                     <div className={s.faqItemImg}>
                                         <Image
-                                            src={item.img}
+                                            src={img}
                                             alt={title}
                                             width={400}
                                             height={300}
@@ -1610,7 +1553,7 @@ export default function HomeClient({
                         <div className={s.newsTop}>
                             <Image
                                 src="/img/main/symbol_chosunmedia.png"
-                                alt="조선미디어"
+                                alt={t("alt.chosunMedia")}
                                 width={200}
                                 height={40}
                                 style={{ width: "auto", height: "auto" }}
@@ -1640,7 +1583,7 @@ export default function HomeClient({
                                         <div className={s.newsSlideImg}>
                                             <Image
                                                 src={img}
-                                                alt="뉴스"
+                                                alt={t("alt.news")}
                                                 width={595}
                                                 height={400}
                                                 style={{ width: "100%", height: "auto" }}
@@ -1680,7 +1623,7 @@ export default function HomeClient({
                                 >
                                     <Image
                                         src={img}
-                                        alt={`뉴스 ${i + 1}`}
+                                        alt={`${t("alt.news")} ${i + 1}`}
                                         width={80}
                                         height={80}
                                         style={{ width: "100%", height: "100%", objectFit: "cover" }}
@@ -1697,7 +1640,7 @@ export default function HomeClient({
                 <div className={s.locationMap}>
                     <Image
                         src="/img/main/map.jpg"
-                        alt="오시는 길"
+                        alt={t("alt.map")}
                         width={1000}
                         height={900}
                         style={{ width: "100%", height: "100%", objectFit: "cover" }}
@@ -1732,7 +1675,7 @@ export default function HomeClient({
                                     <span>
                                         <Image
                                             src="/img/main/icon_naver_map.png"
-                                            alt="네이버 지도"
+                                            alt={t("alt.naverMap")}
                                             width={24}
                                             height={24}
                                         />

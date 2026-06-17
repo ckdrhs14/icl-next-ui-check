@@ -1,4 +1,36 @@
 {
+    "alt": {
+        "aboutImg": "Expert Instructor",
+        "introImg1": "Reference Doctor",
+        "introImg2": "Expert Instructor",
+        "introImg3": "ICL Expert Instructor",
+        "introImg4": "ICL Expert Instructor",
+        "doctorPhoto": "Dr. Lee Dong Hoon",
+        "experienceImg1": "Dr. Lee Dong Hoon, Focused on ICL",
+        "experienceImg2": "ICL Surgery Training for Doctors",
+        "experienceImg3": "Same Prescription, Different Results — 0.1mm Nomogram Calibration",
+        "thesis": "Research Paper",
+        "techImg1": "Advanced Equipment",
+        "techImg2": "Precise Measurement",
+        "techBg": "0.1mm Judgment",
+        "nomogram1": "Nomogram Calibration",
+        "nomogram2": "Nomogram Calibration",
+        "memo": "Surgical Records",
+        "chosunMedia": "Chosun Media",
+        "news": "News",
+        "map": "Directions",
+        "naverMap": "Naver Map"
+    },
+    "thesis_items": [
+        "JCRS_Risk Factors for Normal Tension Glaucoma Among Subgroups of Patients",
+        "JKOS_Therapeutic Outcomes of Deep Lamellar Endothelial Keratoplasty (DLEK) for Bullous Keratopathy",
+        "JKOS_Comparison of Accommodative Power by Intraocular Lens Implantation",
+        "JKOS_Three-Month Clinical Results of Spherical/Aspherical ReSTOR Intraocular Lenses",
+        "Ophthalmology_Correlation between Preoperative Biometry and Posterior Chamber Phakic Visian ICL Vaulting",
+        "KJO_Diabetic Retinopathy and Peripapillary Retinal Thickness",
+        "KJO_Femtosecond Laser-Assisted Small Incision Deep Lamellar Endothelial Keratoplasty",
+        "KJO_A Comparison of Posterior Lamellar Keratoplasty Modalities: DLEK vs. DSEK"
+    ],
     "about": {
         "question": "Who trained your surgeon?",
         "title": "ICL Expert Instructor",

@@ -104,7 +104,19 @@
     "reviewed": "Reviewed by a certified ophthalmologist",
     "badge": "Medical Column",
     "relatedTitle": "You may also like",
-    "backList": "List"
+    "backList": "List",
+    "placeholderItems": [
+      "Essential Tests Before ICL Surgery",
+      "When Can I Return to Daily Life After ICL Surgery?",
+      "The Relationship Between High Myopia and Glaucoma",
+      "What is EVO+ ICL?"
+    ],
+    "placeholderContents": [
+      "<p>Pre-operative examinations for ICL (Implantable Collamer Lens) surgery are the most critical step in determining surgical outcomes. Optimized lenses are selected for each patient through precise measurements including corneal topography, anterior chamber depth, axial length, and corneal endothelial cell count.</p>",
+      "<p>ICL lens implantation is a vision correction procedure that does not cut the cornea, allowing patients to return to daily activities from the day after surgery. However, patients should avoid rubbing their eyes or water activities such as swimming for one week after surgery.</p>",
+      "<p>Patients with high myopia have a 2-3 times higher risk of developing glaucoma compared to the general population. Regular intraocular pressure measurements and optic nerve examinations are important, and glaucoma screening must be performed before ICL surgery.</p>",
+      "<p>EVO+ ICL is a next-generation lens with an expanded optic zone that reduces nighttime glare compared to conventional ICL. It features a 360μm central hole (KS-AquaPORT) that allows aqueous humor circulation without iridotomy.</p>"
+    ]
   },
   "hospitalNews": {
     "heroTitle": "Clinic News",
@@ -113,7 +125,11 @@
     "metaDesc": "Latest updates from DR.ICL Eye Clinic, including academic presentations and awards.",
     "categoryDesc": "Latest updates from DR.ICL Eye Clinic, including academic presentations and awards.",
     "emptyPost": "No news available.",
-    "badge": "Clinic News"
+    "badge": "Clinic News",
+    "placeholderItems": [
+      "Dr.ICL Eye Clinic Office Hours Change Notice",
+      "2025 Lunar New Year Holiday Schedule"
+    ]
   },
   "eventList": {
     "heroTitle": "Events",
@@ -124,7 +140,11 @@
     "emptyEvent": "No events available.",
     "eventOngoing": "Ongoing",
     "eventEnded": "Ended",
-    "badge": "Event"
+    "badge": "Event",
+    "placeholderItems": [
+      "ICL Lens Implantation Summer Event",
+      "Presbyopia/Cataract Consultation Event"
+    ]
   },
   "event": {
     "metaTitle": "Event Details",

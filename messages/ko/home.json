@@ -1,4 +1,36 @@
 {
+    "alt": {
+        "aboutImg": "엑스퍼트 인스트럭터",
+        "introImg1": "레퍼런스 닥터 선정",
+        "introImg2": "엑스퍼트 인스트럭터",
+        "introImg3": "ICL Expert Instructor",
+        "introImg4": "ICL Expert Instructor",
+        "doctorPhoto": "이동훈 원장님",
+        "experienceImg1": "ICL에 집중해 온 이동훈 대표 원장",
+        "experienceImg2": "의사 대상 ICL 수술 교육 국내 다수 진행",
+        "experienceImg3": "같은 도수, 다른 결과 0.1mm 노모그램 보정",
+        "thesis": "논문",
+        "techImg1": "첨단 장비",
+        "techImg2": "정확한 측정",
+        "techBg": "0.1mm의 판단",
+        "nomogram1": "노모그램 보정",
+        "nomogram2": "노모그램 보정",
+        "memo": "수술 기록",
+        "chosunMedia": "조선미디어",
+        "news": "뉴스",
+        "map": "오시는 길",
+        "naverMap": "네이버 지도"
+    },
+    "thesis_items": [
+        "JCRS_Risk Factors for Normal Tension Glaucoma Among Subgroups of Patients",
+        "JKOS_수포각막병증에서의 심층각막내피이식(DLEK)의 치료성적",
+        "JKOS_인공수정체 삽입술에 따른 조절력 비교",
+        "JKOS_구면/비구면 ReSTOR 인공수정체의 3개월 임상 결과",
+        "Ophthalmology_Correlation between Preoperative Biometry and Posterior Chamber Phakic Visian ICL Vaulting",
+        "KJO_Diabetic Retinopathy and Peripapillary Retinal Thickness",
+        "KJO_Femtosecond Laser-Assisted Small Incision Deep Lamellar Endothelial Keratoplasty",
+        "KJO_A Comparison of Posterior Lamellar Keratoplasty Modalities: DLEK vs. DSEK"
+    ],
     "about": {
         "question": "당신의 집도의는 누구에게 수술을 배웠습니까?",
         "title": "ICL 엑스퍼트 인스트럭터",

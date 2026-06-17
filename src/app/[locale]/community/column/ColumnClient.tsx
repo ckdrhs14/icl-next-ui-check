@@ -10,10 +10,10 @@ const PER_PAGE = 6;
 
 /* placeholder data – replace with API fetch */
 const COLUMN_ITEMS = [
-  { seq: 1, title: '렌즈삽입술 전 꼭 알아야 할 검사 항목', img: '', startDate: '2025-04-10' },
-  { seq: 2, title: 'ICL 수술 후 일상복귀는 언제부터 가능한가요?', img: '', startDate: '2025-03-25' },
-  { seq: 3, title: '고도근시와 녹내장의 관계', img: '', startDate: '2025-03-10' },
-  { seq: 4, title: 'EVO+ ICL이란 무엇인가?', img: '', startDate: '2025-02-20' },
+  { seq: 1, titleKey: 0, img: '', startDate: '2025-04-10' },
+  { seq: 2, titleKey: 1, img: '', startDate: '2025-03-25' },
+  { seq: 3, titleKey: 2, img: '', startDate: '2025-03-10' },
+  { seq: 4, titleKey: 3, img: '', startDate: '2025-02-20' },
 ];
 
 export default function ColumnClient() {
@@ -44,7 +44,7 @@ export default function ColumnClient() {
                 )}
               </div>
               <div className={styles.gridItemTxt}>
-                <div className={styles.gridItemTitle}>{item.title}</div>
+                <div className={styles.gridItemTitle}>{t(`placeholderItems.${item.titleKey}`)}</div>
                 <div className={styles.gridItemDate}><p>{item.startDate}</p></div>
               </div>
             </div>

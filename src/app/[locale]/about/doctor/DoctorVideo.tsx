@@ -1,6 +1,7 @@
 'use client';
 
 import { useRef, useState } from 'react';
+import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import styles from './page.module.css';
 
@@ -8,6 +9,7 @@ const PC_VIDEO = 'https://player.vimeo.com/progressive_redirect/playback/1071327
 const MO_VIDEO = 'https://player.vimeo.com/progressive_redirect/playback/1071327810/rendition/720p/file.mp4?loc=external&signature=a33b7b42f07961dee619c165e333187ab29d03ce8c8de54e986b43d25eadac39';
 
 export function DoctorVideo() {
+  const t = useTranslations("accessibility");
   const pcRef = useRef<HTMLVideoElement>(null);
   const moRef = useRef<HTMLVideoElement>(null);
   const [playing, setPlaying] = useState(false);
@@ -23,11 +25,11 @@ export function DoctorVideo() {
       {!playing && (
         <>
           <button className={`${styles.videoThumb} ${styles.thumbPc}`} onClick={handlePlay}>
-            <Image src="/img/int/pc_250908.png" alt="영상 재생" fill style={{ objectFit: 'contain' }} />
+            <Image src="/img/int/pc_250908.png" alt={t("playVideo")} fill style={{ objectFit: 'contain' }} />
             <span className={styles.playBtn}>▶</span>
           </button>
           <button className={`${styles.videoThumb} ${styles.thumbMo}`} onClick={handlePlay}>
-            <Image src="/img/int/mo_250908.png" alt="영상 재생" fill style={{ objectFit: 'contain' }} />
+            <Image src="/img/int/mo_250908.png" alt={t("playVideo")} fill style={{ objectFit: 'contain' }} />
             <span className={styles.playBtn}>▶</span>
           </button>
         </>
