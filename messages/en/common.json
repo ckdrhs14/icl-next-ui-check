@@ -68,8 +68,24 @@
     "clinicHours": "Clinic Hours",
     "lang": {
       "kr": "KR",
-      "en": "EN"
+      "en": "EN",
+      "zh": "ZH",
+      "vi": "VI",
+      "mn": "MN",
+      "ru": "RU"
     }
+  },
+  "accessibility": {
+    "prev": "Previous",
+    "next": "Next",
+    "close": "Close",
+    "more": "More",
+    "playVideo": "Play video",
+    "logoAlt": "Dr.ICL",
+    "logoMenuAlt": "Dr.ICL Eye Clinic"
+  },
+  "seo": {
+    "schemaName": "doctorICL Dr.ICL"
   },
   "footer": {
     "companyName": "Company : DR.ICL Eye Clinic",

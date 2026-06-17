@@ -1,4 +1,5 @@
 import type { ReactNode } from 'react';
+import Script from 'next/script';
 import { NextIntlClientProvider, hasLocale } from 'next-intl';
 import { getMessages, getTranslations } from 'next-intl/server';
 import { notFound } from 'next/navigation';
@@ -74,15 +75,32 @@ export default async function LocaleLayout({
   }
 
   const messages = await getMessages();
+  const t = await getTranslations('layout');
+  const seo = await getTranslations('seo');
+
+  const schemaOrg = {
+    "@context": "http://schema.org",
+    "@type": "Organization",
+    "name": seo("schemaName"),
+    "url": "https://doctoricl.com/",
+    "sameAs": [
+      "https://blog.naver.com/doctor_icl",
+      "https://www.youtube.com/@driclno.1",
+      "https://www.instagram.com/doctoricl"
+    ]
+  };
 
   return (
     <div className={`${notoSerifKr.variable} ${notoSerif.variable}`} lang={locale}>
-      {/* Hidden SEO headings (원본 PHP 동일) */}
+      <Script id="schema-org" type="application/ld+json" strategy="afterInteractive">
+        {JSON.stringify(schemaOrg)}
+      </Script>
+      {/* Hidden SEO headings */}
       <div style={{ position: 'absolute', top: -54, overflow: 'hidden', height: 1, width: 1 }}>
-        <h1>강남 닥터ICL안과의원 - 강남안과,렌즈삽입술,안내렌즈삽입술</h1>
+        <h1>{t('siteTitle')}</h1>
       </div>
       <div style={{ position: 'absolute', top: -54, overflow: 'hidden', height: 1, width: 1 }}>
-        <h2>강남 안과</h2>
+        <h2>{t('siteTitle')}</h2>
       </div>
       <NextIntlClientProvider messages={messages}>
         <LenisInit />

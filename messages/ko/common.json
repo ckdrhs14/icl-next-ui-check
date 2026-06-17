@@ -68,8 +68,24 @@
         "clinicHours": "진료 시간안내",
         "lang": {
             "kr": "KR",
-            "en": "EN"
+            "en": "EN",
+            "zh": "ZH",
+            "vi": "VI",
+            "mn": "MN",
+            "ru": "RU"
         }
+    },
+    "accessibility": {
+        "prev": "이전",
+        "next": "다음",
+        "close": "닫기",
+        "more": "더보기",
+        "playVideo": "영상 재생",
+        "logoAlt": "닥터 ICL",
+        "logoMenuAlt": "닥터 ICL 안과"
+    },
+    "seo": {
+        "schemaName": "doctorICL 닥터ICL"
     },
     "footer": {
         "companyName": "상호명 : 닥터ICL안과",

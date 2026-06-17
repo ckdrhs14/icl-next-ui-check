@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { useTranslations } from 'next-intl';
 import styles from './page.module.css';
 
 interface TimelineItem {
@@ -10,6 +11,7 @@ interface TimelineItem {
 }
 
 export function DomesticTimeline({ items }: { items: TimelineItem[] }) {
+  const t = useTranslations("accessibility");
   const [expanded, setExpanded] = useState(false);
 
   return (
@@ -30,7 +32,7 @@ export function DomesticTimeline({ items }: { items: TimelineItem[] }) {
       </div>
       {!expanded && (
         <button className={styles.moreBtn} onClick={() => setExpanded(true)}>
-          더보기
+          {t("more")}
         </button>
       )}
     </div>

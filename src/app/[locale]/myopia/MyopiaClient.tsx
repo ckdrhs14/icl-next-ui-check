@@ -204,9 +204,7 @@ export default function MyopiaClient() {
       {/* Banner: sec4-banner */}
       <div className={`${styles.bannerBox} ${styles.sec4Banner}`}>
         <div className={styles.bannerBoxInner} data-aos="fade-up" data-aos-duration="1000">
-          <h3 className={styles.bannerH3}>
-            고도근시의 눈은 일반적인 <br />검사만으로는 충분하지 않습니다.
-          </h3>
+          <h3 className={styles.bannerH3}>{t('sec4banner.title')}</h3>
           <p className={styles.bannerP}>{t('sec4banner.desc')}</p>
         </div>
       </div>
@@ -455,7 +453,7 @@ export default function MyopiaClient() {
                 <div>
                   <h4 className={styles.sec10Tit}>{t('sec10.point0Tit')}</h4>
                   <strong className={styles.sec10Subtit}>&ldquo;{t('sec10.point0Subtit')}&rdquo;</strong>
-                  <p className={styles.sec10TxtP}>일반 공식으로는 안구 길이변수에<br className={styles.mo} /> 대응하기 어렵습니다.</p>
+                  <p className={styles.sec10TxtP}>{t('sec10.point0Text1')}</p>
                   <p className={styles.sec10TxtP}>{t('sec10.point0Text2')}</p>
                 </div>
               </div>
@@ -489,7 +487,7 @@ export default function MyopiaClient() {
                   <h4 className={styles.sec10Tit}>{t('sec10.point2Tit')}</h4>
                   <strong className={styles.sec10Subtit}>&ldquo;{t('sec10.point2Subtit')}&rdquo;</strong>
                   <p className={styles.sec10TxtP}>{t('sec10.point2Text1')}</p>
-                  <p className={styles.sec10TxtP}>닥터아이씨엘은 수정체낭과<br className={styles.mo} /> 이를 지지하는 조직의 부담을<br />최소화하는 정교한 저자극 수술 테크닉으로<br />수술 중 돌발 손상과 2차 합병증 위험을 낮춥니다.</p>
+                  <p className={styles.sec10TxtP}>{t('sec10.point2Text2')}</p>
                 </div>
               </div>
             </div>
@@ -678,7 +676,7 @@ export default function MyopiaClient() {
 
           {/* Equip info list */}
           <div className={styles.equipInfoList}>
-            <div className={styles.equipInfoTitle}>닥터 아이씨엘의 데이터 기반<br className={styles.mo} /> 평생 관리 시스템</div>
+            <div className={styles.equipInfoTitle}>{t('sec16.infoTitle')}</div>
             {[
               { em: t('sec16.info0Em'), span: t('sec16.info0Span') },
               { em: t('sec16.info1Em'), span: t('sec16.info1Span') },

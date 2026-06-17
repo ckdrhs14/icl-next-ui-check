@@ -1,0 +1,102 @@
+{
+  "layout": {
+    "siteTitle": "Phòng khám mắt Dr.ICL Gangnam - Cấy ghép thấu kính ICL, Kính áp tròng cấy ghép",
+    "siteDesc": "Phòng khám mắt Gangnam, Lối ra 1 Ga Gangnam, Cấy ghép thấu kính ICL từ ICL đến Cấy ghép IOL đục thủy tinh thể, Bác sĩ nhãn khoa chuyên khoa 20 năm Lee Dong Hoon, Bác sĩ tham chiếu, Giảng viên chuyên gia ICL, Phòng khám mắt Dr. ICL",
+    "siteKeywords": "Phòng khám mắt Gangnam, ICL, Cấy ghép thấu kính, Lee Dong Hoon, Phòng khám mắt Dr. ICL, Đặt lịch tư vấn"
+  },
+  "header": {
+    "menu": {
+      "doctorIcl": "Dr. ICL",
+      "maestro": "MAESTRO ICL",
+      "iclDeepDive": "Khám phá chuyên sâu ICL",
+      "highMyopia": "ICL cho tình trạng đặc biệt",
+      "specialConditions": "ICL cho tình trạng đặc biệt",
+      "presbyopia": "Điều chỉnh lão thị",
+      "community": "Trung tâm khách hàng"
+    },
+    "submenu": {
+      "vision": "Tầm nhìn Dr. ICL",
+      "doctor": "Dr. ICL LEE DONG HOON",
+      "system": "Hệ thống khác biệt",
+      "equipment": "Thiết bị tiên tiến",
+      "clinicInfo": "Thông tin",
+      "location": "Chỉ đường",
+      "maestroIcl": "ICL MAESTRO",
+      "maestroSelection": "Chọn MAESTRO",
+      "maestroDiagnosis": "Chẩn đoán MAESTRO",
+      "maestroSurgery": "Phẫu thuật MAESTRO",
+      "maestroReviews": "Đánh giá MAESTRO",
+      "evoIcl": "ICL Evo+ICL",
+      "iclDefinition": "Tổng quan ICL",
+      "iclAdvantages": "Lợi ích ICL",
+      "iclFaq": "Câu hỏi thường gặp ICL",
+      "myopiaClinic": "Phòng khám cận thị nặng",
+      "myopiaGlaucoma": "Tăng nhãn áp cận thị nặng",
+      "myopiaRetina": "Võng mạc cận thị nặng",
+      "myopiaCataract": "Đục thủy tinh thể cận thị nặng",
+      "myopiaIcl": "ICL cận thị nặng",
+      "myopiaCare": "Chăm sóc cận thị nặng",
+      "postLasik": "Phẫu thuật lại LASIK",
+      "keratoconus": "ICL giác mạc hình chóp",
+      "avellino": "ICL Avellino",
+      "vivaIcl": "ICL lão thị",
+      "presbyopiaCataract": "Lão thị & Đục thủy tinh thể",
+      "column": "Chuyên mục Dr. ICL",
+      "hospitalNews": "Thông báo",
+      "event": "Sự kiện",
+      "reserve": "Đặt lịch",
+      "reviews": "Đánh giá phẫu thuật",
+      "youtube": "YouTube"
+    },
+    "quick": {
+      "reserve": "Đặt lịch nhanh",
+      "location": "Vị trí",
+      "clinicHours": "Giờ khám",
+      "map": "Vị trí / Giờ khám",
+      "call": "Tư vấn qua điện thoại",
+      "kakao": "Tư vấn qua KakaoTalk",
+      "naver": "Đặt lịch Naver",
+      "sideCall": "Tư vấn\nđiện thoại",
+      "sideReserve": "Đặt lịch\nnhanh",
+      "sideMessenger": "Whats App",
+      "sideLocation": "Vị trí",
+      "sideNaver": "Đặt lịch\nNaver",
+      "sideTop": "TOP",
+      "sideQuickMenu": "Menu\nnhanh"
+    },
+    "login": "Đăng nhập",
+    "clinicHours": "Giờ khám bệnh",
+    "lang": {
+      "kr": "KR",
+      "en": "EN",
+      "zh": "ZH",
+      "vi": "VI",
+      "mn": "MN",
+      "ru": "RU"
+    }
+  },
+  "accessibility": {
+    "prev": "Trước",
+    "next": "Tiếp",
+    "close": "Đóng",
+    "more": "Xem thêm",
+    "playVideo": "Phát video",
+    "logoAlt": "Dr.ICL",
+    "logoMenuAlt": "Phòng khám mắt Dr.ICL"
+  },
+  "seo": {
+    "schemaName": "doctorICL Dr.ICL"
+  },
+  "footer": {
+    "companyName": "Công ty : Phòng khám mắt DR.ICL",
+    "address": "Địa chỉ : 390 Gangnam-daero, Gangnam-gu, Seoul, Tầng 20, Mijin Plaza",
+    "ceo": "Đại diện : LEE DONG HOON",
+    "bizNo": "Mã số đăng ký kinh doanh : 523-92-01735",
+    "tel": "Điện thoại : 02. 566. 1215",
+    "copyright": "COPYRIGHT © 2026 DR.ICL Eye Clinic. ALL RIGHT RESERVED.",
+    "nonCovered": "Hạng mục không bảo hiểm",
+    "terms": "Điều khoản sử dụng",
+    "privacy": "Chính sách bảo mật",
+    "certificate": "Cấp giấy chứng nhận"
+  }
+}

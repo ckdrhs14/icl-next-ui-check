@@ -32,7 +32,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <Script src="https://www.googletagmanager.com/gtag/js?id=AW-11442225205" strategy="afterInteractive" />
         <Script id="ga-init" strategy="afterInteractive">{`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','AW-11442225205',{allow_enhanced_conversions:true});`}</Script>
         <Script id="gtm-init" strategy="afterInteractive">{`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-P8M6Z82L');`}</Script>
-        <Script id="schema-org" type="application/ld+json" strategy="afterInteractive">{JSON.stringify({"@context":"http://schema.org","@type":"Organization","name":"doctorICL 닥터ICL","url":"https://doctoricl.com/","sameAs":["https://blog.naver.com/doctor_icl","https://www.youtube.com/@driclno.1","https://www.instagram.com/doctoricl"]})}</Script>
+        {/* Schema.org moved to [locale]/layout.tsx for i18n */}
       </body>
     </html>
   );

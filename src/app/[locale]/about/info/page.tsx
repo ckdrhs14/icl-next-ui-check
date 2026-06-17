@@ -58,7 +58,7 @@ export default async function InfoPage() {
                                         <p>{t("byCar")}</p>
                                     </div>
                                     <div className={styles.imgBox}>
-                                        <Image src="/img/int/int2_map1.gif" alt="차량으로 오시는길" width={550} height={400} unoptimized />
+                                        <Image src="/img/int/int2_map1.gif" alt={t("altByCar")} width={550} height={400} unoptimized />
                                     </div>
                                 </div>
 
@@ -67,7 +67,7 @@ export default async function InfoPage() {
                                         <p>{t("parking")}</p>
                                     </div>
                                     <div className={`${styles.imgBox} ${styles.imgBoxBorder}`}>
-                                        <Image src="/img/int/int2_map3.png" alt="주차장 입구" width={550} height={400} />
+                                        <Image src="/img/int/int2_map3.png" alt={t("altParking")} width={550} height={400} />
                                     </div>
                                 </div>
 
@@ -76,7 +76,7 @@ export default async function InfoPage() {
                                         <p>{t("byTransit")}</p>
                                     </div>
                                     <div className={styles.imgBox}>
-                                        <Image src="/img/int/int2_map2.gif" alt="대중교통 오시는길" width={550} height={400} unoptimized />
+                                        <Image src="/img/int/int2_map2.gif" alt={t("altByTransit")} width={550} height={400} unoptimized />
                                     </div>
                                 </div>
                             </div>
@@ -88,7 +88,7 @@ export default async function InfoPage() {
                                         <p>{t("backEntrance")}</p>
                                     </div>
                                     <div className={styles.imgBox}>
-                                        <Image src="/img/int/int2_map4.png" alt="후문으로 가는 길" width={550} height={400} />
+                                        <Image src="/img/int/int2_map4.png" alt={t("altBackEntrance")} width={550} height={400} />
                                     </div>
                                 </div>
                                 <div className={styles.rightGroup}>
@@ -96,7 +96,7 @@ export default async function InfoPage() {
                                         <p>{t("frontEntrance")}</p>
                                     </div>
                                     <div className={styles.imgBox}>
-                                        <Image src="/img/int/int2_map5.png" alt="정문으로 가는 길" width={550} height={400} />
+                                        <Image src="/img/int/int2_map5.png" alt={t("altFrontEntrance")} width={550} height={400} />
                                     </div>
                                 </div>
                             </div>
@@ -155,13 +155,13 @@ export default async function InfoPage() {
                                 </div>
                                 <div className={styles.desCBox}>
                                     <div className={styles.imgBox}>
-                                        <Image src="/img/int/int2_plus_img1.png" alt="고속버스 터미널 1" width={360} height={250} />
+                                        <Image src="/img/int/int2_plus_img1.png" alt={t("altExpressBus1")} width={360} height={250} />
                                     </div>
                                     <div className={styles.imgBox}>
-                                        <Image src="/img/int/int2_plus_img2.png" alt="고속버스 터미널 2" width={360} height={250} />
+                                        <Image src="/img/int/int2_plus_img2.png" alt={t("altExpressBus2")} width={360} height={250} />
                                     </div>
                                     <div className={styles.imgBox}>
-                                        <Image src="/img/int/int2_plus_img3.png" alt="고속버스 터미널 3" width={360} height={250} />
+                                        <Image src="/img/int/int2_plus_img3.png" alt={t("altExpressBus3")} width={360} height={250} />
                                     </div>
                                 </div>
                             </div>
@@ -174,13 +174,13 @@ export default async function InfoPage() {
                                 </div>
                                 <div className={styles.desCBox}>
                                     <div className={styles.imgBox}>
-                                        <Image src="/img/int/int2_plus_img4.png" alt="KTX 서울역 1" width={360} height={250} />
+                                        <Image src="/img/int/int2_plus_img4.png" alt={t("altKtx1")} width={360} height={250} />
                                     </div>
                                     <div className={styles.imgBox}>
-                                        <Image src="/img/int/int2_plus_img5.png" alt="KTX 서울역 2" width={360} height={250} />
+                                        <Image src="/img/int/int2_plus_img5.png" alt={t("altKtx2")} width={360} height={250} />
                                     </div>
                                     <div className={styles.imgBox}>
-                                        <Image src="/img/int/int2_plus_img6.png" alt="KTX 서울역 3" width={360} height={250} />
+                                        <Image src="/img/int/int2_plus_img6.png" alt={t("altKtx3")} width={360} height={250} />
                                     </div>
                                 </div>
                             </div>
@@ -193,13 +193,13 @@ export default async function InfoPage() {
                                 </div>
                                 <div className={styles.desCBox}>
                                     <div className={styles.imgBox}>
-                                        <Image src="/img/int/int2_plus_img7.png" alt="SRT 수서역 1" width={360} height={250} />
+                                        <Image src="/img/int/int2_plus_img7.png" alt={t("altSrt1")} width={360} height={250} />
                                     </div>
                                     <div className={styles.imgBox}>
-                                        <Image src="/img/int/int2_plus_img8.png" alt="SRT 수서역 2" width={360} height={250} />
+                                        <Image src="/img/int/int2_plus_img8.png" alt={t("altSrt2")} width={360} height={250} />
                                     </div>
                                     <div className={styles.imgBox}>
-                                        <Image src="/img/int/int2_plus_img9.png" alt="SRT 수서역 3" width={360} height={250} />
+                                        <Image src="/img/int/int2_plus_img9.png" alt={t("altSrt3")} width={360} height={250} />
                                     </div>
                                 </div>
                             </div>

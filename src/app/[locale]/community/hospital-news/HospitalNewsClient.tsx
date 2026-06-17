@@ -9,8 +9,8 @@ const PER_PAGE = 6;
 
 /* placeholder data – replace with API fetch */
 const NEWS_ITEMS = [
-  { seq: 5, title: '닥터ICL 안과 진료시간 변경 안내', img: '', url: '', startDate: '2025-04-01' },
-  { seq: 6, title: '2025년 설 연휴 진료 안내', img: '', url: '', startDate: '2025-01-20' },
+  { seq: 5, titleKey: 0, img: '', url: '', startDate: '2025-04-01' },
+  { seq: 6, titleKey: 1, img: '', url: '', startDate: '2025-01-20' },
 ];
 
 export default function HospitalNewsClient() {
@@ -40,7 +40,7 @@ export default function HospitalNewsClient() {
                 )}
               </div>
               <div className={styles.gridItemTxt}>
-                <div className={styles.gridItemTitle}>{item.title}</div>
+                <div className={styles.gridItemTitle}>{t(`placeholderItems.${item.titleKey}`)}</div>
                 <div className={styles.gridItemDate}><p>{item.startDate}</p></div>
               </div>
             </div>

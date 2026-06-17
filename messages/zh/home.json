@@ -1,0 +1,246 @@
+{
+    "alt": {
+        "aboutImg": "专家导师",
+        "introImg1": "参考医生认定",
+        "introImg2": "专家导师",
+        "introImg3": "ICL Expert Instructor",
+        "introImg4": "ICL Expert Instructor",
+        "doctorPhoto": "李东勋院长",
+        "experienceImg1": "专注于ICL的李东勋代表院长",
+        "experienceImg2": "面向医生的ICL手术培训",
+        "experienceImg3": "同样度数，不同结果 0.1mm列线图校正",
+        "thesis": "论文",
+        "techImg1": "尖端设备",
+        "techImg2": "精确测量",
+        "techBg": "0.1mm的判断",
+        "nomogram1": "列线图校正",
+        "nomogram2": "列线图校正",
+        "memo": "手术记录",
+        "chosunMedia": "朝鲜媒体",
+        "news": "新闻",
+        "map": "来院路线",
+        "naverMap": "Naver地图"
+    },
+    "thesis_items": [
+        "JCRS_Risk Factors for Normal Tension Glaucoma Among Subgroups of Patients",
+        "JKOS_大疱性角膜病变深板层角膜内皮移植(DLEK)的治疗效果",
+        "JKOS_人工晶状体植入术的调节力比较",
+        "JKOS_球面/非球面ReSTOR人工晶状体3个月临床结果",
+        "Ophthalmology_Correlation between Preoperative Biometry and Posterior Chamber Phakic Visian ICL Vaulting",
+        "KJO_Diabetic Retinopathy and Peripapillary Retinal Thickness",
+        "KJO_Femtosecond Laser-Assisted Small Incision Deep Lamellar Endothelial Keratoplasty",
+        "KJO_A Comparison of Posterior Lamellar Keratoplasty Modalities: DLEK vs. DSEK"
+    ],
+    "about": {
+        "question": "谁培训了您的主刀医生？",
+        "title": "ICL专家讲师",
+        "desc1": "即使是同样的手术，效果不同是有明确原因的。",
+        "desc2_1": "Dr.ICL院长李东勋医生不仅仅是一名",
+        "desc2_ref": "'ICL参考医生'，",
+        "desc2_2": "他是一位",
+        "desc2_3": "教导医生的医生——",
+        "desc2_expert": "'ICL专家讲师'",
+        "desc2_end": "。",
+        "desc3_1": "凭借对医师教育严格的标准和压倒性的专业能力，",
+        "desc3_2": "那些为手术设定标准的技术",
+        "desc3_3": "将直接应用于您珍贵的双眼。"
+    },
+    "intro": {
+        "h3_1": "超越参考医生",
+        "h3_2": "成为手术的标准",
+        "sub_h5": "ICL专家讲师",
+        "sub_h3": "ICL专家讲师",
+        "last_p": "超越参考医生，成为标准",
+        "last_txt1": "Dr.ICL的李东勋医生曾担任ICL参考医生，目前",
+        "last_txt1_b": "担任'ICL专家讲师'——全球前1%专注于医师教育的顶尖职位",
+        "last_txt1_end": "。",
+        "last_txt2": "以更高、更精细的标准向专科医生传授手术技术。",
+        "last_txt3": "在Dr.ICL，用于培训医生的最高水平技术成为每台手术的标准。",
+        "last_txt3_b": "效果的差异始于主刀医生的水准",
+        "last_txt3_end": "。"
+    },
+    "expertise": {
+        "h3_1": "同样的手术，不同的效果——原因在于",
+        "h3_highlight": "主刀医生。",
+        "desc": "手术的完美程度不取决于设备，而取决于医生的经验和判断力。\n通过无数病例积累的专业知识，造就了效果的差异。",
+        "items": [
+            {
+                "en": "Beyond Reference Doctor",
+                "ko": "超越参考医生的最高水平专业能力",
+                "desc": "不仅仅是使用设备的医生，而是深入理解并应用手术原理和结构，分享和传授设备及手术方法标准的医师。超越经验，去创造和推进标准——这就是超越参考医生的主刀医生的角色。"
+            },
+            {
+                "en": "Expert Instructor",
+                "ko": "教育并传承手术专业知识的专业医师",
+                "desc": "外科医生前来学习专业技术，一起研究实际手术流程，讨论如何创造更安全、更精细的方法。教导他人意味着需要保持更高的标准，而这一过程本身就是提升手术完美度的又一个原因。"
+            },
+            {
+                "en": "The Standard",
+                "ko": "以教授医生的同等完美标准进行手术",
+                "desc": "教育中使用的相同标准和原则被应用于患者手术。不仅仅是传达解释和理论——因为创造这些标准的医生亲自执刀，在过程和效果上都产生了差异。"
+            }
+        ],
+        "dark_quote": "\"谁培训了您的主刀医生？\"",
+        "dark_sub": "教导医生的医生——李东勋医生以Dr.ICL之名证明这一点。"
+    },
+    "experience": {
+        "h3_1": "ICL专家讲师",
+        "h3_highlight": "以经验证明。",
+        "desc": "在这段旅程的尽头，站着ICL专家讲师李东勋医生。",
+        "tabs": ["李东勋医生，专注于ICL", "多次在韩国为医生举办ICL手术培训", "相同处方，不同效果——0.1mm个性化校准"],
+        "slide1_sub": "李东勋医生，专注于ICL",
+        "stat_year": "年", "stat_year_label": "专注于ICL",
+        "stat_cases": "例", "stat_cases_label": "ICL手术累计",
+        "stat_min": "分", "stat_sec": "秒", "stat_time_label": "平均手术时间", "stat_time_sub": "单眼，不含镜片设置及消毒时间", "stat_time_period": "2022年11月至2023年7月平均值",
+        "stat_pct_label": "术后满意度", "stat_pct_sub": "（联合调查：西班牙、韩国、新加坡）",
+        "slide2": [
+            { "b": "韩国多次举办", "t": "面向医生的ICL手术培训" },
+            { "b": "高难度病例", "t": "高难度手术案例培训" },
+            { "b": "真实手术环境", "t": "实操标准，而非仅限理论" },
+            { "b": "国内外医生参与", "t": "分享多样临床案例" }
+        ],
+        "slide3": [
+            { "b": "0.1mm校准", "t": "个体化Nomogram手动调整" },
+            { "b": "数据+判断", "t": "不仅依赖设备数值" },
+            { "b": "基于病历记录", "t": "将结果应用于未来决策" },
+            { "b": "最小化再手术", "t": "力求一次做到最好" }
+        ]
+    },
+    "thesis": {
+        "h3": "李东勋医生的研究论文",
+        "desc": "韩国首位在Ophthalmology——全球最权威的眼科期刊上发表ICL研究的作者"
+    },
+    "technology": {
+        "h3_1": "那么",
+        "h3_highlight": "0.1mm精准",
+        "h3_2": "判断是如何做出的？",
+        "desc": "不凭直觉，而是通过先进设备的精确测量和记录。",
+        "h3_3": "通过这一过程，",
+        "h3_4": "0.1mm的判断",
+        "h3_5": "得以完善。",
+        "sub": "（0.1mm Nomogram校准）"
+    },
+    "memo": {
+        "h3_1": "通过这一过程，",
+        "h3_highlight": "0.1mm的判断",
+        "h3_2": "得以完善。",
+        "desc": "手术结束，但记录永不停止"
+    },
+    "global": {
+        "h3": "Global Dr.ICL Eye Center",
+        "desc": "在全球学术舞台上分享ICL手术的标准。",
+        "slides": {
+            "korea": [
+                "2016.10\n在STAAR Surgical亚太地区获得ICL 2000 Awards",
+                "2016.11 首尔，韩国\n- 在第116届大韩眼科学会开业医研讨会上发表演讲\n- 主题：\"How Far Is Corneal Refractive Surgery Safe?\"",
+                "2017.03\n获得EVO+ICL APAC颁发的TICL 500 Award",
+                "2017.03\n入选Toric EVO+ICL Reference Doctor",
+                "2017.03 首尔，韩国\n受邀在第3届EVO+ICL Experts Meeting上演讲并担任讨论嘉宾\nTICL 500 Award\nCEA (Continuing Education Awards)\n主题：Why Toric ICL?",
+                "2017.12\n获得EVO+ICL Practice of Excellence Award及EVO+TICL年度THE BEST SURGEON",
+                "2018.07 首尔，韩国\n第7届三星眼科研讨会\n发表\"角膜与白内障/屈光手术争议\"演讲\n主题：Astigmatism in Refractive Surgery — ICL with LRI vs Toric ICL",
+                "2018.11\n在首尔汉江扶轮社发表特别演讲\n主题：Eye Health in Middle Age",
+                "2018.11\n- 在第120届大韩眼科学会开业医研讨会上发表演讲\n- 主题：\"Easy and Simple ICL Sizing and Exchange Tips\"",
+                "2019.07\n入选STAAR Surgical全球1,000,000例里程碑BEST SURGEON",
+                "2019.08\n受邀在金眼科医院研讨会上演讲\n主题：Problems and Solutions After ICL Implantation",
+                "2019.11\n- 在第122届大韩眼科学会提交论文\n- 主题：\"Long-term Clinical Results of Posterior Chamber Phakic ICL Implantation Based on CASIA2 Measurements\"",
+                "2020\nKSCRS IT理事及入选英文网站封面模特",
+                "2022\nKSCRS第4版白内障教科书\n合著多焦点IOL患者选择章节",
+                "Korea & Japan ICL Forum（首尔）\n主题：Refractive Surgery Trend",
+                "2025.07\n2025 EVO ICL Forum\n主题：The Importance of Visual Quality in Refractive Surgery",
+                "2025.11\n第3届Korea & Japan ICL Forum\n主题：Phakic IOL usage in Korea, Japan KOL perspective\n— how to treat the Elderly, Presbyopic Patients, and Hyperopic Patients treatment"
+            ],
+            "spain": [
+                "2015.09 巴塞罗那，西班牙\n在European Society of Cataract & Refractive Surgery (ESCRS)上发表演讲\n主题：\"Correlation between Preoperative Biometry and Posterior Chamber Phakic Visian Implantable Collamer Lens Vaulting\"",
+                "2015.09 锡切斯，西班牙\n受邀在第12届World ICL Experts Meeting上演讲\nBest Speaker及ICL EXPERT AWARDS\n主题：\"Correlation between Preoperative Biometry and Posterior Chamber Phakic Visian Implantable Collamer Lens Vaulting\""
+            ],
+            "china": [
+                "2016.03 上海，中国\n受邀在第2届APAC ICL Expert Symposium上演讲\n主题：\"Medical Perspective as an ICL Surgeon\"",
+                "VISION集团CEO祝贺视频\n（全球运营43家眼科诊所）",
+                "BRIGHT EYE HOSPITAL院长祝贺视频\n（在中国运营27家医院）",
+                "AIER Eye Hospital屈光手术标准化负责人祝贺视频\n（全球最大眼科医疗集团——全球813家医院）",
+                "STAAR Surgical中国区负责人祝贺视频"
+            ],
+            "indonesia": [
+                "2016.07 巴厘岛，印度尼西亚\n第29届APACRS\n主题：Ocular Biometry and Optimal Lens Selection Model Equation"
+            ],
+            "portugal": [
+                "2017.10 里斯本，葡萄牙\n在第14届EVO ICL Experts Summit上获得ICL 3000 Award",
+                "2017.10 里斯本，葡萄牙\n受邀在第35届European Society of Cataract & Refractive Surgery (ESCRS)上发言\n主题：Optimization of vision implantable collamer lens vault by intentional rotation"
+            ],
+            "france": [
+                "2019.09 巴黎，法国\n在第10届EVO+ICL Experts Summit上获得EVO+ICL 5,000 Award",
+                "2019.09\n参加在巴黎举办的European Society of Cataract & Refractive Surgery (ESCRS)\n主题：Long-term clinical results and safety of SMILE Xtra\n(lenticule extraction with accelerated corneal cross-linking)"
+            ],
+            "usa": [
+                "2020.05\n在波士顿American Society of Cataract & Refractive Surgery (ASCRS)上发表演讲（线上学术会议）",
+                "2025.04.25~28 LA ASCRS\n主题：Optimizing outcomes in a broad range of patients",
+                "STAAR Surgical CEO祝贺视频",
+                "STAAR Surgical高级副总裁祝贺视频",
+                "Tracey Technologies副总裁祝贺视频"
+            ],
+            "japan": [
+                "2023.11.18\n2023 Korea & Japan ICL Forum（东京）\n主题：Quality of Vision & Recovery",
+                "2024.03.15~17\n2024 APAC Experts Summit\n主题：ICL — Now and Future",
+                "2024.11.14\n第15届ICL Study Group Committee\n主题：Causes and Countermeasures for Endophthalmitis After ICL Surgery",
+                "Yoshihiro Kitazawa医生与李东勋医生\n（日本最大ICL专科诊所院长）",
+                "与EYE CLINIC TOKYO建立国际临床合作伙伴关系\n（日本排名第一的ICL专科诊所）"
+            ]
+        }
+    },
+    "faq": {
+        "h3_1": "Dr.ICL患者",
+        "h3_highlight": "常见问题",
+        "desc": "在Dr.ICL专栏了解更多详情",
+        "items": [
+            { "title": "ICL术后出现光晕？\n为什么这不是副作用及完整适应指南", "date": "2025-12-01" },
+            { "title": "ICL术前检查常见问题解答\n散瞳、费用及检查时长指南", "date": "2025-12-01" },
+            { "title": "突然视力模糊！！", "date": "2025-12-01" },
+            { "title": "Toric ICL！！担心\n镜片旋转？", "date": "2025-12-01" }
+        ]
+    },
+    "youtube": {
+        "h5": "Doctoricl YOUTUBE",
+        "h3_1": "在Dr.ICL进行ICL晶体植入",
+        "h3_2": "在YouTube上关注Dr.ICL",
+        "btn": "访问Dr.ICL YouTube频道"
+    },
+    "instagram": {
+        "h3_1": "发现",
+        "h3_highlight": "最新动态",
+        "h3_2": "来自Dr.ICL",
+        "btn": "访问Dr.ICL Instagram",
+        "fallback": [
+            { "title": "2025 KOREA EVO ICL FORUM", "date": "2025-08-06" },
+            { "title": "ICL EXPERT INSTRUCTOR 正式入选", "date": "2025-07-22" },
+            { "title": "入选全球6位ICL专家医生之一", "date": "2025-07-15" },
+            { "title": "2026 EVO ICL APAC EXPERTS SUMMIT", "date": "2025-06-30" }
+        ]
+    },
+    "news": {
+        "top_h5": "值得信赖的媒体选择",
+        "top_h5_2": "Dr.ICL眼科医院 医疗新闻",
+        "title": "保留角膜的视力矫正新选择：晶体植入的选择标准",
+        "author": "Dr.ICL眼科医院院长 李东勋医生",
+        "desc": "在LASIK、LASEK、SMILE等激光视力矫正手术盛行的趋势下，ICL（可植入式隐形眼镜）作为优先保护角膜的新选择正在崛起。与角膜切削方法不同，该方法在虹膜后方放置特殊晶体，保留角膜结构。",
+        "link_text": "阅读新闻报道"
+    },
+    "location": {
+        "h3_map": "交通指南",
+        "address": "390 Gangnam-daero, Gangnam-gu, Seoul, 20F (Yeoksam-dong, Mijin Plaza)",
+        "address_copied": "地址已复制。",
+        "naver": "Naver地图",
+        "google": "Google地图",
+        "kakao": "Kakao地图",
+        "tmap": "T-Map",
+        "h3_kakao": "KakaoTalk",
+        "kakao_desc": "在KakaoTalk中搜索\"Dr.ICL眼科医院\"。",
+        "h3_hours": "门诊时间",
+        "hours": [
+            { "day": "周一、周二、周四、周五", "time": "AM 09:00 ~ PM 06:00" },
+            { "day": "周六", "time": "AM 08:30 ~ PM 04:00" },
+            { "day": "午休时间", "time": "PM 01:00 ~ PM 02:00" }
+        ],
+        "hours_note": "* 周三、周日及法定节假日休息。",
+        "h3_contact": "预约咨询"
+    }
+}

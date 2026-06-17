@@ -1,0 +1,102 @@
+{
+  "layout": {
+    "siteTitle": "Глазная клиника Dr.ICL в Каннаме — имплантация линз ICL, имплантируемые контактные линзы",
+    "siteDesc": "Глазная клиника в Каннаме, выход 1 станции Каннам, имплантация линз ICL, от ICL до имплантации ИОЛ при катаракте, 20 лет практики офтальмолог Ли Дон Хун, референс-доктор, эксперт-инструктор ICL, глазная клиника Dr.ICL",
+    "siteKeywords": "Глазная клиника в Каннаме, ICL, имплантация линз, Ли Дон Хун, глазная клиника Dr.ICL, запись на консультацию"
+  },
+  "header": {
+    "menu": {
+      "doctorIcl": "Dr. ICL",
+      "maestro": "MAESTRO ICL",
+      "iclDeepDive": "Подробно об ICL",
+      "highMyopia": "ICL при редких состояниях",
+      "specialConditions": "ICL при редких состояниях",
+      "presbyopia": "Коррекция пресбиопии",
+      "community": "Центр поддержки"
+    },
+    "submenu": {
+      "vision": "Философия Dr.ICL",
+      "doctor": "Dr.ICL Ли Дон Хун",
+      "system": "Уникальная система",
+      "equipment": "Современное оборудование",
+      "clinicInfo": "Информация",
+      "location": "Как добраться",
+      "maestroIcl": "ICL MAESTRO",
+      "maestroSelection": "Выбор MAESTRO",
+      "maestroDiagnosis": "Диагностика MAESTRO",
+      "maestroSurgery": "Операция MAESTRO",
+      "maestroReviews": "Отзывы о MAESTRO",
+      "evoIcl": "ICL Evo+ICL",
+      "iclDefinition": "Обзор ICL",
+      "iclAdvantages": "Преимущества ICL",
+      "iclFaq": "Частые вопросы об ICL",
+      "myopiaClinic": "Клиника высокой миопии",
+      "myopiaGlaucoma": "Глаукома при высокой миопии",
+      "myopiaRetina": "Сетчатка при высокой миопии",
+      "myopiaCataract": "Катаракта при высокой миопии",
+      "myopiaIcl": "ICL при высокой миопии",
+      "myopiaCare": "Уход при высокой миопии",
+      "postLasik": "Повторная операция после LASIK",
+      "keratoconus": "ICL при кератоконусе",
+      "avellino": "ICL при авеллино",
+      "vivaIcl": "ICL при пресбиопии",
+      "presbyopiaCataract": "Пресбиопия и катаракта",
+      "column": "Колонка Dr.ICL",
+      "hospitalNews": "Объявления",
+      "event": "Акции",
+      "reserve": "Запись",
+      "reviews": "Отзывы о операциях",
+      "youtube": "YouTube"
+    },
+    "quick": {
+      "reserve": "Быстрая запись",
+      "location": "Расположение",
+      "clinicHours": "Часы работы",
+      "map": "Расположение / Часы работы",
+      "call": "Телефонная консультация",
+      "kakao": "Консультация через KakaoTalk",
+      "naver": "Запись через NAVER",
+      "sideCall": "Телефонная\nконсультация",
+      "sideReserve": "Быстрая\nзапись",
+      "sideMessenger": "Whats App",
+      "sideLocation": "Расположение",
+      "sideNaver": "Запись\nчерез NAVER",
+      "sideTop": "TOP",
+      "sideQuickMenu": "Быстрое\nменю"
+    },
+    "login": "Вход",
+    "clinicHours": "Часы работы",
+    "lang": {
+      "kr": "KR",
+      "en": "EN",
+      "zh": "ZH",
+      "vi": "VI",
+      "mn": "MN",
+      "ru": "RU"
+    }
+  },
+  "accessibility": {
+    "prev": "Назад",
+    "next": "Далее",
+    "close": "Закрыть",
+    "more": "Ещё",
+    "playVideo": "Воспроизвести видео",
+    "logoAlt": "Dr.ICL",
+    "logoMenuAlt": "Глазная клиника Dr.ICL"
+  },
+  "seo": {
+    "schemaName": "doctorICL Dr.ICL"
+  },
+  "footer": {
+    "companyName": "Компания : DR.ICL Eye Clinic",
+    "address": "Адрес : Сеул, Каннам-гу, Каннам-даэро 390, 20 этаж, Миджин Плаза",
+    "ceo": "Директор : Ли Дон Хун",
+    "bizNo": "Регистрационный номер : 523-92-01735",
+    "tel": "Тел. : 02. 566. 1215",
+    "copyright": "COPYRIGHT © 2026 DR.ICL Eye Clinic. ALL RIGHT RESERVED.",
+    "nonCovered": "Нестраховые услуги",
+    "terms": "Условия использования",
+    "privacy": "Политика конфиденциальности",
+    "certificate": "Выдача справок"
+  }
+}
