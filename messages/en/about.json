@@ -288,6 +288,20 @@
     "fromProvince": "For visitors coming from other regions",
     "byExpressBus": "Using the Gangnam Express Bus Terminal",
     "byKTX": "Using KTX from Seoul Station",
-    "bySRT": "Using SRT from Suseo Station"
+    "bySRT": "Using SRT from Suseo Station",
+    "altByCar": "Directions by Car",
+    "altParking": "Parking Entrance",
+    "altByTransit": "Directions by Public Transit",
+    "altBackEntrance": "Way to Back Entrance",
+    "altFrontEntrance": "Way to Front Entrance",
+    "altExpressBus1": "Express Bus Terminal 1",
+    "altExpressBus2": "Express Bus Terminal 2",
+    "altExpressBus3": "Express Bus Terminal 3",
+    "altKtx1": "KTX Seoul Station 1",
+    "altKtx2": "KTX Seoul Station 2",
+    "altKtx3": "KTX Seoul Station 3",
+    "altSrt1": "SRT Suseo Station 1",
+    "altSrt2": "SRT Suseo Station 2",
+    "altSrt3": "SRT Suseo Station 3"
   }
 }

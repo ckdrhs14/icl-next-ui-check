@@ -8,10 +8,10 @@ import styles from './page.module.css';
 
 /* placeholder data – replace with API fetch */
 const ALL_COLUMNS = [
-  { seq: 1, title: '렌즈삽입술 전 꼭 알아야 할 검사 항목', content: '<p>렌즈삽입술(ICL) 전 검사는 수술 결과를 좌우하는 가장 중요한 단계입니다. 각막 지형도, 전방 깊이, 안축장 길이, 각막 내피세포 수 등 정밀한 검사를 통해 환자 개인에게 최적화된 렌즈를 선택합니다.</p>', img: '', startDate: '2025-04-10' },
-  { seq: 2, title: 'ICL 수술 후 일상복귀는 언제부터 가능한가요?', content: '<p>ICL 렌즈삽입술은 각막을 깎지 않는 시력교정술로, 수술 다음 날부터 일상 복귀가 가능합니다. 다만 수술 후 1주일간은 눈을 비비거나 수영 등 물놀이는 삼가야 합니다.</p>', img: '', startDate: '2025-03-25' },
-  { seq: 3, title: '고도근시와 녹내장의 관계', content: '<p>고도근시 환자는 녹내장 발생 위험이 일반인 대비 2~3배 높습니다. 안압 측정과 시신경 검사를 정기적으로 받는 것이 중요하며, ICL 수술 전 녹내장 여부를 반드시 확인해야 합니다.</p>', img: '', startDate: '2025-03-10' },
-  { seq: 4, title: 'EVO+ ICL이란 무엇인가?', content: '<p>EVO+ ICL은 기존 ICL에 비해 광학부가 확대되어 야간 빛 번짐이 줄어든 차세대 렌즈입니다. 중앙에 360μm 크기의 홀(KS-AquaPORT)이 있어 홍채 절개 없이도 방수 순환이 가능합니다.</p>', img: '', startDate: '2025-02-20' },
+  { seq: 1, titleKey: 0, contentKey: 0, img: '', startDate: '2025-04-10' },
+  { seq: 2, titleKey: 1, contentKey: 1, img: '', startDate: '2025-03-25' },
+  { seq: 3, titleKey: 2, contentKey: 2, img: '', startDate: '2025-03-10' },
+  { seq: 4, titleKey: 3, contentKey: 3, img: '', startDate: '2025-02-20' },
 ];
 
 export default function ColumnDetailClient({ seq }: { seq: string }) {
@@ -40,7 +40,7 @@ export default function ColumnDetailClient({ seq }: { seq: string }) {
         <div className={styles.container}>
           {/* Title */}
           <div className={styles.titleBox}>
-            <p className={styles.tit}>{column.title}</p>
+            <p className={styles.tit}>{t(`placeholderItems.${column.titleKey}`)}</p>
           </div>
 
           {/* 작업 3: Column Meta */}
@@ -65,7 +65,7 @@ export default function ColumnDetailClient({ seq }: { seq: string }) {
             {column.img && (
               <Image src={`/img/board/notice/${column.img}`} alt="" width={960} height={600} style={{ width: '100%', height: 'auto' }} />
             )}
-            <div dangerouslySetInnerHTML={{ __html: column.content }} />
+            <div dangerouslySetInnerHTML={{ __html: t.raw(`placeholderContents.${column.contentKey}`) }} />
           </div>
 
           {/* 작업 4: Related Columns */}
@@ -87,7 +87,7 @@ export default function ColumnDetailClient({ seq }: { seq: string }) {
                       )}
                     </div>
                     <div className={styles.relatedCardTxt}>
-                      <div className={styles.relatedCardTitle}>{rc.title}</div>
+                      <div className={styles.relatedCardTitle}>{t(`placeholderItems.${rc.titleKey}`)}</div>
                       <div className={styles.relatedCardDate}>{rc.startDate}</div>
                     </div>
                   </div>

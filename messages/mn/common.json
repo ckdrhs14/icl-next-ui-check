@@ -1,0 +1,102 @@
+{
+  "layout": {
+    "siteTitle": "Каннам Dr.ICL Нүдний Эмнэлэг - ICL Линз Суулгац, Суулгадаг Контакт Линз",
+    "siteDesc": "Каннам Нүдний Эмнэлэг, Каннам станцын 1-р гарц, ICL Линз Суулгацаас Катаракт IOL Суулгац хүртэл, 20 жилийн туршлагатай нүдний мэргэжилтэн Доктор Ли Дон Хүн, Лавлагаа Эмч, ICL Мэргэжилтэн Зааварлагч, Dr. ICL Нүдний Эмнэлэг",
+    "siteKeywords": "Каннам Нүдний Эмнэлэг, ICL, Линз Суулгац, Ли Дон Хүн, Dr. ICL Нүдний Эмнэлэг, Зөвлөгөө Захиалга"
+  },
+  "header": {
+    "menu": {
+      "doctorIcl": "Dr. ICL",
+      "maestro": "MAESTRO ICL",
+      "iclDeepDive": "ICL Гүнзгий Судалгаа",
+      "highMyopia": "Ховор Нөхцөл ICL",
+      "specialConditions": "Ховор Нөхцөл ICL",
+      "presbyopia": "Ахмад Насны Харааны Засал",
+      "community": "Үйлчлүүлэгчийн Төв"
+    },
+    "submenu": {
+      "vision": "Dr. ICL Алсын Хараа",
+      "doctor": "Dr. ICL ЛИ ДОН ХҮН",
+      "system": "Ялгаатай Систем",
+      "equipment": "Дэвшилтэт Тоног Төхөөрөмж",
+      "clinicInfo": "Мэдээлэл",
+      "location": "Байршлын Зааварчилгаа",
+      "maestroIcl": "ICL MAESTRO",
+      "maestroSelection": "MAESTRO Сонголт",
+      "maestroDiagnosis": "MAESTRO Оношилгоо",
+      "maestroSurgery": "MAESTRO Мэс Засал",
+      "maestroReviews": "MAESTRO Сэтгэгдэл",
+      "evoIcl": "ICL Evo+ICL",
+      "iclDefinition": "ICL Тойм",
+      "iclAdvantages": "ICL Давуу Тал",
+      "iclFaq": "ICL Түгээмэл Асуултууд",
+      "myopiaClinic": "Өндөр Зэргийн Богино Хараа Эмнэлэг",
+      "myopiaGlaucoma": "Өндөр Зэргийн Богино Хараа Глауком",
+      "myopiaRetina": "Өндөр Зэргийн Богино Хараа Нүдний Торлог Бүрхэвч",
+      "myopiaCataract": "Өндөр Зэргийн Богино Хараа Катаракт",
+      "myopiaIcl": "Өндөр Зэргийн Богино Хараа ICL",
+      "myopiaCare": "Өндөр Зэргийн Богино Харааны Арчилгаа",
+      "postLasik": "LASIK Дахин Мэс Засал",
+      "keratoconus": "Кератоконус ICL",
+      "avellino": "Авеллино ICL",
+      "vivaIcl": "Ахмад Насны Харааны ICL",
+      "presbyopiaCataract": "Ахмад Насны Хараа & Катаракт",
+      "column": "Dr. ICL нийтлэл",
+      "hospitalNews": "Мэдэгдэл",
+      "event": "Үйл Явдал",
+      "reserve": "Цаг Захиалга",
+      "reviews": "Мэс Заслын Сэтгэгдэл",
+      "youtube": "YouTube"
+    },
+    "quick": {
+      "reserve": "Шуурхай Захиалга",
+      "location": "Байршил",
+      "clinicHours": "Эмнэлгийн Цагийн Хуваарь",
+      "map": "Байршил / Эмнэлгийн Цаг",
+      "call": "Утасны Лавлагаа",
+      "kakao": "KakaoTalk Лавлагаа",
+      "naver": "NAVER Захиалга",
+      "sideCall": "Утасны\nЛавлагаа",
+      "sideReserve": "Шуурхай\nЗахиалга",
+      "sideMessenger": "Whats App",
+      "sideLocation": "Байршил",
+      "sideNaver": "NAVER\nЗахиалга",
+      "sideTop": "TOP",
+      "sideQuickMenu": "Шуурхай\nЦэс"
+    },
+    "login": "Нэвтрэх",
+    "clinicHours": "Эмнэлгийн Цагийн Хуваарь",
+    "lang": {
+      "kr": "KR",
+      "en": "EN",
+      "zh": "ZH",
+      "vi": "VI",
+      "mn": "MN",
+      "ru": "RU"
+    }
+  },
+  "accessibility": {
+    "prev": "Өмнөх",
+    "next": "Дараах",
+    "close": "Хаах",
+    "more": "Дэлгэрэнгүй",
+    "playVideo": "Видео тоглуулах",
+    "logoAlt": "Dr.ICL",
+    "logoMenuAlt": "Dr.ICL нүдний эмнэлэг"
+  },
+  "seo": {
+    "schemaName": "doctorICL Dr.ICL"
+  },
+  "footer": {
+    "companyName": "Компани : DR.ICL Нүдний Эмнэлэг",
+    "address": "Хаяг : Сөүл хот, Каннам дүүрэг, Каннам-даэро 390, 20 давхар, Мижин Плаза",
+    "ceo": "Төлөөлөгч : ЛИ ДОН ХҮН",
+    "bizNo": "Бизнесийн Бүртгэлийн Дугаар : 523-92-01735",
+    "tel": "Утас : 02. 566. 1215",
+    "copyright": "COPYRIGHT © 2026 DR.ICL Eye Clinic. ALL RIGHT RESERVED.",
+    "nonCovered": "Даатгалд Хамрагдахгүй Зүйлс",
+    "terms": "Үйлчилгээний Нөхцөл",
+    "privacy": "Нууцлалын Бодлого",
+    "certificate": "Гэрчилгээ Олгох"
+  }
+}

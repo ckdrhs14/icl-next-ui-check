@@ -1,0 +1,246 @@
+{
+    "alt": {
+        "aboutImg": "Chuyên gia hướng dẫn",
+        "introImg1": "Bác sĩ tham chiếu",
+        "introImg2": "Chuyên gia hướng dẫn",
+        "introImg3": "ICL Expert Instructor",
+        "introImg4": "ICL Expert Instructor",
+        "doctorPhoto": "Bác sĩ Lee Dong Hoon",
+        "experienceImg1": "Bác sĩ Lee Dong Hoon tập trung vào ICL",
+        "experienceImg2": "Đào tạo phẫu thuật ICL cho bác sĩ",
+        "experienceImg3": "Cùng độ cận, kết quả khác biệt — Hiệu chỉnh Nomogram 0.1mm",
+        "thesis": "Luận văn",
+        "techImg1": "Thiết bị tiên tiến",
+        "techImg2": "Đo lường chính xác",
+        "techBg": "Phán đoán 0.1mm",
+        "nomogram1": "Hiệu chỉnh Nomogram",
+        "nomogram2": "Hiệu chỉnh Nomogram",
+        "memo": "Hồ sơ phẫu thuật",
+        "chosunMedia": "Chosun Media",
+        "news": "Tin tức",
+        "map": "Chỉ đường",
+        "naverMap": "Bản đồ Naver"
+    },
+    "thesis_items": [
+        "JCRS_Risk Factors for Normal Tension Glaucoma Among Subgroups of Patients",
+        "JKOS_Kết quả điều trị ghép nội mô giác mạc sâu (DLEK) cho bệnh giác mạc bọng nước",
+        "JKOS_So sánh lực điều tiết theo phẫu thuật cấy thủy tinh thể nhân tạo",
+        "JKOS_Kết quả lâm sàng 3 tháng của thủy tinh thể nhân tạo ReSTOR cầu/phi cầu",
+        "Ophthalmology_Correlation between Preoperative Biometry and Posterior Chamber Phakic Visian ICL Vaulting",
+        "KJO_Diabetic Retinopathy and Peripapillary Retinal Thickness",
+        "KJO_Femtosecond Laser-Assisted Small Incision Deep Lamellar Endothelial Keratoplasty",
+        "KJO_A Comparison of Posterior Lamellar Keratoplasty Modalities: DLEK vs. DSEK"
+    ],
+    "about": {
+        "question": "Ai đã đào tạo bác sĩ phẫu thuật của bạn?",
+        "title": "Giảng viên Chuyên gia ICL",
+        "desc1": "Có một lý do rõ ràng tại sao kết quả khác nhau ngay cả với cùng một ca phẫu thuật.",
+        "desc2_1": "Bác sĩ Lee Dong Hoon, Giám đốc Dr.ICL, không chỉ đơn thuần là một",
+        "desc2_ref": "'Bác sĩ Tham chiếu ICL',",
+        "desc2_2": "Ông là một bác sĩ",
+        "desc2_3": "người dạy các bác sĩ —",
+        "desc2_expert": "'Giảng viên Chuyên gia ICL'",
+        "desc2_end": ".",
+        "desc3_1": "Với tiêu chuẩn nghiêm ngặt và trình độ chuyên môn vượt trội dành cho việc đào tạo bác sĩ,",
+        "desc3_2": "Chính những kỹ năng đặt ra tiêu chuẩn cho phẫu thuật",
+        "desc3_3": "được áp dụng trực tiếp cho đôi mắt quý giá của bạn."
+    },
+    "intro": {
+        "h3_1": "Vượt xa Bác sĩ Tham chiếu",
+        "h3_2": "Trở thành Tiêu chuẩn của Phẫu thuật",
+        "sub_h5": "Giảng viên Chuyên gia ICL",
+        "sub_h3": "Giảng viên Chuyên gia ICL",
+        "last_p": "Vượt xa Bác sĩ Tham chiếu, Trở thành Tiêu chuẩn",
+        "last_txt1": "Bác sĩ Lee Dong Hoon của Dr.ICL, từng giữ vai trò Bác sĩ Tham chiếu ICL, hiện tại",
+        "last_txt1_b": "giữ vai trò 'Giảng viên Chuyên gia ICL' — vị trí top 1% toàn cầu chuyên đào tạo bác sĩ",
+        "last_txt1_end": ".",
+        "last_txt2": "Tiêu chuẩn cao hơn và tinh tế hơn để dạy phẫu thuật cho các chuyên gia.",
+        "last_txt3": "Tại Dr.ICL, trình độ kỹ thuật cao nhất dùng để đào tạo bác sĩ trở thành tiêu chuẩn cho mọi ca phẫu thuật.",
+        "last_txt3_b": "Sự khác biệt trong kết quả bắt đầu từ trình độ của bác sĩ phẫu thuật",
+        "last_txt3_end": "."
+    },
+    "expertise": {
+        "h3_1": "Cùng một ca phẫu thuật, kết quả khác nhau — lý do nằm ở",
+        "h3_highlight": "bác sĩ phẫu thuật.",
+        "desc": "Sự hoàn hảo trong phẫu thuật không được quyết định bởi thiết bị, mà bởi kinh nghiệm và khả năng phán đoán của bác sĩ.\nBí quyết tích lũy qua vô số ca phẫu thuật tạo nên sự khác biệt trong kết quả.",
+        "items": [
+            {
+                "en": "Vượt xa Bác sĩ Tham chiếu",
+                "ko": "Trình độ Chuyên môn Cao nhất Vượt xa Bác sĩ Tham chiếu",
+                "desc": "Không chỉ là bác sĩ sử dụng thiết bị, mà là người chia sẻ và giảng dạy các tiêu chuẩn về thiết bị và phương pháp phẫu thuật, hiểu sâu và áp dụng các nguyên lý cũng như cấu trúc của phẫu thuật. Vượt xa kinh nghiệm để tạo ra và nâng cao tiêu chuẩn — đó là vai trò của một bác sĩ phẫu thuật vượt xa Bác sĩ Tham chiếu."
+            },
+            {
+                "en": "Giảng viên Chuyên gia",
+                "ko": "Bác sĩ Tận tâm Đào tạo và Truyền đạt Chuyên môn Phẫu thuật",
+                "desc": "Các bác sĩ phẫu thuật đến để học hỏi bí quyết, cùng nghiên cứu quy trình phẫu thuật thực tế, và thảo luận cách tạo ra phương pháp an toàn hơn, tinh tế hơn. Dạy người khác đồng nghĩa với việc duy trì tiêu chuẩn cao hơn, và quá trình đó chính là một lý do nữa để nâng cao sự hoàn hảo trong phẫu thuật."
+            },
+            {
+                "en": "Tiêu chuẩn",
+                "ko": "Thực hiện Phẫu thuật với cùng Tiêu chuẩn Hoàn hảo được Giảng dạy cho Bác sĩ",
+                "desc": "Cùng tiêu chuẩn và nguyên tắc được sử dụng trong đào tạo được áp dụng cho phẫu thuật bệnh nhân. Không chỉ đưa ra giải thích và lý thuyết — bởi vì bác sĩ đã tạo ra những tiêu chuẩn đó trực tiếp thực hiện phẫu thuật, tạo nên sự khác biệt trong cả quy trình lẫn kết quả."
+            }
+        ],
+        "dark_quote": "\"Ai đã đào tạo bác sĩ phẫu thuật của bạn?\"",
+        "dark_sub": "Một bác sĩ dạy các bác sĩ — Bác sĩ Lee Dong Hoon chứng minh điều đó dưới tên Dr.ICL."
+    },
+    "experience": {
+        "h3_1": "Giảng viên Chuyên gia ICL được",
+        "h3_highlight": "chứng minh bằng kinh nghiệm.",
+        "desc": "Ở cuối hành trình này là Giảng viên Chuyên gia ICL Bác sĩ Lee Dong Hoon.",
+        "tabs": ["Bác sĩ Lee Dong Hoon, Chuyên tâm với ICL", "Nhiều buổi Đào tạo Phẫu thuật ICL cho Bác sĩ tại Hàn Quốc", "Cùng toa thuốc, Kết quả khác — Hiệu chỉnh Nomogram 0.1mm"],
+        "slide1_sub": "Bác sĩ Lee Dong Hoon, Chuyên tâm với ICL",
+        "stat_year": "Năm", "stat_year_label": "Chuyên tâm với ICL",
+        "stat_cases": "Ca", "stat_cases_label": "Số ca Phẫu thuật ICL đã thực hiện",
+        "stat_min": "Phút", "stat_sec": "Giây", "stat_time_label": "Thời gian Phẫu thuật Trung bình", "stat_time_sub": "Mỗi mắt, không bao gồm cài đặt thấu kính và khử trùng", "stat_time_period": "Trung bình từ tháng 11/2022 – tháng 7/2023",
+        "stat_pct_label": "Mức độ Hài lòng sau Phẫu thuật", "stat_pct_sub": "(Khảo sát chung: Tây Ban Nha, Hàn Quốc, Singapore)",
+        "slide2": [
+            { "b": "Nhiều buổi tại Hàn Quốc", "t": "Đào tạo Phẫu thuật ICL cho Bác sĩ" },
+            { "b": "Ca khó", "t": "Đào tạo các Ca Phẫu thuật Phức tạp" },
+            { "b": "Môi trường Phẫu thuật Thực tế", "t": "Tiêu chuẩn Thực hành, Không chỉ Lý thuyết" },
+            { "b": "Tham gia Trong nước & Quốc tế", "t": "Chia sẻ các Ca Lâm sàng Đa dạng" }
+        ],
+        "slide3": [
+            { "b": "Hiệu chỉnh 0.1mm", "t": "Điều chỉnh Nomogram Cá nhân Thủ công" },
+            { "b": "Dữ liệu + Phán đoán", "t": "Không chỉ Dựa vào Giá trị Máy" },
+            { "b": "Hồ sơ theo Biểu đồ", "t": "Áp dụng Kết quả cho Quyết định Tương lai" },
+            { "b": "Giảm thiểu Tái phẫu thuật", "t": "Thiết kế để Đúng ngay Lần đầu" }
+        ]
+    },
+    "thesis": {
+        "h3": "Bài nghiên cứu của Bác sĩ Lee Dong Hoon",
+        "desc": "Tác giả Hàn Quốc đầu tiên công bố nghiên cứu ICL trên Ophthalmology — tạp chí nhãn khoa uy tín nhất thế giới"
+    },
+    "technology": {
+        "h3_1": "Vậy phán đoán",
+        "h3_highlight": "chính xác 0.1mm",
+        "h3_2": "được thực hiện như thế nào?",
+        "desc": "Không phải bằng trực giác, mà bằng đo lường chính xác và ghi chép thông qua thiết bị tiên tiến.",
+        "h3_3": "Thông qua quy trình này,",
+        "h3_4": "phán đoán 0.1mm",
+        "h3_5": "được hoàn thiện.",
+        "sub": "(Hiệu chỉnh Nomogram 0.1mm)"
+    },
+    "memo": {
+        "h3_1": "Thông qua quy trình này,",
+        "h3_highlight": "phán đoán 0.1mm",
+        "h3_2": "được hoàn thiện.",
+        "desc": "Phẫu thuật kết thúc, nhưng ghi chép không bao giờ dừng lại"
+    },
+    "global": {
+        "h3": "Trung tâm Mắt Dr.ICL Toàn cầu",
+        "desc": "Chia sẻ tiêu chuẩn phẫu thuật ICL trên sân khấu học thuật toàn cầu.",
+        "slides": {
+            "korea": [
+                "2016.10\nGiải thưởng ICL 2000 tại STAAR Surgical Asia-Pacific",
+                "2016.11 Seoul, Korea\n- Bài giảng tại Hội thảo Chuyên gia lần thứ 116 của Hội Nhãn khoa Hàn Quốc\n- Chủ đề: \"How Far Is Corneal Refractive Surgery Safe?\"",
+                "2017.03\nGiải thưởng TICL 500 từ EVO+ICL APAC",
+                "2017.03\nĐược chọn làm Toric EVO+ICL Reference Doctor",
+                "2017.03 Seoul, Korea\nBài giảng mời & hội thảo tại 3rd EVO+ICL Experts Meeting\nGiải thưởng TICL 500\nCEA (Continuing Education Awards)\nChủ đề: Why Toric ICL?",
+                "2017.12\nGiải thưởng EVO+ICL Practice of Excellence & THE BEST SURGEON of the Year cho EVO+TICL",
+                "2018.07 Seoul, Korea\n7th Samsung Ophthalmology Symposium\nBài giảng về \"Controversies in Cornea & Cataract/Refractive Surgery\"\nChủ đề: Astigmatism in Refractive Surgery — ICL with LRI vs Toric ICL",
+                "2018.11\nBài giảng đặc biệt tại Seoul Hangang Rotary Club\nChủ đề: Sức khỏe Mắt ở Tuổi Trung niên",
+                "2018.11\n- Bài giảng tại Hội thảo Chuyên gia lần thứ 120 của Hội Nhãn khoa Hàn Quốc\n- Chủ đề: \"Easy and Simple ICL Sizing and Exchange Tips\"",
+                "2019.07\nĐược chọn làm BEST SURGEON cho cột mốc 1,000,000 ca toàn cầu của STAAR Surgical",
+                "2019.08\nBài giảng mời tại Kim's Eye Hospital Symposium\nChủ đề: Problems and Solutions After ICL Implantation",
+                "2019.11\n- Bài nghiên cứu trình bày tại Hội Nhãn khoa Hàn Quốc lần thứ 122\n- Chủ đề: \"Long-term Clinical Results of Posterior Chamber Phakic ICL Implantation Based on CASIA2 Measurements\"",
+                "2020\nGiám đốc IT của KSCRS & Được chọn làm Người mẫu Bìa Website Tiếng Anh",
+                "2022\nKSCRS 4th Edition Cataract Textbook\nĐồng tác giả Chương Lựa chọn Bệnh nhân IOL Đa tiêu cự",
+                "Korea & Japan ICL Forum (Seoul)\nChủ đề: Refractive Surgery Trend",
+                "2025.07\n2025 EVO ICL Forum\nChủ đề: The Importance of Visual Quality in Refractive Surgery",
+                "2025.11\n3rd Korea & Japan ICL Forum\nChủ đề: Phakic IOL usage in Korea, Japan KOL perspective\n— how to treat the Elderly, Presbyopic Patients, and Hyperopic Patients treatment"
+            ],
+            "spain": [
+                "2015.09 Barcelona, Spain\nThuyết trình tại European Society of Cataract & Refractive Surgery (ESCRS)\nChủ đề: \"Correlation between Preoperative Biometry and Posterior Chamber Phakic Visian Implantable Collamer Lens Vaulting\"",
+                "2015.09 Sitges, Spain\nBài giảng mời tại 12th World ICL Experts Meeting\nBest Speaker & ICL EXPERT AWARDS\nChủ đề: \"Correlation between Preoperative Biometry and Posterior Chamber Phakic Visian Implantable Collamer Lens Vaulting\""
+            ],
+            "china": [
+                "2016.03 Shanghai, China\nBài giảng mời tại 2nd APAC ICL Expert Symposium\nChủ đề: \"Medical Perspective as an ICL Surgeon\"",
+                "Video chúc mừng từ CEO của VISION Group\n(Vận hành 43 phòng khám mắt trên toàn thế giới)",
+                "Video chúc mừng từ Giám đốc BRIGHT EYE HOSPITAL\n(Vận hành 27 bệnh viện tại Trung Quốc)",
+                "Video chúc mừng từ Quản lý Tiêu chuẩn hóa Phẫu thuật Khúc xạ của AIER Eye Hospital\n(Tập đoàn chăm sóc mắt lớn nhất thế giới — 813 bệnh viện trên toàn thế giới)",
+                "Video chúc mừng từ Giám đốc STAAR Surgical Trung Quốc"
+            ],
+            "indonesia": [
+                "2016.07 Bali, Indonesia\n29th APACRS\nChủ đề: Ocular Biometry and Optimal Lens Selection Model Equation"
+            ],
+            "portugal": [
+                "2017.10 Lisbon, Portugal\nGiải thưởng ICL 3000 tại 14th EVO ICL Experts Summit",
+                "2017.10 Lisbon, Portugal\nDiễn giả mời tại 35th European Society of Cataract & Refractive Surgery (ESCRS)\nChủ đề: Optimization of vision implantable collamer lens vault by intentional rotation"
+            ],
+            "france": [
+                "2019.09 Paris, France\nGiải thưởng EVO+ICL 5,000 tại 10th EVO+ICL Experts Summit",
+                "2019.09\nTham dự European Society of Cataract & Refractive Surgery (ESCRS) tại Paris\nChủ đề: Long-term clinical results and safety of SMILE Xtra\n(lenticule extraction with accelerated corneal cross-linking)"
+            ],
+            "usa": [
+                "2020.05\nThuyết trình tại American Society of Cataract & Refractive Surgery (ASCRS) tại Boston (hội nghị trực tuyến)",
+                "2025.04.25~28 LA ASCRS\nChủ đề: Optimizing outcomes in a broad range of patients",
+                "Video chúc mừng từ CEO của STAAR Surgical",
+                "Video chúc mừng từ Phó Chủ tịch Cấp cao của STAAR Surgical",
+                "Video chúc mừng từ Phó Chủ tịch Tracey Technologies"
+            ],
+            "japan": [
+                "2023.11.18\n2023 Korea & Japan ICL Forum (Tokyo)\nChủ đề: Quality of Vision & Recovery",
+                "2024.03.15~17\n2024 APAC Experts Summit\nChủ đề: ICL — Now and Future",
+                "2024.11.14\n15th ICL Study Group Committee\nChủ đề: Causes and Countermeasures for Endophthalmitis After ICL Surgery",
+                "Bác sĩ Yoshihiro Kitazawa và Bác sĩ Lee Dong Hoon\n(Giám đốc Phòng khám Chuyên khoa ICL lớn nhất Nhật Bản)",
+                "Hợp tác Lâm sàng Quốc tế với EYE CLINIC TOKYO\n(Phòng khám Chuyên khoa ICL số 1 Nhật Bản)"
+            ]
+        }
+    },
+    "faq": {
+        "h3_1": "Câu hỏi mà bệnh nhân của chúng tôi tại Dr.ICL",
+        "h3_highlight": "thường hỏi",
+        "desc": "Tìm hiểu thêm từ Chuyên mục Dr.ICL",
+        "items": [
+            { "title": "Quầng sáng sau phẫu thuật ICL?\nTại sao đây không phải tác dụng phụ & hướng dẫn thích nghi đầy đủ", "date": "2025-12-01" },
+            { "title": "Giải đáp thắc mắc khám trước ICL\nGiãn đồng tử, chi phí & thời gian khám", "date": "2025-12-01" },
+            { "title": "Mắt bỗng nhiên mờ!!", "date": "2025-12-01" },
+            { "title": "Toric ICL!! Lo lắng về\nxoay thấu kính?", "date": "2025-12-01" }
+        ]
+    },
+    "youtube": {
+        "h5": "Doctoricl YOUTUBE",
+        "h3_1": "Cấy ghép Thấu kính ICL tại Dr.ICL",
+        "h3_2": "Gặp Dr.ICL trên YouTube",
+        "btn": "Truy cập Kênh YouTube Dr.ICL"
+    },
+    "instagram": {
+        "h3_1": "Khám phá",
+        "h3_highlight": "tin tức mới nhất",
+        "h3_2": "từ Dr.ICL",
+        "btn": "Truy cập Instagram Dr.ICL",
+        "fallback": [
+            { "title": "2025 KOREA EVO ICL FORUM", "date": "2025-08-06" },
+            { "title": "ICL EXPERT INSTRUCTOR Được Chọn Chính thức", "date": "2025-07-22" },
+            { "title": "Được Chọn là Một trong 6 Bác sĩ Chuyên gia ICL trên Toàn thế giới", "date": "2025-07-15" },
+            { "title": "2026 EVO ICL APAC EXPERTS SUMMIT", "date": "2025-06-30" }
+        ]
+    },
+    "news": {
+        "top_h5": "Truyền thông Uy tín Lựa chọn",
+        "top_h5_2": "Tin tức Y tế Phòng khám Mắt Dr.ICL",
+        "title": "Giải pháp chỉnh thị bảo tồn giác mạc: Tiêu chí lựa chọn cấy ghép thấu kính",
+        "author": "Bác sĩ Lee Dong Hoon, Giám đốc Phòng khám Mắt Dr.ICL",
+        "desc": "Giữa xu hướng phẫu thuật chỉnh thị bằng laser như LASIK, LASEK và SMILE, ICL (Thấu kính Collamer Cấy ghép) đang nổi lên như một lựa chọn mới ưu tiên bảo tồn giác mạc. Khác với phương pháp cắt bỏ giác mạc, phương pháp này đặt một thấu kính đặc biệt phía sau mống mắt, bảo toàn cấu trúc giác mạc.",
+        "link_text": "Đọc Bài báo"
+    },
+    "location": {
+        "h3_map": "Chỉ đường",
+        "address": "390 Gangnam-daero, Gangnam-gu, Seoul, 20F (Yeoksam-dong, Mijin Plaza)",
+        "address_copied": "Đã sao chép địa chỉ.",
+        "naver": "Naver Map",
+        "google": "Google Maps",
+        "kakao": "Kakao Map",
+        "tmap": "T-Map",
+        "h3_kakao": "KakaoTalk",
+        "kakao_desc": "Tìm kiếm \"Dr.ICL Eye Clinic\" trên KakaoTalk.",
+        "h3_hours": "Giờ làm việc",
+        "hours": [
+            { "day": "Thứ Hai, Thứ Ba, Thứ Năm, Thứ Sáu", "time": "AM 09:00 ~ PM 06:00" },
+            { "day": "Thứ Bảy", "time": "AM 08:30 ~ PM 04:00" },
+            { "day": "Nghỉ trưa", "time": "PM 01:00 ~ PM 02:00" }
+        ],
+        "hours_note": "* Đóng cửa vào Thứ Tư, Chủ Nhật và ngày lễ.",
+        "h3_contact": "Đặt lịch Tư vấn"
+    }
+}

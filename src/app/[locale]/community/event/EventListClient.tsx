@@ -10,8 +10,8 @@ const PER_PAGE = 6;
 
 /* placeholder data – replace with API fetch */
 const EVENT_ITEMS = [
-  { seq: 101, title: 'ICL 렌즈삽입술 여름 이벤트', thumb: '', showed: true, startDate: '2025-05-01' },
-  { seq: 102, title: '노안/백내장 상담 이벤트', thumb: '', showed: false, startDate: '2025-03-01' },
+  { seq: 101, titleKey: 0, thumb: '', showed: true, startDate: '2025-05-01' },
+  { seq: 102, titleKey: 1, thumb: '', showed: false, startDate: '2025-03-01' },
 ];
 
 export default function EventListClient() {
@@ -45,7 +45,7 @@ export default function EventListClient() {
                 </div>
               </div>
               <div className={styles.gridItemTxt}>
-                <div className={styles.gridItemTitle}>{item.title}</div>
+                <div className={styles.gridItemTitle}>{t(`placeholderItems.${item.titleKey}`)}</div>
                 <div className={styles.gridItemDate}><p>{item.startDate}</p></div>
               </div>
             </div>

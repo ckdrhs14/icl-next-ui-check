@@ -288,6 +288,20 @@
     "fromProvince": "지방에서 오시는 경우",
     "byExpressBus": "강남 고속버스 터미널 이용 시",
     "byKTX": "KTX 서울역 기차 이용 시",
-    "bySRT": "SRT 수서역 기차 이용 시"
+    "bySRT": "SRT 수서역 기차 이용 시",
+    "altByCar": "차량으로 오시는길",
+    "altParking": "주차장 입구",
+    "altByTransit": "대중교통 오시는길",
+    "altBackEntrance": "후문으로 가는 길",
+    "altFrontEntrance": "정문으로 가는 길",
+    "altExpressBus1": "고속버스 터미널 1",
+    "altExpressBus2": "고속버스 터미널 2",
+    "altExpressBus3": "고속버스 터미널 3",
+    "altKtx1": "KTX 서울역 1",
+    "altKtx2": "KTX 서울역 2",
+    "altKtx3": "KTX 서울역 3",
+    "altSrt1": "SRT 수서역 1",
+    "altSrt2": "SRT 수서역 2",
+    "altSrt3": "SRT 수서역 3"
   }
 }

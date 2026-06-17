@@ -2,6 +2,7 @@
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import { useTranslations } from "next-intl";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -15,6 +16,7 @@ interface HistoryItem {
 }
 
 export function HistorySwiper({ items }: { items: HistoryItem[] }) {
+    const t = useTranslations("accessibility");
     return (
         <div className={styles.swiperContainer}>
             <Swiper
@@ -49,9 +51,9 @@ export function HistorySwiper({ items }: { items: HistoryItem[] }) {
                 ))}
             </Swiper>
             <div className={styles.swiperBtns}>
-                <button className={styles.swiperBtnPrev} aria-label="이전" />
+                <button className={styles.swiperBtnPrev} aria-label={t("prev")} />
                 <div className={styles.swiperPagination} />
-                <button className={styles.swiperBtnNext} aria-label="다음" />
+                <button className={styles.swiperBtnNext} aria-label={t("next")} />
             </div>
         </div>
     );

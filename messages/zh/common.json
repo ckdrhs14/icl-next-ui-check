@@ -1,0 +1,102 @@
+{
+  "layout": {
+    "siteTitle": "江南Dr.ICL眼科 - ICL晶体植入术、可植入式隐形眼镜",
+    "siteDesc": "江南眼科，江南站1号出口，从ICL晶体植入到白内障人工晶体植入，20年专注眼科医生李东勋院长，推荐医生，ICL专家讲师，Dr.ICL眼科",
+    "siteKeywords": "江南眼科, ICL, 晶体植入, 李东勋, Dr.ICL眼科, 咨询预约"
+  },
+  "header": {
+    "menu": {
+      "doctorIcl": "Dr. ICL",
+      "maestro": "MAESTRO ICL",
+      "iclDeepDive": "ICL深度探索",
+      "highMyopia": "特殊情况ICL",
+      "specialConditions": "特殊情况ICL",
+      "presbyopia": "老花矫正",
+      "community": "客户中心"
+    },
+    "submenu": {
+      "vision": "Dr. ICL愿景",
+      "doctor": "Dr. ICL 李东勋院长",
+      "system": "差异化系统",
+      "equipment": "先进设备",
+      "clinicInfo": "医院信息",
+      "location": "交通指南",
+      "maestroIcl": "ICL MAESTRO",
+      "maestroSelection": "选择MAESTRO",
+      "maestroDiagnosis": "MAESTRO诊断",
+      "maestroSurgery": "MAESTRO手术",
+      "maestroReviews": "MAESTRO评价",
+      "evoIcl": "ICL Evo+ICL",
+      "iclDefinition": "ICL概述",
+      "iclAdvantages": "ICL优势",
+      "iclFaq": "ICL常见问题",
+      "myopiaClinic": "高度近视门诊",
+      "myopiaGlaucoma": "高度近视青光眼",
+      "myopiaRetina": "高度近视视网膜",
+      "myopiaCataract": "高度近视白内障",
+      "myopiaIcl": "高度近视ICL",
+      "myopiaCare": "高度近视护理",
+      "postLasik": "LASIK二次手术",
+      "keratoconus": "圆锥角膜ICL",
+      "avellino": "Avellino ICL",
+      "vivaIcl": "老花ICL",
+      "presbyopiaCataract": "老花与白内障",
+      "column": "Dr. ICL专栏",
+      "hospitalNews": "公告",
+      "event": "活动",
+      "reserve": "预约",
+      "reviews": "手术评价",
+      "youtube": "YouTube"
+    },
+    "quick": {
+      "reserve": "快速预约",
+      "location": "位置",
+      "clinicHours": "营业时间",
+      "map": "位置 / 营业时间",
+      "call": "电话咨询",
+      "kakao": "KakaoTalk咨询",
+      "naver": "Naver预约",
+      "sideCall": "电话\n咨询",
+      "sideReserve": "快速\n预约",
+      "sideMessenger": "Whats App",
+      "sideLocation": "位置",
+      "sideNaver": "Naver\n预约",
+      "sideTop": "TOP",
+      "sideQuickMenu": "快捷\n菜单"
+    },
+    "login": "登录",
+    "clinicHours": "营业时间",
+    "lang": {
+      "kr": "KR",
+      "en": "EN",
+      "zh": "ZH",
+      "vi": "VI",
+      "mn": "MN",
+      "ru": "RU"
+    }
+  },
+  "accessibility": {
+    "prev": "上一个",
+    "next": "下一个",
+    "close": "关闭",
+    "more": "更多",
+    "playVideo": "播放视频",
+    "logoAlt": "Dr.ICL",
+    "logoMenuAlt": "Dr.ICL眼科"
+  },
+  "seo": {
+    "schemaName": "doctorICL Dr.ICL"
+  },
+  "footer": {
+    "companyName": "公司 : DR.ICL眼科",
+    "address": "地址 : 首尔特别市江南区江南大路390号 Mijin Plaza 20层",
+    "ceo": "代表 : 李东勋",
+    "bizNo": "营业执照号 : 523-92-01735",
+    "tel": "电话 : 02. 566. 1215",
+    "copyright": "COPYRIGHT © 2026 DR.ICL Eye Clinic. ALL RIGHT RESERVED.",
+    "nonCovered": "非医保项目",
+    "terms": "使用条款",
+    "privacy": "隐私政策",
+    "certificate": "证明书发放"
+  }
+}
