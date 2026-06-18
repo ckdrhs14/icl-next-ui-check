@@ -1,246 +1,314 @@
 {
-    "alt": {
-        "aboutImg": "Мэргэжилтэн зааварлагч",
-        "introImg1": "Лавлагаа эмч",
-        "introImg2": "Мэргэжилтэн зааварлагч",
-        "introImg3": "ICL Expert Instructor",
-        "introImg4": "ICL Expert Instructor",
-        "doctorPhoto": "Доктор Ли Дон Хүн",
-        "experienceImg1": "ICL-д төвлөрсөн Доктор Ли Дон Хүн",
-        "experienceImg2": "Эмч нарт зориулсан ICL мэс заслын сургалт",
-        "experienceImg3": "Ижил диоптр, өөр үр дүн — 0.1мм номограмм тохируулга",
-        "thesis": "Судалгааны өгүүлэл",
-        "techImg1": "Дэвшилтэт тоног төхөөрөмж",
-        "techImg2": "Нарийвчлалтай хэмжилт",
-        "techBg": "0.1мм-ийн шийдвэр",
-        "nomogram1": "Номограмм тохируулга",
-        "nomogram2": "Номограмм тохируулга",
-        "memo": "Мэс заслын бүртгэл",
-        "chosunMedia": "Chosun Media",
-        "news": "Мэдээ",
-        "map": "Байршил",
-        "naverMap": "Naver газрын зураг"
-    },
-    "thesis_items": [
-        "JCRS_Risk Factors for Normal Tension Glaucoma Among Subgroups of Patients",
-        "JKOS_Булласт кератопатид гүн давхарт эндотелийн кератопластик (DLEK)-ийн эмчилгээний үр дүн",
-        "JKOS_Хиймэл болор биеийн суулгалтаар нийцлийн хүчийг харьцуулсан судалгаа",
-        "JKOS_Бөмбөлөг/бөмбөлөг бус ReSTOR хиймэл болор биеийн 3 сарын клиник үр дүн",
-        "Ophthalmology_Correlation between Preoperative Biometry and Posterior Chamber Phakic Visian ICL Vaulting",
-        "KJO_Diabetic Retinopathy and Peripapillary Retinal Thickness",
-        "KJO_Femtosecond Laser-Assisted Small Incision Deep Lamellar Endothelial Keratoplasty",
-        "KJO_A Comparison of Posterior Lamellar Keratoplasty Modalities: DLEK vs. DSEK"
+  "alt": {
+    "aboutImg": "Мэргэжилтэн зааварлагч",
+    "introImg1": "Лавлагаа эмч",
+    "introImg2": "Мэргэжилтэн зааварлагч",
+    "introImg3": "ICL Expert Instructor",
+    "introImg4": "ICL Expert Instructor",
+    "doctorPhoto": "Доктор Ли Дон Хүн",
+    "experienceImg1": "ICL-д төвлөрсөн Доктор Ли Дон Хүн",
+    "experienceImg2": "Эмч нарт зориулсан ICL мэс заслын сургалт",
+    "experienceImg3": "Ижил диоптр, өөр үр дүн — 0.1мм номограмм тохируулга",
+    "thesis": "Судалгааны өгүүлэл",
+    "techImg1": "Дэвшилтэт тоног төхөөрөмж",
+    "techImg2": "Нарийвчлалтай хэмжилт",
+    "techBg": "0.1мм-ийн шийдвэр",
+    "nomogram1": "Номограмм тохируулга",
+    "nomogram2": "Номограмм тохируулга",
+    "memo": "Мэс заслын бүртгэл",
+    "chosunMedia": "Chosun Media",
+    "news": "Мэдээ",
+    "map": "Байршил",
+    "naverMap": "Naver газрын зураг"
+  },
+  "thesis_items": [
+    "JCRS_Risk Factors for Normal Tension Glaucoma Among Subgroups of Patients",
+    "JKOS_Булласт кератопатид гүн давхарт эндотелийн кератопластик (DLEK)-ийн эмчилгээний үр дүн",
+    "JKOS_Хиймэл болор биеийн суулгалтаар нийцлийн хүчийг харьцуулсан судалгаа",
+    "JKOS_Бөмбөлөг/бөмбөлөг бус ReSTOR хиймэл болор биеийн 3 сарын клиник үр дүн",
+    "Ophthalmology_Correlation between Preoperative Biometry and Posterior Chamber Phakic Visian ICL Vaulting",
+    "KJO_Diabetic Retinopathy and Peripapillary Retinal Thickness",
+    "KJO_Femtosecond Laser-Assisted Small Incision Deep Lamellar Endothelial Keratoplasty",
+    "KJO_A Comparison of Posterior Lamellar Keratoplasty Modalities: DLEK vs. DSEK"
+  ],
+  "about": {
+    "question": "Таны мэс заслын эмчийг хэн сургасан бэ?",
+    "title": "ICL Шинжлэх Ухааны Зааварлагч",
+    "desc1": "Ижил мэс засал хийсэн ч үр дүн яагаад ялгаатай байдгийн тодорхой шалтгаан бий.",
+    "desc2_1": "Dr.ICL-ийн захирал Доктор Ли Дон Хүн нь зөвхөн",
+    "desc2_ref": "'ICL Лавлагаа Эмч'",
+    "desc2_2": "байхаас давж, тэрээр эмч нарыг сургадаг эмч —",
+    "desc2_3": "эмч нарыг сургадаг эмч —",
+    "desc2_expert": "'ICL Шинжлэх Ухааны Зааварлагч'",
+    "desc2_end": ".",
+    "desc3_1": "Эмч нарын сургалтад зориулсан хатуу стандарт болон давамгайлсан ур чадвараар,",
+    "desc3_2": "мэс заслын стандартыг тогтоодог тэр ур чадвар",
+    "desc3_3": "таны үнэт нүдэнд шууд хэрэглэгддэг."
+  },
+  "intro": {
+    "h3_1": "Лавлагаа Эмчээс Давж",
+    "h3_2": "Мэс Заслын Стандарт Болох Нь",
+    "sub_h5": "ICL Шинжлэх Ухааны Зааварлагч",
+    "sub_h3": "ICL Шинжлэх Ухааны Зааварлагч",
+    "last_p": "Лавлагаа Эмчээс Давж, Стандарт Болох Нь",
+    "last_txt1": "Dr.ICL-ийн Доктор Ли Дон Хүн ICL Лавлагаа Эмчээр ажилласны дараа одоогоор",
+    "last_txt1_b": "эмч нарын сургалтад зориулсан дэлхийн шилдэг 1%-д багтдаг 'ICL Шинжлэх Ухааны Зааварлагч'-аар ажиллаж байна",
+    "last_txt1_end": ".",
+    "last_txt2": "Мэргэжилтнүүдэд мэс заслыг заахад зориулсан илүү өндөр, илүү нарийн стандартууд.",
+    "last_txt3": "Dr.ICL-д эмч нарыг сургахад ашигладаг хамгийн өндөр түвшний ур чадвар нь мэс засал бүрийн стандарт болдог.",
+    "last_txt3_b": "Үр дүнгийн ялгаа мэс засалч эмчийн түвшнээс эхэлдэг",
+    "last_txt3_end": "."
+  },
+  "expertise": {
+    "h3_1": "Ижил мэс засал, өөр үр дүн — шалтгаан нь",
+    "h3_highlight": "мэс засалч эмчид байдаг.",
+    "desc": "Мэс заслын төгс байдал нь тоног төхөөрөмжөөр бус,\nмэс засалч эмчийн туршлага,\nшийдвэрээр тодорхойлогддог.\nТоо томшгүй олон тохиолдлоор хуримтлагдсан\nноу-хау нь үр дүнгийн ялгааг бий болгодог.",
+    "items": [
+      {
+        "en": "Лавлагаа Эмчээс Давж",
+        "ko": "Лавлагаа Эмчээс Давсан Хамгийн Өндөр Түвшний Ур Чадвар",
+        "desc": "Зүгээр л тоног төхөөрөмж ашигладаг эмч биш, харин тоног төхөөрөмж болон мэс заслын аргуудын стандартыг хуваалцаж, заадаг, мэс заслын зарчим, бүтцийг гүнзгий ойлгож хэрэглэдэг эмч. Туршлагаас давж стандартыг бий болгож, хөгжүүлэх — энэ бол Лавлагаа Эмчээс давсан мэс засалч эмчийн үүрэг."
+      },
+      {
+        "en": "Шинжлэх Ухааны Зааварлагч",
+        "ko": "Мэс Заслын Мэдлэг Чадварыг Сургаж Дамжуулдаг Зориулалтын Эмч",
+        "desc": "Мэс засалч эмч нар ноу-хау суралцахаар ирж, бодит мэс заслын үйл явцыг хамтдаа судалж, илүү аюулгүй, илүү нарийн аргуудыг бий болгох арга замыг хэлэлцдэг. Хэн нэгэнд заах гэдэг нь бүр ч өндөр стандартыг хадгалах ёстой гэсэн үг бөгөөд энэ процесс өөрөө мэс заслын төгс байдлыг дээшлүүлэх өөр нэг шалтгаан юм."
+      },
+      {
+        "en": "Стандарт",
+        "ko": "Эмч Нарт Заадаг Ижил Төгс Стандартаар Мэс Засал Хийх",
+        "desc": "Сургалтад ашигладаг ижил стандарт, зарчмууд нь өвчтөний мэс заслд хэрэглэгддэг. Зүгээр л тайлбар, онол хүргэх биш — учир нь тэр стандартыг бий болгосон эмч өөрөө мэс заслыг шууд хийдэг тул процесс болон үр дүн аль алинд нь ялгаа гардаг."
+      }
     ],
-    "about": {
-        "question": "Таны мэс заслын эмчийг хэн сургасан бэ?",
-        "title": "ICL Шинжлэх Ухааны Зааварлагч",
-        "desc1": "Ижил мэс засал хийсэн ч үр дүн яагаад ялгаатай байдгийн тодорхой шалтгаан бий.",
-        "desc2_1": "Dr.ICL-ийн захирал Доктор Ли Дон Хүн нь зөвхөн",
-        "desc2_ref": "'ICL Лавлагаа Эмч'",
-        "desc2_2": "байхаас давж, тэрээр эмч нарыг сургадаг эмч —",
-        "desc2_3": "эмч нарыг сургадаг эмч —",
-        "desc2_expert": "'ICL Шинжлэх Ухааны Зааварлагч'",
-        "desc2_end": ".",
-        "desc3_1": "Эмч нарын сургалтад зориулсан хатуу стандарт болон давамгайлсан ур чадвараар,",
-        "desc3_2": "мэс заслын стандартыг тогтоодог тэр ур чадвар",
-        "desc3_3": "таны үнэт нүдэнд шууд хэрэглэгддэг."
-    },
-    "intro": {
-        "h3_1": "Лавлагаа Эмчээс Давж",
-        "h3_2": "Мэс Заслын Стандарт Болох Нь",
-        "sub_h5": "ICL Шинжлэх Ухааны Зааварлагч",
-        "sub_h3": "ICL Шинжлэх Ухааны Зааварлагч",
-        "last_p": "Лавлагаа Эмчээс Давж, Стандарт Болох Нь",
-        "last_txt1": "Dr.ICL-ийн Доктор Ли Дон Хүн ICL Лавлагаа Эмчээр ажилласны дараа одоогоор",
-        "last_txt1_b": "эмч нарын сургалтад зориулсан дэлхийн шилдэг 1%-д багтдаг 'ICL Шинжлэх Ухааны Зааварлагч'-аар ажиллаж байна",
-        "last_txt1_end": ".",
-        "last_txt2": "Мэргэжилтнүүдэд мэс заслыг заахад зориулсан илүү өндөр, илүү нарийн стандартууд.",
-        "last_txt3": "Dr.ICL-д эмч нарыг сургахад ашигладаг хамгийн өндөр түвшний ур чадвар нь мэс засал бүрийн стандарт болдог.",
-        "last_txt3_b": "Үр дүнгийн ялгаа мэс засалч эмчийн түвшнээс эхэлдэг",
-        "last_txt3_end": "."
-    },
-    "expertise": {
-        "h3_1": "Ижил мэс засал, өөр үр дүн — шалтгаан нь",
-        "h3_highlight": "мэс засалч эмчид байдаг.",
-        "desc": "Мэс заслын төгс байдал нь тоног төхөөрөмжөөр бус, мэс засалч эмчийн туршлага, шийдвэрээр тодорхойлогддог.\nТоо томшгүй олон тохиолдлоор хуримтлагдсан ноу-хау нь үр дүнгийн ялгааг бий болгодог.",
-        "items": [
-            {
-                "en": "Лавлагаа Эмчээс Давж",
-                "ko": "Лавлагаа Эмчээс Давсан Хамгийн Өндөр Түвшний Ур Чадвар",
-                "desc": "Зүгээр л тоног төхөөрөмж ашигладаг эмч биш, харин тоног төхөөрөмж болон мэс заслын аргуудын стандартыг хуваалцаж, заадаг, мэс заслын зарчим, бүтцийг гүнзгий ойлгож хэрэглэдэг эмч. Туршлагаас давж стандартыг бий болгож, хөгжүүлэх — энэ бол Лавлагаа Эмчээс давсан мэс засалч эмчийн үүрэг."
-            },
-            {
-                "en": "Шинжлэх Ухааны Зааварлагч",
-                "ko": "Мэс Заслын Мэдлэг Чадварыг Сургаж Дамжуулдаг Зориулалтын Эмч",
-                "desc": "Мэс засалч эмч нар ноу-хау суралцахаар ирж, бодит мэс заслын үйл явцыг хамтдаа судалж, илүү аюулгүй, илүү нарийн аргуудыг бий болгох арга замыг хэлэлцдэг. Хэн нэгэнд заах гэдэг нь бүр ч өндөр стандартыг хадгалах ёстой гэсэн үг бөгөөд энэ процесс өөрөө мэс заслын төгс байдлыг дээшлүүлэх өөр нэг шалтгаан юм."
-            },
-            {
-                "en": "Стандарт",
-                "ko": "Эмч Нарт Заадаг Ижил Төгс Стандартаар Мэс Засал Хийх",
-                "desc": "Сургалтад ашигладаг ижил стандарт, зарчмууд нь өвчтөний мэс заслд хэрэглэгддэг. Зүгээр л тайлбар, онол хүргэх биш — учир нь тэр стандартыг бий болгосон эмч өөрөө мэс заслыг шууд хийдэг тул процесс болон үр дүн аль алинд нь ялгаа гардаг."
-            }
-        ],
-        "dark_quote": "\"Таны мэс заслын эмчийг хэн сургасан бэ?\"",
-        "dark_sub": "Эмч нарыг сургадаг эмч — Доктор Ли Дон Хүн үүнийг Dr.ICL нэрийн дор нотолдог."
-    },
-    "experience": {
-        "h3_1": "ICL Шинжлэх Ухааны Зааварлагч нь",
-        "h3_highlight": "туршлагаар нотлогддог.",
-        "desc": "Энэ замналын төгсгөлд ICL Шинжлэх Ухааны Зааварлагч Доктор Ли Дон Хүн зогсож байна.",
-        "tabs": ["Доктор Ли Дон Хүн, ICL-д Зориулсан", "Солонгос Дахь Эмч Нарт Зориулсан Олон ICL Мэс Заслын Сургалт", "Ижил Жор, Өөр Үр Дүн — 0.1мм Номограм Тохируулга"],
-        "slide1_sub": "Доктор Ли Дон Хүн, ICL-д Зориулсан",
-        "stat_year": "Жил", "stat_year_label": "ICL-д Зориулсан",
-        "stat_cases": "Тохиолдол", "stat_cases_label": "ICL Мэс Засал Хийсэн",
-        "stat_min": "Мин", "stat_sec": "Сек", "stat_time_label": "Дундаж Мэс Заслын Хугацаа", "stat_time_sub": "Нэг нүд, линзийн тохиргоо болон ариутгалыг оруулахгүй", "stat_time_period": "2022 оны 11-р сараас 2023 оны 7-р сарын дундаж",
-        "stat_pct_label": "Мэс заслын дараах сэтгэл ханамж", "stat_pct_sub": "(Хамтарсан судалгаа: Испани, Солонгос, Сингапур)",
-        "slide2": [
-            { "b": "Солонгос Дахь Олон Удаагийн Сургалт", "t": "Эмч Нарт Зориулсан ICL Мэс Заслын Сургалт" },
-            { "b": "Өндөр Нарийн Төвөгтэй Тохиолдлууд", "t": "Хүнд Мэс Заслын Тохиолдлуудын Сургалт" },
-            { "b": "Бодит Мэс Заслын Орчин", "t": "Зөвхөн Онол Биш, Практик Стандарт" },
-            { "b": "Дотоод, Гадаадын Оролцоо", "t": "Олон Төрлийн Клиник Тохиолдлуудыг Хуваалцах" }
-        ],
-        "slide3": [
-            { "b": "0.1мм Тохируулга", "t": "Хувийн Номограм Гар Тохируулга" },
-            { "b": "Дата + Шийдвэр", "t": "Зөвхөн Машины Утгад Найдахгүй" },
-            { "b": "Картанд Суурилсан Бүртгэл", "t": "Үр Дүнг Ирээдүйн Шийдвэрт Хэрэглэх" },
-            { "b": "Дахин Мэс Заслыг Багасгах", "t": "Эхний Удаагаасаа Зөв Хийхэд Зориулагдсан" }
-        ]
-    },
-    "thesis": {
-        "h3": "Доктор Ли Дон Хүний Судалгааны Өгүүллүүд",
-        "desc": "Дэлхийн хамгийн нэр хүндтэй нүдний эмнэлгийн сэтгүүл Ophthalmology-д ICL судалгааг нийтлүүлсэн анхны Солонгос зохиогч"
-    },
-    "technology": {
-        "h3_1": "Тэгвэл",
-        "h3_highlight": "0.1мм нарийвчлалтай",
-        "h3_2": "шийдвэрийг хэрхэн гаргадаг вэ?",
-        "desc": "Зөн совингоор биш, дэвшилтэт тоног төхөөрөмжөөр нарийн хэмжилт, баримтжуулалтаар.",
-        "h3_3": "Энэ процессоор дамжуулан,",
-        "h3_4": "0.1мм шийдвэр",
-        "h3_5": "төгсдөг.",
-        "sub": "(0.1мм Номограм Тохируулга)"
-    },
-    "memo": {
-        "h3_1": "Энэ процессоор дамжуулан,",
-        "h3_highlight": "0.1мм шийдвэр",
-        "h3_2": "төгсдөг.",
-        "desc": "Мэс засал дуусдаг ч бүртгэл хэзээ ч зогсдоггүй"
-    },
-    "global": {
-        "h3": "Global Dr.ICL Eye Center",
-        "desc": "Дэлхийн эрдэм шинжилгээний тавцанд ICL мэс заслын стандартыг хуваалцаж байна.",
-        "slides": {
-            "korea": [
-                "2016.10\nSTAAR Surgical Asia-Pacific дээр ICL 2000 Awards",
-                "2016.11 Seoul, Korea\n- 116th Korean Ophthalmological Society практик эмч нарын симпозиум дээр лекц\n- Сэдэв: \"How Far Is Corneal Refractive Surgery Safe?\"",
-                "2017.03\nEVO+ICL APAC-аас TICL 500 Award",
-                "2017.03\nToric EVO+ICL Reference Doctor-оор сонгогдсон",
-                "2017.03 Seoul, Korea\n3rd EVO+ICL Experts Meeting дээр урилгат лекц & панел\nTICL 500 Award\nCEA (Continuing Education Awards)\nСэдэв: Why Toric ICL?",
-                "2017.12\nEVO+ICL Practice of Excellence Award & EVO+TICL-ийн THE BEST SURGEON of the Year",
-                "2018.07 Seoul, Korea\n7th Samsung Ophthalmology Symposium\n\"Controversies in Cornea & Cataract/Refractive Surgery\" лекц\nСэдэв: Astigmatism in Refractive Surgery — ICL with LRI vs Toric ICL",
-                "2018.11\nSeoul Hangang Rotary Club дээр тусгай лекц\nСэдэв: Дунд насны нүдний эрүүл мэнд",
-                "2018.11\n- 120th Korean Ophthalmological Society практик эмч нарын симпозиум дээр лекц\n- Сэдэв: \"Easy and Simple ICL Sizing and Exchange Tips\"",
-                "2019.07\nSTAAR Surgical-ийн дэлхийн 1,000,000 тохиолдлын чухал үе дэх BEST SURGEON-оор сонгогдсон",
-                "2019.08\nKim's Eye Hospital Symposium дээр урилгат лекц\nСэдэв: ICL суулгасны дараах асуудал ба шийдлүүд",
-                "2019.11\n- 122nd Korean Ophthalmological Society дээр илтгэл\n- Сэдэв: \"Long-term Clinical Results of Posterior Chamber Phakic ICL Implantation Based on CASIA2 Measurements\"",
-                "2020\nKSCRS IT захирал & англи хэл дээрх вэбсайтын нүүр зургийн загвараар сонгогдсон",
-                "2022\nKSCRS 4th Edition Cataract Textbook\nMultifocal IOL Patient Selection бүлгийн хамтарсан зохиогч",
-                "Korea & Japan ICL Forum (Seoul)\nСэдэв: Refractive Surgery Trend",
-                "2025.07\n2025 EVO ICL Forum\nСэдэв: The Importance of Visual Quality in Refractive Surgery",
-                "2025.11\n3rd Korea & Japan ICL Forum\nСэдэв: Phakic IOL usage in Korea, Japan KOL perspective\n— how to treat the Elderly, Presbyopic Patients, and Hyperopic Patients treatment"
-            ],
-            "spain": [
-                "2015.09 Barcelona, Spain\nEuropean Society of Cataract & Refractive Surgery (ESCRS) дээр илтгэл\nСэдэв: \"Correlation between Preoperative Biometry and Posterior Chamber Phakic Visian Implantable Collamer Lens Vaulting\"",
-                "2015.09 Sitges, Spain\n12th World ICL Experts Meeting дээр урилгат лекц\nBest Speaker & ICL EXPERT AWARDS\nСэдэв: \"Correlation between Preoperative Biometry and Posterior Chamber Phakic Visian Implantable Collamer Lens Vaulting\""
-            ],
-            "china": [
-                "2016.03 Shanghai, China\n2nd APAC ICL Expert Symposium дээр урилгат лекц\nСэдэв: \"Medical Perspective as an ICL Surgeon\"",
-                "VISION Group захирлын баяр хүргэсэн видео\n(Дэлхий даяар 43 нүдний эмнэлэг ажиллуулж буй)",
-                "BRIGHT EYE HOSPITAL захирлын баяр хүргэсэн видео\n(Хятадад 27 эмнэлэг ажиллуулж буй)",
-                "AIER Eye Hospital Хугарлын Мэс Заслын Стандартчиллын Менежерийн баяр хүргэсэн видео\n(Дэлхийн хамгийн том нүдний эмнэлгийн бүлэг — дэлхий даяар 813 эмнэлэг)",
-                "STAAR Surgical Хятадын Тэргүүний баяр хүргэсэн видео"
-            ],
-            "indonesia": [
-                "2016.07 Bali, Indonesia\n29th APACRS\nСэдэв: Ocular Biometry and Optimal Lens Selection Model Equation"
-            ],
-            "portugal": [
-                "2017.10 Lisbon, Portugal\n14th EVO ICL Experts Summit дээр ICL 3000 Award",
-                "2017.10 Lisbon, Portugal\n35th European Society of Cataract & Refractive Surgery (ESCRS) дээр урилгат илтгэгч\nСэдэв: Optimization of vision implantable collamer lens vault by intentional rotation"
-            ],
-            "france": [
-                "2019.09 Paris, France\n10th EVO+ICL Experts Summit дээр EVO+ICL 5,000 Award",
-                "2019.09\nПарис дахь European Society of Cataract & Refractive Surgery (ESCRS)-д оролцсон\nСэдэв: Long-term clinical results and safety of SMILE Xtra\n(lenticule extraction with accelerated corneal cross-linking)"
-            ],
-            "usa": [
-                "2020.05\nБостон дахь American Society of Cataract & Refractive Surgery (ASCRS) дээр илтгэл (онлайн нийгэмлэг)",
-                "2025.04.25~28 LA ASCRS\nСэдэв: Optimizing outcomes in a broad range of patients",
-                "STAAR Surgical захирлын баяр хүргэсэн видео",
-                "STAAR Surgical ахлах дэд ерөнхийлөгчийн баяр хүргэсэн видео",
-                "Tracey Technologies дэд ерөнхийлөгчийн баяр хүргэсэн видео"
-            ],
-            "japan": [
-                "2023.11.18\n2023 Korea & Japan ICL Forum (Tokyo)\nСэдэв: Quality of Vision & Recovery",
-                "2024.03.15~17\n2024 APAC Experts Summit\nСэдэв: ICL — Now and Future",
-                "2024.11.14\n15th ICL Study Group Committee\nСэдэв: Causes and Countermeasures for Endophthalmitis After ICL Surgery",
-                "Dr. Yoshihiro Kitazawa болон Доктор Ли Дон Хүн\n(Япон Улсын Хамгийн Том ICL Мэргэшсэн Эмнэлгийн Захирал)",
-                "EYE CLINIC TOKYO-тэй олон улсын клиникийн хамтын ажиллагааны гэрээ\n(Японы №1 ICL Мэргэшсэн Эмнэлэг)"
-            ]
-        }
-    },
-    "faq": {
-        "h3_1": "Dr.ICL-ийн өвчтнүүдийн",
-        "h3_highlight": "түгээмэл асуултууд",
-        "desc": "Dr.ICL-ийн нийтлэлүүдээс дэлгэрэнгүй мэдээлэл аваарай",
-        "items": [
-            { "title": "ICL мэс заслын дараах гэрлийн толбо?\nЯагаад энэ нь гаж нөлөө биш & дасан зохицох бүрэн гарын авлага", "date": "2025-12-01" },
-            { "title": "ICL-ийн өмнөх шинжилгээний асуултуудын хариулт\nНүдний зовхи нээлгэх, зардал & шинжилгээний хугацааны гарын авлага", "date": "2025-12-01" },
-            { "title": "Гэнэт харааг бүрхэгшлээ!!", "date": "2025-12-01" },
-            { "title": "Toric ICL!! Линзийн\nэргэлтээс санаа зовж байна уу?", "date": "2025-12-01" }
-        ]
-    },
-    "youtube": {
-        "h5": "Doctoricl YouTube",
-        "h3_1": "Dr.ICL дээр ICL Линз Суулгах",
-        "h3_2": "Dr.ICL-тэй YouTube дээр уулзаарай",
-        "btn": "Dr.ICL YouTube Сувагт Зочлох"
-    },
-    "instagram": {
-        "h3_1": "Dr.ICL-ийн",
-        "h3_highlight": "хамгийн сүүлийн мэдээг",
-        "h3_2": "олж мэдээрэй",
-        "btn": "Dr.ICL Instagram Зочлох",
-        "fallback": [
-            { "title": "2025 KOREA EVO ICL FORUM", "date": "2025-08-06" },
-            { "title": "ICL EXPERT INSTRUCTOR Албан Ёсны Сонголт", "date": "2025-07-22" },
-            { "title": "Дэлхийн 6 ICL Шинжлэх Ухааны Зааварлагч Эмчийн Нэгээр Сонгогдсон", "date": "2025-07-15" },
-            { "title": "2026 EVO ICL APAC EXPERTS SUMMIT", "date": "2025-06-30" }
-        ]
-    },
-    "news": {
-        "top_h5": "Найдвартай Мэдээлэл Сонгодог",
-        "top_h5_2": "Dr.ICL Нүдний Эмнэлгийн Эмнэлгийн Мэдээ",
-        "title": "Эвэрлэг бүрхүүлийг хамгаалсан харааны засвар: Линз суулгалтыг сонгох шалгуур",
-        "author": "Dr.ICL Нүдний Эмнэлгийн Захирал Доктор Ли Дон Хүн",
-        "desc": "LASIK, LASEK, SMILE зэрэг лазер харааны засварын мэс заслын хандлагын дунд ICL (Implantable Collamer Lens) нь эвэрлэг бүрхүүлийг хамгаалахыг нэн тэргүүнд тавьсан шинэ хувилбар болон гарч ирж байна. Эвэрлэг бүрхүүлийг зүлгэх аргаас ялгаатай нь энэ арга нь солонгон бүрхүүлийн ард тусгай линз байрлуулж, эвэрлэг бүрхүүлийн бүтцийг хадгалдаг.",
-        "link_text": "Мэдээний Нийтлэл Унших"
-    },
-    "location": {
-        "h3_map": "Замын Чиглэл",
-        "address": "390 Gangnam-daero, Gangnam-gu, Seoul, 20F (Yeoksam-dong, Mijin Plaza)",
-        "address_copied": "Хаяг хуулагдлаа.",
-        "naver": "Naver Map",
-        "google": "Google Maps",
-        "kakao": "Kakao Map",
-        "tmap": "T-Map",
-        "h3_kakao": "KakaoTalk",
-        "kakao_desc": "KakaoTalk дээр \"Dr.ICL Eye Clinic\" гэж хайна уу.",
-        "h3_hours": "Эмнэлгийн Цагийн Хуваарь",
-        "hours": [
-            { "day": "Дав, Мяг, Пүр, Баа", "time": "AM 09:00 ~ PM 06:00" },
-            { "day": "Бямба", "time": "AM 08:30 ~ PM 04:00" },
-            { "day": "Үдийн Завсарлага", "time": "PM 01:00 ~ PM 02:00" }
-        ],
-        "hours_note": "* Лхагва, Ням гариг болон нийтийн амралтын өдрүүдэд хаалттай.",
-        "h3_contact": "Зөвлөгөө Авах"
+    "dark_quote": "\"Таны мэс заслын эмчийг хэн сургасан бэ?\"",
+    "dark_sub": "Эмч нарыг сургадаг эмч — Доктор Ли Дон Хүн үүнийг Dr.ICL нэрийн дор нотолдог."
+  },
+  "experience": {
+    "h3_1": "ICL Шинжлэх Ухааны Зааварлагч нь",
+    "h3_highlight": "туршлагаар нотлогддог.",
+    "desc": "Энэ замналын төгсгөлд ICL Шинжлэх Ухааны Зааварлагч Доктор Ли Дон Хүн зогсож байна.",
+    "tabs": [
+      "Доктор Ли Дон Хүн, ICL-д Зориулсан",
+      "Солонгос Дахь Эмч Нарт Зориулсан Олон ICL Мэс Заслын Сургалт",
+      "Ижил Жор, Өөр Үр Дүн — 0.1мм Номограм Тохируулга"
+    ],
+    "slide1_sub": "Доктор Ли Дон Хүн, ICL-д Зориулсан",
+    "stat_year": "Жил",
+    "stat_year_label": "ICL-д Зориулсан",
+    "stat_cases": "Тохиолдол",
+    "stat_cases_label": "ICL Мэс Засал Хийсэн",
+    "stat_min": "Мин",
+    "stat_sec": "Сек",
+    "stat_time_label": "Дундаж Мэс Заслын Хугацаа",
+    "stat_time_sub": "Нэг нүд, линзийн тохиргоо болон ариутгалыг оруулахгүй",
+    "stat_time_period": "2022 оны 11-р сараас 2023 оны 7-р сарын дундаж",
+    "stat_pct_label": "Мэс заслын дараах сэтгэл ханамж",
+    "stat_pct_sub": "(Хамтарсан судалгаа: Испани, Солонгос, Сингапур)",
+    "slide2": [
+      {
+        "b": "Солонгос Дахь Олон Удаагийн Сургалт",
+        "t": "Эмч Нарт Зориулсан ICL Мэс Заслын Сургалт"
+      },
+      {
+        "b": "Өндөр Нарийн Төвөгтэй Тохиолдлууд",
+        "t": "Хүнд Мэс Заслын Тохиолдлуудын Сургалт"
+      },
+      {
+        "b": "Бодит Мэс Заслын Орчин",
+        "t": "Зөвхөн Онол Биш, Практик Стандарт"
+      },
+      {
+        "b": "Дотоод, Гадаадын Оролцоо",
+        "t": "Олон Төрлийн Клиник Тохиолдлуудыг Хуваалцах"
+      }
+    ],
+    "slide3": [
+      {
+        "b": "0.1мм Тохируулга",
+        "t": "Хувийн Номограм Гар Тохируулга"
+      },
+      {
+        "b": "Дата + Шийдвэр",
+        "t": "Зөвхөн Машины Утгад Найдахгүй"
+      },
+      {
+        "b": "Картанд Суурилсан Бүртгэл",
+        "t": "Үр Дүнг Ирээдүйн Шийдвэрт Хэрэглэх"
+      },
+      {
+        "b": "Дахин Мэс Заслыг Багасгах",
+        "t": "Эхний Удаагаасаа Зөв Хийхэд Зориулагдсан"
+      }
+    ]
+  },
+  "thesis": {
+    "h3": "Доктор Ли Дон Хүний Судалгааны Өгүүллүүд",
+    "desc": "Дэлхийн хамгийн нэр хүндтэй нүдний эмнэлгийн сэтгүүл Ophthalmology-д ICL судалгааг нийтлүүлсэн анхны Солонгос зохиогч"
+  },
+  "technology": {
+    "h3_1": "Тэгвэл",
+    "h3_highlight": "0.1мм нарийвчлалтай",
+    "h3_2": "шийдвэрийг хэрхэн гаргадаг вэ?",
+    "desc": "Зөн совингоор биш, дэвшилтэт тоног төхөөрөмжөөр нарийн хэмжилт, баримтжуулалтаар.",
+    "h3_3": "Энэ процессоор дамжуулан,",
+    "h3_4": "0.1мм шийдвэр",
+    "h3_5": "төгсдөг.",
+    "sub": "(0.1мм Номограм Тохируулга)"
+  },
+  "memo": {
+    "h3_1": "Энэ процессоор дамжуулан,",
+    "h3_highlight": "0.1мм шийдвэр",
+    "h3_2": "төгсдөг.",
+    "desc": "Мэс засал дуусдаг ч бүртгэл хэзээ ч зогсдоггүй"
+  },
+  "global": {
+    "h3": "Global Dr.ICL Eye Center",
+    "desc": "Дэлхийн эрдэм шинжилгээний тавцанд ICL мэс заслын стандартыг хуваалцаж байна.",
+    "slides": {
+      "korea": [
+        "2016.10\nSTAAR Surgical Asia-Pacific дээр ICL 2000 Awards",
+        "2016.11 Seoul, Korea\n- 116th Korean Ophthalmological Society практик эмч нарын симпозиум дээр лекц\n- Сэдэв: \"How Far Is Corneal Refractive Surgery Safe?\"",
+        "2017.03\nEVO+ICL APAC-аас TICL 500 Award",
+        "2017.03\nToric EVO+ICL Reference Doctor-оор сонгогдсон",
+        "2017.03 Seoul, Korea\n3rd EVO+ICL Experts Meeting дээр урилгат лекц & панел\nTICL 500 Award\nCEA (Continuing Education Awards)\nСэдэв: Why Toric ICL?",
+        "2017.12\nEVO+ICL Practice of Excellence Award & EVO+TICL-ийн THE BEST SURGEON of the Year",
+        "2018.07 Seoul, Korea\n7th Samsung Ophthalmology Symposium\n\"Controversies in Cornea & Cataract/Refractive Surgery\" лекц\nСэдэв: Astigmatism in Refractive Surgery — ICL with LRI vs Toric ICL",
+        "2018.11\nSeoul Hangang Rotary Club дээр тусгай лекц\nСэдэв: Дунд насны нүдний эрүүл мэнд",
+        "2018.11\n- 120th Korean Ophthalmological Society практик эмч нарын симпозиум дээр лекц\n- Сэдэв: \"Easy and Simple ICL Sizing and Exchange Tips\"",
+        "2019.07\nSTAAR Surgical-ийн дэлхийн 1,000,000 тохиолдлын чухал үе дэх BEST SURGEON-оор сонгогдсон",
+        "2019.08\nKim's Eye Hospital Symposium дээр урилгат лекц\nСэдэв: ICL суулгасны дараах асуудал ба шийдлүүд",
+        "2019.11\n- 122nd Korean Ophthalmological Society дээр илтгэл\n- Сэдэв: \"Long-term Clinical Results of Posterior Chamber Phakic ICL Implantation Based on CASIA2 Measurements\"",
+        "2020\nKSCRS IT захирал & англи хэл дээрх вэбсайтын нүүр зургийн загвараар сонгогдсон",
+        "2022\nKSCRS 4th Edition Cataract Textbook\nMultifocal IOL Patient Selection бүлгийн хамтарсан зохиогч",
+        "Korea & Japan ICL Forum (Seoul)\nСэдэв: Refractive Surgery Trend",
+        "2025.07\n2025 EVO ICL Forum\nСэдэв: The Importance of Visual Quality in Refractive Surgery",
+        "2025.11\n3rd Korea & Japan ICL Forum\nСэдэв: Phakic IOL usage in Korea, Japan KOL perspective\n— how to treat the Elderly, Presbyopic Patients, and Hyperopic Patients treatment"
+      ],
+      "spain": [
+        "2015.09 Barcelona, Spain\nEuropean Society of Cataract & Refractive Surgery (ESCRS) дээр илтгэл\nСэдэв: \"Correlation between Preoperative Biometry and Posterior Chamber Phakic Visian Implantable Collamer Lens Vaulting\"",
+        "2015.09 Sitges, Spain\n12th World ICL Experts Meeting дээр урилгат лекц\nBest Speaker & ICL EXPERT AWARDS\nСэдэв: \"Correlation between Preoperative Biometry and Posterior Chamber Phakic Visian Implantable Collamer Lens Vaulting\""
+      ],
+      "china": [
+        "2016.03 Shanghai, China\n2nd APAC ICL Expert Symposium дээр урилгат лекц\nСэдэв: \"Medical Perspective as an ICL Surgeon\"",
+        "VISION Group захирлын баяр хүргэсэн видео\n(Дэлхий даяар 43 нүдний эмнэлэг ажиллуулж буй)",
+        "BRIGHT EYE HOSPITAL захирлын баяр хүргэсэн видео\n(Хятадад 27 эмнэлэг ажиллуулж буй)",
+        "AIER Eye Hospital Хугарлын Мэс Заслын Стандартчиллын Менежерийн баяр хүргэсэн видео\n(Дэлхийн хамгийн том нүдний эмнэлгийн бүлэг — дэлхий даяар 813 эмнэлэг)",
+        "STAAR Surgical Хятадын Тэргүүний баяр хүргэсэн видео"
+      ],
+      "indonesia": [
+        "2016.07 Bali, Indonesia\n29th APACRS\nСэдэв: Ocular Biometry and Optimal Lens Selection Model Equation"
+      ],
+      "portugal": [
+        "2017.10 Lisbon, Portugal\n14th EVO ICL Experts Summit дээр ICL 3000 Award",
+        "2017.10 Lisbon, Portugal\n35th European Society of Cataract & Refractive Surgery (ESCRS) дээр урилгат илтгэгч\nСэдэв: Optimization of vision implantable collamer lens vault by intentional rotation"
+      ],
+      "france": [
+        "2019.09 Paris, France\n10th EVO+ICL Experts Summit дээр EVO+ICL 5,000 Award",
+        "2019.09\nПарис дахь European Society of Cataract & Refractive Surgery (ESCRS)-д оролцсон\nСэдэв: Long-term clinical results and safety of SMILE Xtra\n(lenticule extraction with accelerated corneal cross-linking)"
+      ],
+      "usa": [
+        "2020.05\nБостон дахь American Society of Cataract & Refractive Surgery (ASCRS) дээр илтгэл (онлайн нийгэмлэг)",
+        "2025.04.25~28 LA ASCRS\nСэдэв: Optimizing outcomes in a broad range of patients",
+        "STAAR Surgical захирлын баяр хүргэсэн видео",
+        "STAAR Surgical ахлах дэд ерөнхийлөгчийн баяр хүргэсэн видео",
+        "Tracey Technologies дэд ерөнхийлөгчийн баяр хүргэсэн видео"
+      ],
+      "japan": [
+        "2023.11.18\n2023 Korea & Japan ICL Forum (Tokyo)\nСэдэв: Quality of Vision & Recovery",
+        "2024.03.15~17\n2024 APAC Experts Summit\nСэдэв: ICL — Now and Future",
+        "2024.11.14\n15th ICL Study Group Committee\nСэдэв: Causes and Countermeasures for Endophthalmitis After ICL Surgery",
+        "Dr. Yoshihiro Kitazawa болон Доктор Ли Дон Хүн\n(Япон Улсын Хамгийн Том ICL Мэргэшсэн Эмнэлгийн Захирал)",
+        "EYE CLINIC TOKYO-тэй олон улсын клиникийн хамтын ажиллагааны гэрээ\n(Японы №1 ICL Мэргэшсэн Эмнэлэг)"
+      ]
     }
+  },
+  "faq": {
+    "h3_1": "Dr.ICL-ийн өвчтнүүдийн",
+    "h3_highlight": "түгээмэл асуултууд",
+    "desc": "Dr.ICL-ийн нийтлэлүүдээс дэлгэрэнгүй мэдээлэл аваарай",
+    "items": [
+      {
+        "title": "ICL мэс заслын дараах гэрлийн толбо?\nЯагаад энэ нь гаж нөлөө биш\n& дасан зохицох бүрэн гарын авлага",
+        "date": "2025-12-01"
+      },
+      {
+        "title": "ICL-ийн өмнөх шинжилгээний асуултуудын хариулт\nНүдний зовхи нээлгэх, зардал &\nшинжилгээний хугацааны гарын авлага",
+        "date": "2025-12-01"
+      },
+      {
+        "title": "Гэнэт харааг бүрхэгшлээ!!",
+        "date": "2025-12-01"
+      },
+      {
+        "title": "Toric ICL!! Линзийн\nэргэлтээс санаа зовж байна уу?",
+        "date": "2025-12-01"
+      }
+    ]
+  },
+  "youtube": {
+    "h5": "Doctoricl YouTube",
+    "h3_1": "Dr.ICL дээр ICL Линз Суулгах",
+    "h3_2": "Dr.ICL-тэй YouTube дээр уулзаарай",
+    "btn": "Dr.ICL YouTube Сувагт Зочлох"
+  },
+  "instagram": {
+    "h3_1": "Dr.ICL-ийн",
+    "h3_highlight": "хамгийн сүүлийн мэдээг",
+    "h3_2": "олж мэдээрэй",
+    "btn": "Dr.ICL Instagram Зочлох",
+    "fallback": [
+      {
+        "title": "2025 KOREA EVO ICL FORUM",
+        "date": "2025-08-06"
+      },
+      {
+        "title": "ICL EXPERT INSTRUCTOR Албан Ёсны Сонголт",
+        "date": "2025-07-22"
+      },
+      {
+        "title": "Дэлхийн 6 ICL Шинжлэх Ухааны Зааварлагч Эмчийн Нэгээр Сонгогдсон",
+        "date": "2025-07-15"
+      },
+      {
+        "title": "2026 EVO ICL APAC EXPERTS SUMMIT",
+        "date": "2025-06-30"
+      }
+    ]
+  },
+  "news": {
+    "top_h5": "Найдвартай Мэдээлэл Сонгодог",
+    "top_h5_2": "Dr.ICL Нүдний Эмнэлгийн Эмнэлгийн Мэдээ",
+    "title": "Эвэрлэг бүрхүүлийг хамгаалсан харааны засвар: Линз суулгалтыг сонгох шалгуур",
+    "author": "Dr.ICL Нүдний Эмнэлгийн Захирал Доктор Ли Дон Хүн",
+    "desc": "LASIK, LASEK, SMILE зэрэг лазер харааны засварын мэс заслын хандлагын дунд ICL (Implantable Collamer Lens) нь эвэрлэг бүрхүүлийг хамгаалахыг нэн тэргүүнд тавьсан шинэ хувилбар болон гарч ирж байна. Эвэрлэг бүрхүүлийг зүлгэх аргаас ялгаатай нь энэ арга нь солонгон бүрхүүлийн ард тусгай линз байрлуулж, эвэрлэг бүрхүүлийн бүтцийг хадгалдаг.",
+    "link_text": "Мэдээний Нийтлэл Унших"
+  },
+  "location": {
+    "h3_map": "Замын Чиглэл",
+    "address": "390 Gangnam-daero, Gangnam-gu, Seoul, 20F (Yeoksam-dong, Mijin Plaza)",
+    "address_copied": "Хаяг хуулагдлаа.",
+    "naver": "Naver Map",
+    "google": "Google Maps",
+    "kakao": "Kakao Map",
+    "tmap": "T-Map",
+    "h3_kakao": "KakaoTalk",
+    "kakao_desc": "KakaoTalk дээр \"Dr.ICL Eye Clinic\" гэж хайна уу.",
+    "h3_hours": "Эмнэлгийн Цагийн Хуваарь",
+    "hours": [
+      {
+        "day": "Дав, Мяг, Пүр, Баа",
+        "time": "AM 09:00 ~ PM 06:00"
+      },
+      {
+        "day": "Бямба",
+        "time": "AM 08:30 ~ PM 04:00"
+      },
+      {
+        "day": "Үдийн Завсарлага",
+        "time": "PM 01:00 ~ PM 02:00"
+      }
+    ],
+    "hours_note": "* Лхагва, Ням гариг болон нийтийн амралтын өдрүүдэд хаалттай.",
+    "h3_contact": "Зөвлөгөө Авах"
+  }
 }

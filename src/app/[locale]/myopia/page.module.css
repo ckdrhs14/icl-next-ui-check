@@ -175,7 +175,13 @@
   font-size: 30px;
   font-style: normal;
   font-weight: 400;
-  line-height: 22px;
+  line-height: 32px;
+  text-align: center;
+}
+:global([lang="mn"]) .myopiaListItemTxtBoxH4,
+:global([lang="ru"]) .myopiaListItemTxtBoxH4 {
+  font-size: 20px;
+  line-height: 26px;
 }
 
 /* === Section 3: Complications (myopia1-sec3) === */
@@ -222,7 +228,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
+  width: 33.333%;
 }
 
 .myopiaListType2ImgBox {
@@ -251,7 +257,7 @@
   font-size: 32px;
   font-style: normal;
   font-weight: 700;
-  line-height: 14.381px;
+  line-height: 32px;
 }
 
 .myopiaListType2TxtBoxP {
@@ -262,6 +268,7 @@
   font-style: normal;
   font-weight: 400;
   line-height: 26px;
+  word-break: break-all;
 }
 
 /* === Banner Boxes === */
@@ -432,6 +439,11 @@
   line-height: 32px;
   text-align: center;
 }
+:global([lang="mn"]) .myopiaListTopTxtBoxH4,
+:global([lang="ru"]) .myopiaListTopTxtBoxH4 {
+  font-size: 20px;
+  line-height: 26px;
+}
 
 .myopiaListTxtBottom {
   margin-top: 34px;
@@ -526,6 +538,8 @@
   font-style: normal;
   font-weight: 700;
   line-height: 58px;
+  margin-right: 40px;
+  max-width: 400px;
 }
 
 .sec8TitleStrong {
@@ -876,7 +890,6 @@
 
 .sec12 .titGroupH3 {
   color: #fff;
-  white-space: nowrap;
 }
 
 .sec12MyopiaList {
@@ -974,6 +987,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
   border-radius: 0 0 10px 10px;
 }
 
@@ -1313,7 +1327,7 @@
 
 .borTxtColumnLi {
   min-width: 960px;
-  padding: 24px 0;
+  padding: 24px 30px;
   border-radius: 10px;
   background: #042B48;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);

@@ -212,7 +212,7 @@
   text-align: center;
   font-size: 32px;
   font-weight: 700;
-  line-height: 22px;
+  line-height: 32px;
   text-transform: uppercase;
 }
 .wrapList4Img {
@@ -429,6 +429,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
   background: #67B5A9;
   border-radius: 100%;
   aspect-ratio: 1/1;
@@ -653,8 +654,9 @@
   margin: 0 0 80px;
 }
 .borTxtColumn ul li {
+  width: 100%;
   min-width: 960px;
-  padding: 24px 0px;
+  padding: 24px 30px;
   border-radius: 10px;
   background: #042B48;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
