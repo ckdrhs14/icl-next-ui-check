@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { ScrollPageLayout, type ScrollSection } from '@/components/scroll';
 import styles from './page.module.css';
@@ -8,16 +8,16 @@ import styles from './page.module.css';
 export default function MyopiaClient() {
   const t = useTranslations('myopia');
 
-  const SECTIONS: ScrollSection[] = [
+  const SECTIONS: ScrollSection[] = useMemo(() => [
     { id: 'myopia-cont1', hash: '#myopia-cont1', label: t('nav0'), dark: true },
     { id: 'myopia-cont2', hash: '#myopia-cont2', label: t('nav1') },
     { id: 'myopia-cont3', hash: '#myopia-cont3', label: t('nav2'), dark: true },
     { id: 'myopia-cont4', hash: '#myopia-cont4', label: t('nav3'), dark: true },
     { id: 'myopia-cont5', hash: '#myopia-cont5', label: t('nav4'), dark: true },
     { id: 'myopia-cont6', hash: '#myopia-cont6', label: t('nav5'), dark: true },
-  ];
+  ], [t]);
 
-  const SAFETY_ITEMS = [
+  const SAFETY_ITEMS = useMemo(() => [
     {
       num: '01',
       title: 'Zero-Gap Targeting',
@@ -33,9 +33,9 @@ export default function MyopiaClient() {
       title: 'Long-term Retical Guard',
       desc: [t('sec8.safety2Desc1'), t('sec8.safety2Desc2'), t('sec8.safety2Desc3')],
     },
-  ];
+  ], [t]);
 
-  const EQUIPMENT_SLIDES = [
+  const EQUIPMENT_SLIDES = useMemo(() => [
     {
       img: '/img/myopia/equipment-01.png',
       tit: t('sec16.equip0Tit'),
@@ -54,7 +54,7 @@ export default function MyopiaClient() {
       subtit: t('sec16.equip2Subtit'),
       texts: [t('sec16.equip2Text0'), t('sec16.equip2Text1'), t('sec16.equip2Text2')],
     },
-  ];
+  ], [t]);
 
   // Equipment swiper with loop clones
   const loopSlides = [
@@ -509,7 +509,7 @@ export default function MyopiaClient() {
       <section className={styles.sec12}>
         <div className={styles.sec12Inner} data-aos="fade-up" data-aos-duration="1000">
           <div>
-            <h3 className={styles.titGroupH3} style={{ color: '#fff', whiteSpace: 'nowrap' }}>
+            <h3 className={styles.titGroupH3} style={{ color: '#fff' }}>
               {t('sec12.title1')}<br className={styles.mo} /> <span className={styles.cNv}>{t('sec12.title2')}</span>{t('sec12.title3')}<br className={styles.mo} /> <span className={styles.cNv}>{t('sec12.title4')}</span>{t('sec12.title5')}
             </h3>
           </div>

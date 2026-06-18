@@ -56,7 +56,7 @@ export default async function SystemPage() {
             <p className={styles.heroSub}>{t('heroTitle1')}</p>
             <h3 className={styles.heroTitle}>
               &ldquo;{t('heroTitle2')}
-              <br className={styles.brMobile} /> {t('heroTitle3')}&rdquo;
+              <br /> {t('heroTitle3')}&rdquo;
             </h3>
           </div>
           <div className={styles.heroDivider} />

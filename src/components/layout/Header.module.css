@@ -9,6 +9,9 @@
 .whiteLogo { position: absolute; top: 0; left: 0; width: 100%; opacity: 0; transition: all 0.6s ease; }
 .navListWrap { display: flex; gap: clamp(20px, 2vw, 40px); align-items: center; list-style: none; }
 .navListWrap li a { color: #222; font-size: clamp(13px, 1.3vw, 18px); font-weight: 400; line-height: 140%; letter-spacing: -0.02em; transition: all 0.6s ease; text-decoration: none; }
+:global([lang="vi"]) .navListWrap li a,
+:global([lang="mn"]) .navListWrap li a,
+:global([lang="ru"]) .navListWrap li a { font-size: clamp(13px, 1.3vw, 16px); }
 
 /* Btn Wrap */
 .btnWrap { display: flex; align-items: center; gap: clamp(14px, 1.4vw, 30px); list-style: none; }
@@ -57,9 +60,9 @@
 .menuListWrap > li > a { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; text-decoration: none; }
 .menuArrow { display: none; }
 .menuSymbol { width: 40px; height: auto; }
-.menuTxt { color: #fff; font-size: clamp(22px, 2vw, 30px); font-weight: 500; line-height: 130%; letter-spacing: -1.05px; }
+.menuTxt { color: #fff; font-size: clamp(22px, 2vw, 30px); font-weight: 500; line-height: 130%; letter-spacing: -1.05px; text-align: center; }
 .menuTxt::after { content: ""; display: block; width: 24px; height: 1px; background-color: #a8a29e; margin: clamp(24px, 2.4vw, 48px) auto; }
-.subMenuWrap { display: flex; flex-direction: column; align-items: center; gap: 24px; list-style: none; }
+.subMenuWrap { display: flex; flex-direction: column; align-items: center; gap: 24px; list-style: none; text-align: center; }
 .subMenuWrap a { color: #9f9f9f; font-size: clamp(16px, 1.6vw, 20px); font-weight: 300; line-height: 140%; letter-spacing: -0.035em; display: block; transition: all 0.4s ease; position: relative; text-decoration: none; }
 .subMenuWrap a::before { content: ""; display: inline-block; width: 20px; aspect-ratio: 1; background-image: url("/img/main/menu_icon.svg"); background-size: contain; background-repeat: no-repeat; background-position: center; opacity: 0; position: absolute; transform: translateX(50%) translateY(-50%); transition: all 0.4s ease; left: -25px; top: 50%; }
 .subMenuWrap a:hover { color: #64c0a7; transform: translateX(15px); }

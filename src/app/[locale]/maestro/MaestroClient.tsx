@@ -197,7 +197,7 @@ export default function MaestroClient() {
 
   return (
     <ScrollPageLayout sections={LEFT_NAV}>
-      {/* Right Quick Nav */}
+      {/* Right Quick Nav - 주석처리
       <nav className={`${styles.rightQuickNav} ${locale === 'en' ? styles.rightQuickNavEn : ''}`}>
         <ul className={styles.rightQuickList}>
           {RIGHT_NAV.map((s) => (
@@ -215,6 +215,7 @@ export default function MaestroClient() {
           ))}
         </ul>
       </nav>
+      */}
 
       {/* Section 1: Hero (spec1-sec1) */}
       <section id="hero" className={styles.hero}>
