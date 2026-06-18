@@ -124,6 +124,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
   width: 100%;
   padding: 24px 0;
   background-color: #042B48;

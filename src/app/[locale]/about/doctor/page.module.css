@@ -107,6 +107,11 @@
     white-space: nowrap;
     text-align: center;
 }
+:global([lang="vi"]) .heroComm p,
+:global([lang="mn"]) .heroComm p,
+:global([lang="ru"]) .heroComm p {
+    white-space: pre;
+}
 
 .heroRight {
     position: relative;
@@ -338,6 +343,7 @@
     font-size: 60px;
     line-height: 70px;
     color: #64c0a7;
+    white-space: pre-line;
 }
 
 .titleEn {
@@ -355,6 +361,7 @@
     font-size: 78px;
     line-height: 88px;
     color: #fff;
+    white-space: pre-line;
 }
 
 .dividerLine {
@@ -421,6 +428,7 @@
     font-size: 22px;
     line-height: 32px;
     color: #fff;
+    white-space: pre-line;
 }
 
 /* Navigation buttons container */

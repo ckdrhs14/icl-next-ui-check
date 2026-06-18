@@ -28,7 +28,7 @@ export default async function CataractPage() {
       <div className={`${styles.catSec10} ${styles.catBImg3}`}>
         <div className={`${styles.titGroup} ${styles.white}`} data-aos="fade-up" data-aos-duration="1000">
           <h3 dangerouslySetInnerHTML={{ __html: t.raw('sec10Title') }} />
-          <p>{t('sec10Desc')}</p>
+          <p dangerouslySetInnerHTML={{ __html: t.raw('sec10Desc') }} />
         </div>
 
         <div className={styles.contInner} data-aos="fade-up" data-aos-duration="1000">

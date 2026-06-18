@@ -1,246 +1,314 @@
 {
-    "alt": {
-        "aboutImg": "Эксперт-инструктор",
-        "introImg1": "Референс-доктор",
-        "introImg2": "Эксперт-инструктор",
-        "introImg3": "ICL Expert Instructor",
-        "introImg4": "ICL Expert Instructor",
-        "doctorPhoto": "Доктор Ли Дон Хун",
-        "experienceImg1": "Доктор Ли Дон Хун, специализирующийся на ICL",
-        "experienceImg2": "Обучение врачей хирургии ICL",
-        "experienceImg3": "Одинаковые диоптрии, разные результаты — калибровка номограммы 0.1мм",
-        "thesis": "Научная статья",
-        "techImg1": "Высокотехнологичное оборудование",
-        "techImg2": "Точные измерения",
-        "techBg": "Решение в 0.1мм",
-        "nomogram1": "Калибровка номограммы",
-        "nomogram2": "Калибровка номограммы",
-        "memo": "Хирургические записи",
-        "chosunMedia": "Chosun Media",
-        "news": "Новости",
-        "map": "Как добраться",
-        "naverMap": "Карта Naver"
-    },
-    "thesis_items": [
-        "JCRS_Risk Factors for Normal Tension Glaucoma Among Subgroups of Patients",
-        "JKOS_Результаты лечения буллёзной кератопатии глубокой ламеллярной эндотелиальной кератопластикой (DLEK)",
-        "JKOS_Сравнение аккомодации при имплантации интраокулярных линз",
-        "JKOS_Трёхмесячные клинические результаты сферических/асферических ИОЛ ReSTOR",
-        "Ophthalmology_Correlation between Preoperative Biometry and Posterior Chamber Phakic Visian ICL Vaulting",
-        "KJO_Diabetic Retinopathy and Peripapillary Retinal Thickness",
-        "KJO_Femtosecond Laser-Assisted Small Incision Deep Lamellar Endothelial Keratoplasty",
-        "KJO_A Comparison of Posterior Lamellar Keratoplasty Modalities: DLEK vs. DSEK"
+  "alt": {
+    "aboutImg": "Эксперт-инструктор",
+    "introImg1": "Референс-доктор",
+    "introImg2": "Эксперт-инструктор",
+    "introImg3": "ICL Expert Instructor",
+    "introImg4": "ICL Expert Instructor",
+    "doctorPhoto": "Доктор Ли Дон Хун",
+    "experienceImg1": "Доктор Ли Дон Хун, специализирующийся на ICL",
+    "experienceImg2": "Обучение врачей хирургии ICL",
+    "experienceImg3": "Одинаковые диоптрии, разные результаты — калибровка номограммы 0.1мм",
+    "thesis": "Научная статья",
+    "techImg1": "Высокотехнологичное оборудование",
+    "techImg2": "Точные измерения",
+    "techBg": "Решение в 0.1мм",
+    "nomogram1": "Калибровка номограммы",
+    "nomogram2": "Калибровка номограммы",
+    "memo": "Хирургические записи",
+    "chosunMedia": "Chosun Media",
+    "news": "Новости",
+    "map": "Как добраться",
+    "naverMap": "Карта Naver"
+  },
+  "thesis_items": [
+    "JCRS_Risk Factors for Normal Tension Glaucoma Among Subgroups of Patients",
+    "JKOS_Результаты лечения буллёзной кератопатии глубокой ламеллярной эндотелиальной кератопластикой (DLEK)",
+    "JKOS_Сравнение аккомодации при имплантации интраокулярных линз",
+    "JKOS_Трёхмесячные клинические результаты сферических/асферических ИОЛ ReSTOR",
+    "Ophthalmology_Correlation between Preoperative Biometry and Posterior Chamber Phakic Visian ICL Vaulting",
+    "KJO_Diabetic Retinopathy and Peripapillary Retinal Thickness",
+    "KJO_Femtosecond Laser-Assisted Small Incision Deep Lamellar Endothelial Keratoplasty",
+    "KJO_A Comparison of Posterior Lamellar Keratoplasty Modalities: DLEK vs. DSEK"
+  ],
+  "about": {
+    "question": "Кто обучал вашего хирурга?",
+    "title": "ICL Expert Instructor",
+    "desc1": "Есть чёткая причина, почему результаты отличаются даже при одной и той же операции.",
+    "desc2_1": "Доктор Ли Дон Хун, генеральный директор Dr.ICL, — это не просто",
+    "desc2_ref": "'ICL Reference Doctor',",
+    "desc2_2": "Он — врач,",
+    "desc2_3": "который обучает врачей —",
+    "desc2_expert": "'ICL Expert Instructor'",
+    "desc2_end": ".",
+    "desc3_1": "Строгие стандарты и выдающееся мастерство, посвящённые обучению врачей,",
+    "desc3_2": "Те самые навыки, которые задают стандарт хирургии,",
+    "desc3_3": "применяются непосредственно к вашим драгоценным глазам."
+  },
+  "intro": {
+    "h3_1": "Больше, чем Reference Doctor",
+    "h3_2": "Становясь стандартом хирургии",
+    "sub_h5": "ICL Expert Instructor",
+    "sub_h3": "ICL Expert Instructor",
+    "last_p": "Больше, чем Reference Doctor — становясь стандартом",
+    "last_txt1": "Доктор Ли Дон Хун из Dr.ICL, ранее являвшийся ICL Reference Doctor, в настоящее время",
+    "last_txt1_b": "занимает должность 'ICL Expert Instructor' — глобальную позицию в топ-1%, посвящённую обучению врачей",
+    "last_txt1_end": ".",
+    "last_txt2": "Более высокие и совершенные стандарты обучения хирургии для специалистов.",
+    "last_txt3": "В Dr.ICL высочайший уровень мастерства, используемый для обучения врачей, становится стандартом каждой операции.",
+    "last_txt3_b": "Разница в результатах начинается с уровня хирурга",
+    "last_txt3_end": "."
+  },
+  "expertise": {
+    "h3_1": "Одна и та же операция, разные результаты — причина в",
+    "h3_highlight": "хирурге.",
+    "desc": "Совершенство хирургии определяется\nне оборудованием, а опытом и суждением хирурга.\nНоу-хау, накопленное за бесчисленные операции,\nсоздаёт разницу в результатах.",
+    "items": [
+      {
+        "en": "Beyond Reference Doctor",
+        "ko": "Высочайший уровень мастерства, превосходящий Reference Doctor",
+        "desc": "Не просто врач, использующий оборудование, а специалист, который делится и обучает стандартам оборудования и хирургических методов, глубоко понимая и применяя принципы и структуру хирургии. Выходя за рамки опыта к созданию и продвижению стандартов — именно в этом роль хирурга, превосходящего Reference Doctor."
+      },
+      {
+        "en": "Expert Instructor",
+        "ko": "Преданный врач, обучающий и передающий хирургическое мастерство",
+        "desc": "Хирурги приходят учиться ноу-хау, совместно изучают реальные хирургические процессы и обсуждают способы создания более безопасных и совершенных методов. Обучение других означает поддержание ещё более высоких стандартов, и этот процесс сам по себе является ещё одной причиной повышения хирургического совершенства."
+      },
+      {
+        "en": "The Standard",
+        "ko": "Выполнение операций с теми же безупречными стандартами, которым обучают врачей",
+        "desc": "Те же стандарты и принципы, используемые в обучении, применяются к операциям пациентов. Это не просто объяснения и теории — ведь врач, создавший эти стандарты, выполняет операции лично, что делает разницу как в процессе, так и в результатах."
+      }
     ],
-    "about": {
-        "question": "Кто обучал вашего хирурга?",
-        "title": "ICL Expert Instructor",
-        "desc1": "Есть чёткая причина, почему результаты отличаются даже при одной и той же операции.",
-        "desc2_1": "Доктор Ли Дон Хун, генеральный директор Dr.ICL, — это не просто",
-        "desc2_ref": "'ICL Reference Doctor',",
-        "desc2_2": "Он — врач,",
-        "desc2_3": "который обучает врачей —",
-        "desc2_expert": "'ICL Expert Instructor'",
-        "desc2_end": ".",
-        "desc3_1": "Строгие стандарты и выдающееся мастерство, посвящённые обучению врачей,",
-        "desc3_2": "Те самые навыки, которые задают стандарт хирургии,",
-        "desc3_3": "применяются непосредственно к вашим драгоценным глазам."
-    },
-    "intro": {
-        "h3_1": "Больше, чем Reference Doctor",
-        "h3_2": "Становясь стандартом хирургии",
-        "sub_h5": "ICL Expert Instructor",
-        "sub_h3": "ICL Expert Instructor",
-        "last_p": "Больше, чем Reference Doctor — становясь стандартом",
-        "last_txt1": "Доктор Ли Дон Хун из Dr.ICL, ранее являвшийся ICL Reference Doctor, в настоящее время",
-        "last_txt1_b": "занимает должность 'ICL Expert Instructor' — глобальную позицию в топ-1%, посвящённую обучению врачей",
-        "last_txt1_end": ".",
-        "last_txt2": "Более высокие и совершенные стандарты обучения хирургии для специалистов.",
-        "last_txt3": "В Dr.ICL высочайший уровень мастерства, используемый для обучения врачей, становится стандартом каждой операции.",
-        "last_txt3_b": "Разница в результатах начинается с уровня хирурга",
-        "last_txt3_end": "."
-    },
-    "expertise": {
-        "h3_1": "Одна и та же операция, разные результаты — причина в",
-        "h3_highlight": "хирурге.",
-        "desc": "Совершенство хирургии определяется не оборудованием, а опытом и суждением хирурга.\nНоу-хау, накопленное за бесчисленные операции, создаёт разницу в результатах.",
-        "items": [
-            {
-                "en": "Beyond Reference Doctor",
-                "ko": "Высочайший уровень мастерства, превосходящий Reference Doctor",
-                "desc": "Не просто врач, использующий оборудование, а специалист, который делится и обучает стандартам оборудования и хирургических методов, глубоко понимая и применяя принципы и структуру хирургии. Выходя за рамки опыта к созданию и продвижению стандартов — именно в этом роль хирурга, превосходящего Reference Doctor."
-            },
-            {
-                "en": "Expert Instructor",
-                "ko": "Преданный врач, обучающий и передающий хирургическое мастерство",
-                "desc": "Хирурги приходят учиться ноу-хау, совместно изучают реальные хирургические процессы и обсуждают способы создания более безопасных и совершенных методов. Обучение других означает поддержание ещё более высоких стандартов, и этот процесс сам по себе является ещё одной причиной повышения хирургического совершенства."
-            },
-            {
-                "en": "The Standard",
-                "ko": "Выполнение операций с теми же безупречными стандартами, которым обучают врачей",
-                "desc": "Те же стандарты и принципы, используемые в обучении, применяются к операциям пациентов. Это не просто объяснения и теории — ведь врач, создавший эти стандарты, выполняет операции лично, что делает разницу как в процессе, так и в результатах."
-            }
-        ],
-        "dark_quote": "\"Кто обучал вашего хирурга?\"",
-        "dark_sub": "Врач, который обучает врачей — доктор Ли Дон Хун доказывает это под именем Dr.ICL."
-    },
-    "experience": {
-        "h3_1": "ICL Expert Instructor",
-        "h3_highlight": "подтверждается опытом.",
-        "desc": "В конце этого пути стоит ICL Expert Instructor доктор Ли Дон Хун.",
-        "tabs": ["Доктор Ли Дон Хун, посвятивший себя ICL", "Многочисленные тренинги по хирургии ICL для врачей в Корее", "Одинаковый рецепт, разные результаты — калибровка номограммы 0,1 мм"],
-        "slide1_sub": "Доктор Ли Дон Хун, посвятивший себя ICL",
-        "stat_year": "лет", "stat_year_label": "Посвящённых ICL",
-        "stat_cases": "операций", "stat_cases_label": "Выполненных операций ICL",
-        "stat_min": "мин", "stat_sec": "сек", "stat_time_label": "Среднее время операции", "stat_time_sub": "На один глаз, без учёта настройки линзы и стерилизации", "stat_time_period": "Среднее за ноябрь 2022 – июль 2023",
-        "stat_pct_label": "Удовлетворённость после операции", "stat_pct_sub": "(Совместное исследование: Испания, Корея, Сингапур)",
-        "slide2": [
-            { "b": "Многочисленные сессии в Корее", "t": "Обучение врачей хирургии ICL" },
-            { "b": "Сложные случаи", "t": "Обучение на сложных хирургических случаях" },
-            { "b": "Реальные условия операции", "t": "Практические стандарты, а не просто теория" },
-            { "b": "Участие из разных стран", "t": "Обмен разнообразными клиническими случаями" }
-        ],
-        "slide3": [
-            { "b": "Калибровка 0,1 мм", "t": "Индивидуальная ручная настройка номограммы" },
-            { "b": "Данные + суждение", "t": "Не полагаясь только на машинные показатели" },
-            { "b": "Записи на основе карт", "t": "Применение результатов к будущим решениям" },
-            { "b": "Минимизация повторных операций", "t": "Рассчитано на правильный результат с первого раза" }
-        ]
-    },
-    "thesis": {
-        "h3": "Научные работы доктора Ли Дон Хуна",
-        "desc": "Первый корейский автор, опубликовавший исследование ICL в Ophthalmology — самом престижном офтальмологическом журнале мира"
-    },
-    "technology": {
-        "h3_1": "Как же принимается",
-        "h3_highlight": "решение с точностью 0,1 мм",
-        "h3_2": "?",
-        "desc": "Не интуицией, а точными измерениями и документированием с помощью современного оборудования.",
-        "h3_3": "Благодаря этому процессу",
-        "h3_4": "решение с точностью 0,1 мм",
-        "h3_5": "достигает совершенства.",
-        "sub": "(Калибровка номограммы 0,1 мм)"
-    },
-    "memo": {
-        "h3_1": "Благодаря этому процессу",
-        "h3_highlight": "решение с точностью 0,1 мм",
-        "h3_2": "достигает совершенства.",
-        "desc": "Операция заканчивается, но записи не прекращаются"
-    },
-    "global": {
-        "h3": "Глобальный офтальмологический центр Dr.ICL",
-        "desc": "Распространение стандартов хирургии ICL на мировой академической арене.",
-        "slides": {
-            "korea": [
-                "2016.10\nICL 2000 Awards at STAAR Surgical Asia-Pacific",
-                "2016.11 Seoul, Korea\n- Лекция на 116-м симпозиуме Корейского офтальмологического общества для практикующих врачей\n- Тема: \"How Far Is Corneal Refractive Surgery Safe?\"",
-                "2017.03\nTICL 500 Award from EVO+ICL APAC",
-                "2017.03\nSelected as Toric EVO+ICL Reference Doctor",
-                "2017.03 Seoul, Korea\nПриглашённая лекция и панельная дискуссия на 3rd EVO+ICL Experts Meeting\nTICL 500 Award\nCEA (Continuing Education Awards)\nТема: Why Toric ICL?",
-                "2017.12\nEVO+ICL Practice of Excellence Award & THE BEST SURGEON of the Year for EVO+TICL",
-                "2018.07 Seoul, Korea\n7th Samsung Ophthalmology Symposium\nЛекция на тему \"Controversies in Cornea & Cataract/Refractive Surgery\"\nТема: Astigmatism in Refractive Surgery — ICL with LRI vs Toric ICL",
-                "2018.11\nСпециальная лекция в Seoul Hangang Rotary Club\nТема: Eye Health in Middle Age",
-                "2018.11\n- Лекция на 120-м симпозиуме Корейского офтальмологического общества для практикующих врачей\n- Тема: \"Easy and Simple ICL Sizing and Exchange Tips\"",
-                "2019.07\nSelected as BEST SURGEON for STAAR Surgical's Global 1,000,000 Cases Milestone",
-                "2019.08\nПриглашённая лекция на Kim's Eye Hospital Symposium\nТема: Problems and Solutions After ICL Implantation",
-                "2019.11\n- Доклад на 122-м заседании Корейского офтальмологического общества\n- Тема: \"Long-term Clinical Results of Posterior Chamber Phakic ICL Implantation Based on CASIA2 Measurements\"",
-                "2020\nKSCRS IT Director & Selected as English Website Cover Model",
-                "2022\nKSCRS 4th Edition Cataract Textbook\nСоавтор главы о выборе пациентов для мультифокальных ИОЛ",
-                "Korea & Japan ICL Forum (Seoul)\nТема: Refractive Surgery Trend",
-                "2025.07\n2025 EVO ICL Forum\nТема: The Importance of Visual Quality in Refractive Surgery",
-                "2025.11\n3rd Korea & Japan ICL Forum\nТема: Phakic IOL usage in Korea, Japan KOL perspective\n— how to treat the Elderly, Presbyopic Patients, and Hyperopic Patients treatment"
-            ],
-            "spain": [
-                "2015.09 Barcelona, Spain\nДоклад на European Society of Cataract & Refractive Surgery (ESCRS)\nТема: \"Correlation between Preoperative Biometry and Posterior Chamber Phakic Visian Implantable Collamer Lens Vaulting\"",
-                "2015.09 Sitges, Spain\nПриглашённая лекция на 12th World ICL Experts Meeting\nBest Speaker & ICL EXPERT AWARDS\nТема: \"Correlation between Preoperative Biometry and Posterior Chamber Phakic Visian Implantable Collamer Lens Vaulting\""
-            ],
-            "china": [
-                "2016.03 Shanghai, China\nПриглашённая лекция на 2nd APAC ICL Expert Symposium\nТема: \"Medical Perspective as an ICL Surgeon\"",
-                "Поздравительное видео от генерального директора VISION Group\n(Управляет 43 глазными клиниками по всему миру)",
-                "Поздравительное видео от директора BRIGHT EYE HOSPITAL\n(Управляет 27 больницами в Китае)",
-                "Поздравительное видео от менеджера по стандартизации рефракционной хирургии AIER Eye Hospital\n(Крупнейшая в мире офтальмологическая группа — 813 больниц по всему миру)",
-                "Поздравительное видео от главы STAAR Surgical в Китае"
-            ],
-            "indonesia": [
-                "2016.07 Bali, Indonesia\n29th APACRS\nТема: Ocular Biometry and Optimal Lens Selection Model Equation"
-            ],
-            "portugal": [
-                "2017.10 Lisbon, Portugal\nICL 3000 Award at 14th EVO ICL Experts Summit",
-                "2017.10 Lisbon, Portugal\nПриглашённый докладчик на 35th European Society of Cataract & Refractive Surgery (ESCRS)\nТема: Optimization of vision implantable collamer lens vault by intentional rotation"
-            ],
-            "france": [
-                "2019.09 Paris, France\nEVO+ICL 5,000 Award at 10th EVO+ICL Experts Summit",
-                "2019.09\nУчастие в European Society of Cataract & Refractive Surgery (ESCRS) в Париже\nТема: Long-term clinical results and safety of SMILE Xtra\n(lenticule extraction with accelerated corneal cross-linking)"
-            ],
-            "usa": [
-                "2020.05\nДоклад на American Society of Cataract & Refractive Surgery (ASCRS) в Бостоне (онлайн-конференция)",
-                "2025.04.25~28 LA ASCRS\nТема: Optimizing outcomes in a broad range of patients",
-                "Поздравительное видео от генерального директора STAAR Surgical",
-                "Поздравительное видео от старшего вице-президента STAAR Surgical",
-                "Поздравительное видео от вице-президента Tracey Technologies"
-            ],
-            "japan": [
-                "2023.11.18\n2023 Korea & Japan ICL Forum (Tokyo)\nТема: Quality of Vision & Recovery",
-                "2024.03.15~17\n2024 APAC Experts Summit\nТема: ICL — Now and Future",
-                "2024.11.14\n15th ICL Study Group Committee\nТема: Causes and Countermeasures for Endophthalmitis After ICL Surgery",
-                "Dr. Yoshihiro Kitazawa и доктор Ли Дон Хун\n(Директор крупнейшей в Японии специализированной клиники ICL)",
-                "Международное партнёрство по клиническому сотрудничеству с EYE CLINIC TOKYO\n(Специализированная клиника ICL №1 в Японии)"
-            ]
-        }
-    },
-    "faq": {
-        "h3_1": "Вопросы, которые наши пациенты в Dr.ICL",
-        "h3_highlight": "часто задают",
-        "desc": "Узнайте больше из колонок Dr.ICL",
-        "items": [
-            { "title": "Ореолы после операции ICL?\nПочему это не побочный эффект и полное руководство по адаптации", "date": "2025-12-01" },
-            { "title": "Ответы на вопросы об обследовании перед ICL\nРасширение зрачка, стоимость и продолжительность обследования", "date": "2025-12-01" },
-            { "title": "Внезапно размытое зрение!!", "date": "2025-12-01" },
-            { "title": "Toric ICL!! Беспокоитесь о\nвращении линзы?", "date": "2025-12-01" }
-        ]
-    },
-    "youtube": {
-        "h5": "Doctoricl YouTube",
-        "h3_1": "Имплантация линз ICL в Dr.ICL",
-        "h3_2": "Смотрите Dr.ICL на YouTube",
-        "btn": "Перейти на канал Dr.ICL в YouTube"
-    },
-    "instagram": {
-        "h3_1": "Узнайте",
-        "h3_highlight": "последние новости",
-        "h3_2": "от Dr.ICL",
-        "btn": "Посетить Instagram Dr.ICL",
-        "fallback": [
-            { "title": "2025 KOREA EVO ICL FORUM", "date": "2025-08-06" },
-            { "title": "Официальный выбор ICL EXPERT INSTRUCTOR", "date": "2025-07-22" },
-            { "title": "Выбран одним из 6 экспертов ICL в мире", "date": "2025-07-15" },
-            { "title": "2026 EVO ICL APAC EXPERTS SUMMIT", "date": "2025-06-30" }
-        ]
-    },
-    "news": {
-        "top_h5": "Авторитетные СМИ выбирают",
-        "top_h5_2": "Медицинские новости офтальмологической клиники Dr.ICL",
-        "title": "Альтернатива коррекции зрения с сохранением роговицы: критерии выбора имплантации линзы",
-        "author": "Доктор Ли Дон Хун, генеральный директор офтальмологической клиники Dr.ICL",
-        "desc": "На фоне тенденции лазерной коррекции зрения, такой как LASIK, LASEK и SMILE, ICL (Implantable Collamer Lens) выступает как новый вариант, ставящий сохранение роговицы на первое место. В отличие от методов абляции роговицы, этот подход предполагает размещение специальной линзы за радужной оболочкой, сохраняя структуру роговицы.",
-        "link_text": "Читать новостную статью"
-    },
-    "location": {
-        "h3_map": "Как добраться",
-        "address": "390 Gangnam-daero, Gangnam-gu, Seoul, 20F (Yeoksam-dong, Mijin Plaza)",
-        "address_copied": "Адрес скопирован.",
-        "naver": "Naver Map",
-        "google": "Google Maps",
-        "kakao": "Kakao Map",
-        "tmap": "T-Map",
-        "h3_kakao": "KakaoTalk",
-        "kakao_desc": "Найдите \"Dr.ICL Eye Clinic\" в KakaoTalk.",
-        "h3_hours": "Часы работы клиники",
-        "hours": [
-            { "day": "Пн, Вт, Чт, Пт", "time": "AM 09:00 ~ PM 06:00" },
-            { "day": "Суббота", "time": "AM 08:30 ~ PM 04:00" },
-            { "day": "Обеденный перерыв", "time": "PM 01:00 ~ PM 02:00" }
-        ],
-        "hours_note": "* Закрыто по средам, воскресеньям и в государственные праздники.",
-        "h3_contact": "Записаться на консультацию"
+    "dark_quote": "\"Кто обучал вашего хирурга?\"",
+    "dark_sub": "Врач, который обучает врачей — доктор Ли Дон Хун доказывает это под именем Dr.ICL."
+  },
+  "experience": {
+    "h3_1": "ICL Expert Instructor",
+    "h3_highlight": "подтверждается опытом.",
+    "desc": "В конце этого пути стоит ICL Expert Instructor доктор Ли Дон Хун.",
+    "tabs": [
+      "Доктор Ли Дон Хун, посвятивший себя ICL",
+      "Многочисленные тренинги по хирургии ICL для врачей в Корее",
+      "Одинаковый рецепт, разные результаты — калибровка номограммы 0,1 мм"
+    ],
+    "slide1_sub": "Доктор Ли Дон Хун, посвятивший себя ICL",
+    "stat_year": "лет",
+    "stat_year_label": "Посвящённых ICL",
+    "stat_cases": "операций",
+    "stat_cases_label": "Выполненных операций ICL",
+    "stat_min": "мин",
+    "stat_sec": "сек",
+    "stat_time_label": "Среднее время операции",
+    "stat_time_sub": "На один глаз, без учёта настройки линзы и стерилизации",
+    "stat_time_period": "Среднее за ноябрь 2022 – июль 2023",
+    "stat_pct_label": "Удовлетворённость после операции",
+    "stat_pct_sub": "(Совместное исследование: Испания, Корея, Сингапур)",
+    "slide2": [
+      {
+        "b": "Многочисленные сессии в Корее",
+        "t": "Обучение врачей хирургии ICL"
+      },
+      {
+        "b": "Сложные случаи",
+        "t": "Обучение на сложных хирургических случаях"
+      },
+      {
+        "b": "Реальные условия операции",
+        "t": "Практические стандарты, а не просто теория"
+      },
+      {
+        "b": "Участие из разных стран",
+        "t": "Обмен разнообразными клиническими случаями"
+      }
+    ],
+    "slide3": [
+      {
+        "b": "Калибровка 0,1 мм",
+        "t": "Индивидуальная ручная настройка номограммы"
+      },
+      {
+        "b": "Данные + суждение",
+        "t": "Не полагаясь только на машинные показатели"
+      },
+      {
+        "b": "Записи на основе карт",
+        "t": "Применение результатов к будущим решениям"
+      },
+      {
+        "b": "Минимизация повторных операций",
+        "t": "Рассчитано на правильный результат с первого раза"
+      }
+    ]
+  },
+  "thesis": {
+    "h3": "Научные работы доктора Ли Дон Хуна",
+    "desc": "Первый корейский автор, опубликовавший исследование ICL в Ophthalmology — самом престижном офтальмологическом журнале мира"
+  },
+  "technology": {
+    "h3_1": "Как же принимается",
+    "h3_highlight": "решение с точностью 0,1 мм",
+    "h3_2": "?",
+    "desc": "Не интуицией, а точными измерениями и документированием с помощью современного оборудования.",
+    "h3_3": "Благодаря этому процессу",
+    "h3_4": "решение с точностью 0,1 мм",
+    "h3_5": "достигает совершенства.",
+    "sub": "(Калибровка номограммы 0,1 мм)"
+  },
+  "memo": {
+    "h3_1": "Благодаря этому процессу",
+    "h3_highlight": "решение с точностью 0,1 мм",
+    "h3_2": "достигает совершенства.",
+    "desc": "Операция заканчивается, но записи не прекращаются"
+  },
+  "global": {
+    "h3": "Глобальный офтальмологический центр Dr.ICL",
+    "desc": "Распространение стандартов хирургии ICL на мировой академической арене.",
+    "slides": {
+      "korea": [
+        "2016.10\nICL 2000 Awards at STAAR Surgical Asia-Pacific",
+        "2016.11 Seoul, Korea\n- Лекция на 116-м симпозиуме Корейского офтальмологического общества для практикующих врачей\n- Тема: \"How Far Is Corneal Refractive Surgery Safe?\"",
+        "2017.03\nTICL 500 Award from EVO+ICL APAC",
+        "2017.03\nSelected as Toric EVO+ICL Reference Doctor",
+        "2017.03 Seoul, Korea\nПриглашённая лекция и панельная дискуссия на 3rd EVO+ICL Experts Meeting\nTICL 500 Award\nCEA (Continuing Education Awards)\nТема: Why Toric ICL?",
+        "2017.12\nEVO+ICL Practice of Excellence Award & THE BEST SURGEON of the Year for EVO+TICL",
+        "2018.07 Seoul, Korea\n7th Samsung Ophthalmology Symposium\nЛекция на тему \"Controversies in Cornea & Cataract/Refractive Surgery\"\nТема: Astigmatism in Refractive Surgery — ICL with LRI vs Toric ICL",
+        "2018.11\nСпециальная лекция в Seoul Hangang Rotary Club\nТема: Eye Health in Middle Age",
+        "2018.11\n- Лекция на 120-м симпозиуме Корейского офтальмологического общества для практикующих врачей\n- Тема: \"Easy and Simple ICL Sizing and Exchange Tips\"",
+        "2019.07\nSelected as BEST SURGEON for STAAR Surgical's Global 1,000,000 Cases Milestone",
+        "2019.08\nПриглашённая лекция на Kim's Eye Hospital Symposium\nТема: Problems and Solutions After ICL Implantation",
+        "2019.11\n- Доклад на 122-м заседании Корейского офтальмологического общества\n- Тема: \"Long-term Clinical Results of Posterior Chamber Phakic ICL Implantation Based on CASIA2 Measurements\"",
+        "2020\nKSCRS IT Director & Selected as English Website Cover Model",
+        "2022\nKSCRS 4th Edition Cataract Textbook\nСоавтор главы о выборе пациентов для мультифокальных ИОЛ",
+        "Korea & Japan ICL Forum (Seoul)\nТема: Refractive Surgery Trend",
+        "2025.07\n2025 EVO ICL Forum\nТема: The Importance of Visual Quality in Refractive Surgery",
+        "2025.11\n3rd Korea & Japan ICL Forum\nТема: Phakic IOL usage in Korea, Japan KOL perspective\n— how to treat the Elderly, Presbyopic Patients, and Hyperopic Patients treatment"
+      ],
+      "spain": [
+        "2015.09 Barcelona, Spain\nДоклад на European Society of Cataract & Refractive Surgery (ESCRS)\nТема: \"Correlation between Preoperative Biometry and Posterior Chamber Phakic Visian Implantable Collamer Lens Vaulting\"",
+        "2015.09 Sitges, Spain\nПриглашённая лекция на 12th World ICL Experts Meeting\nBest Speaker & ICL EXPERT AWARDS\nТема: \"Correlation between Preoperative Biometry and Posterior Chamber Phakic Visian Implantable Collamer Lens Vaulting\""
+      ],
+      "china": [
+        "2016.03 Shanghai, China\nПриглашённая лекция на 2nd APAC ICL Expert Symposium\nТема: \"Medical Perspective as an ICL Surgeon\"",
+        "Поздравительное видео от генерального директора VISION Group\n(Управляет 43 глазными клиниками по всему миру)",
+        "Поздравительное видео от директора BRIGHT EYE HOSPITAL\n(Управляет 27 больницами в Китае)",
+        "Поздравительное видео от менеджера по стандартизации рефракционной хирургии AIER Eye Hospital\n(Крупнейшая в мире офтальмологическая группа — 813 больниц по всему миру)",
+        "Поздравительное видео от главы STAAR Surgical в Китае"
+      ],
+      "indonesia": [
+        "2016.07 Bali, Indonesia\n29th APACRS\nТема: Ocular Biometry and Optimal Lens Selection Model Equation"
+      ],
+      "portugal": [
+        "2017.10 Lisbon, Portugal\nICL 3000 Award at 14th EVO ICL Experts Summit",
+        "2017.10 Lisbon, Portugal\nПриглашённый докладчик на 35th European Society of Cataract & Refractive Surgery (ESCRS)\nТема: Optimization of vision implantable collamer lens vault by intentional rotation"
+      ],
+      "france": [
+        "2019.09 Paris, France\nEVO+ICL 5,000 Award at 10th EVO+ICL Experts Summit",
+        "2019.09\nУчастие в European Society of Cataract & Refractive Surgery (ESCRS) в Париже\nТема: Long-term clinical results and safety of SMILE Xtra\n(lenticule extraction with accelerated corneal cross-linking)"
+      ],
+      "usa": [
+        "2020.05\nДоклад на American Society of Cataract & Refractive Surgery (ASCRS) в Бостоне (онлайн-конференция)",
+        "2025.04.25~28 LA ASCRS\nТема: Optimizing outcomes in a broad range of patients",
+        "Поздравительное видео от генерального директора STAAR Surgical",
+        "Поздравительное видео от старшего вице-президента STAAR Surgical",
+        "Поздравительное видео от вице-президента Tracey Technologies"
+      ],
+      "japan": [
+        "2023.11.18\n2023 Korea & Japan ICL Forum (Tokyo)\nТема: Quality of Vision & Recovery",
+        "2024.03.15~17\n2024 APAC Experts Summit\nТема: ICL — Now and Future",
+        "2024.11.14\n15th ICL Study Group Committee\nТема: Causes and Countermeasures for Endophthalmitis After ICL Surgery",
+        "Dr. Yoshihiro Kitazawa и доктор Ли Дон Хун\n(Директор крупнейшей в Японии специализированной клиники ICL)",
+        "Международное партнёрство по клиническому сотрудничеству с EYE CLINIC TOKYO\n(Специализированная клиника ICL №1 в Японии)"
+      ]
     }
+  },
+  "faq": {
+    "h3_1": "Вопросы, которые наши пациенты в Dr.ICL",
+    "h3_highlight": "часто задают",
+    "desc": "Узнайте больше из колонок Dr.ICL",
+    "items": [
+      {
+        "title": "Ореолы после операции ICL?\nПочему это не побочный эффект\nи полное руководство по адаптации",
+        "date": "2025-12-01"
+      },
+      {
+        "title": "Ответы на вопросы об обследовании перед ICL\nРасширение зрачка, стоимость\nи продолжительность обследования",
+        "date": "2025-12-01"
+      },
+      {
+        "title": "Внезапно размытое зрение!!",
+        "date": "2025-12-01"
+      },
+      {
+        "title": "Toric ICL!! Беспокоитесь о\nвращении линзы?",
+        "date": "2025-12-01"
+      }
+    ]
+  },
+  "youtube": {
+    "h5": "Doctoricl YouTube",
+    "h3_1": "Имплантация линз ICL в Dr.ICL",
+    "h3_2": "Смотрите Dr.ICL на YouTube",
+    "btn": "Перейти на канал Dr.ICL в YouTube"
+  },
+  "instagram": {
+    "h3_1": "Узнайте",
+    "h3_highlight": "последние новости",
+    "h3_2": "от Dr.ICL",
+    "btn": "Посетить Instagram Dr.ICL",
+    "fallback": [
+      {
+        "title": "2025 KOREA EVO ICL FORUM",
+        "date": "2025-08-06"
+      },
+      {
+        "title": "Официальный выбор ICL EXPERT INSTRUCTOR",
+        "date": "2025-07-22"
+      },
+      {
+        "title": "Выбран одним из 6 экспертов ICL в мире",
+        "date": "2025-07-15"
+      },
+      {
+        "title": "2026 EVO ICL APAC EXPERTS SUMMIT",
+        "date": "2025-06-30"
+      }
+    ]
+  },
+  "news": {
+    "top_h5": "Авторитетные СМИ выбирают",
+    "top_h5_2": "Медицинские новости офтальмологической клиники Dr.ICL",
+    "title": "Альтернатива коррекции зрения с сохранением роговицы: критерии выбора имплантации линзы",
+    "author": "Доктор Ли Дон Хун, генеральный директор офтальмологической клиники Dr.ICL",
+    "desc": "На фоне тенденции лазерной коррекции зрения, такой как LASIK, LASEK и SMILE, ICL (Implantable Collamer Lens) выступает как новый вариант, ставящий сохранение роговицы на первое место. В отличие от методов абляции роговицы, этот подход предполагает размещение специальной линзы за радужной оболочкой, сохраняя структуру роговицы.",
+    "link_text": "Читать новостную статью"
+  },
+  "location": {
+    "h3_map": "Как добраться",
+    "address": "390 Gangnam-daero, Gangnam-gu, Seoul, 20F (Yeoksam-dong, Mijin Plaza)",
+    "address_copied": "Адрес скопирован.",
+    "naver": "Naver Map",
+    "google": "Google Maps",
+    "kakao": "Kakao Map",
+    "tmap": "T-Map",
+    "h3_kakao": "KakaoTalk",
+    "kakao_desc": "Найдите \"Dr.ICL Eye Clinic\" в KakaoTalk.",
+    "h3_hours": "Часы работы клиники",
+    "hours": [
+      {
+        "day": "Пн, Вт, Чт, Пт",
+        "time": "AM 09:00 ~ PM 06:00"
+      },
+      {
+        "day": "Суббота",
+        "time": "AM 08:30 ~ PM 04:00"
+      },
+      {
+        "day": "Обеденный перерыв",
+        "time": "PM 01:00 ~ PM 02:00"
+      }
+    ],
+    "hours_note": "* Закрыто по средам, воскресеньям и в государственные праздники.",
+    "h3_contact": "Записаться на консультацию"
+  }
 }
