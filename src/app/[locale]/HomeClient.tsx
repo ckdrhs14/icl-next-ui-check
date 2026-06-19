@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef, useCallback } from "react";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import dynamic from "next/dynamic";
@@ -323,6 +323,12 @@ function useCountUp(target: number, duration = 1500) {
 function HeroVideo() {
     const videoRef = useRef<HTMLVideoElement>(null);
     const [isMobile, setIsMobile] = useState(false);
+    const locale = useLocale();
+
+    const videoSuffix = locale === "ko" ? "v2" : locale;
+    const videoSrc = isMobile
+        ? `/video/main_hero_video_high_mo_${videoSuffix}.mp4`
+        : `/video/main_hero_video_high_${videoSuffix}.mp4`;
 
     useEffect(() => {
         const mql = window.matchMedia("(max-width: 768px)");
@@ -345,8 +351,8 @@ function HeroVideo() {
     return (
         <video
             ref={videoRef}
-            key={isMobile ? "mo" : "pc"}
-            src={isMobile ? "/video/main_hero_video_high_mo_v2.mp4" : "/video/main_hero_video_high_v2.mp4"}
+            key={`${isMobile ? "mo" : "pc"}-${locale}`}
+            src={videoSrc}
             autoPlay
             muted
             loop
