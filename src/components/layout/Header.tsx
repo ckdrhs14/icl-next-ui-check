@@ -92,16 +92,20 @@ export function Header() {
     const router = useRouter();
     const [isWhite, setIsWhite] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
+    const [isHoverOpen, setIsHoverOpen] = useState(false);
     const [langOpen, setLangOpen] = useState(false);
     const [mobileActive, setMobileActive] = useState<number | null>(null);
 
     const headerRef = useRef<HTMLElement>(null);
     const detailRef = useRef<HTMLDivElement>(null);
+    const hoverDismissed = useRef(false);
+    const hoverTimer = useRef<ReturnType<typeof setTimeout>>();
+    const closeTimer = useRef<ReturnType<typeof setTimeout>>();
 
     /* data-header-bg="white" 감지 */
     useEffect(() => {
         const check = () => {
-            if (isOpen) return;
+            if (isOpen || isHoverOpen) return;
             const header = headerRef.current;
             if (!header) return;
             const probeY = header.offsetHeight || 72;
@@ -119,7 +123,7 @@ export function Header() {
         window.addEventListener("scroll", check, { passive: true });
         check();
         return () => window.removeEventListener("scroll", check);
-    }, [isOpen]);
+    }, [isOpen, isHoverOpen]);
 
 
 
@@ -130,7 +134,7 @@ export function Header() {
         return () => document.removeEventListener("click", close);
     }, [langOpen]);
 
-    useEffect(() => { setIsOpen(false); setMobileActive(null); setLangOpen(false); }, [pathname]);
+    useEffect(() => { setIsOpen(false); setIsHoverOpen(false); setMobileActive(null); setLangOpen(false); }, [pathname]);
 
     useEffect(() => {
         if (isOpen) {
@@ -158,10 +162,46 @@ export function Header() {
         return () => window.removeEventListener("resize", setHeight);
     }, []);
 
+    const cancelClose = useCallback(() => { clearTimeout(closeTimer.current); }, []);
+
+    const handleMouseEnter = useCallback(() => {
+        cancelClose();
+        if (window.innerWidth > 1024 && !hoverDismissed.current && !isOpen) {
+            hoverTimer.current = setTimeout(() => setIsHoverOpen(true), 150);
+        }
+    }, [isOpen, cancelClose]);
+
+    const handleMouseLeave = useCallback(() => {
+        clearTimeout(hoverTimer.current);
+        cancelClose();
+        if (!isOpen) {
+            setIsHoverOpen(false);
+        }
+        hoverDismissed.current = false;
+    }, [isOpen, cancelClose]);
+
+    /* navListWrap, detailMenuContainer 밖의 헤더 영역에 마우스 진입 시 hover 닫기 (딜레이) */
+    const handleHeaderHoverClose = useCallback(() => {
+        clearTimeout(hoverTimer.current);
+        if (isHoverOpen && !isOpen) {
+            closeTimer.current = setTimeout(() => setIsHoverOpen(false), 100);
+        }
+    }, [isHoverOpen, isOpen]);
+
     const toggleMenu = useCallback(() => {
-        setIsOpen((prev) => !prev);
-        setMobileActive(null);
-    }, []);
+        clearTimeout(hoverTimer.current);
+        const menuVisible = isOpen || isHoverOpen;
+        if (menuVisible) {
+            /* 메뉴가 열려있으면 닫기 */
+            setIsOpen(false);
+            setIsHoverOpen(false);
+            setMobileActive(null);
+        } else {
+            /* 메뉴가 닫혀있으면 열기 */
+            setIsOpen(true);
+            setMobileActive(null);
+        }
+    }, [isOpen, isHoverOpen]);
 
     const toggleMobileItem = useCallback((idx: number) => {
         setMobileActive((prev) => (prev === idx ? null : idx));
@@ -176,14 +216,15 @@ export function Header() {
 
     const cls = [
         styles.header,
-        isWhite && !isOpen ? styles.isWhite : "",
-        isOpen ? styles.open : ""
+        isWhite && !isOpen && !isHoverOpen ? styles.isWhite : "",
+        isOpen ? styles.open : "",
+        isHoverOpen && !isOpen ? styles.hoverOpen : ""
     ].filter(Boolean).join(" ");
 
     return (
         <>
-            <header className={cls} ref={headerRef}>
-                <div className={styles.headerTopContainer}>
+            <header className={cls} ref={headerRef} onMouseLeave={handleMouseLeave}>
+                <div className={styles.headerTopContainer} onMouseOver={handleHeaderHoverClose}>
                     <div className={styles.innerCon}>
                         <div className={styles.menuContainer}>
                             <Link href="/" className={styles.logo}>
@@ -192,7 +233,7 @@ export function Header() {
                                 {/* eslint-disable-next-line @next/next/no-img-element */}
                                 <img className={styles.whiteLogo} src="/img/main/logo_white.svg" alt={a11y("logoAlt")} />
                             </Link>
-                            <ul className={styles.navListWrap}>
+                            <ul className={styles.navListWrap} onMouseOver={(e) => { e.stopPropagation(); }} onMouseEnter={handleMouseEnter}>
                                 {MENU_ITEMS.map((item) => (
                                     <li key={item.key}>
                                         <Link href={item.href}>{t(`menu.${item.key}`)}</Link>
@@ -255,7 +296,7 @@ export function Header() {
                 </div>
 
                 {/* Detail Menu (펼침 메뉴) */}
-                <div className={styles.detailMenuContainer} ref={detailRef}>
+                <div className={styles.detailMenuContainer} ref={detailRef} onMouseEnter={cancelClose}>
                     <div className={styles.detailMenuBox}>
                         <div className={styles.detailLogo}>
                             {/* eslint-disable-next-line @next/next/no-img-element */}
